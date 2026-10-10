@@ -1,0 +1,306 @@
+# addr	name	description  (pushed into Ghidra by scripts/apply_annotations.py)
+# ---- engine helpers ----
+00648600	memset	memset(dst, byte, n): CRT-style fill (aligned dword loop).
+006bfe55	atexit	atexit(fn): registers static destructor; returns 0 on success, -1 on fail.
+006bf840	operator_delete	operator delete(p) -> free.
+00406ce0	ObjMgr_FindSlotByGuid	this=g_ObjMgr. Hash (lo^hi)*-0xfb & 0xfff -> short bucket head; walk 0x14-byte entries at this+0x28c0 (entry[0]=obj*, short next @+0xe) until obj->guid(+8,+0xc)==guid. Returns slot index in EAX or -1. Ptr = entries[slot].obj, valid if obj->flags(+0x7f)&0x10.
+0041b9c0	Guid_Set	this[0]=lo, this[1]=hi (64-bit GUID pair).
+0041b9f0	Mat44_TransformPoint	out = M * p + T. M is 4x4 float, column vectors (m[0],m[4],m[8]) row x, translation m[12..14].
+0041ba80	Rsc_GetPtr	Lock then unlock a resource handle; returns its data pointer.
+0041bab0	CharAnim_GetBonePos	this=char_anim_player. If dirty (+0x13c) refresh bone cache; return &bones[i] (vec3, 12 bytes) at +0x140.
+0041bae0	List_PopAll	Pops entries (FUN_00582290) while count(+8) > 0.
+0041def0	Trivial_ctor	Returns this. Compiler-generated constructor for a trivial element type (used in array ctor loops).
+# ---- bilbo ----
+0041b9e0	bilbo__GetFlag4ec1	Returns bit0 of byte this+0x4ec1.
+0041bb60	bilbo__StaticInitGlobals	Zeroes Bilbo statics 0x0075b9f4..0x0075ba0c.
+0041bb90	bilbo__RegisterStaticDtor	atexit(static dtor at 0x0041bba0).
+0041bcd0	Bilbo_GetGuid	Returns the hard-coded player GUID 0xABCABCABCABCABC0. Only ONE object can own it -> second player needs a different GUID.
+0041c2b0	bilbo__SetInputEnabled	this+0x740 = enabled; if 0: memset(input block this+0x600, 0, 0x128) and +0x6f8=1. Input block: +0x600/+0x604 left stick x/y, +0x618/+0x61c camera stick, +0x630..0x638 world move vector, +0x700 (0x1c0) +0x704 (0x1c1) action flags, +0x710 (0x1c4) "any input".
+0041c660	bilbo__scalar_deleting_dtor	vtable slot 0. bilbo__dtor(); if (flags&1) operator delete(this). Standard MSVC pattern.
+0041fce0	bilbo__NearestEnemyCloserThan	return nearestHostileDist(+0x5910) < d.
+00420fe0	bilbo__IsBusy_guess	True if guid at +0x5958 set, int +0x5960 set, or timer +0x5970 > 0 (timer decremented by dt in OnAdvanceLogic).
+0041bce0	bilbo__InitTuning	Fills Bilbo's TUNING TABLE at *(this+0x450) (~110 floats: speeds, distances, angles; e.g. +0x1c0=72 swim depth?, +0x1cc=25, +0x1b0=1200). Copies a few into this+0xd0..0xec. Angles via Math_Cos_guess(pi/3, pi/4, 10deg).
+0041c960	bilbo__PlaceAtLevelStart	Gets start-marker GUID (FUN_0054c790), sets position via this->vf[5]=SetPosition(&marker+0xa8,0) and rotation via vf[7]=SetRotation(&(0,yaw@marker+0xb4,0)). Gives chapter items: levels after Ch02_RoastMutton -> Sting (this+0x418=1), after Ch00_DreamWorld -> "The Ring" (+0x41c). Inventory_Add = FUN_00434c40(item,1.0).
+0041fbd0	bilbo__FindNearestHostileNPC	Iterates spatial set (FUN_00588ff0/FUN_00589010 -> GUIDs); keeps objects with type(+0x7c)==0x1c NPC, vf[66](0)!=0 and +0x1a4==2; stores nearest GUID at this+0x5908 and distance at +0x5910 (FLT_MAX if none).
+00420330	bilbo__UpdateSpecialGround	Ground object GUID at this+0xa8. If it is RigidInstance(5)/PlaySurface(6) and qualifies (FUN_004ac4d0), sets +0x5958 (its GUID) / +0x5960=1 and tuning+0x1b4=100 (else 1200 from +0x1b0).
+00420470	Mat44_Translate	M = M * T(v): fast path adds v to translation row when M is affine.
+# ---- GameObject base virtuals (vtable 0x006ede98, 61 slots) ----
+004aa340	GameObject__scalar_deleting_dtor	slot 0. dtor (FUN_004aa360) then free if flags&1.
+004aa440	GameObject__SetPosition	slot 5 (+0x14). SetPosition(vec3* p, int resetInitial): clamp |x|,|z|<=1e6 |y|<=1e5; pos(+0x14)=p; rebuild world AABB (+0x44/+0x50) from local AABB (vf14); splash if flags(+0x10)&0x4000000; NPC/Bilbo -> FUN_004ab260(delta); sdbase__UpdateLinks (spatial DB re-file); if resetInitial InitialPos(+0x20)=p. ALWAYS use this, never write +0x14 directly.
+004aa910	GameObject__SetName	slot 18 (+0x48). Frees old name (+0xa0); if ObjectFlags(+0x7a)&1 store heap copy else "NONAME".
+004aa650	GameObject__Export	slot 21 (+0x54). Writes DoesCameraColl, DoesCameraFade, LightChannels(+0x7e), ObjectFlags(+0x7a), ScriptResource(+0x74), InitialPos(+0x20), Orientation(+0x68), LocalBoundingBox(+0x2c), ObjSaveFlag(+0x7f&1), ObjName(+0xa0).
+004aa740	GameObject__OnImport	slot 22 (+0x58). Reads the same fields from level data via bin_in__GetField.
+005ba900	Nop	Empty function (used as default virtual).
+00429100	Nop_DebugHook	Empty function; compiled-out debug hook, called many times from logic_mgr__SingleStep.
+00425890	Nop2	Empty function (default virtual: GameObject slots 1,2,3,8,27,41).
+# ---- names confirmed by the maintainer's hobbit-synchrony-v3 mod (src: synchrony) ----
+004021c0	obj_mgr__GetSlotFromGuid	[synchrony] GUID -> object pointer (0 if not found / not loaded). thiscall on g_ObjMgr.
+00423c90	bilbo__SetRingEquipped	[synchrony] writes bilbo+0x420 (1 = ring equipped -> invisible).
+00424c30	bilbo__CreateStoneProjectile	[synchrony] (this, vector3& from, vector3& to): throws a stone.
+004373b0	bilboInventory__GetStingSwingLevel	[synchrony] weapon upgrade level getter.
+00437420	bilboInventory__GetStingJumpLevel	[synchrony]
+00437490	bilboInventory__GetStaffSwingLevel	[synchrony]
+00437500	bilboInventory__GetStaffJumpLevel	[synchrony]
+00437570	bilboInventory__GetStaffAEJumpLevel	[synchrony]
+004375e0	bilboInventory__GetStoneThrowLevel	[synchrony]
+00446330	bilbo__Pickups_GetPickup	[synchrony] (object* pickup): grants the pickup directly.
+0046a550	cinema__Start	[synchrony] starts a cutscene (thiscall). Mod detours it to detect cinematics.
+00488d30	fx_object__FireAndForget	[synchrony] (name, pos, rot, scale): one-shot effect.
+00497d60	load_trigger__Execute	[synchrony] level-transition trigger fire.
+004a0ba0	NPCObject__RecomputeMoves	[synchrony] NPC vtable slot +0x11C: recompute which moves the NPC can still do.
+004a40d0	NPCObject__ShatterShield	[synchrony] engine's own shield break (hides shield, updates moves).
+004a99a0	NPCObject__MakeTransparent	[synchrony] toggles bit 0x40 of render field.
+004ac5d0	object__GetIsLayerActive	[synchrony] reads the layer-active bit.
+004b53a0	Projectile__CreateProjectile	[synchrony] (eProjectileType, owner, vector3 from, vector3 to).
+004c71a0	rigid_instance__AnimDataAvailable	[synchrony]
+004c7580	rigid_instance__SetAnimFrame	[synchrony]
+004d2f20	Switch__SetOn	[synchrony]
+004d2f50	Switch__Toggle	[synchrony]
+004d5bd0	treasure_chest__Open	[synchrony]
+004dcef0	trigger__OnUse	[synchrony] (item)
+004dd060	trigger__UseItems	[synchrony]
+004dd2d0	trigger__OnPressB	[synchrony] action-button trigger.
+004ef370	web_wall__StartBreakAtPoint	[synchrony]
+0052cd20	Pause_Mgr__RenderMainWindow	[synchrony] (this,0) pause summary background.
+0052d740	Pause_Mgr__Toggle	[synchrony] this = g_PauseMgr 0x00763208.
+0053b780	char_anim__AdvanceFrame_guess	[synchrony] frame advance; reads the engine clamp-vs-wrap switch.
+0055abc0	layer_mgr__LoadLevel	[synchrony] only caller of layer_mgr__LoadObjects.
+0055d520	AIAction__Factory	[synchrony] switch on ActionType (case 4 = ActionSetGoalList -> ctor 0x005D0580).
+00572ce0	event_mgr__ApplyPainFromTable	[synchrony] looks up "<who>_<AnimEvent>[_<level>]" (x_strlwr'd) in the pain table -> damage.
+00595310	PhysController__UpdateGoals	[synchrony] caches result at PhysController+0x190.
+00595730	PhysController__ProcessGoal	[synchrony] returns early if goal is null.
+005aa750	SenseController__GetOwner	[synchrony]
+005aaad0	SenseController__UpdateSensedArray	[synchrony] acquires sensed targets.
+005ab3f0	SenseController__CanSmell	[synchrony]
+005ab800	SenseController__CanSee	[synchrony] uses target's class signature; 005AB9C2 jne -> return 1.
+005af160	StateController__GetGoalListFromName	[synchrony] goal lists at StateController+0xE0/+0xE4.
+005af960	StateController__GetCurrentGoal	[synchrony]
+005af980	StateController__PopFrontGoal	[synchrony]
+005af9f0	StateController__PushGoal	[synchrony]
+005cc300	AIAction__Fire	[synchrony] called by AIManager links that pass their test.
+005cc330	AIAction__OnAdvanceLogic	[synchrony] action vtbl+0x14.
+005d06f0	ActionSetGoalList__Execute	[synchrony] vtable 0x006F4640; resolves CharacterGuid(+0x18).
+0063fb10	bin_in__ctor	[synchrony]
+0063fb50	bin_in__dtor	[synchrony]
+0063fc50	bin_in__OpenFile	[synchrony] (const char* name)
+0063ff20	bin_in__ReadHeader	[synchrony]
+0063ffc0	bin_in__ReadFields	[synchrony]
+00648080	x_strlwr	[synchrony]
+0069fe40	ui__CreateCtrl	[synchrony]
+006a13b0	ui__RegisterTemplate	[synchrony]
+006a1430	ui__OpenDialog	[synchrony] every menu screen goes through it.
+006a16c0	ui__CloseDialog	[synchrony] __stdcall(ctx, popTopFlag) ret 8.
+006a22e0	ui_dialog__BaseCtor	[synchrony]
+006a2400	ui_dialog__BaseCreate	[synchrony]
+006a32c0	ui_ctrl__SetId	[synchrony]
+006a3320	ui_dialog__GetCtrlById	[synchrony]
+006a5e20	ui_slider__SetRange	[synchrony] thiscall(slider, min, max) ret 8.
+006c035e	operator_new	[synchrony]
+# ---- bilbo input + state machine ----
+0042a6a0	Input_IsActionDown_guess	(actionId) -> nonzero while the mapped game action is held. GLOBAL (not per-player). Seen ids: 0x18 look/first-person?, 0x2c/0x2d, 0x32/0x33 forward/back(or strafe), 0x34-0x37 modifiers.
+00671130	Input_GetAxis_guess	(axisId, 0) -> float analog axis. 0x9a/0x9b = mouse/camera X/Y.
+004323e0	bilbo__ReadInput	Reads global input (Input_IsActionDown_guess / Input_GetAxis_guess) into this->input: +0x600/+0x604 move stick, +0x618/+0x61c camera stick (later flipped by invert options DAT_00762b04/08), +0x700/+0x704 flags, +0x710 any-input, +0x718 desired yaw (vf[0x10c/4]() + pi when moving back).
+00432940	bilbo__ComputeMoveVector_guess	Stick (+0x600..) x camera basis -> world move vector +0x630..+0x638, scaled by magnitude.
+0044c120	bilbo__PlaySfx_guess	(id, volume 1.0): ids 3 hit, 4 sparks/block, 0x10 land.
+00647b10	Rand_Int	(lo, hi) random integer.
+00434ca0	Inventory_GetCount_guess	(itemId) -> float count (item 6 checked on poison pain types 15/17).
+00421120	bilbo__OnApplyPain	vtable slot 30. (srcGuidLo, srcGuidHi, vec3* hitPos, ?, float damage, ?, float knockback, int painType). Ignored in DEATH(26)/CONV(32,33) or if invulnerable(+0x44c). Picks block/hit reaction (STING_BLOCK, STAFF_BLOCK, HitStick/Sparks fx) and QUEUES damage: +0x3f8=damage, +0x3fc=knockback, +0x400=pending (state handlers react; OnAdvanceLogic clears it).
+# ---- animation ----
+004258a0	AnimRef_GetGroup_guess	Lock+unlock resource handle at this+4, return its pointer (the anim_group of an anim player/ref).
+0053cc70	anim_group__FindAnimIndex	this=anim_group. (name) -> anim index or -1. Hash h=5381; h=h*33 ^ toupper(c); open addressing over {hash,index} pairs at +0x3c (size 2*count(+0x54)); confirms by strcmp on 0x50-byte records at +0x58 (name first, frame count ushort @+0x30, flags @+0x2e bit0 = loop?).
+00540840	char_anim_player__SetAnim	(animIdx, p3->+4, p4->+8, blendTime): dirty bone cache, anim_track_controller__SetAnim(idx, blend), duration +0x2c = frames * frameTime(DAT_006f3c10), reset root-motion accumulators +0x30..+0x48.
+005434b0	anim_track_controller__SetAnim	(idx, blendTime): idx<0 -> 0. Same clip and still playing (or looping) -> keep; else start/blend over blendTime.
+# ---- bilbo inventory (this = g_BilboInventory 0x0075BBE0); HEALTH IS ITEM 4 ----
+00434c10	Inventory_GetMaxHealth	return *(float*)(this+0xb34)  (= 0x0075C714).
+00434c40	Inventory_SetCount	(id, v): counts[id] (+0x1cc+id*4) = clamp(v, min +0x4e4+id*8, max +0x4e8+id*8).
+00434ca0	Inventory_GetCount	(id): id<199 -> float counts[id] else 0. Item names: table 0x00720fa0 (see Hobbit-RE/inventory_items.txt). 4=Health 48=Health Potion 51=Sting 52=The Ring 53=Staff 54-56 special stones.
+00434cd0	Inventory_GetCountByName	(xstring key) -> GetCount(IdFromName(key)).
+00434d10	Inventory_Add	(id, amount): counts[id] += amount, clamped to [min,max].
+00434d90	Inventory_AddByName	(key, amount)
+00434dd0	Inventory_Remove	(id, amount): counts[id] -= amount, clamped at min.
+00434e10	Inventory_RemoveByName	(key, amount)
+00434eb0	Inventory_IdFromName	(xstring* key) -> id or -1. Same djb2-xor uppercase hash as anim names; 0x18c buckets at this+0xb60; names PTR table 0x00720fa0.
+00511cf0	PauseMenu_UseHealthPotion_guess	If Health(4) < MaxHealth and potions(48) > 0: potions -1, Health +24, sound "OptionSelect"; else "OptionCancel".
+00649b20	xstring__ctor_guess	Builds a temporary string key from char* (used for inventory/name lookups).
+00649ba0	xstring__dtor_guess	Destroys it.
+# ---- bilbo state machine handlers (auto from 0x00439a60 + BILBO_STATE enum) ----
+00439a60	bilbo__ApplyStateTransition	Loop<=8: if next(+0x8d8)!=cur(+0x8d4) or force(+0x9b4): OnExit[cur]; cur=next; OnEnter[cur]; then OnUpdate[cur]; repeat if update requested a new state.
+0043a3f0	bilbo__RequestState	(state, file, line): next(+0x8d8)=state, +0x9a4/+0x9a8 = requester file/line (debug), +0x9b4=0. Applied by bilbo__ApplyStateTransition.
+00426c60	bilbo__UpdateTargeting	FindTargets, pick lock-on target from GUID list +0x46d8 (index +0x46d4), camera lock FUN_0056b710.
+004425a0	bilbo__DecayImpulse	Push velocity +0x774..+0x77c = base(+0x780..) * remaining/duration(+0x78c); timer +0x790 += dt.
+0043b110	bilbo__IDLE_OnExit	Bilbo state handler: bilbo__IDLE_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043cd70	bilbo__RUN_OnExit	Bilbo state handler: bilbo__RUN_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043e0a0	bilbo__JUMP_OnExit	Bilbo state handler: bilbo__JUMP_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043e880	bilbo__FALL_OnExit	Bilbo state handler: bilbo__FALL_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043f910	bilbo__CLIMB_WALL_OnExit	Bilbo state handler: bilbo__CLIMB_WALL_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043fb50	bilbo__WALL_PULLUP_OnExit	Bilbo state handler: bilbo__WALL_PULLUP_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042e070	bilbo__EDGE_MOUNT_OnExit	Bilbo state handler: bilbo__EDGE_MOUNT_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042ec20	bilbo__EDGE_GRAB_OnExit	Bilbo state handler: bilbo__EDGE_GRAB_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042eed0	bilbo__EDGE_PULLUP_OnExit	Bilbo state handler: bilbo__EDGE_PULLUP_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004404d0	bilbo__POLEJUMP_OnExit	Bilbo state handler: bilbo__POLEJUMP_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004287e0	bilbo__CHAIN_ATTACK_OnExit	Bilbo state handler: bilbo__CHAIN_ATTACK_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429c50	bilbo__STONE_ATTACK_OnExit	Bilbo state handler: bilbo__STONE_ATTACK_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00440b70	bilbo__FIRST_PERSON_LOOK_OnExit	Bilbo state handler: bilbo__FIRST_PERSON_LOOK_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a030	bilbo__FORWARD_INAIR_ATTACK_OnExit	Bilbo state handler: bilbo__FORWARD_INAIR_ATTACK_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00440f70	bilbo__DEATH_OnExit	Bilbo state handler: bilbo__DEATH_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441300	bilbo__DEATH_FALL_OnExit	Bilbo state handler: bilbo__DEATH_FALL_OnExit, bilbo__DEATH_WATER_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00439490	bilbo__CLIMB_LADDER_OnExit	Bilbo state handler: bilbo__CLIMB_LADDER_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00439770	bilbo__LADDER_PULLUP_OnExit	Bilbo state handler: bilbo__LADDER_PULLUP_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441880	bilbo__MINE_CART_RIDE_OnExit	Bilbo state handler: bilbo__MINE_CART_RIDE_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441e30	bilbo__MINE_CART_SWING_OnExit	Bilbo state handler: bilbo__MINE_CART_SWING_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00442270	bilbo__CONVERSATION_TALK_OnExit	Bilbo state handler: bilbo__CONVERSATION_TALK_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044c080	bilbo__ROPE_CLIMB_OnExit	Bilbo state handler: bilbo__ROPE_CLIMB_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004497b0	bilbo__PUSH_BLOCK_OnExit	Bilbo state handler: bilbo__PUSH_BLOCK_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00432140	bilbo__HOISTING_OnExit	Bilbo state handler: bilbo__HOISTING_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043b5d0	bilbo__FIDGET_OnExit	Bilbo state handler: bilbo__FIDGET_OnExit (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043a6a0	bilbo__IDLE_OnEnter	Bilbo state handler: bilbo__IDLE_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043ee60	bilbo__FLY_OnEnter	Bilbo state handler: bilbo__FLY_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043b940	bilbo__RUN_OnEnter	Bilbo state handler: bilbo__RUN_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043cdc0	bilbo__SNEAK_OnEnter	Bilbo state handler: bilbo__SNEAK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043d570	bilbo__JUMP_OnEnter	Bilbo state handler: bilbo__JUMP_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043e180	bilbo__FALL_OnEnter	Bilbo state handler: bilbo__FALL_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043e970	bilbo__LAND_OnEnter	Bilbo state handler: bilbo__LAND_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043ef60	bilbo__CROUCH_SLIDE_OnEnter	Bilbo state handler: bilbo__CROUCH_SLIDE_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043f1c0	bilbo__CLIMB_WALL_OnEnter	Bilbo state handler: bilbo__CLIMB_WALL_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043f950	bilbo__WALL_PULLUP_OnEnter	Bilbo state handler: bilbo__WALL_PULLUP_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042dd20	bilbo__EDGE_MOUNT_OnEnter	Bilbo state handler: bilbo__EDGE_MOUNT_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042e0c0	bilbo__EDGE_GRAB_OnEnter	Bilbo state handler: bilbo__EDGE_GRAB_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042ec70	bilbo__EDGE_PULLUP_OnEnter	Bilbo state handler: bilbo__EDGE_PULLUP_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042ef70	bilbo__EDGE_DROP_OFF_OnEnter	Bilbo state handler: bilbo__EDGE_DROP_OFF_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043fbd0	bilbo__POLEJUMP_OnEnter	Bilbo state handler: bilbo__POLEJUMP_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00427390	bilbo__CHAIN_ATTACK_OnEnter	Bilbo state handler: bilbo__CHAIN_ATTACK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00428830	bilbo__TARG_IDLE_OnEnter	Bilbo state handler: bilbo__TARG_IDLE_OnEnter, bilbo__TARG_RUN_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429110	bilbo__TARG_JUMP_OnEnter	Bilbo state handler: bilbo__TARG_JUMP_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429a60	bilbo__STONE_ATTACK_OnEnter	Bilbo state handler: bilbo__STONE_ATTACK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00440530	bilbo__FIRST_PERSON_LOOK_OnEnter	Bilbo state handler: bilbo__FIRST_PERSON_LOOK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004298d0	bilbo__TARG_STRAFE_ATTACK_OnEnter	Bilbo state handler: bilbo__TARG_STRAFE_ATTACK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429c60	bilbo__FORWARD_INAIR_ATTACK_OnEnter	Bilbo state handler: bilbo__FORWARD_INAIR_ATTACK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a0d0	bilbo__BACKWARD_BLOCK_OnEnter	Bilbo state handler: bilbo__BACKWARD_BLOCK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a280	bilbo__KNOCKBACK_OnEnter	Bilbo state handler: bilbo__KNOCKBACK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00440de0	bilbo__DEATH_OnEnter	Bilbo state handler: bilbo__DEATH_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441000	bilbo__DEATH_FALL_OnEnter	Bilbo state handler: bilbo__DEATH_FALL_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004385d0	bilbo__CLIMB_LADDER_OnEnter	Bilbo state handler: bilbo__CLIMB_LADDER_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00439500	bilbo__LADDER_PULLUP_OnEnter	Bilbo state handler: bilbo__LADDER_PULLUP_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441370	bilbo__MINE_CART_RIDE_OnEnter	Bilbo state handler: bilbo__MINE_CART_RIDE_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004419d0	bilbo__MINE_CART_SWING_OnEnter	Bilbo state handler: bilbo__MINE_CART_SWING_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00442070	bilbo__CONVERSATION_LISTEN_OnEnter	Bilbo state handler: bilbo__CONVERSATION_LISTEN_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00442140	bilbo__CONVERSATION_TALK_OnEnter	Bilbo state handler: bilbo__CONVERSATION_TALK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004422b0	bilbo__CINEMATIC_OnEnter	Bilbo state handler: bilbo__CINEMATIC_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044b1b0	bilbo__ROPE_CLIMB_OnEnter	Bilbo state handler: bilbo__ROPE_CLIMB_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a550	bilbo__BLOCKED_OnEnter	Bilbo state handler: bilbo__BLOCKED_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00448ba0	bilbo__PUSH_BLOCK_OnEnter	Bilbo state handler: bilbo__PUSH_BLOCK_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044c190	bilbo__SLIDING_OnEnter	Bilbo state handler: bilbo__SLIDING_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441f70	bilbo__LAUNCHING_OnEnter	Bilbo state handler: bilbo__LAUNCHING_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004314f0	bilbo__HOISTING_OnEnter	Bilbo state handler: bilbo__HOISTING_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044dfc0	bilbo__USE_OnEnter	Bilbo state handler: bilbo__USE_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043b130	bilbo__FIDGET_OnEnter	Bilbo state handler: bilbo__FIDGET_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441160	bilbo__DEATH_WATER_OnEnter	Bilbo state handler: bilbo__DEATH_WATER_OnEnter (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043a7e0	bilbo__IDLE_OnUpdate	Bilbo state handler: bilbo__IDLE_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043eec0	bilbo__FLY_OnUpdate	Bilbo state handler: bilbo__FLY_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043b970	bilbo__RUN_OnUpdate	Bilbo state handler: bilbo__RUN_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043cea0	bilbo__SNEAK_OnUpdate	Bilbo state handler: bilbo__SNEAK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043d6b0	bilbo__JUMP_OnUpdate	Bilbo state handler: bilbo__JUMP_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043e250	bilbo__FALL_OnUpdate	Bilbo state handler: bilbo__FALL_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043ecc0	bilbo__LAND_OnUpdate	Bilbo state handler: bilbo__LAND_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043f070	bilbo__CROUCH_SLIDE_OnUpdate	Bilbo state handler: bilbo__CROUCH_SLIDE_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043f290	bilbo__CLIMB_WALL_OnUpdate	Bilbo state handler: bilbo__CLIMB_WALL_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043fa00	bilbo__WALL_PULLUP_OnUpdate	Bilbo state handler: bilbo__WALL_PULLUP_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042de50	bilbo__EDGE_MOUNT_OnUpdate	Bilbo state handler: bilbo__EDGE_MOUNT_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042e260	bilbo__EDGE_GRAB_OnUpdate	Bilbo state handler: bilbo__EDGE_GRAB_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042ed30	bilbo__EDGE_PULLUP_OnUpdate	Bilbo state handler: bilbo__EDGE_PULLUP_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042efc0	bilbo__EDGE_DROP_OFF_OnUpdate	Bilbo state handler: bilbo__EDGE_DROP_OFF_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043fcc0	bilbo__POLEJUMP_OnUpdate	Bilbo state handler: bilbo__POLEJUMP_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004274b0	bilbo__CHAIN_ATTACK_OnUpdate	Bilbo state handler: bilbo__CHAIN_ATTACK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00428850	bilbo__TARG_IDLE_OnUpdate	Bilbo state handler: bilbo__TARG_IDLE_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00428aa0	bilbo__TARG_RUN_OnUpdate	Bilbo state handler: bilbo__TARG_RUN_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429410	bilbo__TARG_JUMP_OnUpdate	Bilbo state handler: bilbo__TARG_JUMP_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429ae0	bilbo__STONE_ATTACK_OnUpdate	Bilbo state handler: bilbo__STONE_ATTACK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004405f0	bilbo__FIRST_PERSON_LOOK_OnUpdate	Bilbo state handler: bilbo__FIRST_PERSON_LOOK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004299e0	bilbo__TARG_STRAFE_ATTACK_OnUpdate	Bilbo state handler: bilbo__TARG_STRAFE_ATTACK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00429d00	bilbo__FORWARD_INAIR_ATTACK_OnUpdate	Bilbo state handler: bilbo__FORWARD_INAIR_ATTACK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a250	bilbo__BACKWARD_BLOCK_OnUpdate	Bilbo state handler: bilbo__BACKWARD_BLOCK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a520	bilbo__KNOCKBACK_OnUpdate	Bilbo state handler: bilbo__KNOCKBACK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00440ec0	bilbo__DEATH_OnUpdate	Bilbo state handler: bilbo__DEATH_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441060	bilbo__DEATH_FALL_OnUpdate	Bilbo state handler: bilbo__DEATH_FALL_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00438990	bilbo__CLIMB_LADDER_OnUpdate	Bilbo state handler: bilbo__CLIMB_LADDER_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004395b0	bilbo__LADDER_PULLUP_OnUpdate	Bilbo state handler: bilbo__LADDER_PULLUP_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441450	bilbo__MINE_CART_RIDE_OnUpdate	Bilbo state handler: bilbo__MINE_CART_RIDE_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441a80	bilbo__MINE_CART_SWING_OnUpdate	Bilbo state handler: bilbo__MINE_CART_SWING_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00442320	bilbo__CINEMATIC_OnUpdate	Bilbo state handler: bilbo__CINEMATIC_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044b3b0	bilbo__ROPE_CLIMB_OnUpdate	Bilbo state handler: bilbo__ROPE_CLIMB_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0042a5d0	bilbo__BLOCKED_OnUpdate	Bilbo state handler: bilbo__BLOCKED_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00448d80	bilbo__PUSH_BLOCK_OnUpdate	Bilbo state handler: bilbo__PUSH_BLOCK_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044c250	bilbo__SLIDING_OnUpdate	Bilbo state handler: bilbo__SLIDING_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00442040	bilbo__LAUNCHING_OnUpdate	Bilbo state handler: bilbo__LAUNCHING_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+004318d0	bilbo__HOISTING_OnUpdate	Bilbo state handler: bilbo__HOISTING_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0044e030	bilbo__USE_OnUpdate	Bilbo state handler: bilbo__USE_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+0043b180	bilbo__FIDGET_OnUpdate	Bilbo state handler: bilbo__FIDGET_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+00441200	bilbo__DEATH_WATER_OnUpdate	Bilbo state handler: bilbo__DEATH_WATER_OnUpdate (dispatched by bilbo__ApplyStateTransition 0x00439a60).
+# ---- more GameObject base slots (functions exist in headless copy; GUI needs CreateVtableFunctions) ----
+004aa420	GameObject__OnAdvanceLogic	slot 4 base: empty (profiler scope "object::OnAdvanceLogic" only).
+00425540	GameObject__GetL2W	slot 13 (+0x34): (mat4* out) builds local-to-world matrix from Orientation(+0x68) and position(+0x14).
+004aa9b0	GameObject__GetNameXString	slot 20 (+0x50): (out) -> string object from vf19 GetName.
+004e3f10	GameObject__OnApplyPain	slot 30 (+0x78) base: return 0 (pain not handled). Bilbo: bilbo__OnApplyPain 0x00421120.
+004ac5a0	GameObject__GetCollisionFlags	slot 36 (+0x90): bit 4 set if camera collides (FUN_004ab440).
+00452cb0	GameObject__SetFlag2000	slot 39 (+0x9c): ObjectFlags |= 0x2000; if arg also |= 0x1000.
+004ab4e0	GameObject__EnumerateProperties	slot 44 (+0xb0) [synchrony name]: (prop_array&) lists editor properties.
+004ab750	GameObject__SetProperty	slot 45 (+0xb4) [synchrony name]: (const char* name, ed_property&).
+004abdf0	GameObject__GetProperty	slot 46 (+0xb8) [synchrony name]: (ed_property& out, const char* name).
+00425950	ReturnOne	return 1 (CharacterObject slot 9 = IsCharacter).
+# ---- CharacterObject (vtable 0x006ecc88; slots 61-65 added) ----
+00468280	CharacterObject__FreeAnimPlayer	slot 3: deletes char_anim_player at this+0x128 (FUN_005405d0 dtor + operator delete).
+00468250	CharacterObject__FreeAnimPlayer2	slot 62: same body as slot 3.
+00467cd0	CharacterObject__StartTalking	slot 63: (voiceHandle) -> +0x19c; sets up "LipSync" anim channel.
+00467e40	CharacterObject__StopTalking	slot 64: +0x19c=-1; marks anim player (vf +0x154 = GetAnimPlayer, slot 85 in bilbo/NPC) dirty and resets its track.
+004682b0	CharacterObject__GetDefaultKey	slot 65: returns string key built from DAT_00720670.
+00468330	CharacterObject__ResetState1a4	slot 43: +0x1a4 = +0x1b8, then vf35(flags(+0x7f)&4 >>2, -1).
+004698a0	CharacterObject__SetFlag2000	slot 39 override (same body as GameObject).
+# ---- NPC damage ----
+004a4610	NPCObject__OnApplyPain	slot 30. (attackerGuidLo, attackerGuidHi, painEvent*, ...): many early-outs (return 0 = ignored), then NPCObject__TakeHit; returns 1.
+004a5130	NPCObject__TakeHit	(attackerLo, attackerHi, painEvent* ev). Hit fx at bbox centre: HitSting (Sting, unblocked) / Sparks (blocked) / HitStick. If attacker==Bilbo: combo FUN_00422360 + sfx. Weapon 0x12 -> "Freeze". Impact sound by weapon(ev+0x28: 0/7 claw/bite/enemy blade, 1/4 Sting, 0x12 freeze, 0x13 fire) x surface(ev+0x34: 0 flesh 1 wood 2 blade/blocked 3 stone). hp(+0x290) -= ev+0x30 * ev+0x2c * ev+0x20. Flag +0x268 bit 0x8000000 = last hit by HARD-CODED Bilbo GUID (remote players won't get credit).
+# ---- Bilbo.cpp small helpers ----
+00422420	bilbo__GetHealth	Inventory_GetCount(4 = Health).
+00422430	bilbo__GetPoisonStrength	+0x5f38 (set by OnApplyPain poison types 15/17).
+00422440	bilbo__GetPoisonDamage	+0x5f40.
+00422450	bilbo__IsPoisoned	+0x5f34 (duration +0x5f3c from tuning+0x1c8).
+00422460	bilbo__GetVigor	Inventory_GetCount(6 = Vigor Health).
+00422470	bilbo__GetWeapon	Selected weapon from flags: +0x3b0 -> 3 Stones, +0x3c0 -> 0 Sting, +0x3d0 -> 1 Staff, none -> 2.
+004224a0	bilbo__GetTargetList	(outPos vec3[] from +0x48d8, outF[] from +0x4bd8, int* outCount=+0x4cd8, int* outIdx=+0x46d4) returns current target +0x46d0.
+004228e0	bilbo__GetCoins	(int)Inventory_GetCount(1 = Coin).
+00422f30	bilbo__SetYaw	(yaw): Bilbo orientation radian3 at +0x470 (yaw +0x474) mirrored to +0x5a0 (vf12) and +0x7ac; bumps anim dirty counters +0x580..+0x59c. SYNC THIS for rotation.
+00422fb0	bilbo__GetYaw	return +0x474.
+00423c80	bilbo__IsRingEquipped	return +0x420.
+00424770	ed_property__assign	Copies a 0x220-byte ed_property (512-byte resource name + bbox/color/vec3/rad3/guid/s32/f32/bool). 112 callers (property get/set code).
+00424ba0	bilbo__HasF434	return +0x434 > 0.
+00424bc0	bilbo__SetF5ef0	+0x5ef0 = 1.
+00424bd0	bilbo__Deactivate	slot 50 override: FUN_00542580 (anim player) then base 0x004ac540.
+00424ce0	bilbo__SetF250	+0x250 = 1.
+00422510	bilbo__IsOnWalkableGround	vf[80](+0x140)(pos, 0, &dist/normal, &hit) ground probe; false if slope steeper than tuning+0x58 (cos 45deg) unless flag +0xb1&0x20; requires +0x768==0 and !FUN_00467eb0.
+00424f20	bilbo__ResetToIdle	+0x124=2; ground snap via vf[80] + SetPosition; RequestState(IDLE); anim IDLE_WEAPON or IDLE_NO_WEAPON by weapon flags. Called by AI/script action 0x005d9230 when target is Bilbo.
+00424a30	Mat44_Copy	16-float copy.
+00424aa0	Mat44_NormalizeAxes	Normalizes the 3 basis rows (removes scale).
+00421f80	bilbo__UpdateWeaponHitVolume_guess	Uses weapon prop GUIDs +0x4dc8/+0x4dd0: reads their world AABB (+0x44..) and merges/compares (attack volume).
+00422360	bilbo__OnWeaponHitFx_guess	Called from NPCObject__TakeHit when attacker is Bilbo: uses prop GUID +0x4da8 world AABB -> FUN_004947c0/FUN_004948c0 (effect around weapon).
+0041e0b0	bilbo__Move	slot 5 override: if pos inside world limits (DAT_006e9974..80): mark anim dirty, copy pos to +0x464, then GameObject__SetPosition(pos, reset). Else FUN_0044ca80 (BilboSupport.cpp out-of-world fallback).
+0041e1d0	bilbo__SetRotation	slot 7 override: bilbo__SetYaw(rot.y); mirror +0x470 -> +0x5a0; base Orientation +0x68 = rot.
+0041e1b0	bilbo__vf60	slot 60 override: base 0x004aaa80(arg) then SetYaw(arg[1]).
+0041b160	bilbo__PlaceFootprintDecal_guess	Only caller: event_mgr__HandleContactAudioEvent (anim foot-contact). Transforms a bone point (Mat44_TransformPoint) and calls decal_mgr__UpdateDecal -> footprint.
+# ---- AI targeting ----
+005be240	AIState__GetTargetGuid	mov ecx,[this+8] (StateController); jmp StateController__GetTargetGuid.
+005af0f0	StateController__GetTargetGuid	Returns u64 target GUID at this+0x180/+0x184 in EDX:EAX (Ghidra shows void). If 0: returns the OWNER NPC GUID (GetOwner()->GetGuid()) = "no target".
+005af120	StateController__GetOwner	Owner NPC GUID at +0x170/+0x174 -> obj_mgr__GetSlotFromGuid, cached pointer at +0x178.
+00629400	AIState_006f62b0__OnAdvanceLogic	AI state (vtable 0x006f62b0 slot 3) tick(dt): if target object gone -> StateController+0x180 = Bilbo GUID; timers +0x64/+0x6c; switch on sub-state +0x42.
+005aa850	Object_GetGuid	return *(u64*)(this+8) in EDX:EAX (generic GUID getter).
+00420560	bilbo__FinishFrame	Last call of OnAdvanceLogic: event_mgr__HandleAllEvents_1 on anim-event queue +0x454 (sounds/footsteps); when current anim (+0x5efc, group handle +0x5ef8) == "equip_weapon" and progress +0x5f04 passes the swap point (once, +0x4e1c): set weapon flags from HUD selection (FUN_00435870/FUN_00435800 type 3 Sting->+0x3c0, 5 Staff->+0x3d0, 6 Stones->+0x3b0); Ring equipped -> all off.
+00424890	ed_property_value__assign	Copies ed_property_value: char[512] resource name, bbox @+0x200, xcolor @+0x218, vec3 @+0x21c, radian3 @+0x228, guid @+0x238, s32/f32/bool after.
+00423e20	bilbo__UpdateRingVisuals	Ring on: alpha byte +0x4ea8 = 0x80 (translucent), blend +0x4eb8 = 1.0; off: 0xFF / 0.0. Drives ring screen effect FUN_004f3140(blend) and mode toggle FUN_00587cf0(blend>=threshold).
+00422190	bilbo__UpdateWeaponTrail_guess	Weapon prop GUID +0x4da8 -> effect object FUN_00494640/850/620 (colour -1, width 2.5): likely sword swoosh trail (FX_swooshmap.xbmp).
+00422590	bilbo__UpdateGroundContact_guess	FUN_00425e90(6); refresh standing-on GUID (FUN_00468420/30/10, cleared if object gone); ground probe vf[80](pos,1,...); fallback plane = flat up (0,1,0) through pos.
+0041e230	bilbo__RegisterSensePoints_guess	slot 28: unless global mode DAT_00777238 is 5/7: FUN_005784a0(guid) begin; 3x FUN_005799d0(pos + y offsets 006e998c/88/84, radius 70 (mode 1) or 50, guid); FUN_005785b0 end. Likely AI-visible sense spheres (a 2nd player needs these too).
+00421020	bilbo__OnMessage	slot 42: (msg*): ignore if msg sender GUID (msg[2..3]) == self. type 5 (checkpoint/save): if +0x410, heal Health(4) to MaxHealth (or FUN_004cdf30 when DAT_0075dae8==0). type 7: counter +0xa04 up to 10.
+00424cf0	bilbo__Respawn	Clear ground GUID(+0xa8), weapon flags (+0x3b0/+0x3c0/+0x3d0), FUN_004343c0 inventory reset, velocity +0x7a0..+0x7b0 = 0, FUN_004430e0(2), FUN_004cdf30 restore checkpoint, camera reset FUN_0056b6b0(1), RequestState(IDLE).
+004cdf30	SavePedestal_RestoreCheckpoint_guess	Called on respawn and on checkpoint message (bilbo__OnMessage type 5).
+0056b6b0	camera_mgr__Reset_guess	"CAMERAMGR: Camera reset, pop=%s" (arg 1 = pop into place).
+00423ec0	bilbo__EnumerateProperties	slot 44: Bilbo editor properties: m_bUsingStone, m_bUsingStaff, m_bUsingSting, m_bAttachedToPlatform, IsRingEquipped, IsPoisoned, PoisonTime, PoisonDelay, ForcedVisibility, LevelReset.
+00424080	bilbo__SetProperty	slot 45: set the properties above by name (ed_property). Clean way to sync weapon/ring/poison on a remote Bilbo.
+004a6d10	NPCObject__EnumerateProperties	slot 44: NPC editor properties incl. Tweaks\Run AI, Do StateControl, Do Senses, Do PhysControl, Do Collision, Do Render, Invulnerable, Die Immediately, Activity Sphere Radius; Current/Max Hit Points; Courage Pts; Team 1 (Bilbo's); ShieldGuid; Creature Type Name; Combat Tweaks (block/evade/shove/strafe %); Debug\Current State/Target/Anim Name.

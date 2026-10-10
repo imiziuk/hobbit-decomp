@@ -1,0 +1,47 @@
+
+void __fastcall FUN_00434400(int param_1)
+
+{
+  int iVar1;
+  undefined4 *puVar2;
+  
+  iVar1 = 0;
+  puVar2 = (undefined4 *)(param_1 + 0x1cc);
+  do {
+    if ((((((iVar1 != 3) && (iVar1 != 1)) && (iVar1 != 2)) && ((iVar1 != 4 && (iVar1 != 6)))) &&
+        ((((((((iVar1 != 7 && ((iVar1 != 0x17 && (iVar1 != 0xf)))) && (iVar1 != 0x1a)) &&
+             (((iVar1 != 8 && (iVar1 != 0x30)) && (iVar1 != 0x31)))) &&
+            ((((iVar1 != 0x32 && (iVar1 != 0x33)) &&
+              ((iVar1 != 0x34 && ((iVar1 != 0x35 && (iVar1 != 0x15)))))) && (iVar1 != 0x16)))) &&
+           ((((iVar1 != 0x39 && (iVar1 != 0x3a)) && (iVar1 != 0x1d)) &&
+            ((iVar1 != 0x1e && (iVar1 != 0x1f)))))) &&
+          (((iVar1 != 0x20 && ((iVar1 != 0x21 && (iVar1 != 0x22)))) &&
+           ((iVar1 != 0x23 &&
+            (((((iVar1 != 0x24 && (iVar1 != 0x25)) && (iVar1 != 0x26)) &&
+              ((iVar1 != 0x27 && (iVar1 != 0x28)))) && (iVar1 != 0x29)))))))) &&
+         ((((((iVar1 != 0x2a && (iVar1 != 0x2b)) &&
+             ((iVar1 != 0x2c && (((iVar1 != 0x2d && (iVar1 != 0x2e)) && (iVar1 != 0xa2)))))) &&
+            (((iVar1 != 0xa3 && (iVar1 != 0xa4)) && (iVar1 != 0xa5)))) &&
+           (((iVar1 != 0xa6 && (iVar1 != 0xa7)) &&
+            ((iVar1 != 0xa8 && (((iVar1 != 0xa9 && (iVar1 != 0xaa)) && (iVar1 != 0xab)))))))) &&
+          ((iVar1 != 0xac && (iVar1 != 0xad)))))))) &&
+       ((((iVar1 != 0xae &&
+          ((((iVar1 != 0xaf && (iVar1 != 0xb0)) &&
+            ((iVar1 != 0xb1 &&
+             ((((iVar1 != 0xb2 && (iVar1 != 0xb3)) && (iVar1 != 0xb4)) &&
+              ((iVar1 != 0xb5 && (iVar1 != 0xb6)))))))) && (iVar1 != 0xb7)))) &&
+         (((iVar1 != 0xb8 && (iVar1 != 0xb9)) &&
+          ((iVar1 != 0xba && (((iVar1 != 0xbb && (iVar1 != 0xbc)) && (iVar1 != 0xbd)))))))) &&
+        ((((iVar1 != 0xbe && (iVar1 != 0xbf)) && (iVar1 != 0xc0)) &&
+         (((iVar1 != 0xc1 && (iVar1 != 0xc2)) &&
+          ((iVar1 != 0xc3 && ((iVar1 != 0xc4 && (iVar1 != 0xc5)))))))))))) {
+      *puVar2 = 0;
+    }
+    iVar1 = iVar1 + 1;
+    puVar2 = puVar2 + 1;
+  } while (iVar1 < 0xc6);
+  *(undefined4 *)(param_1 + 0xb5c) = 0;
+  *(undefined4 *)(param_1 + 0xb58) = 0xffffffff;
+  return;
+}
+

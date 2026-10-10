@@ -1,0 +1,1 @@
+{"addr":"0068eeed","name":"FUN_0068eeed","cc":"__cdecl","proto":"undefined FUN_0068eeed(int param_1)","c":"\nvoid __cdecl FUN_0068eeed(int param_1)\n\n{\n  *(byte *)(param_1 + 0x61) = *(byte *)(param_1 + 0x61) | 4;\n  return;\n}\n\n","globals":[],"callees":[]}

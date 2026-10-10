@@ -1,0 +1,1 @@
+{"addr":"004a40c0","name":"FUN_004a40c0","cc":"__stdcall","proto":"undefined FUN_004a40c0(void)","c":"\nvoid FUN_004a40c0(void)\n\n{\n  thunk_FUN_005a3490();\n  return;\n}\n\n","globals":[],"callees":[{"addr":"005b8080","name":"thunk_FUN_005a3490","cc":"__stdcall","ret":"undefined4","variadic":false,"external":false,"params":[]}]}

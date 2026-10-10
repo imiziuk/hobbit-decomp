@@ -1,0 +1,56 @@
+
+float10 __fastcall FUN_005a2bf0(float *param_1)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  uint uVar4;
+  float fVar5;
+  float fVar6;
+  float *pfVar7;
+  int iVar8;
+  int iVar9;
+  float10 fVar10;
+  float10 fVar11;
+  float10 fVar12;
+  float10 fVar13;
+  
+  fVar5 = *param_1 * *param_1;
+  iVar9 = 0;
+  fVar10 = (float10)DAT_006e92e4;
+  if (0 < (int)param_1[4]) {
+    iVar8 = 0;
+    do {
+      uVar4 = *(uint *)((int)param_1[5] + 0x30 + iVar8);
+      pfVar7 = (float *)((int)param_1[5] + iVar8);
+      if (((uVar4 & 1) != 0) && ((uVar4 & 2) == 0)) {
+        fVar1 = *pfVar7;
+        fVar2 = pfVar7[1];
+        fVar3 = pfVar7[2];
+        fVar6 = fVar5 * pfVar7[8];
+        if (param_1[9] == 0.0) {
+          *pfVar7 = fVar5 * pfVar7[6] + *pfVar7;
+          pfVar7[1] = fVar5 * pfVar7[7] + pfVar7[1];
+        }
+        else {
+          fVar6 = (pfVar7[2] - pfVar7[5]) + fVar6;
+          *pfVar7 = (*pfVar7 - pfVar7[3]) + fVar5 * pfVar7[6] + *pfVar7;
+          pfVar7[1] = (pfVar7[1] - pfVar7[4]) + fVar5 * pfVar7[7] + pfVar7[1];
+        }
+        pfVar7[2] = fVar6 + pfVar7[2];
+        pfVar7[3] = fVar1;
+        pfVar7[4] = fVar2;
+        pfVar7[5] = fVar3;
+        fVar11 = (float10)fVar1 - (float10)*pfVar7;
+        fVar12 = (float10)fVar2 - (float10)pfVar7[1];
+        fVar13 = (float10)fVar3 - (float10)pfVar7[2];
+        fVar10 = SQRT(fVar11 * fVar11 + fVar12 * fVar12 + fVar13 * fVar13) + fVar10;
+      }
+      iVar9 = iVar9 + 1;
+      iVar8 = iVar8 + 0x34;
+    } while (iVar9 < (int)param_1[4]);
+  }
+  return fVar10;
+}
+

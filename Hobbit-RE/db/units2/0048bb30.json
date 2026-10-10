@@ -1,0 +1,1 @@
+{"addr":"0048bb30","name":"FUN_0048bb30","cc":"__fastcall","proto":"uint FUN_0048bb30(int param_1)","c":"\nuint __fastcall FUN_0048bb30(int param_1)\n\n{\n  return (*(byte *)(param_1 + 0x154) & 8) >> 3;\n}\n\n","globals":[],"callees":[]}

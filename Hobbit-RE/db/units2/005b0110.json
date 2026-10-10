@@ -1,0 +1,1 @@
+{"addr":"005b0110","name":"FUN_005b0110","cc":"__fastcall","proto":"int FUN_005b0110(int param_1)","c":"\nint __fastcall FUN_005b0110(int param_1)\n\n{\n  FUN_005b0120();\n  return param_1 + 0x1e8;\n}\n\n","globals":[],"callees":[{"addr":"005b0120","name":"FUN_005b0120","cc":"__stdcall","ret":"undefined","variadic":false,"external":false,"params":[]}]}

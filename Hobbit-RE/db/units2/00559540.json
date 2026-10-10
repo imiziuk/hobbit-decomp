@@ -1,0 +1,1 @@
+{"addr":"00559540","name":"FUN_00559540","cc":"__cdecl","proto":"undefined FUN_00559540(int * param_1)","c":"\nvoid __cdecl FUN_00559540(int *param_1)\n\n{\n  if (*param_1 != 0) {\n    (**(code **)(*DAT_007f1000 + 0xe0))(DAT_007f1000,*param_1);\n  }\n  *param_1 = 0;\n  return;\n}\n\n","globals":[{"name":"DAT_007f1000","addr":"007f1000","type":"int *"}],"callees":[]}

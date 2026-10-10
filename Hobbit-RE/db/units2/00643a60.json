@@ -1,0 +1,1 @@
+{"addr":"00643a60","name":"FUN_00643a60","cc":"__fastcall","proto":"bool FUN_00643a60(int * param_1)","c":"\nbool __fastcall FUN_00643a60(int *param_1)\n\n{\n  return *param_1 <= param_1[2];\n}\n\n","globals":[],"callees":[]}

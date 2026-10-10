@@ -1,0 +1,20 @@
+AUTO_00454fb0: memory 0976AEF8 A=FFFF0000 B=00170000 (584 bytes written)
+  first divergence: index=1 A:eip=004E1E80 addr=0B7AC85C size=4 value=42480000 B:eip=004E1E80 addr=0B7AC85C size=4 value=4E049000
+  diff 007784DC A=00000020 B=00000012   original wrote it at 0058B0DD   ours wrote it at 0058AE02 (game code)
+  diff 007784E4 A=00000020 B=00000012   original wrote it at 0058B0C2   ours wrote it at 0058ADFB (game code)
+  diff 0077B430 A=00000000 B=00000004   ours wrote it at 0058AC8A (game code)
+  diff 0976AEF4 A=00000000 B=00010000   ours wrote it at 0058ADC6 (game code)
+
+AUTO_00461a70: memory 007789A4 A=FFFFFFFF B=FFFF0015 (198 bytes written)
+  first divergence: index=5 A:eip=00461BE0 addr=0B7D6CA0 size=4 value=3F800000 B:eip=1010EAA4 addr=0B7D6CA0 size=4 value=1
+  ours wrote it in @AUTO_00461a70@4 +0x1E4: 00461a70.c line 89: puVar3 = (undefined4 *)FUN_004607c0(param_1,local_8c,(short *)(param_1[0x2c] + iVar7),0);
+  diff 007789A4 A=FFFFFFFF B=FFFF0015   ours wrote it at 0058A4C2 (game code)
+  diff 00778E2C A=0015FFFF B=FFFFFFFF   original wrote it at 0058A4C2   ours wrote it at 0058A5DA (game code)
+  diff 007794A4 A=00000001 B=00000002   ours wrote it at 0058A40D (game code)
+  diff 007794C0 A=FFFFFFFF B=FFFF0016   ours wrote it at 0058A4C2 (game code)
+
+AUTO_00493980: memory 0B7986BC A=C3480000 B=FFFFFF38 (218 bytes written)
+  first divergence: index=63 A:eip=004939AF addr=0B7987A1 size=1 value=10 B:eip=1012C32A addr=0B798784 size=4 value=0
+  ours wrote it in @AUTO_00493980@4 +0x4A: 00493980.c line 29: param_1[0x3e] = 0x3f800000;
+  diff 0B7986BC A=C3480000 B=FFFFFF38   original wrote it at 00493A51
+      ours: 00493980.c line 49: local_30 = 200.0;

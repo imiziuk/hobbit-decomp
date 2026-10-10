@@ -1,0 +1,12 @@
+
+void __fastcall FUN_0048b6c0(int param_1)
+
+{
+  FUN_004ac510();
+  if (((*(byte *)(param_1 + 0x154) & 8) != 0) && ((*(byte *)(param_1 + 0x154) & 2) != 0)) {
+    FUN_00488c30(param_1 + 0xa8);
+  }
+  *(undefined4 *)(param_1 + 0x1b4) = 0;
+  return;
+}
+

@@ -1,0 +1,1 @@
+{"addr":"00534260","name":"FUN_00534260","cc":"__stdcall","proto":"undefined * FUN_00534260(void)","c":"\nundefined * FUN_00534260(void)\n\n{\n  return &DAT_007644fc;\n}\n\n","globals":[{"name":"DAT_007644fc","addr":"007644fc","type":"undefined"}],"callees":[]}

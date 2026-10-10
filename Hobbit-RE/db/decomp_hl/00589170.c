@@ -1,0 +1,29 @@
+
+int __fastcall FUN_00589170(int param_1)
+
+{
+  short sVar1;
+  short sVar2;
+  int iVar3;
+  int iVar4;
+  
+  sVar2 = *(short *)(param_1 + 0xe);
+  iVar3 = (int)sVar2;
+  if (iVar3 == -1) {
+    return -1;
+  }
+  iVar4 = iVar3 * 0x68;
+  sVar1 = *(short *)(*(int *)(param_1 + 8) + 0x48 + iVar4);
+  *(short *)(param_1 + 0xe) = sVar1;
+  if (sVar1 != -1) {
+    *(undefined2 *)(sVar1 * 0x68 + 0x4a + *(int *)(param_1 + 8)) = 0xffff;
+  }
+  if (*(short *)(param_1 + 0xc) != -1) {
+    *(short *)(*(short *)(param_1 + 0xc) * 0x68 + 0x4a + *(int *)(param_1 + 8)) = sVar2;
+  }
+  *(undefined2 *)(*(int *)(param_1 + 8) + 0x48 + iVar4) = *(undefined2 *)(param_1 + 0xc);
+  *(undefined2 *)(*(int *)(param_1 + 8) + 0x4a + iVar4) = 0xffff;
+  *(short *)(param_1 + 0xc) = sVar2;
+  return iVar3;
+}
+

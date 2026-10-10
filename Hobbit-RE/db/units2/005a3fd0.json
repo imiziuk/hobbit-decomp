@@ -1,0 +1,1 @@
+{"addr":"005a3fd0","name":"FUN_005a3fd0","cc":"__stdcall","proto":"undefined FUN_005a3fd0(int param_1)","c":"\nvoid FUN_005a3fd0(int param_1)\n\n{\n  if ((*(byte *)(*(int *)(param_1 + 4) + 8) & 2) != 0) {\n    (**(code **)(**(int **)(param_1 + 8) + 0xe4))();\n    return;\n  }\n  (**(code **)(**(int **)(param_1 + 8) + 0xe0))();\n  return;\n}\n\n","globals":[],"callees":[]}

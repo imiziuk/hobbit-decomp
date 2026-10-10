@@ -1,0 +1,1 @@
+{"addr":"006ca476","name":"FUN_006ca476","cc":"__cdecl","proto":"bool FUN_006ca476(FARPROC param_1)","c":"\nbool __cdecl FUN_006ca476(FARPROC param_1)\n\n{\n  BOOL BVar1;\n  \n  BVar1 = IsBadCodePtr(param_1);\n  return BVar1 == 0;\n}\n\n","globals":[],"callees":[{"addr":"006e9188"}]}

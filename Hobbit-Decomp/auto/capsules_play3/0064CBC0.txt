@@ -1,0 +1,6 @@
+function 0064CBC0 AUTO_0064cbc0
+verdict st0 A=34947 B=-1.81364e+19
+regs eax=02153FA8 ebx=00000001 ecx=02153FA2 edx=00000000 esi=00000000 edi=00000000 ebp=001AFF74 esp=001AF840 eflags=00000206 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=0
+diff_count 0

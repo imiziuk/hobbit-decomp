@@ -1,0 +1,8 @@
+function 004A28C0 AUTO_004a28c0
+verdict eax A=0CE6AB28 B=0CE72790
+regs eax=0CE72790 ebx=00000000 ecx=0CE72790 edx=006F6788 esi=0CE43E60 edi=0000000C ebp=0000000C esp=001AFBD0 eflags=00000206 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=1
+diff_count 0
+wa 004A294A 0CE6AB48 4 2
+wb 101363EB 0CE6AB48 4 2

@@ -1,0 +1,6 @@
+function 00677270 AUTO_00677270
+verdict esp after return A=001AFD74 B=001AFD6C (stack imbalance)
+regs eax=00000000 ebx=00222000 ecx=007F8798 edx=00000000 esi=00000000 edi=006C0C90 ebp=001AFF74 esp=001AFD68 eflags=00000246 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=0
+diff_count 0

@@ -1,0 +1,90 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_0050c980(void)
+
+{
+  _DAT_00732bdc = FUN_006a2260(0);
+  _DAT_00732be0 = FUN_006a22a0(0x78);
+  _DAT_00732be4 = FUN_006a2260(0x26c);
+  _DAT_00732be8 = FUN_006a22a0(0x1e);
+  _DAT_00732bec = 0;
+  _DAT_00732bf0 = 0;
+  _DAT_00732bf4 = 1;
+  _DAT_00732bf8 = 1;
+  _DAT_00732bfc = 1;
+  _DAT_00732c00 = 2;
+  _DAT_00732c04 = s_IDS_OPTIONS_VIDEO_00732db8;
+  _DAT_00732c08 = s_button_00731f30;
+  _DAT_00732c0c = FUN_006a2260(0);
+  _DAT_00732c10 = FUN_006a22a0(0x96);
+  _DAT_00732c14 = FUN_006a2260(0x26c);
+  _DAT_00732c18 = FUN_006a22a0(0x1e);
+  _DAT_00732c1c = 0;
+  _DAT_00732c20 = 1;
+  _DAT_00732c24 = 1;
+  _DAT_00732c28 = 1;
+  _DAT_00732c2c = 1;
+  _DAT_00732c30 = 3;
+  _DAT_00732c34 = s_IDS_OPTIONS_CAMERA_PC_00732da0;
+  _DAT_00732c38 = s_button_00731f30;
+  _DAT_00732c3c = FUN_006a2260(0);
+  _DAT_00732c40 = FUN_006a22a0(0xb4);
+  _DAT_00732c44 = FUN_006a2260(0x26c);
+  _DAT_00732c48 = FUN_006a22a0(0x1e);
+  _DAT_00732c4c = 0;
+  _DAT_00732c50 = 2;
+  _DAT_00732c54 = 1;
+  _DAT_00732c58 = 1;
+  _DAT_00732c5c = 1;
+  _DAT_00732c60 = 4;
+  _DAT_00732c64 = s_IDS_OPTIONS_CONTROLS_00732d88;
+  _DAT_00732c68 = s_button_00731f30;
+  _DAT_00732c6c = FUN_006a2260(0);
+  _DAT_00732c70 = FUN_006a22a0(0xd2);
+  _DAT_00732c74 = FUN_006a2260(0x26c);
+  _DAT_00732c78 = FUN_006a22a0(0x1e);
+  _DAT_00732c7c = 0;
+  _DAT_00732c80 = 3;
+  _DAT_00732c84 = 1;
+  _DAT_00732c88 = 1;
+  _DAT_00732c8c = 1;
+  _DAT_00732c90 = 5;
+  _DAT_00732c94 = s_IDS_OPTIONS_PERFORMANCE_00732d70;
+  _DAT_00732c98 = s_button_00731f30;
+  _DAT_00732c9c = FUN_006a2260(0);
+  _DAT_00732ca0 = FUN_006a22a0(0xf0);
+  _DAT_00732ca4 = FUN_006a2260(0x26c);
+  _DAT_00732ca8 = FUN_006a22a0(0x1e);
+  _DAT_00732cac = 0;
+  _DAT_00732cb0 = 4;
+  _DAT_00732cb4 = 1;
+  _DAT_00732cb8 = 1;
+  _DAT_00732cbc = 1;
+  _DAT_00732cc0 = 0;
+  _DAT_00732cc4 = s_IDS_DONE_00731f38;
+  _DAT_00732cc8 = s_button_00731f30;
+  _DAT_00732ccc = FUN_006a2260(0);
+  _DAT_00732cd0 = FUN_006a22a0(300);
+  _DAT_00732cd4 = FUN_006a2260(0x26c);
+  _DAT_00732cd8 = FUN_006a22a0(0x1e);
+  _DAT_00732cdc = 0;
+  _DAT_00732ce0 = 5;
+  _DAT_00732ce4 = 1;
+  _DAT_00732ce8 = 1;
+  _DAT_00732cec = 1;
+  _DAT_00732cf0 = 6;
+  _DAT_00732cf4 = s_IDS_NULL_00731f24;
+  _DAT_00732cf8 = s_frame2_00731f80;
+  _DAT_00732cfc = FUN_006a2260(0xe);
+  _DAT_00732d00 = FUN_006a22a0(0x31);
+  _DAT_00732d04 = FUN_006a2260(0x246);
+  _DAT_00732d08 = FUN_006a22a0(0x140);
+  _DAT_00732d0c = 0;
+  _DAT_00732d10 = 0;
+  _DAT_00732d14 = 0;
+  _DAT_00732d18 = 0;
+  _DAT_00732d1c = 3;
+  return;
+}
+

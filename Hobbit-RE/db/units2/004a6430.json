@@ -1,0 +1,1 @@
+{"addr":"004a6430","name":"FUN_004a6430","cc":"__thiscall","proto":"undefined FUN_004a6430(int param_1)","c":"\nvoid __thiscall FUN_004a6430(void *this,int param_1)\n\n{\n  FUN_00580a60((int)this + 0x310);\n  return;\n}\n\n","globals":[],"callees":[{"addr":"00580a60","name":"FUN_00580a60","cc":"__fastcall","ret":"undefined","variadic":false,"external":false,"params":["int"]}]}

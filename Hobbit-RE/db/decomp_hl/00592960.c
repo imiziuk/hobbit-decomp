@@ -1,0 +1,13 @@
+
+int __fastcall FUN_00592960(int param_1)
+
+{
+  int iVar1;
+  
+  iVar1 = *(int *)(param_1 + 0x158);
+  if (iVar1 == 0) {
+    return iVar1;
+  }
+  return *(int *)(iVar1 + 4);
+}
+

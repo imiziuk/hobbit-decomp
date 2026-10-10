@@ -1,0 +1,1 @@
+{"addr":"006c564c","name":"FUN_006c564c","cc":"__stdcall","proto":"DWORD * FUN_006c564c(void)","c":"\nDWORD * FUN_006c564c(void)\n\n{\n  DWORD *pDVar1;\n  \n  pDVar1 = FUN_006c3f43();\n  return pDVar1 + 3;\n}\n\n","globals":[],"callees":[{"addr":"006c3f43","name":"FUN_006c3f43","cc":"__stdcall","ret":"DWORD *","variadic":false,"external":false,"params":[]}]}

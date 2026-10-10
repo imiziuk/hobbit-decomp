@@ -1,0 +1,6 @@
+function 005082C0 AUTO_005082c0
+verdict esp after return A=001AFCE0 B=001AFCD8 (stack imbalance)
+regs eax=006F2DC8 ebx=032EE8C0 ecx=09F05210 edx=3D089430 esi=00000000 edi=0332E998 ebp=00000000 esp=001AFCD4 eflags=00000202 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=0
+diff_count 0

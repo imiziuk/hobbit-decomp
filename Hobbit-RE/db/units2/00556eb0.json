@@ -1,0 +1,1 @@
+{"addr":"00556eb0","name":"FUN_00556eb0","cc":"__thiscall","proto":"bool FUN_00556eb0(int * param_1)","c":"\nbool __thiscall FUN_00556eb0(void *this,int *param_1)\n\n{\n                    /* WARNING: Load size is inaccurate */\n  return (bool)('\\x01' - (*this != *param_1));\n}\n\n","globals":[],"callees":[]}

@@ -1,0 +1,1 @@
+{"addr":"00554720","name":"FUN_00554720","cc":"__thiscall","proto":"undefined FUN_00554720(undefined1 param_1)","c":"\nvoid __thiscall FUN_00554720(void *this,undefined1 param_1)\n\n{\n  *(undefined1 *)((int)this + 0xd4) = param_1;\n  return;\n}\n\n","globals":[],"callees":[]}

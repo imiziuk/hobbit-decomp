@@ -1,0 +1,1 @@
+{"addr":"00699496","name":"FUN_00699496","cc":"__fastcall","proto":"int FUN_00699496(int param_1)","c":"\nint __fastcall FUN_00699496(int param_1)\n\n{\n  int in_EAX;\n  \n  return (in_EAX * 0x1fe + 0xff + param_1) / (param_1 * 2);\n}\n\n","globals":[],"callees":[]}

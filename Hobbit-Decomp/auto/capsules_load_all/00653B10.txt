@@ -1,0 +1,6 @@
+function 00653B10 AUTO_00653b10
+verdict eax A=033C2D28 B=0000368C
+regs eax=0000368C ebx=00000001 ecx=007E3670 edx=00030408 esi=0000368C edi=007E3578 ebp=00808E58 esp=093CFF48 eflags=00000206 fpcw=027F
+teb 00206000 ourdll 10000000
+first_divergence index=0
+diff_count 0

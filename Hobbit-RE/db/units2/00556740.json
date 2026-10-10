@@ -1,0 +1,1 @@
+{"addr":"00556740","name":"FUN_00556740","cc":"__fastcall","proto":"undefined FUN_00556740(int param_1)","c":"\nvoid __fastcall FUN_00556740(int param_1)\n\n{\n  operator_new((int)*(short *)(param_1 + 0x1c) << 2);\n  return;\n}\n\n","globals":[],"callees":[{"addr":"006c035e","name":"operator_new","cc":"__cdecl","ret":"void *","variadic":false,"external":false,"params":["uint"]}]}

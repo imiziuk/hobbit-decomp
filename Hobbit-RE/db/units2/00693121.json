@@ -1,0 +1,1 @@
+{"addr":"00693121","name":"FUN_00693121","cc":"__cdecl","proto":"int FUN_00693121(byte * param_1)","c":"\nint __cdecl FUN_00693121(byte *param_1)\n\n{\n  undefined4 in_EAX;\n  \n  return CONCAT22((short)((uint)in_EAX >> 0x10),(ushort)*param_1) * 0x100 +\n         CONCAT22((short)((uint)param_1 >> 0x10),(ushort)param_1[1]);\n}\n\n","globals":[],"callees":[]}

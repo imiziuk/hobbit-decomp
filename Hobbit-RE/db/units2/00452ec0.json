@@ -1,0 +1,1 @@
+{"addr":"00452ec0","name":"FUN_00452ec0","cc":"__cdecl","proto":"undefined FUN_00452ec0(undefined4 param_1)","c":"\nvoid __cdecl FUN_00452ec0(undefined4 param_1)\n\n{\n  DAT_0075ca5c = param_1;\n  return;\n}\n\n","globals":[{"name":"DAT_0075ca5c","addr":"0075ca5c","type":"undefined4"}],"callees":[]}

@@ -1,0 +1,1 @@
+{"addr":"0053eb00","name":"FUN_0053eb00","cc":"__thiscall","proto":"undefined FUN_0053eb00(byte param_1)","c":"\nvoid __thiscall FUN_0053eb00(void *this,byte param_1)\n\n{\n                    /* WARNING: Load size is inaccurate */\n  *(uint *)this = *this | 1 << (param_1 & 0x1f);\n  return;\n}\n\n","globals":[],"callees":[]}

@@ -1,0 +1,82 @@
+
+undefined4 * __fastcall FUN_004fcb70(undefined4 *param_1)
+
+{
+  void *local_c;
+  undefined1 *puStack_8;
+  undefined4 local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_006d651a;
+  local_c = ExceptionList;
+  ExceptionList = &local_c;
+  FUN_0064cbe0();
+  FUN_004fb180();
+  local_4 = 0;
+  FUN_006499d0();
+  local_4._0_1_ = 1;
+  FUN_006499d0();
+  local_4 = CONCAT31(local_4._1_3_,2);
+  *param_1 = 0;
+  param_1[8] = 0;
+  param_1[9] = 0;
+  param_1[10] = 0;
+  param_1[0xb] = 0;
+  param_1[0xc] = 0;
+  param_1[0xd] = 1;
+  param_1[0xf] = 1;
+  param_1[0x10] = 0;
+  param_1[0x11] = 0;
+  param_1[0x12] = 0;
+  param_1[0x13] = 0;
+  param_1[0x14] = 0;
+  param_1[0x15] = 0;
+  param_1[0x16] = 0;
+  param_1[0x17] = 0;
+  param_1[0x18] = 0;
+  param_1[0x19] = 0;
+  param_1[0x1a] = 0;
+  param_1[0x1c] = 0;
+  param_1[0x1d] = 0;
+  param_1[0x1e] = 0;
+  param_1[0x1f] = 0;
+  param_1[0x20] = 0;
+  param_1[0x21] = 0;
+  param_1[0x15e] = 0;
+  param_1[0x15f] = 0;
+  param_1[0x163] = 0;
+  param_1[0x164] = 200;
+  param_1[0x165] = 0x96;
+  param_1[0x166] = 0;
+  param_1[0x167] = 0;
+  param_1[0x168] = 6;
+  param_1[0x169] = 0;
+  param_1[0x16a] = 0;
+  param_1[0x16b] = 0;
+  param_1[0x16c] = 0x42c80000;
+  param_1[0x16d] = 0x42c80000;
+  param_1[0x16e] = 0x42c80000;
+  param_1[0x16f] = 1;
+  param_1[0x170] = 0;
+  param_1[0x171] = 0;
+  param_1[0x172] = 1;
+  FUN_0064a2e0(&DAT_0071fe94);
+  FUN_0064a2e0(&DAT_0075b6e0);
+  param_1[0x189] = 0;
+  param_1[0x1b] = 0;
+  param_1[0x160] = 0;
+  param_1[0x161] = 0;
+  param_1[0x162] = 0;
+  param_1[399] = 1;
+  param_1[0x18d] = 0;
+  param_1[0x1d0] = 0;
+  param_1[0x1d1] = 0;
+  param_1[0x1d2] = 0;
+  param_1[0x1d3] = 0;
+  param_1[0x1d5] = 0;
+  param_1[0x1d4] = 0;
+  param_1[0x1d6] = 1;
+  ExceptionList = local_c;
+  return param_1;
+}
+

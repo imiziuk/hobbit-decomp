@@ -1,0 +1,1 @@
+{"addr":"006cc673","name":"FUN_006cc673","cc":"__cdecl","proto":"undefined FUN_006cc673(uint * param_1)","c":"\nvoid __cdecl FUN_006cc673(uint *param_1)\n\n{\n  uint uVar1;\n  \n  uVar1 = param_1[1];\n  param_1[1] = uVar1 >> 1 | param_1[2] << 0x1f;\n  param_1[2] = param_1[2] >> 1;\n  *param_1 = *param_1 >> 1 | uVar1 << 0x1f;\n  return;\n}\n\n","globals":[],"callees":[]}

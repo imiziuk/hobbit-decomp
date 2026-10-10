@@ -1,0 +1,10 @@
+
+void __fastcall FUN_00406080(int param_1)
+
+{
+  *(float *)(param_1 + 0x208) =
+       *(float *)(*(int *)(param_1 + 8) + 0x10) * *(float *)(param_1 + 0x210) +
+       *(float *)(param_1 + 0x20c);
+  return;
+}
+

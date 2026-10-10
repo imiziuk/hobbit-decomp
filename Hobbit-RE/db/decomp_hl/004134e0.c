@@ -1,0 +1,160 @@
+
+void __fastcall FUN_004134e0(int param_1)
+
+{
+  undefined4 uVar1;
+  void *pvVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  undefined8 uVar7;
+  undefined8 uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  undefined1 local_8c [128];
+  void *local_c;
+  undefined1 *puStack_8;
+  undefined4 local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_006cee8c;
+  local_c = ExceptionList;
+  ExceptionList = &local_c;
+  FUN_0053f530(0x7d000);
+  FUN_00647d10(param_1 + 4,s_Ch11_CloudsBurst_0071f4a4);
+  uVar1 = FUN_005496c0(s_SFX_GUI_audiopkg_0071cde8,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_Player_audiopkg_0071cdd4,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_Weapons_audiopkg_0071cdbc,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_Goblins_audiopkg_0071cdfc,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_Wolves_audiopkg_0071d724,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_DwarvesWar_audiopkg_0071f48c,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_ElvesWar_audiopkg_0071f474,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_HumansWar_audiopkg_0071f45c,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_AMB_Chapter11_audiopkg_0071f440,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_Chapter11_audiopkg_0071f428,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  uVar1 = FUN_005496c0(s_SFX_Ring_audiopkg_0071cda8,s_Audio_0071ce88);
+  FUN_00658080(uVar1);
+  FUN_00419620(local_8c,s_DX_CH11_PC_audiopkg_0071f414);
+  FUN_00658080(local_8c);
+  FUN_0054e6d0(s_CH_11_CloudsBurst_SubTitles_bin_0071f3f4);
+  pvVar2 = operator_new(0x88);
+  local_4 = 0;
+  if (pvVar2 == (void *)0x0) {
+    uVar1 = 0;
+  }
+  else {
+    uVar1 = FUN_00411df0();
+  }
+  local_4 = 0xffffffff;
+  *(undefined4 *)(param_1 + 0x104) = uVar1;
+  uVar3 = FUN_0054c210(s_CatCinema_0071f3e8,0);
+  uVar4 = FUN_0054c210(s_Cat_001_Trigger_0071f3d8,0);
+  uVar5 = FUN_0054c210(s_Cat_ControlPanel_001_0071f3c0,0);
+  uVar6 = FUN_0054c210(s_Gob_Slave_Cat_001_0071f3ac,0);
+  uVar7 = FUN_0054c210(s_Catapult_001_Projectile_0071f394,0);
+  uVar8 = FUN_0054c210(s_Catapult_001_0071f384,0);
+  FUN_00411ee0(uVar8,uVar7,uVar6,uVar5,uVar4,uVar3);
+  uVar3 = FUN_0054c210(s_Catapult_001_Target_1_0071f36c,0);
+  FUN_00412620(0,uVar3);
+  uVar3 = FUN_0041bcd0();
+  FUN_00412660(0,uVar3);
+  uVar3 = FUN_0054c210(s_Catapult_001_Target_2_0071f354,0);
+  FUN_00412620(1,uVar3);
+  uVar3 = FUN_0054c210(s_CB_ExplodingWall_Cat_0071f33c,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_032_0071f330,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_033_0071f324,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_034_0071f318,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_035_0071f30c,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_036_0071f300,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_037_0071f2f4,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_038_0071f2e8,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_039_0071f2dc,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_040_0071f2d0,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_041_0071f2c4,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_042_0071f2b8,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_043_0071f2ac,0);
+  FUN_00412660(1,uVar3);
+  uVar3 = FUN_0054c210(s_Gob_War_044_0071f2a0,0);
+  FUN_00412660(1,uVar3);
+  pvVar2 = operator_new(0x88);
+  local_4 = 1;
+  if (pvVar2 == (void *)0x0) {
+    uVar1 = 0;
+  }
+  else {
+    uVar1 = FUN_00411df0();
+  }
+  uVar10 = 0;
+  uVar9 = 0;
+  local_4 = 0xffffffff;
+  *(undefined4 *)(param_1 + 0x108) = uVar1;
+  uVar3 = FUN_0054c210(s_Cat_002_Trigger_0071f290,0);
+  uVar4 = FUN_0054c210(s_Cat_ControlPanel_002_0071f278,0);
+  uVar5 = FUN_0054c210(s_Gob_Slave_Cat_002_0071f264,0);
+  uVar6 = FUN_0054c210(s_Catapult_002_Projectile_0071f24c,0);
+  uVar7 = FUN_0054c210(s_Catapult_002_0071f23c,0);
+  FUN_00411ee0(uVar7,uVar6,uVar5,uVar4,uVar3,uVar9,uVar10);
+  uVar3 = FUN_0054c210(s_Catapult_002_Target_1_0071f224,0);
+  FUN_00412620(0,uVar3);
+  uVar3 = FUN_0041bcd0();
+  FUN_00412660(0,uVar3);
+  uVar3 = FUN_0054c210(s_Catapult_002_Target_2_0071f20c,0);
+  FUN_00412620(1,uVar3);
+  FUN_00548de0(s_LOCKBOX_BROKEN_XSC_0071f1f8);
+  FUN_00548de0(s_Props_arrow_wraith_rgeom_0071f1dc);
+  FUN_00548de0(s_PROPS_gobsword_D__xbmp_0071f1c4);
+  FUN_00548de0(s_PROPS_gobshield_D__xbmp_0071f1ac);
+  FUN_00548de0(s_PROPS_bow_elf_D__xbmp_0071f194);
+  FUN_00548de0(s_PROPS_sword_elf_D__xbmp_0071f17c);
+  FUN_00548de0(s_PROPS_powderkeg_D__xbmp_0071f164);
+  FUN_00548de0(s_PROPS_sword_goblin_D__xbmp_0071f148);
+  FUN_00548de0(s_PROPS_cata_tray_D__xbmp_0071f130);
+  FUN_00548de0(s_PROPS_sword_elf_D__xbmp_0071f17c);
+  FUN_00548de0(s_PROPS_glamdring_D__xbmp_0071f118);
+  FUN_00548de0(s_PROPS_glamdring_s_D__xbmp_0071f0fc);
+  FUN_00548de0(s_PROPS_glamdring_e_D__xbmp_0071f0e0);
+  FUN_00548de0(s_PROPS_gand_staff_D__xbmp_0071f0c4);
+  FUN_00548de0(s_PROPS_BalinsAxe_Txtr_copy_D__xbm_0071ebb8);
+  FUN_00548de0(s_PROPS_powderkeg_D__xbmp_0071f164);
+  FUN_00548de0(s_PROPS_sword_goblin_D__xbmp_0071f148);
+  FUN_00548de0(s_PROPS_cata_tray_D__xbmp_0071f130);
+  FUN_00548de0(s_PROPS_bow_man_D__xbmp_0071f0ac);
+  FUN_00548de0(s_PROPS_sword_man_D__xbmp_0071f094);
+  FUN_00548de0(s_PROPS_gobbag_D__xbmp_0071f07c);
+  FUN_00548de0(s_PROPS_cata_tray_D__xbmp_0071f130);
+  FUN_00548de0(s_PROPS_GOBBAG_RGEOM_0071f068);
+  FUN_00548de0(s_PROPS_gobbag_D__xbmp_0071f07c);
+  FUN_00548de0(s_CHARACTERS_DWARFANIMS_CHARANIM_0071f048);
+  FUN_00548de0(s_CH11_CINE05_SAVECARWINFAILURE_SW_0071f01c);
+  FUN_00548de0(s_CHARACTERS_GANDALFANIMS_CHARANIM_0071eff8);
+  FUN_00548de0(s_CHARACTERS_ELFMALEANIMS_CHARANIM_0071efd4);
+  FUN_00548de0(s_CHARACTERS_ELFFEMALEANIMS_CHARAN_0071efb0);
+  FUN_00548de0(s_CHARACTERS_WARG_WOLFANIMS_CHARAN_0071ef8c);
+  FUN_00548de0(s_FX_BeornBeam_xbmp_0071ef78);
+  ExceptionList = local_c;
+  return;
+}
+

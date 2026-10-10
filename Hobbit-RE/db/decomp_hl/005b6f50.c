@@ -1,0 +1,68 @@
+
+void __thiscall
+FUN_005b6f50(int param_1,int param_2,int param_3,int param_4,int param_5,int param_6)
+
+{
+  int *piVar1;
+  int iVar2;
+  void *pvVar3;
+  int iVar4;
+  int iVar5;
+  int *piVar6;
+  
+  if ((((param_2 != 0) || (param_3 != 0)) || (param_4 != 0)) || (param_5 != 0)) {
+    piVar1 = (int *)operator_new(0x14);
+    piVar6 = (int *)0x0;
+    if (piVar1 != (int *)0x0) {
+      *piVar1 = 0;
+      piVar1[1] = 0;
+      piVar1[2] = 0;
+      piVar1[3] = 0;
+      piVar1[4] = 0;
+      piVar6 = piVar1;
+    }
+    piVar6[4] = param_6;
+    *piVar6 = param_2;
+    piVar6[1] = param_3;
+    piVar6[2] = param_4;
+    piVar6[3] = param_5;
+    iVar5 = *(int *)(param_1 + 0x28);
+    if (*(int *)(param_1 + 0x30) < iVar5 + 1) {
+      if (*(int *)(param_1 + 0x38) == 0) {
+        iVar2 = *(int *)(param_1 + 0x30) / 2;
+        iVar4 = 1;
+        if (0 < iVar2) {
+          iVar4 = iVar2;
+        }
+        if (iVar4 + iVar5 < 1) {
+          iVar5 = 1;
+        }
+        else {
+          if (iVar2 < 1) {
+            iVar2 = 1;
+          }
+          iVar5 = iVar5 + iVar2;
+        }
+      }
+      else {
+        iVar5 = *(int *)(param_1 + 0x38) + iVar5;
+      }
+      pvVar3 = operator_new(iVar5 * 4);
+      iVar4 = 0;
+      if (0 < *(int *)(param_1 + 0x28)) {
+        do {
+          *(undefined4 *)((int)pvVar3 + iVar4 * 4) =
+               *(undefined4 *)(*(int *)(param_1 + 0x2c) + iVar4 * 4);
+          iVar4 = iVar4 + 1;
+        } while (iVar4 < *(int *)(param_1 + 0x28));
+      }
+      FUN_006bf840(*(undefined4 *)(param_1 + 0x2c));
+      *(void **)(param_1 + 0x2c) = pvVar3;
+      *(int *)(param_1 + 0x30) = iVar5;
+    }
+    *(int **)(*(int *)(param_1 + 0x2c) + *(int *)(param_1 + 0x28) * 4) = piVar6;
+    *(int *)(param_1 + 0x28) = *(int *)(param_1 + 0x28) + 1;
+  }
+  return;
+}
+

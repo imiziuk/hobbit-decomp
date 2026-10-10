@@ -1,0 +1,1 @@
+{"addr":"006628b0","name":"FUN_006628b0","cc":"__stdcall","proto":"bool FUN_006628b0(void)","c":"\nbool FUN_006628b0(void)\n\n{\n  return DAT_007eff74 == 0;\n}\n\n","globals":[{"name":"DAT_007eff74","addr":"007eff74","type":"int"}],"callees":[]}

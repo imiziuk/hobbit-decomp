@@ -1,0 +1,26 @@
+
+int FUN_006486a0(byte *param_1,byte *param_2,int param_3)
+
+{
+  byte *pbVar1;
+  
+  pbVar1 = param_1 + param_3;
+  if ((((3 < param_3) && (((uint)param_1 & 3) == 0)) && (((uint)param_2 & 3) == 0)) &&
+     (param_1 <= pbVar1 + -4)) {
+    do {
+      if (*(int *)param_1 != *(int *)param_2) break;
+      param_1 = param_1 + 4;
+      param_2 = param_2 + 4;
+    } while (param_1 <= pbVar1 + -4);
+  }
+  while( true ) {
+    if (pbVar1 <= param_1) {
+      return 0;
+    }
+    if (*param_1 != *param_2) break;
+    param_1 = param_1 + 1;
+    param_2 = param_2 + 1;
+  }
+  return (-(uint)(*param_1 < *param_2) & 0xfffffffe) + 1;
+}
+

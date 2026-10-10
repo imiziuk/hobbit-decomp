@@ -1,0 +1,36 @@
+
+void __fastcall FUN_00664ec0(int param_1)
+
+{
+  short sVar1;
+  int iVar2;
+  int iVar3;
+  short *psVar4;
+  
+  iVar3 = *(int *)(param_1 + 0xc) / *(int *)(param_1 + 0x18);
+  iVar2 = *(int *)(param_1 + 0x30);
+  if (iVar2 < iVar3) {
+    psVar4 = *(short **)(param_1 + 0x24);
+    if (psVar4 != *(short **)(param_1 + 0x28)) {
+      do {
+        *psVar4 = *psVar4 + ((short)iVar3 - (short)iVar2);
+        psVar4 = psVar4 + 1;
+      } while (psVar4 != *(short **)(param_1 + 0x28));
+      *(int *)(param_1 + 0x30) = iVar3;
+      return;
+    }
+  }
+  else if (iVar3 < iVar2) {
+    sVar1 = *(short *)(param_1 + 0x30);
+    psVar4 = *(short **)(param_1 + 0x24);
+    if (psVar4 != *(short **)(param_1 + 0x28)) {
+      do {
+        *psVar4 = *psVar4 - (sVar1 - (short)iVar3);
+        psVar4 = psVar4 + 1;
+      } while (psVar4 != *(short **)(param_1 + 0x28));
+    }
+  }
+  *(int *)(param_1 + 0x30) = iVar3;
+  return;
+}
+

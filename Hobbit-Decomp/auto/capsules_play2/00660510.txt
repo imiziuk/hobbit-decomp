@@ -1,0 +1,6 @@
+function 00660510 AUTO_00660510
+verdict st0 A=320 B=4.48416e-43
+regs eax=00000000 ebx=02FDE998 ecx=00000097 edx=0000000C esi=02FDE9B8 edi=00000000 ebp=02F9E8C0 esp=001AF7D4 eflags=00000287 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

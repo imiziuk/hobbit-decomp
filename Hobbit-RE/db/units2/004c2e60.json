@@ -1,0 +1,1 @@
+{"addr":"004c2e60","name":"FUN_004c2e60","cc":"__fastcall","proto":"undefined FUN_004c2e60(int param_1)","c":"\nvoid __fastcall FUN_004c2e60(int param_1)\n\n{\n  ushort uVar1;\n  \n  uVar1 = *(ushort *)(param_1 + 0x15a);\n  if ((uVar1 & 0x200) == 0) {\n    uVar1 = uVar1 & 0xbfff;\n  }\n  *(ushort *)(param_1 + 0x15a) = uVar1 ^ 0x4000;\n  return;\n}\n\n","globals":[],"callees":[]}

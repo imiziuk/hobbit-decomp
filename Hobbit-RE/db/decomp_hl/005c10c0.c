@@ -1,0 +1,33 @@
+
+int __fastcall FUN_005c10c0(int param_1)
+
+{
+  short *psVar1;
+  int *piVar2;
+  int iVar3;
+  int iVar4;
+  int iVar5;
+  
+  iVar3 = *(int *)(param_1 + 100);
+  iVar5 = 0;
+  if (0 < iVar3) {
+    piVar2 = (int *)(*(int *)(param_1 + 0x68) + 0x10);
+    do {
+      iVar4 = *piVar2;
+      if (0 < iVar4) {
+        psVar1 = (short *)piVar2[1];
+        do {
+          if (iVar5 <= *psVar1) {
+            iVar5 = (int)*psVar1;
+          }
+          psVar1 = psVar1 + 1;
+          iVar4 = iVar4 + -1;
+        } while (iVar4 != 0);
+      }
+      piVar2 = piVar2 + 0xb;
+      iVar3 = iVar3 + -1;
+    } while (iVar3 != 0);
+  }
+  return iVar5 + 1;
+}
+

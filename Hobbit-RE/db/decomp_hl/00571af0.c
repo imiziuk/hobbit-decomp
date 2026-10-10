@@ -1,0 +1,28 @@
+
+void FUN_00571af0(float param_1,float param_2,int param_3,int param_4,int param_5,float *param_6,
+                 float *param_7,float *param_8,float *param_9)
+
+{
+  if (param_4 == param_3) {
+    if (param_1 < param_2 != (param_1 == param_2)) {
+      *param_6 = param_1;
+      *param_7 = param_2;
+      *param_8 = param_1;
+      *param_9 = param_2;
+      return;
+    }
+  }
+  else if (param_3 < param_4) {
+    *param_6 = param_1;
+    *param_7 = (float)(param_5 + -1);
+    *param_8 = 0.0;
+    *param_9 = param_2;
+    return;
+  }
+  *param_6 = 1.0;
+  *param_7 = 0.0;
+  *param_8 = 1.0;
+  *param_9 = 0.0;
+  return;
+}
+

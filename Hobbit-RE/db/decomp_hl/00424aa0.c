@@ -1,0 +1,29 @@
+
+void __fastcall FUN_00424aa0(float *param_1)
+
+{
+  float fVar1;
+  float fVar2;
+  float fVar3;
+  
+  fVar1 = DAT_006e92e8 /
+          SQRT(param_1[2] * param_1[2] + param_1[1] * param_1[1] + *param_1 * *param_1);
+  fVar2 = DAT_006e92e8 /
+          SQRT(param_1[6] * param_1[6] + param_1[5] * param_1[5] + param_1[4] * param_1[4]);
+  fVar3 = DAT_006e92e8 /
+          SQRT(param_1[10] * param_1[10] + param_1[9] * param_1[9] + param_1[8] * param_1[8]);
+  *param_1 = fVar1 * *param_1;
+  param_1[1] = fVar1 * param_1[1];
+  param_1[2] = fVar1 * param_1[2];
+  param_1[3] = fVar1 * param_1[3];
+  param_1[4] = fVar2 * param_1[4];
+  param_1[5] = fVar2 * param_1[5];
+  param_1[6] = fVar2 * param_1[6];
+  param_1[7] = fVar2 * param_1[7];
+  param_1[8] = fVar3 * param_1[8];
+  param_1[9] = fVar3 * param_1[9];
+  param_1[10] = fVar3 * param_1[10];
+  param_1[0xb] = fVar3 * param_1[0xb];
+  return;
+}
+

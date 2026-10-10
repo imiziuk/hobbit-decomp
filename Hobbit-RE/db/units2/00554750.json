@@ -1,0 +1,1 @@
+{"addr":"00554750","name":"FUN_00554750","cc":"__fastcall","proto":"bool FUN_00554750(int param_1)","c":"\nbool __fastcall FUN_00554750(int param_1)\n\n{\n  return *(char *)(param_1 + 0xd4) != -1;\n}\n\n","globals":[],"callees":[]}

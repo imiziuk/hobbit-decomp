@@ -1,0 +1,11 @@
+function 00597CF0 AUTO_00597cf0
+verdict x87 stack depth differs after return: top A=0 B=7
+regs eax=00000004 ebx=00000001 ecx=0CE3B6D8 edx=001AFC28 esi=0CE3B6D8 edi=001AFC28 ebp=00000000 esp=001AFBD8 eflags=00000297 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=1 A:eip=00597F09 addr=0CE3B90C size=4 value=3E879E44 B:eip=101D67D1 addr=0CE3B90C size=4 value=0
+diff 0CE3B90C A=3E879E44 B=00000000
+diff_count 1
+wa 00597D23 001AFC28 4 0
+wa 00597F09 0CE3B90C 4 3E879E44
+wb 101D659D 001AFC28 4 0
+wb 101D67D1 0CE3B90C 4 0

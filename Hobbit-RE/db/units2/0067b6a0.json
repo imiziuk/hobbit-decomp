@@ -1,0 +1,1 @@
+{"addr":"0067b6a0","name":"FUN_0067b6a0","cc":"__stdcall","proto":"uint FUN_0067b6a0(void)","c":"\nuint FUN_0067b6a0(void)\n\n{\n  return -(uint)(DAT_00806ba0 != 0) & DAT_00806a60;\n}\n\n","globals":[{"name":"DAT_00806ba0","addr":"00806ba0","type":"int"},{"name":"DAT_00806a60","addr":"00806a60","type":"uint"}],"callees":[]}

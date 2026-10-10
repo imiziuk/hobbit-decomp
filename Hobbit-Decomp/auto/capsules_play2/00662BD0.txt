@@ -1,0 +1,6 @@
+function 00662BD0 AUTO_00662bd0
+verdict ours did not finish: unreadable memory 00000009
+regs eax=00000001 ebx=41700000 ecx=00000001 edx=00000001 esi=0DA16A28 edi=6EF785BC ebp=0D928B38 esp=001AFB8C eflags=00000202 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

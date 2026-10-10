@@ -1,0 +1,1 @@
+{"addr":"004ab3c0","name":"FUN_004ab3c0","cc":"__fastcall","proto":"undefined FUN_004ab3c0(int * param_1)","c":"\nvoid __fastcall FUN_004ab3c0(int *param_1)\n\n{\n  (**(code **)(*param_1 + 0x8c))((*(byte *)((int)param_1 + 0x7f) & 4) >> 2,0xffffffff);\n  return;\n}\n\n","globals":[],"callees":[]}

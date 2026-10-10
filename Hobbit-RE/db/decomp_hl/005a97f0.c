@@ -1,0 +1,40 @@
+
+bool FUN_005a97f0(int param_1,int param_2)
+
+{
+  float fVar1;
+  int iVar2;
+  float *pfVar3;
+  short *psVar4;
+  short *psVar5;
+  
+  iVar2 = 0;
+  psVar4 = (short *)(param_1 + 0x104);
+  *(undefined4 *)(param_1 + 0x1a0) = 0;
+  *(undefined4 *)(param_1 + 0x19c) = 0;
+  if (-1 < *(int *)(param_1 + 0x10)) {
+    psVar5 = (short *)(param_1 + 0x13c);
+    pfVar3 = (float *)(param_1 + 0x78);
+    do {
+      fVar1 = *(float *)(param_2 + *psVar4 * 4) * pfVar3[-1] +
+              *(float *)(param_2 + psVar5[-0x1a] * 4) * pfVar3[1] +
+              *(float *)(param_2 + psVar5[-0x1b] * 4) * *pfVar3 + pfVar3[2];
+      if (fVar1 < DAT_006e92e4 != (fVar1 == DAT_006e92e4)) {
+        fVar1 = *(float *)(param_2 + *psVar5 * 4) * *pfVar3 +
+                *(float *)(param_2 + psVar5[1] * 4) * pfVar3[1] +
+                *(float *)(param_2 + psVar5[-1] * 4) * pfVar3[-1] + pfVar3[2];
+        if (fVar1 < DAT_006e92e4 != (fVar1 == DAT_006e92e4)) {
+          *(undefined4 *)(param_1 + 0x1a0) = 1;
+          return false;
+        }
+        *(uint *)(param_1 + 0x19c) = *(uint *)(param_1 + 0x19c) | 1 << ((byte)iVar2 & 0x1f);
+      }
+      psVar4 = psVar4 + 3;
+      psVar5 = psVar5 + 3;
+      iVar2 = iVar2 + 1;
+      pfVar3 = pfVar3 + 4;
+    } while (iVar2 <= *(int *)(param_1 + 0x10));
+  }
+  return *(int *)(param_1 + 0x19c) == 0;
+}
+

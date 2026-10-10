@@ -1,0 +1,1 @@
+{"addr":"005c7750","name":"FUN_005c7750","cc":"__stdcall","proto":"int FUN_005c7750(void)","c":"\nint FUN_005c7750(void)\n\n{\n  int local_4;\n  \n  FUN_006c0bb4(&local_4);\n  return local_4 + -0x3a501ce0;\n}\n\n","globals":[],"callees":[{"addr":"006c0bb4","name":"FUN_006c0bb4","cc":"__cdecl","ret":"undefined","variadic":false,"external":false,"params":["int *"]}]}

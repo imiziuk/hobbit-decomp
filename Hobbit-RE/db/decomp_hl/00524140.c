@@ -1,0 +1,8 @@
+
+void FUN_00524140(void)
+
+{
+  FUN_006a13b0(s_text_box_00735534,&PTR_s_IDS_TEXT_BOX_SCREEN_007354f8,FUN_00524160);
+  return;
+}
+

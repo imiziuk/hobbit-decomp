@@ -1,0 +1,1 @@
+{"addr":"0064c800","name":"FUN_0064c800","cc":"__cdecl","proto":"undefined FUN_0064c800(float param_1)","c":"\nvoid __cdecl FUN_0064c800(float param_1)\n\n{\n  FUN_0064c810(param_1,0);\n  return;\n}\n\n","globals":[],"callees":[{"addr":"0064c810","name":"FUN_0064c810","cc":"__cdecl","ret":"float10","variadic":false,"external":false,"params":["float","int"]}]}

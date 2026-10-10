@@ -1,0 +1,1 @@
+{"addr":"005a3d60","name":"FUN_005a3d60","cc":"__stdcall","proto":"float10 FUN_005a3d60(void)","c":"\n/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */\n\nfloat10 FUN_005a3d60(void)\n\n{\n  return (float10)_DAT_007441ec;\n}\n\n","globals":[{"name":"DAT_007441ec","addr":"007441ec","type":"undefined"}],"callees":[]}

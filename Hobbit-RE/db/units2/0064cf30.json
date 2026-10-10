@@ -1,0 +1,1 @@
+{"addr":"0064cf30","name":"FUN_0064cf30","cc":"__cdecl","proto":"bool FUN_0064cf30(uint param_1)","c":"\nbool __cdecl FUN_0064cf30(uint param_1)\n\n{\n  return (param_1 & 0x7f800000) != 0x7f800000;\n}\n\n","globals":[],"callees":[]}

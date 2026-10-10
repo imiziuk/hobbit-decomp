@@ -1,0 +1,1 @@
+{"addr":"0069947d","name":"FUN_0069947d","cc":"__thiscall","proto":"int FUN_0069947d(void)","c":"\nint __thiscall FUN_0069947d(void *this)\n\n{\n  int in_stack_0000000c;\n  \n  return ((int)this * 0xff + in_stack_0000000c / 2) / in_stack_0000000c;\n}\n\n","globals":[],"callees":[]}

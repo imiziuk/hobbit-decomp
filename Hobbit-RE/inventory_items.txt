@@ -1,0 +1,162 @@
+  0 0x00  NONE
+  1 0x01  Coin
+  2 0x02  Stones
+  3 0x03  Ihavehadstones(DONOTUSE)
+  4 0x04  Health
+  5 0x05  GreaterHealth
+  6 0x06  Vigor Health
+  7 0x07  CPTotal(DONOTUSE)
+  8 0x08  LevelingCP(DONOTUSE)
+  9 0x09  Courage
+ 10 0x0a  Courage1
+ 11 0x0b  Courage5
+ 12 0x0c  Courage10
+ 13 0x0d  Courage25
+ 14 0x0e  Courage50
+ 15 0x0f  Coin Bag
+ 16 0x10  CoinBag5
+ 17 0x11  CoinBag10
+ 18 0x12  CoinBag25
+ 19 0x13  CoinBag50
+ 20 0x14  CoinBag100
+ 21 0x15  Rock Bag
+ 22 0x16  Med Bag,
+ 23 0x17  Skeleton Key
+ 24 0x18  CLevelSP(DONOTUSE)
+ 25 0x19  ChestCount(DONOTUSE)
+ 26 0x1a  BilboLevel(DONOTUSE)
+ 27 0x1b  BilboIsPoisoned(DONOTUSE)
+ 28 0x1c  BilboPoisonTimer(DONOTUSE)
+ 29 0x1d  Bilbo_Staff_Swing
+ 30 0x1e  Bilbo_Staff_Swing2
+ 31 0x1f  Bilbo_Staff_Swing3
+ 32 0x20  Bilbo_Staff_Jump
+ 33 0x21  Bilbo_Staff_Jump2
+ 34 0x22  Bilbo_Staff_Jump3
+ 35 0x23  Bilbo_Staff_AE_Jump
+ 36 0x24  Bilbo_Staff_AE_Jump2
+ 37 0x25  Bilbo_Staff_AE_Jump3
+ 38 0x26  Bilbo_Sting_Swing
+ 39 0x27  Bilbo_Sting_Swing2
+ 40 0x28  Bilbo_Sting_Swing3
+ 41 0x29  Bilbo_Sting_Jump
+ 42 0x2a  Bilbo_Sting_Jump2
+ 43 0x2b  Bilbo_Sting_Jump3
+ 44 0x2c  Bilbo_Stone_Throw
+ 45 0x2d  Bilbo_Stone_Throw2
+ 46 0x2e  Bilbo_Stone_Throw3
+ 47 0x2f  Level Potion
+ 48 0x30  Health Potion
+ 49 0x31  Antidote
+ 50 0x32  Water of Vigor
+ 51 0x33  Sword Sting
+ 52 0x34  The Ring
+ 53 0x35  Staff
+ 54 0x36  Explosive Stone
+ 55 0x37  Fire Stone
+ 56 0x38  Freeze Stone
+ 57 0x39  NotUsed Stone
+ 58 0x3a  NotUsed Stone
+ 59 0x3b  Troll Key
+ 60 0x3c  Witch King Crystal
+ 61 0x3d  Burberry Leaves
+ 62 0x3e  Blue Urn
+ 63 0x3f  Red Urn
+ 64 0x40  Yellow Urn
+ 65 0x41  TorchUnlit
+ 66 0x42  TorchLit
+ 67 0x43  Bellows
+ 68 0x44  SignetRing
+ 69 0x45  OilCan
+ 70 0x46  Iron Small Gear
+ 71 0x47  Silver Small Gear
+ 72 0x48  Gold Small Gear
+ 73 0x49  Copper Small Gear
+ 74 0x4a  Matalic Small Gear
+ 75 0x4b  Iron Medium Gear
+ 76 0x4c  Silver Medium Gear
+ 77 0x4d  Gold Medium Gear
+ 78 0x4e  Copper Medium Gear
+ 79 0x4f  Matalic Medium Gear
+ 80 0x50  Iron Large Gear
+ 81 0x51  Silver Large Gear
+ 82 0x52  Gold Large Gear
+ 83 0x53  Copper Large Gear
+ 84 0x54  Matalic Large Gear
+ 85 0x55  Iron Piston Head
+ 86 0x56  Silver Piston Head
+ 87 0x57  Gold Piston Head
+ 88 0x58  Copper Piston Head
+ 89 0x59  Matalic Piston Head
+ 90 0x5a  Iron Piston Arm
+ 91 0x5b  Silver Piston Arm
+ 92 0x5c  Gold Piston Arm
+ 93 0x5d  Copper Piston Arm
+ 94 0x5e  Matalic Piston Arm
+ 95 0x5f  Wood Quest
+ 96 0x60  Gondola Gold Key
+ 97 0x61  Gondola Silver Key
+ 98 0x62  Old Elev Key
+ 99 0x63  Jail Exit Key
+100 0x64  Final Bridge Key
+101 0x65  Gondola Gear1
+102 0x66  Gondola Gear2
+103 0x67  Gondola Lever
+104 0x68  Wart Stone
+105 0x69  Goblet
+106 0x6a  Necklace
+107 0x6b  Ruby
+108 0x6c  Spears
+109 0x6d  Tray
+110 0x6e  Tea_Cakes
+111 0x6f  Tea_Cake_Ingredients
+112 0x70  Shed_Key
+113 0x71  Apple
+114 0x72  Hammer
+115 0x73  Nails
+116 0x74  Walking_Stick
+117 0x75  Egg
+118 0x76  Berry
+119 0x77  Wheat_Sack
+120 0x78  Sugar
+121 0x79  Spice
+122 0x7a  Flour
+123 0x7b  Wheat
+124 0x7c  Quilt
+125 0x7d  Sewing Needle
+126 0x7e  Elvish Opening Crystal 1
+127 0x7f  Elvish Opening Crystal 2
+128 0x80  Elvish Opening Crystal 3
+129 0x81  Elvish Opening Crystal 4
+130 0x82  Elvish Healing Potion
+131 0x83  Deep Cellar Key 1
+132 0x84  Deep Cellar Key 2
+133 0x85  Deep Cellar Key 3
+134 0x86  Deep Cellar Key 4
+135 0x87  Cavern Crystal
+136 0x88  Ithilmane
+137 0x89  Willowweed
+138 0x8a  Spidersbane
+139 0x8b  Web Potion
+140 0x8c  Belt
+141 0x8d  Chain
+142 0x8e  Treasury Key Mold
+143 0x8f  Throne Key Mold 1
+144 0x90  Throne Key Mold 2
+145 0x91  Treasury Key
+146 0x92  Throne Key 1
+147 0x93  Throne Key 2
+148 0x94  Arkenstone
+149 0x95  City Warehouse Key
+150 0x96  Black Arrow
+151 0x97  Malloc's Golden Dagger
+152 0x98  Black Wine Bottle
+153 0x99  Blue Wine Bottle
+154 0x9a  Purple Wine Bottle
+155 0x9b  Red Wine Bottle
+156 0x9c  Yellow Wine Bottle
+157 0x9d  Gandalf's Message
+158 0x9e  Healing Draught
+159 0x9f  TrollKey2
+160 0xa0  Ladder Switch Lever
+161 0xa1  Renn

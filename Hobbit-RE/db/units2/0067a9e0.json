@@ -1,0 +1,1 @@
+{"addr":"0067a9e0","name":"FUN_0067a9e0","cc":"__fastcall","proto":"undefined4 FUN_0067a9e0(undefined4 param_1)","c":"\nundefined4 __fastcall FUN_0067a9e0(undefined4 param_1)\n\n{\n  return param_1;\n}\n\n","globals":[],"callees":[]}

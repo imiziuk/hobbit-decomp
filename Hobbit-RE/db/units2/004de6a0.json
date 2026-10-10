@@ -1,0 +1,1 @@
+{"addr":"004de6a0","name":"FUN_004de6a0","cc":"__fastcall","proto":"uint FUN_004de6a0(int param_1)","c":"\nuint __fastcall FUN_004de6a0(int param_1)\n\n{\n  return *(uint *)(param_1 + 0x120) >> 6 & 1;\n}\n\n","globals":[],"callees":[]}

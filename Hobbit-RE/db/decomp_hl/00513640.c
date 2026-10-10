@@ -1,0 +1,8 @@
+
+void FUN_00513640(void)
+
+{
+  FUN_006a13b0(s_level_select_00733890,&PTR_s_IDS_OPTIONS_AUDIO_SCREEN_00733850,FUN_00513660);
+  return;
+}
+

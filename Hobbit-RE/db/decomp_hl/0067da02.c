@@ -1,0 +1,10 @@
+
+void Direct3DCreate8(void)
+
+{
+                    /* WARNING: Could not recover jumptable at 0x0067da02. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  Direct3DCreate8();
+  return;
+}
+

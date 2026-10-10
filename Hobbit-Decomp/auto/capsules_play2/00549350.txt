@@ -1,0 +1,6 @@
+function 00549350 AUTO_00549350
+verdict eax A=FFFFFFFF B=00000001
+regs eax=0076C970 ebx=00382000 ecx=0076C0D0 edx=0076C990 esi=0076C0D0 edi=00771D18 ebp=001AFF74 esp=001AFD4C eflags=00000206 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

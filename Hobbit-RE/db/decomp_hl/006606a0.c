@@ -1,0 +1,82 @@
+
+void FUN_006606a0(void)
+
+{
+  int iVar1;
+  int iVar2;
+  void *pvVar3;
+  uint uVar4;
+  int iVar5;
+  int *piVar6;
+  int *piStack_88;
+  int *piStack_84;
+  undefined4 uStack_80;
+  undefined4 *puStack_7c;
+  int *piStack_78;
+  int iStack_74;
+  int iStack_70;
+  undefined4 uStack_6c;
+  int *piStack_68;
+  int iStack_64;
+  undefined4 uStack_60;
+  undefined1 *puStack_5c;
+  int *piStack_58;
+  undefined4 *puStack_54;
+  undefined4 local_3c;
+  undefined4 local_38;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  iVar2 = DAT_007eff8c;
+  iVar1 = DAT_007eff88;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_006e6910;
+  pvStack_c = ExceptionList;
+  puStack_54 = &local_3c;
+  local_3c = 0;
+  local_38 = 0;
+  piStack_58 = DAT_007f1000;
+  puStack_5c = (undefined1 *)0x6606e9;
+  ExceptionList = &pvStack_c;
+  (**(code **)(*DAT_007f1000 + 0x80))();
+  puStack_5c = &stack0xffffffb8;
+  uStack_60 = 1;
+  iStack_64 = 0x16;
+  piStack_68 = (int *)0x0;
+  uStack_6c = 1;
+  iStack_70 = iVar2;
+  iStack_74 = iVar1;
+  piStack_78 = DAT_007f1000;
+  puStack_7c = (undefined4 *)0x660702;
+  (**(code **)(*DAT_007f1000 + 0x50))();
+  puStack_7c = &uStack_60;
+  uStack_80 = 0;
+  piStack_84 = piStack_68;
+  piStack_88 = (int *)0x660712;
+  (**(code **)(*piStack_68 + 0x3c))();
+  piStack_88 = (int *)0x0;
+  piVar6 = (int *)0x0;
+  iVar5 = iStack_70;
+  (**(code **)(*DAT_007f1000 + 0x70))(DAT_007f1000,iStack_70,0,0,uStack_6c);
+  (**(code **)(*piStack_88 + 8))(piStack_88);
+  (**(code **)(*piStack_88 + 8))(piStack_88);
+  (**(code **)(*piVar6 + 0x40))(piVar6,0,&piStack_88,0);
+  uVar4 = iVar2 * iVar1 * 4;
+  pvVar3 = operator_new(uVar4);
+  FUN_00648480(pvVar3,iVar5,uVar4);
+  (**(code **)(iRam00000000 + 0x44))(0,0);
+  piVar6 = piStack_68;
+  piStack_68 = (int *)operator_new((int)piStack_68 * iStack_64 * 4);
+  FUN_006605f0(pvVar3,iVar1,iVar2,uStack_60,piStack_68,piVar6,iStack_64);
+  FUN_006bf840(pvVar3);
+  FUN_00650250();
+  iStack_74 = 0;
+  FUN_00650e90(3,piVar6,iStack_64,1,piStack_68,0,0,0xffffffff,0);
+  FUN_00653240(s_ResizedScreenie_tga_0074f0d0);
+  iStack_74 = 0xffffffff;
+  thunk_FUN_00650380();
+  ExceptionList = puStack_7c;
+  return;
+}
+

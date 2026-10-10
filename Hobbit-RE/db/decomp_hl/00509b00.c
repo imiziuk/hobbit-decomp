@@ -1,0 +1,8 @@
+
+void FUN_00509b00(void)
+
+{
+  FUN_006a13b0(s_credits_007328d0,&PTR_s_IDS_PRESS_START_SCREEN_007328a0,FUN_00509b20);
+  return;
+}
+

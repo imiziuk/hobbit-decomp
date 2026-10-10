@@ -1,0 +1,18 @@
+
+undefined4 FUN_0057add0(float *param_1,int param_2,int *param_3,int *param_4)
+
+{
+  float fVar1;
+  
+  fVar1 = *(float *)(param_2 + *param_4 * 4) * *param_1 +
+          *(float *)(param_2 + param_4[1] * 4) * param_1[1] +
+          *(float *)(param_2 + param_4[2] * 4) * param_1[2] + param_1[3];
+  if ((fVar1 < DAT_006e92e4 == (NAN(fVar1) || NAN(DAT_006e92e4))) &&
+     (*(float *)(param_2 + *param_3 * 4) * *param_1 +
+      *(float *)(param_2 + param_3[1] * 4) * param_1[1] +
+      *(float *)(param_2 + param_3[2] * 4) * param_1[2] + param_1[3] <= DAT_006e92e4)) {
+    return 1;
+  }
+  return 0;
+}
+

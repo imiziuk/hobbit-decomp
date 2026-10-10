@@ -1,0 +1,8 @@
+function 00555AB0 AUTO_00555ab0
+verdict ours did not finish: unreadable memory 13A4A64E
+regs eax=7FFFFFFF ebx=007CBB70 ecx=00771C30 edx=001AFBFF esi=00771C30 edi=09978F3C ebp=00000001 esp=001AFB54 eflags=00000246 fpcw=007F
+teb 00228000 ourdll 10000000
+first_divergence index=0 A:eip=00555BF2 addr=001AFB94 size=4 value=72ED85
+diff 001AFB94 A=0072ED85 B=0072ED84
+diff_count 1
+wa 00555BF2 001AFB94 4 72ED85

@@ -1,0 +1,6 @@
+addr	name	samples	pass	near	fail	incomplete	verdict	detail
+004A5760	AUTO_004a5760	12	12	0	0	0	PASS	
+004A6780	AUTO_004a6780	12	12	0	0	0	PASS	
+00529100	AUTO_00529100	0	0	0	0	0	NEVER	
+00555900	AUTO_00555900	12	12	0	0	0	PASS	
+00555AB0	AUTO_00555ab0	12	11	0	1	0	FAIL	ours did not finish: unreadable memory 13A4A64E

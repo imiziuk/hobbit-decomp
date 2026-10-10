@@ -1,0 +1,1 @@
+{"addr":"004746b0","name":"FUN_004746b0","cc":"__fastcall","proto":"float10 FUN_004746b0(int param_1)","c":"\nfloat10 __fastcall FUN_004746b0(int param_1)\n\n{\n  return (float10)*(float *)(param_1 + 8) + (float10)*(float *)(param_1 + 4);\n}\n\n","globals":[],"callees":[]}

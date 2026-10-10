@@ -1,0 +1,1 @@
+{"addr":"00531e40","name":"FUN_00531e40","cc":"__fastcall","proto":"int FUN_00531e40(int param_1)","c":"\nint __fastcall FUN_00531e40(int param_1)\n\n{\n  return param_1 + 0xd0;\n}\n\n","globals":[],"callees":[]}

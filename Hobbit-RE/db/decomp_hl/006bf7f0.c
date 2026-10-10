@@ -1,0 +1,29 @@
+
+float10 __fastcall FUN_006bf7f0(int param_1)
+
+{
+  uint uVar1;
+  int iVar2;
+  
+  uVar1 = *(uint *)(param_1 + 0xc);
+  iVar2 = 1;
+  if ((int)uVar1 < 0) {
+    iVar2 = *(int *)(*(int *)(param_1 + 4) + 0xc);
+  }
+  if (0 < (int)uVar1) {
+    iVar2 = *(int *)(*(int *)(param_1 + 4) + 0x10);
+  }
+  if (iVar2 != 1) {
+    if (iVar2 != 2) {
+      if ((int)uVar1 < 0) {
+        return (float10)DAT_006e92e4;
+      }
+      return (float10)DAT_006e92e8;
+    }
+    if ((uVar1 & 1) != 0) {
+      return (float10)DAT_006e92e8 - (float10)*(float *)(param_1 + 0x10);
+    }
+  }
+  return (float10)*(float *)(param_1 + 0x10);
+}
+

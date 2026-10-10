@@ -1,0 +1,12 @@
+
+int FUN_006819e0(int param_1,int param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = (param_2 + -1) * param_1 * 4;
+  return (param_1 +
+         CONCAT22((short)((uint)iVar1 >> 0x10),(ushort)(((ushort)((short)iVar1 + 7U) >> 3) + 7) >> 3
+                 ) * 2) * 4;
+}
+

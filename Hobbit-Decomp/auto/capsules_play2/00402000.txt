@@ -1,0 +1,6 @@
+function 00402000 AUTO_00402000
+verdict x87 stack depth differs after return: top A=7 B=0
+regs eax=001AEC68 ebx=0CAEA6E4 ecx=001AEC68 edx=43212F48 esi=0CAEA6D0 edi=001AECD0 ebp=001AECA8 esp=001AEC4C eflags=00000216 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

@@ -1,0 +1,1 @@
+{"addr":"004534e0","name":"FUN_004534e0","cc":"__fastcall","proto":"undefined FUN_004534e0(int param_1)","c":"\nvoid __fastcall FUN_004534e0(int param_1)\n\n{\n  DAT_00724fa4 = 0;\n  *(undefined4 *)(param_1 + 0x458) = 1;\n  return;\n}\n\n","globals":[{"name":"DAT_00724fa4","addr":"00724fa4","type":"undefined4"}],"callees":[]}

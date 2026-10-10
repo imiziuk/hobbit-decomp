@@ -1,0 +1,1 @@
+{"addr":"006824da","name":"FUN_006824da","cc":"__stdcall","proto":"undefined FUN_006824da(int param_1)","c":"\nvoid FUN_006824da(int param_1)\n\n{\n  FUN_00688109(*(int *)(param_1 + 0x48));\n  return;\n}\n\n","globals":[],"callees":[{"addr":"00688109","name":"FUN_00688109","cc":"__fastcall","ret":"undefined4","variadic":false,"external":false,"params":["int"]}]}

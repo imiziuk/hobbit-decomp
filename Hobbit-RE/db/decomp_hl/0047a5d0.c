@@ -1,0 +1,85 @@
+
+void __thiscall FUN_0047a5d0(int param_1,undefined4 param_2,undefined4 *param_3)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uStack_20;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  uVar2 = param_2;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_006d1f48;
+  pvStack_c = ExceptionList;
+  uStack_20 = param_3;
+  ExceptionList = &pvStack_c;
+  FUN_00475120(param_2);
+  uStack_20 = uVar2;
+  FUN_00649920(&param_3,s_Action_d_FXType_007281f4);
+  uStack_20 = *(undefined4 *)(param_1 + 0x1c);
+  uStack_4 = 0;
+  uVar1 = FUN_00649940();
+  FUN_00641480(uVar1);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a638;
+  FUN_00649950();
+  uStack_20 = uVar2;
+  FUN_00649920(&param_3,s_Action_d_Magnitude_007281e0);
+  uStack_20 = *(undefined4 *)(param_1 + 0x20);
+  uStack_4 = 1;
+  uVar1 = FUN_00649940();
+  FUN_00641400(uVar1);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a673;
+  FUN_00649950();
+  uStack_20 = uVar2;
+  FUN_00649920(&param_3,s_Action_d_Frequency_007281cc);
+  uStack_20 = *(undefined4 *)(param_1 + 0x24);
+  uStack_4 = 2;
+  uVar1 = FUN_00649940();
+  FUN_00641400(uVar1);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a6ae;
+  FUN_00649950();
+  uStack_20 = uVar2;
+  FUN_00649920(&param_3,s_Action_d_Rolling_007281b8);
+  uStack_20 = *(undefined4 *)(param_1 + 0x28);
+  uStack_4 = 3;
+  uVar1 = FUN_00649940();
+  FUN_00641760(uVar1);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a6e9;
+  FUN_00649950();
+  uStack_20 = uVar2;
+  FUN_00649920(&param_3,s_Action_d_Fadeout_007281a4);
+  uStack_20 = *(undefined4 *)(param_1 + 0x2c);
+  uStack_4 = 4;
+  uVar1 = FUN_00649940();
+  FUN_00641760(uVar1);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a724;
+  FUN_00649950();
+  param_3 = &uStack_20;
+  uStack_20 = *(undefined4 *)(param_1 + 0x34);
+  FUN_00649920(&param_3,s_Action_d_Color_00728194,uVar2);
+  uStack_4 = 5;
+  uVar1 = FUN_00649940();
+  FUN_00641370(uVar1);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a779;
+  FUN_00649950();
+  uStack_20 = uVar2;
+  FUN_00649920(&param_2,s_Action_d_Target_00728128);
+  uStack_20 = *(undefined4 *)(param_1 + 0x30);
+  uStack_4 = 6;
+  uVar2 = FUN_00649940();
+  FUN_00641400(uVar2);
+  uStack_4 = 0xffffffff;
+  uStack_20 = 0x47a7b4;
+  FUN_00649950();
+  ExceptionList = pvStack_c;
+  return;
+}
+

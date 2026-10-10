@@ -1,0 +1,8 @@
+function 00626D80 AUTO_00626d80
+verdict eax A=00000000 B=00000001
+regs eax=001AFBE8 ebx=00000001 ecx=0DA525E8 edx=006E9818 esi=0DA525E8 edi=0960A6F8 ebp=0076F110 esp=001AFBBC eflags=00000202 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0 B:eip=1024D947 addr=001AFBE8 size=4 value=8
+diff 001AFBE8 A=00000000 B=00000008
+diff_count 1
+wb 1024D947 001AFBE8 4 8

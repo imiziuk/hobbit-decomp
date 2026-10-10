@@ -1,0 +1,8 @@
+function 004DC100 AUTO_004dc100
+verdict ours did not finish: unreadable memory 00000124
+regs eax=0994A15C ebx=099DE410 ecx=0DBB7C2C edx=0E3B5FA8 esi=09822F98 edi=00000004 ebp=0076F430 esp=001AFB4C eflags=00000216 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=0 A:eip=004DC10C addr=0994A15C size=4 value=3DCCCCCD
+diff 0994A15C A=3DCCCCCD B=0E9D0728
+diff_count 1
+wa 004DC10C 0994A15C 4 3DCCCCCD

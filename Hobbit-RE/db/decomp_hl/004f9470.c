@@ -1,0 +1,184 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_004f9470(int param_1)
+
+{
+  float fVar1;
+  float fVar2;
+  int iVar3;
+  undefined4 *puVar4;
+  float *pfVar5;
+  int iStack_4fc;
+  int *piStack_4f8;
+  undefined4 uStack_4f4;
+  undefined4 uStack_4f0;
+  undefined1 *puStack_4ec;
+  undefined1 *puStack_4e8;
+  undefined1 *puStack_4e4;
+  float *pfStack_4e0;
+  float fStack_4c8;
+  float fStack_4c4;
+  undefined4 uStack_4c0;
+  float fStack_4bc;
+  float fStack_4b8;
+  undefined1 auStack_4b0 [12];
+  undefined1 auStack_4a4 [24];
+  undefined1 auStack_48c [1152];
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_006d627b;
+  pvStack_c = ExceptionList;
+  puStack_4e4 = (undefined1 *)0x4f94a1;
+  ExceptionList = &pvStack_c;
+  pfStack_4e0 = (float *)(param_1 + 0xe4);
+  FUN_00581f30();
+  iVar3 = (DAT_007f23d8 + 0x3fU & 0xffffffc0) - DAT_007f23d8;
+  puVar4 = (undefined4 *)(iVar3 + DAT_007f23d8);
+  DAT_007f23d8 = DAT_007f23d8 + (iVar3 + 0x4fU & 0xfffffff0);
+  *(undefined4 **)(param_1 + 0x158) = puVar4;
+  *puVar4 = 0x3f800000;
+  puVar4[5] = 0x3f800000;
+  puVar4[10] = 0x3f800000;
+  puVar4[0xf] = 0x3f800000;
+  puVar4[0xc] = 0;
+  puVar4[8] = 0;
+  puVar4[4] = 0;
+  puVar4[0xd] = 0;
+  puVar4[9] = 0;
+  puVar4[1] = 0;
+  puVar4[0xe] = 0;
+  puVar4[6] = 0;
+  puVar4[2] = 0;
+  puVar4[0xb] = 0;
+  puVar4[7] = 0;
+  puVar4[3] = 0;
+  *(byte *)(param_1 + 0x180) = *(byte *)(param_1 + 0x180) & 0xdd;
+  pfStack_4e0 = (float *)(param_1 + 0xc4);
+  *(undefined4 *)(param_1 + 0x15c) = 1;
+  *(undefined4 *)(param_1 + 0x16c) = 0;
+  *(int *)(param_1 + 0x160) = param_1 + 0xcc;
+  *(undefined4 *)(param_1 + 0x178) = 0;
+  *(int *)(param_1 + 0x168) = param_1 + 0xe4;
+  puStack_4e4 = (undefined1 *)0x4f953d;
+  iVar3 = FUN_00549470();
+  *(int *)(param_1 + 0x17c) = iVar3;
+  if (iVar3 != 0) {
+    pfStack_4e0 = (float *)auStack_4a4;
+    puStack_4e4 = (undefined1 *)0x4f9557;
+    pfVar5 = (float *)FUN_005c1230();
+    fStack_4c4 = pfVar5[1];
+    fStack_4bc = pfVar5[3];
+    fStack_4b8 = pfVar5[4];
+    if (*(int *)(param_1 + 0x17c) != 0) {
+      fVar2 = pfVar5[5] - pfVar5[2];
+      fVar1 = fStack_4bc - *pfVar5;
+      fVar1 = SQRT(fVar2 * fVar2 +
+                   (fStack_4b8 - fStack_4c4) * (fStack_4b8 - fStack_4c4) + fVar1 * fVar1) *
+              _DAT_006e936c * _DAT_006ec084;
+      pfStack_4e0 = (float *)((pfVar5[5] + pfVar5[2]) * _DAT_006e936c);
+      puStack_4e4 = (undefined1 *)((fStack_4b8 + fStack_4c4) * _DAT_006e936c);
+      puStack_4e8 = (undefined1 *)((fStack_4bc + *pfVar5) * _DAT_006e936c);
+      puStack_4ec = (undefined1 *)0x4f95ff;
+      FUN_00401f00();
+      pfStack_4e0 = (float *)0x4f960a;
+      pfStack_4e0 = (float *)__ftol();
+      puStack_4e4 = (undefined1 *)0x4f9616;
+      puStack_4e4 = (undefined1 *)__ftol();
+      puStack_4e8 = (undefined1 *)0x4f9622;
+      puStack_4e8 = (undefined1 *)__ftol();
+      puStack_4ec = (undefined1 *)0x4f962e;
+      puStack_4ec = (undefined1 *)__ftol();
+      uStack_4f0 = 0x4f963a;
+      FUN_00671580();
+      pfStack_4e0 = (float *)0x447a0000;
+      puStack_4e4 = (undefined1 *)0x3dcccccd;
+      puStack_4e8 = (undefined1 *)0x4f964f;
+      FUN_00671650();
+      pfStack_4e0 = (float *)0x3f860a92;
+      puStack_4e4 = (undefined1 *)0x4f965f;
+      FUN_006715c0();
+      fStack_4c8 = fVar1 / _DAT_0075f860;
+      pfStack_4e0 = &fStack_4c8;
+      fStack_4c4 = 0.0;
+      uStack_4c0 = 0;
+      puStack_4e4 = (undefined1 *)0x4f9685;
+      FUN_00671670();
+      pfStack_4e0 = (float *)0x0;
+      puStack_4e4 = auStack_4b0;
+      puStack_4e8 = (undefined1 *)0x4f9696;
+      FUN_006723d0();
+      fVar2 = *(float *)(param_1 + 0xac) + *(float *)(param_1 + 0xa8);
+      *(float *)(param_1 + 0xa8) = fVar2;
+      pfStack_4e0 = (float *)(fVar2 * _DAT_006e9368 * _DAT_006e957c);
+      puStack_4e4 = (undefined1 *)0x0;
+      puStack_4e8 = (undefined1 *)(fVar1 / _DAT_0075f860);
+      puStack_4ec = auStack_4b0;
+      uStack_4f0 = 0x4f96d7;
+      FUN_00672650();
+      if (_DAT_006e9558 <= *(float *)(param_1 + 0xa8)) {
+        *(undefined4 *)(param_1 + 0xa8) = 0;
+      }
+      pfStack_4e0 = *(float **)(param_1 + 200);
+      puStack_4e4 = (undefined1 *)0x4f96fc;
+      FUN_00660270();
+      puStack_4e8 = *(undefined1 **)(param_1 + 200);
+      puStack_4e4 = (undefined1 *)0x0;
+      puStack_4ec = (undefined1 *)0x4f9709;
+      FUN_0065f960();
+      puStack_4ec = (undefined1 *)0x0;
+      uStack_4f0 = 0x4f970f;
+      FUN_0065fc10();
+      *(byte *)(param_1 + 0x180) = *(byte *)(param_1 + 0x180) | 4;
+      pfStack_4e0 = (float *)0x0;
+      puStack_4e4 = (undefined1 *)0x3f800000;
+      puStack_4e8 = (undefined1 *)0xffffffff;
+      puStack_4ec = (undefined1 *)0x2;
+      uStack_4f0 = 0;
+      *(undefined4 *)(param_1 + 0x188) = 1;
+      uStack_4f4 = 0;
+      piStack_4f8 = DAT_007f1000;
+      iStack_4fc = 0x4f973d;
+      (**(code **)(*DAT_007f1000 + 0x90))();
+      iStack_4fc = 0x4f9747;
+      FUN_00429100();
+      iStack_4fc = 0x4f9751;
+      FUN_00553740();
+      iStack_4fc = 0x4f975b;
+      FUN_005c2b70();
+      *(undefined2 *)(param_1 + 0x182) = 1;
+      puStack_4e8 = (undefined1 *)&iStack_4fc;
+      iStack_4fc = *(int *)(param_1 + 0x82);
+      FUN_00582310();
+      iStack_4fc = param_1;
+      (**(code **)(*(int *)(param_1 + 0x144) + 4))();
+      pfStack_4e0 = (float *)0x4f97af;
+      FUN_005c3030();
+      pfStack_4e0 = (float *)0x4f97b9;
+      FUN_00553760();
+      pfStack_4e0 = (float *)0x4f97c3;
+      FUN_00429100();
+      pfStack_4e0 = (float *)0x0;
+      puStack_4e4 = (undefined1 *)0x4f97c9;
+      pfStack_4e0 = (float *)FUN_0065fce0();
+      puStack_4e4 = (undefined1 *)0x4f97d6;
+      FUN_006714b0();
+      pfStack_4e0 = (float *)auStack_48c;
+      uStack_4 = 0;
+      puStack_4e4 = (undefined1 *)0x4f97e7;
+      FUN_0065f910();
+      puStack_4e4 = auStack_48c;
+      puStack_4e8 = (undefined1 *)0x4f97f1;
+      FUN_00660270();
+      uStack_4 = 0xffffffff;
+      pfStack_4e0 = (float *)0x4f9808;
+      FUN_00671570();
+    }
+  }
+  ExceptionList = pvStack_c;
+  return;
+}
+

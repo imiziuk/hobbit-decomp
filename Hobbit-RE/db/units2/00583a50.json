@@ -1,0 +1,1 @@
+{"addr":"00583a50","name":"FUN_00583a50","cc":"__stdcall","proto":"undefined FUN_00583a50(void)","c":"\nvoid FUN_00583a50(void)\n\n{\n  FUN_00583a80(0x777a10);\n  return;\n}\n\n","globals":[],"callees":[{"addr":"00583a80","name":"FUN_00583a80","cc":"__fastcall","ret":"int","variadic":false,"external":false,"params":["int"]}]}

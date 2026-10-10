@@ -1,0 +1,10 @@
+
+void FUN_0067d4f0(void)
+
+{
+  FUN_00648510(DAT_00808ed4,DAT_00808ed4 + DAT_00808ef0,(DAT_00808f20 + -1) * DAT_00808ef0);
+  FUN_00648600(DAT_00808ee8,0,DAT_00808ef0);
+  DAT_00808ec8 = 0;
+  return;
+}
+

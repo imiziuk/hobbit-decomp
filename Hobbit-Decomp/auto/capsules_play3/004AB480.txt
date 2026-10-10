@@ -1,0 +1,8 @@
+function 004AB480 AUTO_004ab480
+verdict eax A=00000001 B=00000030
+regs eax=00000001 ebx=00000000 ecx=03330448 edx=001AFCB8 esi=03330448 edi=03330474 ebp=0333048C esp=001AFC8C eflags=00000202 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=1
+diff_count 0
+wa 004AB488 033304C2 1 30
+wb 1013B10E 033304C2 1 30

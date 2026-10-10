@@ -1,0 +1,29 @@
+
+HANDLE FUN_006c2b30(undefined4 param_1,SIZE_T param_2,undefined4 param_3)
+
+{
+  LPVOID lpThreadId;
+  HANDLE hThread;
+  DWORD DVar1;
+  
+  DVar1 = 0;
+  lpThreadId = (LPVOID)FUN_006c29f3(1,0x74);
+  if (lpThreadId != (LPVOID)0x0) {
+    FUN_006c3f30(lpThreadId);
+    *(undefined4 *)((int)lpThreadId + 0x48) = param_1;
+    *(undefined4 *)((int)lpThreadId + 0x4c) = param_3;
+    hThread = CreateThread((LPSECURITY_ATTRIBUTES)0x0,param_2,FUN_006c2ba7,lpThreadId,4,
+                           (LPDWORD)lpThreadId);
+    *(HANDLE *)((int)lpThreadId + 4) = hThread;
+    if ((hThread != (HANDLE)0x0) && (DVar1 = ResumeThread(hThread), DVar1 != 0xffffffff)) {
+      return hThread;
+    }
+    DVar1 = GetLastError();
+  }
+  FUN_006c1d53(lpThreadId);
+  if (DVar1 != 0) {
+    FUN_006c55d0(DVar1);
+  }
+  return (HANDLE)0xffffffff;
+}
+

@@ -1,0 +1,1 @@
+{"addr":"006abb20","name":"FUN_006abb20","cc":"__fastcall","proto":"undefined FUN_006abb20(int param_1)","c":"\nvoid __fastcall FUN_006abb20(int param_1)\n\n{\n  if (DAT_00813180 == 0) {\n    _BinkPause_8(*(undefined4 *)(param_1 + 0x1c),1);\n  }\n  return;\n}\n\n","globals":[{"name":"DAT_00813180","addr":"00813180","type":"int"}],"callees":[{"addr":"006e9298"}]}

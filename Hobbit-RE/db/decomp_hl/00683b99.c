@@ -1,0 +1,49 @@
+
+undefined4 __fastcall FUN_00683b99(int *param_1)
+
+{
+  int iVar1;
+  uint *puVar2;
+  int iVar3;
+  uint uVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  uint *puVar8;
+  uint *puVar9;
+  uint *puVar10;
+  uint *puVar11;
+  uint *puVar12;
+  
+  iVar1 = *param_1;
+  puVar10 = *(uint **)(param_1[1] + 0x18);
+  puVar2 = *(uint **)(iVar1 + 0x18);
+  iVar3 = *(int *)(iVar1 + 0x1048);
+  puVar11 = (uint *)(*(int *)(iVar1 + 0x1054) * iVar3 + (int)puVar2);
+  for (; puVar2 < puVar11; puVar2 = (uint *)((int)puVar2 + iVar3 * 2)) {
+    iVar1 = *(int *)(iVar1 + 0x1050);
+    puVar12 = (uint *)(iVar3 + (int)puVar2);
+    puVar8 = puVar10;
+    for (puVar9 = puVar2; puVar9 < puVar2 + iVar1; puVar9 = puVar9 + 2) {
+      uVar4 = puVar9[1];
+      uVar5 = *puVar9;
+      uVar6 = puVar12[1];
+      uVar7 = *puVar12;
+      *puVar8 = ((uVar5 >> 2 & 0xffc03fc0) + (uVar7 >> 2 & 0xffc03fc0) + (uVar4 >> 2 & 0xffc03fc0) +
+                 -0x7fff80 + (uVar6 >> 2 & 0xffc03fc0) ^
+                (uVar5 & 0xff00ff) + (uVar7 & 0xff00ff) + (uVar4 & 0xff00ff) + 0x20002 +
+                (uVar6 & 0xff00ff) >> 2) & 0xff00ff ^
+                (uint)(&DAT_00800080 +
+                      (uVar6 >> 2 & 0x3fc03fc0) +
+                      (uVar5 >> 2 & 0x3fc03fc0) + (uVar7 >> 2 & 0x3fc03fc0) +
+                      (uVar4 >> 2 & 0x3fc03fc0));
+      puVar12 = puVar12 + 2;
+      puVar8 = puVar8 + 1;
+    }
+    puVar10 = (uint *)((int)puVar10 + *(int *)(param_1[1] + 0x1048));
+    iVar1 = *param_1;
+    iVar3 = *(int *)(iVar1 + 0x1048);
+  }
+  return 0;
+}
+

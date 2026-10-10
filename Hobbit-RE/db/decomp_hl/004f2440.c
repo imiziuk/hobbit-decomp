@@ -1,0 +1,153 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_004f2440(undefined4 *param_1)
+
+{
+  float fVar1;
+  float fVar2;
+  undefined4 *puVar3;
+  undefined4 uVar4;
+  int iVar5;
+  float local_18;
+  int local_14;
+  int local_10;
+  float local_c;
+  float local_8;
+  float local_4;
+  
+  param_1[0x21d] = 0x18;
+  param_1[2] = 0;
+  FUN_0065f8a0(&local_14,&local_10);
+  iVar5 = 0xf;
+  param_1[0x15c] = (float)local_14 / _DAT_006efa34;
+  param_1[0x158] = (float)local_14;
+  param_1[0x159] = (float)local_10;
+  param_1[0x156] = param_1[0x158];
+  param_1[0x157] = param_1[0x159];
+  param_1[0x156] = (float)param_1[0x156] * _DAT_006e936c;
+  param_1[0x157] = (float)param_1[0x157] * _DAT_006e936c;
+  param_1[0x15a] = 0;
+  fVar1 = DAT_006e92e4;
+  param_1[0x15b] = 0;
+  param_1[0x161] = 1;
+  param_1[0x162] = 3;
+  param_1[500] = 0x42fa0000;
+  param_1[0x213] = 0x437f0000;
+  param_1[0x163] = 0x42960000;
+  param_1[0x164] = 0x42200000;
+  puVar3 = param_1 + 0x178;
+  do {
+    puVar3[-3] = fVar1;
+    puVar3[-2] = 0;
+    fVar2 = _DAT_006efa48;
+    *puVar3 = 0x41900000;
+    iVar5 = iVar5 + -1;
+    puVar3[-1] = fVar2 + fVar1;
+    fVar1 = fVar1 + _DAT_006e99a0;
+    puVar3 = puVar3 + 4;
+  } while (iVar5 != 0);
+  FUN_004fa3d0(param_1 + 0xf5);
+  FUN_004fa3d0(&DAT_00763460);
+  local_18 = (float)FUN_004f8d90(0x30);
+  local_c = (float)(int)local_18;
+  local_18 = (float)FUN_004f8d60(0x218);
+  local_8 = (float)(int)local_18;
+  local_4 = local_c;
+  FUN_004fa430(&local_8);
+  FUN_004fa480(0x3f800000);
+  local_18 = -NAN;
+  FUN_004fa4b0(&local_18);
+  FUN_004fa710(param_1[500]);
+  param_1[0x1cb] = 0;
+  param_1[0x1cc] = 0xffffffff;
+  param_1[0x1cd] = 0;
+  param_1[0x1ce] = 0xffffffff;
+  local_c = (float)FUN_004f8d90(0x70);
+  local_18 = (float)(int)local_c;
+  local_c = (float)FUN_004f8d60(0x260);
+  local_8 = (float)(int)local_c;
+  local_4 = local_18;
+  FUN_004fa430(&local_8);
+  FUN_004fa480(0x3f800000);
+  local_18 = -NAN;
+  FUN_004fa4b0(&local_18);
+  FUN_004fa710(param_1[500]);
+  param_1[0x1e9] = 1;
+  FUN_0058e880(param_1[0x1ea]);
+  param_1[0x1ea] = 0xffffffff;
+  *param_1 = 0;
+  param_1[1] = 0;
+  param_1[0x1fd] = 1;
+  param_1[0x155] = 1;
+  param_1[3] = 0;
+  param_1[0x206] = 0;
+  param_1[0x207] = 0;
+  param_1[0x209] = 0;
+  param_1[0x20a] = 0;
+  param_1[0x20b] = 0;
+  param_1[0x20c] = 0;
+  *(undefined1 *)((int)param_1 + 0x837) = 0xff;
+  *(undefined1 *)((int)param_1 + 0x836) = 0;
+  *(undefined1 *)((int)param_1 + 0x835) = 0;
+  *(undefined1 *)(param_1 + 0x20d) = 0;
+  param_1[0x1f8] = 0x3f800000;
+  param_1[0x1fb] = 0x3f800000;
+  param_1[0x205] = 0;
+  param_1[0x5e] = 0xffffffff;
+  param_1[0x5b] = 0xffffffff;
+  param_1[0x5c] = 0xffffffff;
+  param_1[0x5d] = 1;
+  param_1[0x61] = 0;
+  param_1[0x62] = 1;
+  param_1[0x5f] = 0;
+  param_1[0x60] = 1;
+  param_1[99] = 0x40a00000;
+  param_1[100] = 0x41700000;
+  param_1[0x1ff] = 0x41e00000;
+  param_1[0x200] = 0x41800000;
+  param_1[0x201] = 0xc0000000;
+  param_1[0x203] = 0x40800000;
+  param_1[0x204] = 0x42180000;
+  param_1[0x202] = 0x40c00000;
+  param_1[0x167] = 0x423c0000;
+  param_1[0x168] = 0x422c0000;
+  param_1[0x210] = 0x42480000;
+  param_1[0x211] = 1;
+  param_1[0x212] = 0;
+  param_1[0x216] = 1;
+  param_1[0x217] = 0x40c00000;
+  param_1[0x218] = 0x41a00000;
+  param_1[0x1fa] = 0;
+  param_1[0x215] = 0x40c00000;
+  FUN_00434ca0(1);
+  uVar4 = __ftol();
+  param_1[0x1f6] = uVar4;
+  FUN_00434ca0(1);
+  uVar4 = __ftol();
+  param_1[0x1f5] = uVar4;
+  param_1[0x1f7] = 0xffffffff;
+  param_1[0x219] = 0x42700000;
+  param_1[0x21a] = 0;
+  param_1[0x221] = 0;
+  param_1[0x21e] = 0;
+  param_1[0x21f] = 0;
+  param_1[0x220] = 0;
+  param_1[0x222] = 0xff;
+  param_1[0x4e8] = 0;
+  FUN_004f3140(0);
+  local_18 = ((float)param_1[0x4e8] + (float)param_1[0x4e8]) - DAT_006e92e8;
+  if (local_18 < DAT_006e92e4) {
+    local_18 = 0.0;
+  }
+  FUN_0056baa0(local_18);
+  FUN_00587cf0(_DAT_006e936c <= (float)param_1[0x4e8]);
+  FUN_004343c0();
+  if ((int)param_1[0x1cc] < 0) {
+    FUN_0058e880(param_1[0x1cc]);
+    param_1[0x1cc] = 0xffffffff;
+    param_1[0x1cd] = 0;
+  }
+  return;
+}
+

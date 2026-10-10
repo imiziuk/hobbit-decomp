@@ -1,0 +1,1 @@
+{"addr":"0064fea0","name":"FUN_0064fea0","cc":"__stdcall","proto":"undefined FUN_0064fea0(void)","c":"\nvoid FUN_0064fea0(void)\n\n{\n  LeaveCriticalSection((LPCRITICAL_SECTION)&DAT_007ce4e8);\n  return;\n}\n\n","globals":[{"name":"DAT_007ce4e8","addr":"007ce4e8","type":"undefined"}],"callees":[{"addr":"006e9064"}]}

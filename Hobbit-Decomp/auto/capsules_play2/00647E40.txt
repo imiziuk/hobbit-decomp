@@ -1,0 +1,6 @@
+function 00647E40 AUTO_00647e40
+verdict eax A=FFFFFFFC B=02F51E08
+regs eax=02F51E08 ebx=00731F1C ecx=00731F1C edx=02F51E00 esi=02F51E04 edi=00000006 ebp=FFFFFFFF esp=001AFCF8 eflags=00000246 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

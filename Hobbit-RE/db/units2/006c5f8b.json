@@ -1,0 +1,1 @@
+{"addr":"006c5f8b","name":"FUN_006c5f8b","cc":"__stdcall","proto":"int FUN_006c5f8b(void)","c":"\nint FUN_006c5f8b(void)\n\n{\n  short in_FPUStatusWord;\n  \n  return (int)in_FPUStatusWord;\n}\n\n","globals":[],"callees":[]}

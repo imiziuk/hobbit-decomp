@@ -1,0 +1,60 @@
+
+void __fastcall FUN_00673c30(float *param_1)
+
+{
+  float *pfVar1;
+  float fVar2;
+  float fVar3;
+  float fVar4;
+  float *pfVar5;
+  float *pfVar6;
+  int iVar7;
+  
+  if (((uint)param_1[0x22] & 1) != 0) {
+    pfVar6 = param_1 + 3;
+    pfVar1 = param_1 + 0x23;
+    if ((pfVar1 != pfVar6) && (pfVar6 != param_1 + 0x13)) {
+      pfVar5 = param_1 + 0x25;
+      iVar7 = (int)pfVar6 - (int)pfVar1;
+      do {
+        pfVar5[-2] = *pfVar6;
+        pfVar5[-1] = pfVar6[1];
+        *pfVar5 = *(float *)(iVar7 + (int)pfVar5);
+        pfVar5[1] = pfVar6[3];
+        pfVar6 = pfVar6 + 4;
+        pfVar5 = pfVar5 + 4;
+      } while (pfVar6 != param_1 + 0x13);
+    }
+    fVar2 = param_1[0x24];
+    param_1[0x24] = param_1[0x27];
+    param_1[0x27] = fVar2;
+    fVar2 = param_1[0x25];
+    param_1[0x25] = param_1[0x2b];
+    param_1[0x2b] = fVar2;
+    fVar2 = param_1[0x26];
+    param_1[0x26] = param_1[0x2f];
+    param_1[0x2f] = fVar2;
+    fVar2 = param_1[0x29];
+    param_1[0x29] = param_1[0x2c];
+    param_1[0x2c] = fVar2;
+    fVar2 = param_1[0x2a];
+    param_1[0x2a] = param_1[0x30];
+    param_1[0x30] = fVar2;
+    fVar2 = param_1[0x2e];
+    param_1[0x2e] = param_1[0x31];
+    param_1[0x31] = fVar2;
+    fVar2 = -*param_1;
+    fVar4 = -param_1[1];
+    fVar3 = -param_1[2];
+    param_1[0x2f] = fVar2 * *pfVar1 + fVar4 * param_1[0x27] + fVar3 * param_1[0x2b] + param_1[0x2f];
+    param_1[0x30] =
+         fVar4 * param_1[0x28] + fVar2 * param_1[0x24] + fVar3 * param_1[0x2c] + param_1[0x30];
+    param_1[0x31] =
+         fVar4 * param_1[0x29] + fVar2 * param_1[0x25] + fVar3 * param_1[0x2d] + param_1[0x31];
+    param_1[0x32] =
+         fVar4 * param_1[0x2a] + fVar2 * param_1[0x26] + fVar3 * param_1[0x2e] + param_1[0x32];
+    param_1[0x22] = (float)((uint)param_1[0x22] & 0xfffffffe);
+  }
+  return;
+}
+

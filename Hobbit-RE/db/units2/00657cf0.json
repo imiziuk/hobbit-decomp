@@ -1,0 +1,1 @@
+{"addr":"00657cf0","name":"FUN_00657cf0","cc":"__stdcall","proto":"longlong FUN_00657cf0(void)","c":"\nlonglong FUN_00657cf0(void)\n\n{\n  longlong lVar1;\n  \n  lVar1 = __ftol();\n  return lVar1;\n}\n\n","globals":[],"callees":[{"addr":"006c04c0","name":"__ftol","cc":"__stdcall","ret":"longlong","variadic":false,"external":false,"params":[]}]}

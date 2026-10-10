@@ -1,0 +1,1 @@
+{"addr":"0041fce0","name":"FUN_0041fce0","cc":"__thiscall","proto":"undefined4 FUN_0041fce0(float param_1)","c":"\nundefined4 __thiscall FUN_0041fce0(void *this,float param_1)\n\n{\n  if (*(float *)((int)this + 0x5910) < param_1 !=\n      (NAN(*(float *)((int)this + 0x5910)) || NAN(param_1))) {\n    return 1;\n  }\n  return 0;\n}\n\n","globals":[],"callees":[]}

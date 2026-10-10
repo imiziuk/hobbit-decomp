@@ -1,0 +1,6 @@
+function 0065C8B0 AUTO_0065c8b0
+verdict eax A=00000001 B=00000028
+regs eax=00000028 ebx=033C1158 ecx=00000028 edx=033C2268 esi=00000028 edi=00000000 ebp=00000008 esp=001AF754 eflags=00000246 fpcw=007F
+teb 003BB000 ourdll 10000000
+first_divergence index=0
+diff_count 0

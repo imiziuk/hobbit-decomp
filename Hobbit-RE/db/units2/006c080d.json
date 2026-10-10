@@ -1,0 +1,1 @@
+{"addr":"006c080d","name":"FUN_006c080d","cc":"__stdcall","proto":"undefined FUN_006c080d(void)","c":"\nvoid FUN_006c080d(void)\n\n{\n  __amsg_exit(0x19);\n  return;\n}\n\n","globals":[],"callees":[{"addr":"006c0d98","name":"__amsg_exit","cc":"__cdecl","ret":"void","variadic":false,"external":false,"params":["int"]}]}

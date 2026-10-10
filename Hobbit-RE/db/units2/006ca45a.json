@@ -1,0 +1,1 @@
+{"addr":"006ca45a","name":"FUN_006ca45a","cc":"__cdecl","proto":"bool FUN_006ca45a(LPVOID param_1, UINT_PTR param_2)","c":"\nbool __cdecl FUN_006ca45a(LPVOID param_1,UINT_PTR param_2)\n\n{\n  BOOL BVar1;\n  \n  BVar1 = IsBadWritePtr(param_1,param_2);\n  return BVar1 == 0;\n}\n\n","globals":[],"callees":[{"addr":"006e9180"}]}

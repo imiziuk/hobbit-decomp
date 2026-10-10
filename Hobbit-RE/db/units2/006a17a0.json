@@ -1,0 +1,1 @@
+{"addr":"006a17a0","name":"FUN_006a17a0","cc":"__stdcall","proto":"undefined4 FUN_006a17a0(int param_1)","c":"\nundefined4 FUN_006a17a0(int param_1)\n\n{\n  if (0 < *(int *)(param_1 + 0x5c8)) {\n    return *(undefined4 *)(*(int *)(param_1 + 0x5cc) + -4 + *(int *)(param_1 + 0x5c8) * 4);\n  }\n  return 0;\n}\n\n","globals":[],"callees":[]}

@@ -1,0 +1,6 @@
+function 00406CE0 AUTO_00406ce0
+verdict eax A=00000B47 B=001AF2E4
+regs eax=001AF2E4 ebx=00000000 ecx=0076CD88 edx=00210440 esi=E298FC00 edi=0CD4B388 ebp=0D8AD590 esp=001AF2C4 eflags=00000246 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

@@ -1,0 +1,1 @@
+{"addr":"00606da0","name":"FUN_00606da0","cc":"__stdcall","proto":"undefined4 FUN_00606da0(void)","c":"\nundefined4 FUN_00606da0(void)\n\n{\n  FUN_00649ba0((undefined4 *)&stack0x00000004);\n  return 0;\n}\n\n","globals":[],"callees":[{"addr":"00649ba0","name":"FUN_00649ba0","cc":"__fastcall","ret":"undefined","variadic":false,"external":false,"params":["undefined4 *"]}]}

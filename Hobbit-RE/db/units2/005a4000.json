@@ -1,0 +1,1 @@
+{"addr":"005a4000","name":"FUN_005a4000","cc":"__stdcall","proto":"undefined4 FUN_005a4000(int param_1)","c":"\nundefined4 FUN_005a4000(int param_1)\n\n{\n  return *(undefined4 *)(param_1 + 8);\n}\n\n","globals":[],"callees":[]}

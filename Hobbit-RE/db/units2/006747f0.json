@@ -1,0 +1,1 @@
+{"addr":"006747f0","name":"FUN_006747f0","cc":"__cdecl","proto":"undefined FUN_006747f0(size_t param_1)","c":"\nvoid __cdecl FUN_006747f0(size_t param_1)\n\n{\n  thunk_FUN_0064ff70(param_1);\n  return;\n}\n\n","globals":[],"callees":[{"addr":"0064ff90","name":"thunk_FUN_0064ff70","cc":"__cdecl","ret":"void *","variadic":false,"external":false,"params":["size_t"]}]}

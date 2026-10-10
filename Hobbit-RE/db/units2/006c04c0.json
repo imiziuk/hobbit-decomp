@@ -1,0 +1,1 @@
+{"addr":"006c04c0","name":"__ftol","cc":"__stdcall","proto":"longlong __ftol(void)","c":"\n/* Library Function - Single Match\n    __ftol\n   \n   Library: Visual Studio */\n\nlonglong __ftol(void)\n\n{\n  float10 in_ST0;\n  \n  return (longlong)ROUND(in_ST0);\n}\n\n","globals":[],"callees":[]}

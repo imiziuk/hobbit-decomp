@@ -1,0 +1,1 @@
+{"addr":"004caff0","name":"FUN_004caff0","cc":"__fastcall","proto":"bool FUN_004caff0(int param_1)","c":"\nbool __fastcall FUN_004caff0(int param_1)\n\n{\n  int iVar1;\n  \n  iVar1 = *(int *)(param_1 + 300);\n  if (iVar1 == 5) {\n    return false;\n  }\n  if (iVar1 == 6) {\n    return false;\n  }\n  return iVar1 != 7;\n}\n\n","globals":[],"callees":[]}

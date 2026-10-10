@@ -1,0 +1,1 @@
+{"addr":"0069451b","name":"FUN_0069451b","cc":"__cdecl","proto":"undefined FUN_0069451b(int * param_1)","c":"\nvoid __cdecl FUN_0069451b(int *param_1)\n\n{\n  *(undefined4 *)(*param_1 + 0x14) = 0x30;\n  (**(code **)*param_1)(param_1);\n  return;\n}\n\n","globals":[],"callees":[]}

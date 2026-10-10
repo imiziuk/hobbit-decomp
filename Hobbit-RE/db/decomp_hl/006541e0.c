@@ -1,0 +1,148 @@
+
+byte * FUN_006541e0(ushort *param_1,int param_2,int param_3)
+
+{
+  undefined4 uVar1;
+  byte bVar2;
+  byte *pbVar3;
+  ushort *puVar4;
+  uint uVar5;
+  byte *pbVar6;
+  byte *pbVar7;
+  uint uVar8;
+  int iVar9;
+  int iVar10;
+  uint uVar11;
+  int local_8;
+  byte local_4;
+  
+  iVar9 = param_2 * 0x7c;
+  pbVar3 = (byte *)thunk_FUN_0064ff70(param_3 * 4,s_C__projects_meridian_xCore_x_fil_0074dba8,0x2e);
+  pbVar7 = pbVar3;
+  if ((*(int *)(&DAT_006f6cf4 + iVar9) == 0x20) && (0 < param_3)) {
+    iVar10 = (int)param_1 - (int)pbVar3;
+    pbVar6 = pbVar3;
+    do {
+      pbVar7 = pbVar6 + 4;
+      pbVar6[2] = (byte)((*(uint *)(&DAT_006f6d38 + iVar9) & *(uint *)(pbVar6 + iVar10)) >>
+                        ((byte)*(undefined4 *)(&DAT_006f6d10 + iVar9) & 0x1f));
+      pbVar6[1] = (byte)((*(uint *)(&DAT_006f6d3c + iVar9) & *(uint *)(pbVar7 + iVar10 + -4)) >>
+                        ((byte)*(undefined4 *)(&DAT_006f6d14 + iVar9) & 0x1f));
+      *pbVar6 = (byte)((*(uint *)(&DAT_006f6d40 + iVar9) & *(uint *)(pbVar7 + iVar10 + -4)) >>
+                      ((byte)*(undefined4 *)(&DAT_006f6d18 + iVar9) & 0x1f));
+      bVar2 = (byte)((*(uint *)(&DAT_006f6d44 + iVar9) & *(uint *)(pbVar7 + iVar10 + -4)) >>
+                    ((byte)*(undefined4 *)(&DAT_006f6d1c + iVar9) & 0x1f));
+      pbVar6[3] = bVar2;
+      param_3 = param_3 + -1;
+      pbVar6[3] = (byte)((*(uint *)(&DAT_006f6d48 + iVar9) & *(uint *)(pbVar7 + iVar10 + -4)) >>
+                        ((byte)*(undefined4 *)(&DAT_006f6d20 + iVar9) & 0x1f)) | bVar2;
+      pbVar6 = pbVar7;
+    } while (param_3 != 0);
+    param_3 = 0;
+  }
+  if (*(int *)(&DAT_006f6cf4 + iVar9) == 0x18) {
+    puVar4 = param_1;
+    if ((*(int *)(&DAT_006f6d10 + iVar9) == 0x10) && (0 < param_3)) {
+      do {
+        pbVar7[2] = (byte)*puVar4;
+        pbVar7[1] = *(byte *)((int)puVar4 + 1);
+        *pbVar7 = (byte)puVar4[1];
+        pbVar7[3] = 0xff;
+        puVar4 = (ushort *)((int)puVar4 + 3);
+        pbVar7 = pbVar7 + 4;
+        param_3 = param_3 + -1;
+      } while (param_3 != 0);
+      param_3 = 0;
+    }
+    if ((*(int *)(&DAT_006f6d10 + iVar9) == 0) && (0 < param_3)) {
+      do {
+        *pbVar7 = (byte)*puVar4;
+        pbVar7[1] = *(byte *)((int)puVar4 + 1);
+        pbVar7[2] = (byte)puVar4[1];
+        pbVar7[3] = 0xff;
+        puVar4 = (ushort *)((int)puVar4 + 3);
+        pbVar7 = pbVar7 + 4;
+        param_3 = param_3 + -1;
+      } while (param_3 != 0);
+      param_3 = 0;
+    }
+  }
+  if ((*(int *)(&DAT_006f6cf4 + iVar9) == 0x10) && (local_8 = param_3, 0 < param_3)) {
+    do {
+      uVar8 = (uint)*param_1;
+      uVar5 = ((uVar8 & *(uint *)(&DAT_006f6d38 + iVar9)) >>
+              ((byte)*(undefined4 *)(&DAT_006f6d10 + iVar9) & 0x1f)) <<
+              ((byte)*(undefined4 *)(&DAT_006f6d24 + iVar9) & 0x1f);
+      uVar11 = ((uVar8 & *(uint *)(&DAT_006f6d3c + iVar9)) >>
+               ((byte)*(undefined4 *)(&DAT_006f6d14 + iVar9) & 0x1f)) <<
+               ((byte)*(undefined4 *)(&DAT_006f6d28 + iVar9) & 0x1f);
+      local_4 = (byte)uVar11 |
+                (byte)(uVar11 >> ((byte)*(undefined4 *)(&DAT_006f6d00 + iVar9) & 0x1f));
+      uVar11 = ((uVar8 & *(uint *)(&DAT_006f6d40 + iVar9)) >>
+               ((byte)*(undefined4 *)(&DAT_006f6d18 + iVar9) & 0x1f)) <<
+               ((byte)*(undefined4 *)(&DAT_006f6d2c + iVar9) & 0x1f);
+      uVar1 = *(undefined4 *)(&DAT_006f6d04 + iVar9);
+      if (*(int *)(&DAT_006f6d08 + iVar9) == 0) {
+        param_2._0_1_ = 0xff;
+      }
+      else {
+        uVar8 = ((*(uint *)(&DAT_006f6d44 + iVar9) & uVar8) >>
+                ((byte)*(undefined4 *)(&DAT_006f6d1c + iVar9) & 0x1f)) <<
+                ((byte)*(undefined4 *)(&DAT_006f6d30 + iVar9) & 0x1f);
+        for (iVar10 = *(int *)(&DAT_006f6d08 + iVar9); iVar10 < 8; iVar10 = iVar10 * 2) {
+          uVar8 = uVar8 | uVar8 >> ((byte)iVar10 & 0x1f);
+        }
+        param_2._0_1_ = (byte)uVar8;
+      }
+      pbVar7[2] = (byte)uVar5 |
+                  (byte)(uVar5 >> ((byte)*(undefined4 *)(&DAT_006f6cfc + iVar9) & 0x1f));
+      pbVar7[1] = local_4;
+      pbVar7[3] = (byte)param_2;
+      *pbVar7 = (byte)uVar11 | (byte)(uVar11 >> ((byte)uVar1 & 0x1f));
+      param_1 = param_1 + 1;
+      pbVar7 = pbVar7 + 4;
+      local_8 = local_8 + -1;
+    } while (local_8 != 0);
+    param_3 = 0;
+  }
+  if ((*(int *)(&DAT_006f6cf4 + iVar9) == 8) && (local_8 = param_3, 0 < param_3)) {
+    do {
+      uVar8 = (uint)(byte)*param_1;
+      uVar5 = ((uVar8 & *(uint *)(&DAT_006f6d38 + iVar9)) >>
+              ((byte)*(undefined4 *)(&DAT_006f6d10 + iVar9) & 0x1f)) <<
+              ((byte)*(undefined4 *)(&DAT_006f6d24 + iVar9) & 0x1f);
+      uVar11 = ((uVar8 & *(uint *)(&DAT_006f6d3c + iVar9)) >>
+               ((byte)*(undefined4 *)(&DAT_006f6d14 + iVar9) & 0x1f)) <<
+               ((byte)*(undefined4 *)(&DAT_006f6d28 + iVar9) & 0x1f);
+      local_4 = (byte)uVar11 |
+                (byte)(uVar11 >> ((byte)*(undefined4 *)(&DAT_006f6d00 + iVar9) & 0x1f));
+      uVar11 = ((uVar8 & *(uint *)(&DAT_006f6d40 + iVar9)) >>
+               ((byte)*(undefined4 *)(&DAT_006f6d18 + iVar9) & 0x1f)) <<
+               ((byte)*(undefined4 *)(&DAT_006f6d2c + iVar9) & 0x1f);
+      uVar1 = *(undefined4 *)(&DAT_006f6d04 + iVar9);
+      if (*(int *)(&DAT_006f6d08 + iVar9) == 0) {
+        param_3._0_1_ = 0xff;
+      }
+      else {
+        uVar8 = ((*(uint *)(&DAT_006f6d44 + iVar9) & uVar8) >>
+                ((byte)*(undefined4 *)(&DAT_006f6d1c + iVar9) & 0x1f)) <<
+                ((byte)*(undefined4 *)(&DAT_006f6d30 + iVar9) & 0x1f);
+        for (iVar10 = *(int *)(&DAT_006f6d08 + iVar9); iVar10 < 8; iVar10 = iVar10 * 2) {
+          uVar8 = uVar8 | uVar8 >> ((byte)iVar10 & 0x1f);
+        }
+        param_3._0_1_ = (byte)uVar8;
+      }
+      pbVar7[2] = (byte)uVar5 |
+                  (byte)(uVar5 >> ((byte)*(undefined4 *)(&DAT_006f6cfc + iVar9) & 0x1f));
+      pbVar7[1] = local_4;
+      pbVar7[3] = (byte)param_3;
+      *pbVar7 = (byte)uVar11 | (byte)(uVar11 >> ((byte)uVar1 & 0x1f));
+      param_1 = (ushort *)((int)param_1 + 1);
+      pbVar7 = pbVar7 + 4;
+      local_8 = local_8 + -1;
+    } while (local_8 != 0);
+    return pbVar3;
+  }
+  return pbVar3;
+}
+

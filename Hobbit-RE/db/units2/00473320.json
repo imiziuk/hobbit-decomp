@@ -1,0 +1,1 @@
+{"addr":"00473320","name":"FUN_00473320","cc":"__stdcall","proto":"undefined8 FUN_00473320(void)","c":"\nundefined8 FUN_00473320(void)\n\n{\n  return CONCAT44(DAT_0075cd04,DAT_0075cd00);\n}\n\n","globals":[{"name":"DAT_0075cd00","addr":"0075cd00","type":"undefined4"},{"name":"DAT_0075cd04","addr":"0075cd04","type":"undefined4"}],"callees":[]}

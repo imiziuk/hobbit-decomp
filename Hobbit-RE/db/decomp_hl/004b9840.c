@@ -1,0 +1,62 @@
+
+undefined4 * __fastcall FUN_004b9840(undefined4 *param_1)
+
+{
+  FUN_004c0370();
+  *param_1 = &PTR_FUN_006ee748;
+  param_1[0xa8] = 0;
+  param_1[0xab] = 0;
+  param_1[8] = 0;
+  param_1[9] = 0;
+  param_1[10] = 0;
+  param_1[0x5f] = 0;
+  param_1[0x58] = &DAT_0075d8ec;
+  if (DAT_0075d8ec == 0) {
+    DAT_0075d8ec = 1;
+  }
+  param_1[0x1a] = 0;
+  param_1[0x1b] = 0;
+  param_1[0x1c] = 0;
+  param_1[0x88] = 0;
+  param_1[0x89] = 0;
+  param_1[0x8a] = 0;
+  param_1[0x8b] = 0x3f800000;
+  param_1[0x5e] = 0;
+  param_1[0x5d] = 0;
+  param_1[0x5c] = 0;
+  param_1[0x94] = 0;
+  param_1[0x95] = 0;
+  param_1[0x96] = 0;
+  param_1[0x97] = 0;
+  param_1[0x98] = param_1[0x98] & 0xfffffffc;
+  param_1[0x74] = 0;
+  param_1[0x73] = 0;
+  param_1[0x72] = 0;
+  param_1[0x81] = 0;
+  param_1[0x7d] = 0;
+  param_1[0x79] = 0;
+  param_1[0x82] = 0;
+  param_1[0x7e] = 0;
+  param_1[0x76] = 0;
+  param_1[0x83] = 0;
+  param_1[0x7b] = 0;
+  param_1[0x77] = 0;
+  param_1[0x80] = 0;
+  param_1[0x7c] = 0;
+  param_1[0x78] = 0;
+  param_1[0x75] = 0x3f800000;
+  param_1[0x7a] = 0x3f800000;
+  param_1[0x7f] = 0x3f800000;
+  param_1[0x84] = 0x3f800000;
+  param_1[0x9c] = 0;
+  param_1[0x9d] = 0;
+  param_1[0xa4] = 0;
+  param_1[0xa5] = 0;
+  param_1[0x98] = param_1[0x98] & 0xfffffffb | 0x40;
+  param_1[0x9b] = 8;
+  param_1[0x9a] = 1;
+  param_1[0xa2] = 0x40000000;
+  param_1[0x99] = 0x42480000;
+  return param_1;
+}
+

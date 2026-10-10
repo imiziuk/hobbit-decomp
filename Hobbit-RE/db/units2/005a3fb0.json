@@ -1,0 +1,1 @@
+{"addr":"005a3fb0","name":"FUN_005a3fb0","cc":"__stdcall","proto":"int FUN_005a3fb0(int param_1)","c":"\nint FUN_005a3fb0(int param_1)\n\n{\n  return *(int *)(param_1 + 8) + 0x44;\n}\n\n","globals":[],"callees":[]}

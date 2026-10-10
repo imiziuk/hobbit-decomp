@@ -1,0 +1,1 @@
+{"addr":"00435940","name":"FUN_00435940","cc":"__stdcall","proto":"undefined * FUN_00435940(int param_1)","c":"\nundefined * FUN_00435940(int param_1)\n\n{\n  return (&PTR_s_Inst_CouragePoint_1_rgeom_007215d0)[param_1];\n}\n\n","globals":[{"name":"PTR_s_Inst_CouragePoint_1.rgeom_007215d0","addr":"007215d0","type":"undefined *"}],"callees":[]}

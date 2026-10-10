@@ -1,0 +1,31 @@
+
+/* Library Function - Multiple Matches With Different Base Names
+    _GodotFailDdeQueryConvInfo@12
+    _GodotFailFindResourceW@12
+    _GodotFailSetPropA@12
+    _GodotFailSetWindowLongA@12
+   
+   Libraries: Visual Studio 2005 Release, Visual Studio 2008 Release, Visual Studio 2010 Release,
+   Visual Studio 2015 Release */
+
+undefined4 FID_conflict__GodotFailFindResourceW_12(void)
+
+{
+  HMODULE pHVar1;
+  code *UNRECOVERED_JUMPTABLE;
+  undefined4 uVar2;
+  char *pcVar3;
+  
+  pcVar3 = "FindResourceW";
+  pHVar1 = GetModuleHandleA("kernel32.dll");
+  UNRECOVERED_JUMPTABLE = (code *)_GetProcAddressInternal_8(pHVar1,pcVar3);
+  if (UNRECOVERED_JUMPTABLE != (code *)0x0) {
+                    /* WARNING: Could not recover jumptable at 0x006cdc27. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    uVar2 = (*UNRECOVERED_JUMPTABLE)();
+    return uVar2;
+  }
+  SetLastError(0x7f);
+  return 0;
+}
+

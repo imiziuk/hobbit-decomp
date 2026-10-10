@@ -1,0 +1,8 @@
+
+void FUN_00503720(void)
+
+{
+  FUN_006a13b0(s_buy_sale_00731f74,&PTR_s_IDS_BUY_SALE_SCREEN_00731e68,FUN_00503740);
+  return;
+}
+

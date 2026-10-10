@@ -1,0 +1,1 @@
+{"addr":"00525860","name":"FUN_00525860","cc":"__stdcall","proto":"undefined4 FUN_00525860(int param_1)","c":"\nundefined4 FUN_00525860(int param_1)\n\n{\n  if (param_1 == 0x16) {\n    return 1;\n  }\n  if ((param_1 != 0x17) && (param_1 != 0x19)) {\n    return 2;\n  }\n  return 0;\n}\n\n","globals":[],"callees":[]}

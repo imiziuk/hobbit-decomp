@@ -1,0 +1,1 @@
+{"addr":"0067b820","name":"FUN_0067b820","cc":"__stdcall","proto":"undefined FUN_0067b820(int param_1)","c":"\nvoid FUN_0067b820(int param_1)\n\n{\n  (**(code **)(**(int **)(param_1 + 0x78) + 0x48))(*(int **)(param_1 + 0x78));\n  *(undefined4 *)(param_1 + 0x7c) = 0;\n  return;\n}\n\n","globals":[],"callees":[]}

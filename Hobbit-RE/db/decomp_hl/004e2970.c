@@ -1,0 +1,93 @@
+
+void __fastcall FUN_004e2970(int param_1)
+
+{
+  float fVar1;
+  undefined4 *puVar2;
+  undefined4 uVar3;
+  float *pfVar4;
+  undefined4 *puVar5;
+  float *pfStack_b4;
+  char *local_b0;
+  undefined1 *local_a0;
+  float local_9c;
+  float local_98;
+  float local_94;
+  float local_90;
+  float local_8c;
+  float local_88;
+  float local_84;
+  undefined1 local_80 [20];
+  undefined1 local_6c [8];
+  undefined4 local_64 [22];
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_006d5958;
+  pvStack_c = ExceptionList;
+  local_b0 = s_volume__RenderCustom_0072e8ac;
+  pfStack_b4 = (float *)0x4e299e;
+  ExceptionList = &pvStack_c;
+  FUN_00649600();
+  local_4 = 0;
+  pfVar4 = (float *)0x0;
+  puVar5 = local_64;
+  do {
+    local_b0 = (char *)0x1;
+    pfStack_b4 = pfVar4;
+    puVar2 = (undefined4 *)FUN_004e2160(&local_8c);
+    puVar5[-2] = *puVar2;
+    puVar5[-1] = puVar2[1];
+    *puVar5 = puVar2[2];
+    pfVar4 = (float *)((int)pfVar4 + 1);
+    puVar5 = puVar5 + 3;
+  } while ((int)pfVar4 < 8);
+  local_b0 = (char *)0x0;
+  pfStack_b4 = (float *)0x1;
+  FUN_0066c3a0();
+  local_a0 = (undefined1 *)&local_b0;
+  local_b0 = (char *)0xffffffff;
+  pfStack_b4 = (float *)0x4e29fc;
+  FUN_0066ddd0();
+  pfStack_b4 = (float *)0xc;
+  FUN_0066e180(local_6c,8);
+  FUN_0066e550(&DAT_0072e86c,0x18);
+  FUN_0066d9a0();
+  local_a0 = *(undefined1 **)(param_1 + 0x70);
+  local_98 = 0.0;
+  local_94 = 0.0;
+  local_90 = 100.0;
+  FUN_0064c8e0(local_a0,&local_a0,&local_9c);
+  fVar1 = local_94 * (float)local_a0;
+  local_94 = local_98 * (float)local_a0 + local_94 * local_9c;
+  local_a0 = *(undefined1 **)(param_1 + 0x68);
+  local_98 = local_9c * local_98 - fVar1;
+  FUN_0064c8e0(*(undefined1 **)(param_1 + 0x68),&local_9c,&local_a0);
+  local_b0 = *(char **)(param_1 + 0x6c);
+  fVar1 = local_90 * local_9c;
+  local_90 = local_94 * local_9c + local_90 * (float)local_a0;
+  pfStack_b4 = (float *)0x4e2acd;
+  local_94 = local_94 * (float)local_a0 - fVar1;
+  FUN_00428740();
+  local_b0 = (char *)0x4e2ad4;
+  pfVar4 = (float *)FUN_005c0150();
+  local_b0 = (char *)0x3f000000;
+  local_84 = pfVar4[5] + pfVar4[2];
+  pfStack_b4 = &local_8c;
+  local_88 = pfVar4[4] + pfVar4[1];
+  local_8c = *pfVar4 + pfVar4[3];
+  FUN_00402160(local_80);
+  local_b0 = (char *)0x0;
+  local_a0 = (undefined1 *)&pfStack_b4;
+  FUN_00406b70(0xffffff00);
+  uVar3 = FUN_00402130(&local_8c,local_80,&local_98);
+  FUN_00669ca0(local_80,uVar3);
+  local_4 = 0xffffffff;
+  local_b0 = (char *)0x4e2b54;
+  FUN_00649720();
+  ExceptionList = pvStack_c;
+  return;
+}
+

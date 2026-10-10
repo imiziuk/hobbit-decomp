@@ -1,0 +1,193 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall FUN_0045bf10(int *param_1)
+
+{
+  float *pfVar1;
+  float fVar2;
+  undefined4 *puVar3;
+  undefined4 uVar4;
+  int iVar5;
+  float *pfVar6;
+  uint extraout_ECX;
+  undefined4 extraout_ECX_00;
+  uint extraout_ECX_01;
+  undefined4 extraout_ECX_02;
+  undefined4 extraout_ECX_03;
+  uint extraout_ECX_04;
+  uint extraout_ECX_05;
+  uint extraout_ECX_06;
+  undefined8 uStack_98;
+  undefined1 local_80;
+  undefined1 local_7f;
+  undefined1 local_7e;
+  undefined1 local_7d;
+  float fStack_7c;
+  float fStack_78;
+  float fStack_74;
+  float fStack_70;
+  undefined1 *puStack_6c;
+  undefined4 uStack_60;
+  undefined4 uStack_5c;
+  undefined4 uStack_58;
+  float fStack_54;
+  float fStack_50;
+  float fStack_4c;
+  float fStack_48;
+  float fStack_44;
+  float fStack_40;
+  float fStack_3c;
+  float fStack_38;
+  float fStack_34;
+  float fStack_30;
+  float fStack_2c;
+  float fStack_28;
+  float fStack_24;
+  float fStack_20;
+  float fStack_1c;
+  undefined1 auStack_18 [12];
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  int local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_006d05d0;
+  pvStack_c = ExceptionList;
+  uStack_98 = 1.634016887049667e-306;
+  ExceptionList = &pvStack_c;
+  FUN_00649600();
+  local_4 = 0;
+  local_7f = 0xff;
+  if (param_1[0x2b] == 0) {
+    if (param_1[0x2c] == 0) goto LAB_0045bf8a;
+  }
+  else {
+    local_7f = 0;
+    if (param_1[0x2c] != 0) goto LAB_0045bf8a;
+  }
+  local_7f = 0x80;
+LAB_0045bf8a:
+  local_7d = 0xff;
+  local_7e = 0xff;
+  local_80 = 0;
+  uStack_98 = (double)CONCAT44(0x45bf91,(undefined4)uStack_98);
+  puVar3 = (undefined4 *)(**(code **)(*param_1 + 0x28))();
+  uStack_60 = *puVar3;
+  uStack_5c = puVar3[1];
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)CONCAT44(1,uStack_60);
+  uStack_58 = puVar3[2];
+  FUN_00425250(&local_80);
+  FUN_0066a6e0(&uStack_60,*(undefined4 *)(DAT_00772b08 + 0xc4));
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)(ulonglong)extraout_ECX;
+  pfVar6 = (float *)(param_1 + 0x35);
+  FUN_00406b70(0xff00ff00);
+  FUN_00669ca0(&uStack_60,pfVar6);
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)CONCAT44(1,extraout_ECX_00);
+  FUN_00406b70(0xff00ff00);
+  FUN_0066a6e0(pfVar6,param_1[0x41]);
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)(ulonglong)extraout_ECX_01;
+  pfVar1 = (float *)(param_1 + 0x38);
+  FUN_00406b70(0xff00ff00);
+  FUN_00669ca0(pfVar6,pfVar1);
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)CONCAT44(1,extraout_ECX_02);
+  FUN_00406b70(0xff00ff00);
+  FUN_0066a6e0(pfVar1,0x41a00000);
+  fStack_7c = SQRT(((float)param_1[0x37] + (float)param_1[0x3a]) *
+                   ((float)param_1[0x37] + (float)param_1[0x3a]) +
+                   ((float)param_1[0x36] + (float)param_1[0x39]) *
+                   ((float)param_1[0x36] + (float)param_1[0x39]) +
+                   (*pfVar1 + *pfVar6) * (*pfVar1 + *pfVar6));
+  uStack_98 = (double)fStack_7c;
+  FUN_00649920(&fStack_78,&DAT_00725bec);
+  local_4._0_1_ = 1;
+  uStack_98 = (double)CONCAT44(0x45c0ae,(undefined4)uStack_98);
+  uVar4 = FUN_00649940();
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)CONCAT44(uVar4,extraout_ECX_03);
+  FUN_00406b70(0xff00ff00);
+  uVar4 = FUN_00402130(&fStack_54,pfVar6,pfVar1,0x40000000);
+  uVar4 = FUN_004451d0(auStack_18,uVar4);
+  FUN_0066ae20(uVar4);
+  local_4 = (uint)local_4._1_3_ << 8;
+  uStack_98 = (double)CONCAT44(0x45c0fe,(undefined4)uStack_98);
+  FUN_00649950();
+  uStack_98 = (double)CONCAT44(0x45c105,(undefined4)uStack_98);
+  puVar3 = (undefined4 *)(**(code **)(*param_1 + 0x30))();
+  fStack_74 = (float)*puVar3;
+  uStack_98 = (double)CONCAT44(0x45c112,(undefined4)uStack_98);
+  iVar5 = (**(code **)(*param_1 + 0x30))();
+  fStack_78 = *(float *)(iVar5 + 4);
+  uStack_98 = (double)CONCAT44(fStack_78,fStack_74);
+  FUN_00440b10();
+  puStack_6c = (undefined1 *)(fStack_4c * fStack_7c);
+  fStack_70 = fStack_50 * fStack_7c;
+  fStack_78 = fStack_54 * fStack_7c;
+  fStack_74 = *(float *)(DAT_00772b08 + 0xe0) * _DAT_006e936c;
+  uStack_98 = 2.25862752281665e-317;
+  fStack_48 = fStack_78;
+  fStack_44 = fStack_70;
+  fStack_40 = (float)puStack_6c;
+  FUN_00428790();
+  uStack_98 = 2.25863246347311e-317;
+  FUN_004286f0();
+  uStack_98 = (double)CONCAT44(fStack_74,0x45c191);
+  FUN_00428740();
+  fStack_3c = fStack_78;
+  fStack_34 = (float)puStack_6c;
+  fStack_38 = fStack_70;
+  puStack_6c = (undefined1 *)(*(float *)(DAT_00772b08 + 0xe0) * _DAT_006e99ec);
+  uStack_98 = 2.25866704806832e-317;
+  FUN_00428790();
+  uStack_98 = 2.25867198872478e-317;
+  FUN_004286f0();
+  uStack_98 = (double)CONCAT44(puStack_6c,0x45c1e1);
+  FUN_00428740();
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)(ulonglong)extraout_ECX_04;
+  FUN_00425250(&local_80);
+  uVar4 = FUN_00402130(auStack_18,&uStack_60,&fStack_48);
+  FUN_00669ca0(&uStack_60,uVar4);
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)(ulonglong)extraout_ECX_05;
+  FUN_00425250(&local_80);
+  uVar4 = FUN_00402130(auStack_18,&uStack_60,&fStack_3c);
+  FUN_00669ca0(&uStack_60,uVar4);
+  uStack_98 = (double)CONCAT44(0x45c25c,(undefined4)uStack_98);
+  pfVar6 = (float *)(**(code **)(*param_1 + 0x28))();
+  fStack_30 = *pfVar6;
+  fStack_2c = pfVar6[1];
+  fStack_28 = pfVar6[2];
+  uStack_98 = (double)CONCAT44(0x45c277,(undefined4)uStack_98);
+  puVar3 = (undefined4 *)(**(code **)(*param_1 + 0x30))();
+  fStack_54 = 0.0;
+  fStack_50 = 0.0;
+  fStack_4c = 1.0;
+  uStack_98 = (double)CONCAT44(puVar3[2],0x45c29e);
+  FUN_00428790();
+  uStack_98 = (double)CONCAT44(*puVar3,0x45c2aa);
+  FUN_004286f0();
+  uStack_98 = (double)CONCAT44(puVar3[1],0x45c2b7);
+  FUN_00428740();
+  fVar2 = fStack_7c - (float)param_1[0x41];
+  puStack_6c = (undefined1 *)&uStack_98;
+  uStack_98 = (double)(ulonglong)extraout_ECX_06;
+  fStack_70 = fStack_50 * fVar2;
+  fStack_74 = fStack_54 * fVar2;
+  fStack_1c = fStack_28 + fStack_4c * fVar2;
+  fStack_20 = fStack_2c + fStack_70;
+  fStack_24 = fStack_74 + fStack_30;
+  FUN_00406b70(0xffff0000);
+  FUN_00669ca0(&fStack_30,&fStack_24);
+  local_4 = 0xffffffff;
+  uStack_98 = (double)CONCAT44(0x45c340,(undefined4)uStack_98);
+  FUN_00649720();
+  ExceptionList = pvStack_c;
+  return;
+}
+

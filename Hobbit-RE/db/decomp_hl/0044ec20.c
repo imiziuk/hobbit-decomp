@@ -1,0 +1,19 @@
+
+void __fastcall FUN_0044ec20(int param_1)
+
+{
+  undefined4 *puVar1;
+  int iVar2;
+  
+  if (*(int *)(param_1 + 0x5e94) != 0) {
+    puVar1 = (undefined4 *)(param_1 + 0x59c4);
+    iVar2 = 0x10;
+    do {
+      *puVar1 = 0;
+      puVar1 = puVar1 + 0x14;
+      iVar2 = iVar2 + -1;
+    } while (iVar2 != 0);
+  }
+  return;
+}
+

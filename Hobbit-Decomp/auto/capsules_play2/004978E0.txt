@@ -1,0 +1,6 @@
+function 004978E0 AUTO_004978e0
+verdict ours did not finish: unreadable memory 00000008
+regs eax=001AFBFC ebx=00000000 ecx=0CD9DD40 edx=C35EC3AA esi=0D1FD0C8 edi=0CD9DD40 ebp=0D8AD9D0 esp=001AFBF8 eflags=00000216 fpcw=007F
+teb 00385000 ourdll 10000000
+first_divergence index=0
+diff_count 0

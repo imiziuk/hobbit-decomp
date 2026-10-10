@@ -1,0 +1,1 @@
+{"addr":"005a3d90","name":"FUN_005a3d90","cc":"__cdecl","proto":"undefined FUN_005a3d90(uint param_1)","c":"\nvoid __cdecl FUN_005a3d90(uint param_1)\n\n{\n  DAT_007986c0 = param_1 & ((int)param_1 < 1) - 1;\n  if (7 < (int)DAT_007986c0) {\n    DAT_007986c0 = 8;\n  }\n  return;\n}\n\n","globals":[{"name":"DAT_007986c0","addr":"007986c0","type":"uint"}],"callees":[]}

@@ -1,0 +1,1 @@
+{"addr":"005afae0","name":"FUN_005afae0","cc":"__fastcall","proto":"undefined4 FUN_005afae0(int param_1)","c":"\nundefined4 __fastcall FUN_005afae0(int param_1)\n\n{\n  if ((*(uint *)(param_1 + 0x130) & 8) != 0) {\n    *(uint *)(param_1 + 0x130) = *(uint *)(param_1 + 0x130) & 0xfffffff7;\n    return 1;\n  }\n  return 0;\n}\n\n","globals":[],"callees":[]}

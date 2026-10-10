@@ -1,0 +1,8 @@
+function 004D22C0 AUTO_004d22c0
+verdict eax A=00000010 B=00000000
+regs eax=00000000 ebx=00000000 ecx=0C2922B0 edx=00000000 esi=0C2922B0 edi=001AF434 ebp=7FFFFFFF esp=001AEF78 eflags=00000202 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=1
+diff_count 0
+wa 004D22F6 0C2923D6 1 10
+wb 1015694D 0C2923D6 1 10

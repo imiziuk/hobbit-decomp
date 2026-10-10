@@ -1,0 +1,1 @@
+{"addr":"004ace10","name":"FUN_004ace10","cc":"__fastcall","proto":"int FUN_004ace10(int param_1)","c":"\nint __fastcall FUN_004ace10(int param_1)\n\n{\n  if (*(int *)(param_1 + 4) == 0) {\n    return 0;\n  }\n  return *(int *)(param_1 + 8) - *(int *)(param_1 + 4) >> 2;\n}\n\n","globals":[],"callees":[]}

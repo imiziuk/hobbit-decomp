@@ -1,0 +1,1 @@
+{"addr":"0043b5d0","name":"FUN_0043b5d0","cc":"__fastcall","proto":"undefined FUN_0043b5d0(int param_1)","c":"\nvoid __fastcall FUN_0043b5d0(int param_1)\n\n{\n  if (*(int *)(param_1 + 0x8d8) != 1) {\n    *(undefined4 *)(param_1 + 0xa70) = 0;\n  }\n  return;\n}\n\n","globals":[],"callees":[]}

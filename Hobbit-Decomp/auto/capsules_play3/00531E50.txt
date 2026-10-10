@@ -1,0 +1,6 @@
+function 00531E50 AUTO_00531e50
+verdict ours did not finish: external code ntdll.dll!RtlEnterCriticalSection+0x0
+regs eax=001AFC60 ebx=00764560 ecx=007642E8 edx=001AFC64 esi=007642E8 edi=00000004 ebp=00724FB8 esp=001AFC5C eflags=00000212 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=0
+diff_count 0

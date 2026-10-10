@@ -1,0 +1,10 @@
+function 004BF3A0 AUTO_004bf3a0
+verdict ours did not finish: unreadable memory 00000008
+regs eax=001AFACC ebx=00000001 ecx=0E5C9448 edx=00000000 esi=0E5C9448 edi=00000000 ebp=001AFADC esp=001AFAB8 eflags=00000246 fpcw=007F
+teb 00225000 ourdll 10000000
+first_divergence index=0 A:eip=004BF610 addr=001AFACC size=4 value=A87FFFFE
+diff 001AFACC A=A87FFFFE B=00000000
+diff_count 1
+wa 004BF610 001AFACC 4 A87FFFFE
+wa 004BF616 001AFAD0 4 0
+wa 004BF619 001AFAD4 4 0

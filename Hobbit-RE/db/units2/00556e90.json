@@ -1,0 +1,1 @@
+{"addr":"00556e90","name":"FUN_00556e90","cc":"__cdecl","proto":"int FUN_00556e90(int param_1)","c":"\nint __cdecl FUN_00556e90(int param_1)\n\n{\n  return param_1 + 4;\n}\n\n","globals":[],"callees":[]}

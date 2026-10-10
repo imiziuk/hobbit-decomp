@@ -1,0 +1,1 @@
+{"addr":"00424ba0","name":"FUN_00424ba0","cc":"__fastcall","proto":"undefined4 FUN_00424ba0(int param_1)","c":"\nundefined4 __fastcall FUN_00424ba0(int param_1)\n\n{\n  if (DAT_006e92e4 < *(float *)(param_1 + 0x434)) {\n    return 1;\n  }\n  return 0;\n}\n\n","globals":[{"name":"DAT_006e92e4","addr":"006e92e4","type":"float"}],"callees":[]}

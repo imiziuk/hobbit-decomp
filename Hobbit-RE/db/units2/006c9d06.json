@@ -1,0 +1,1 @@
+{"addr":"006c9d06","name":"FUN_006c9d06","cc":"__stdcall","proto":"undefined FUN_006c9d06(void)","c":"\nvoid FUN_006c9d06(void)\n\n{\n  return;\n}\n\n","globals":[{"name":"ExceptionList","addr":"ffdff000","type":"void *"}],"callees":[]}

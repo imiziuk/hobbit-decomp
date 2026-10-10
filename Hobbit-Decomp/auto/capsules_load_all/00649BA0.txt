@@ -1,0 +1,6 @@
+function 00649BA0 AUTO_00649ba0
+verdict eax A=001AFA3C B=00000000
+regs eax=007631F8 ebx=003B8001 ecx=001AFA38 edx=007631FC esi=001AFA64 edi=774FD180 ebp=774FD470 esp=001AFA18 eflags=00000202 fpcw=027F
+teb 003BB000 ourdll 10000000
+first_divergence index=0
+diff_count 0

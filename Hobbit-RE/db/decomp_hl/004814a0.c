@@ -1,0 +1,96 @@
+
+undefined4 * __fastcall FUN_004814a0(undefined4 *param_1)
+
+{
+  undefined4 *puVar1;
+  int iVar2;
+  void *local_c;
+  undefined1 *puStack_8;
+  undefined4 local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_006d28ae;
+  local_c = ExceptionList;
+  ExceptionList = &local_c;
+  FUN_004e3dd0();
+  local_4 = 0;
+  FUN_006c043b(param_1 + 0x56,4,2,&LAB_00484230,FUN_00406ba0);
+  param_1[0x58] = 0x7fffffff;
+  *param_1 = &PTR_FUN_006ed1b8;
+  DAT_0075cdf0 = DAT_0075cdf0 + 1;
+  *(byte *)(param_1 + 0x55) = *(byte *)(param_1 + 0x55) & 0xdf;
+  local_4 = CONCAT31(local_4._1_3_,2);
+  FUN_00549430(param_1 + 0x58,&DAT_0075b6e0);
+  FUN_00549430(param_1 + 0x56,&DAT_0075b6e0);
+  FUN_00549430(param_1 + 0x57,&DAT_0075b6e0);
+  param_1[0x5a] = 0;
+  param_1[0x59] = 0xc2480000;
+  param_1[0x5b] = 0x42480000;
+  param_1[0x5c] = 0xc2480000;
+  param_1[0x5e] = 0xc2480000;
+  param_1[0x5d] = 0;
+  param_1[0x5f] = 0x42480000;
+  param_1[0x61] = 0xc2480000;
+  param_1[0x60] = 0;
+  param_1[0x62] = 0x42480000;
+  param_1[100] = 0x42480000;
+  param_1[99] = 0;
+  param_1[0x65] = 0;
+  param_1[0x66] = 0;
+  param_1[0x67] = 0;
+  param_1[0x68] = 0x3f800000;
+  param_1[0x69] = 0x3f800000;
+  param_1[0x6a] = 0x3f800000;
+  param_1[0x6b] = 0x3f800000;
+  param_1[0x6c] = 0;
+  puVar1 = param_1 + 0x7e;
+  iVar2 = 2;
+  do {
+    puVar1[-1] = 0;
+    *puVar1 = 0;
+    puVar1[1] = 0;
+    puVar1[2] = 0x3f800000;
+    puVar1[3] = 0x3f800000;
+    puVar1[4] = 0x3f800000;
+    puVar1[5] = 0x3f800000;
+    puVar1[6] = 0;
+    puVar1[-0x11] = puVar1[-1];
+    puVar1[-0x10] = *puVar1;
+    puVar1[-0xf] = puVar1[1];
+    puVar1[-0xe] = puVar1[2];
+    puVar1[-0xd] = puVar1[3];
+    puVar1[-0xc] = puVar1[4];
+    puVar1[-0xb] = puVar1[5];
+    puVar1[-10] = puVar1[6];
+    puVar1 = puVar1 + 8;
+    iVar2 = iVar2 + -1;
+  } while (iVar2 != 0);
+  *(undefined1 *)((int)param_1 + 0x237) = 0xff;
+  *(undefined1 *)((int)param_1 + 0x236) = 0xff;
+  *(undefined1 *)((int)param_1 + 0x235) = 0xff;
+  *(undefined1 *)(param_1 + 0x8d) = 0xff;
+  *(byte *)(param_1 + 0xa2) = *(byte *)(param_1 + 0xa2) & 0xfe;
+  param_1[0x8e] = 0;
+  param_1[0x95] = 0;
+  param_1[0x94] = 0;
+  param_1[0x97] = 0;
+  param_1[0x96] = 0;
+  param_1[0xa1] = 1;
+  param_1[0xa0] = 1;
+  param_1[0x99] = 0x3f800000;
+  param_1[0x98] = 0x3f800000;
+  param_1[0x9d] = 0x3f800000;
+  param_1[0x9c] = 0x3f800000;
+  param_1[0x9b] = 0x3f800000;
+  param_1[0x9a] = 0x3f800000;
+  param_1[0x9f] = 0x3f800000;
+  param_1[0x9e] = 0x3f800000;
+  param_1[0x91] = 0x3f800000;
+  param_1[0x90] = 0x3f800000;
+  param_1[0x93] = 0x3f800000;
+  param_1[0x92] = 0x3f800000;
+  param_1[0x8f] = 2;
+  ExceptionList = local_c;
+  return param_1;
+}
+

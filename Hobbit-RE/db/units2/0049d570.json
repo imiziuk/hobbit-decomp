@@ -1,0 +1,1 @@
+{"addr":"0049d570","name":"FUN_0049d570","cc":"__thiscall","proto":"undefined FUN_0049d570(char param_1)","c":"\nvoid __thiscall FUN_0049d570(void *this,char param_1)\n\n{\n  *(byte *)((int)this + 0x50) =\n       (param_1 << 1 ^ *(byte *)((int)this + 0x50)) & 2 ^ *(byte *)((int)this + 0x50);\n  return;\n}\n\n","globals":[],"callees":[]}

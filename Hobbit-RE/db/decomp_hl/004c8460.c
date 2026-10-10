@@ -1,0 +1,107 @@
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 * __fastcall FUN_004c8460(undefined4 *param_1)
+
+{
+  undefined4 uVar1;
+  undefined4 local_54;
+  undefined4 local_50;
+  undefined4 local_4c;
+  undefined1 local_48 [24];
+  undefined1 local_30 [12];
+  undefined4 local_24;
+  undefined4 local_20;
+  undefined4 local_1c;
+  undefined4 local_18;
+  undefined4 local_14;
+  undefined4 local_10;
+  void *local_c;
+  undefined1 *puStack_8;
+  undefined4 local_4;
+  
+  local_4 = 0xffffffff;
+  puStack_8 = &LAB_006d4a20;
+  local_c = ExceptionList;
+  ExceptionList = &local_c;
+  FUN_004aa170();
+  param_1[0x37] = 0x7fffffff;
+  param_1[0x38] = 0x7fffffff;
+  param_1[0x56] = 0x7fffffff;
+  local_4._0_1_ = 3;
+  local_4._1_3_ = 0;
+  FUN_005a3f00();
+  *param_1 = &PTR_FUN_006ee9c8;
+  _DAT_0075daac = _DAT_0075daac + 1;
+  local_4 = CONCAT31(local_4._1_3_,4);
+  param_1[0x48] = 0;
+  param_1[0x49] = 0;
+  FUN_004c88f0();
+  FUN_004c7f10();
+  param_1[0x32] = 0x43fa0000;
+  param_1[0x4c] = 0x43fa0000;
+  param_1[0x3e] = 0x43fa0000;
+  param_1[0x3f] = 0x42c80000;
+  param_1[0x40] = 0x42c80000;
+  param_1[0x35] = 0x40a00000;
+  param_1[0x41] = 0x40a00000;
+  param_1[0x33] = 0x41f00000;
+  param_1[0x34] = 0x3f800000;
+  param_1[0x36] = 0x43160000;
+  param_1[0x39] = 0x41200000;
+  param_1[0x3a] = 0;
+  param_1[0x3c] = 0;
+  param_1[0x3d] = 0;
+  param_1[0x42] = 1;
+  param_1[0x4b] = 0;
+  param_1[0x50] = 0xffffffff;
+  param_1[0x51] = 0;
+  param_1[0x52] = 0;
+  param_1[0x53] = 0;
+  param_1[0x43] = 0;
+  param_1[0x44] = 0x41c80000;
+  param_1[0x45] = 0x41c80000;
+  param_1[0x46] = 0x3f800000;
+  local_54 = 0;
+  local_50 = 0;
+  local_4c = 0;
+  FUN_00401f00(0xc2480000,0xc2480000,0xc2480000);
+  FUN_004357e0(local_48);
+  uVar1 = FUN_00401f00(0x42480000,0x42480000,0x42480000);
+  uVar1 = FUN_00402130(local_30,&local_54,uVar1);
+  FUN_004357e0(uVar1);
+  param_1[0xc] = local_20;
+  param_1[0xb] = local_24;
+  param_1[0xd] = local_1c;
+  param_1[0xf] = local_14;
+  param_1[0xe] = local_18;
+  param_1[0x10] = local_10;
+  param_1[0x2c] = 0;
+  param_1[0x2b] = 0;
+  param_1[0x2a] = 0;
+  param_1[0x2f] = 0;
+  param_1[0x2e] = 0;
+  param_1[0x2d] = 0;
+  param_1[0x30] = 1;
+  param_1[0x31] = 0;
+  FUN_004cafe0();
+  param_1[0x55] = 0x437f0000;
+  uVar1 = FUN_005496c0(s_hangvine_xbmp_0072d154,s_Props_00720224);
+  FUN_00549430(param_1 + 0x37,uVar1);
+  uVar1 = FUN_005496c0(s_thornvine_xbmp_0072d144,s_Props_00720224);
+  FUN_00549430(param_1 + 0x38,uVar1);
+  *(byte *)(param_1 + 99) = *(byte *)(param_1 + 99) | 3;
+  *(byte *)(param_1 + 0x5f) = *(byte *)(param_1 + 0x5f) & 0xfe;
+  param_1[0x62] = 0;
+  param_1[0x5a] = 0;
+  param_1[0x5b] = 0;
+  param_1[0x5c] = 0x3e800000;
+  param_1[0x58] = 0;
+  param_1[0x57] = 0xffffffff;
+  uVar1 = FUN_005496c0(s_ShadowDisc_xbmp_0071ef3c,&DAT_0071ef4c);
+  FUN_00549430(param_1 + 0x56,uVar1);
+  *(byte *)((int)param_1 + 0x7f) = *(byte *)((int)param_1 + 0x7f) | 1;
+  ExceptionList = local_c;
+  return param_1;
+}
+
