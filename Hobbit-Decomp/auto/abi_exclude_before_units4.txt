@@ -1,0 +1,50 @@
+AUTO_00442420	own ret [12] != ours 0
+AUTO_0044fba0	own ret [24] != ours 8
+AUTO_0045cbe0	own ret [4] != ours 0
+AUTO_0046aaf0	tail jmp 0046ab10 pops [4] != ours 0
+AUTO_004f6b80	own ret [20] != ours 0
+AUTO_004f9830	own ret [4] != ours 0
+AUTO_005082c0	own ret [8] != ours 0
+AUTO_00509400	tail jmp 006a2960 pops [16] != ours 8
+AUTO_0050b210	own ret [8] != ours 0
+AUTO_00514620	own ret [28] != ours 24
+AUTO_00517330	own ret [8] != ours 0
+AUTO_00517f30	own ret [8] != ours 0
+AUTO_0051c160	own ret [8] != ours 0
+AUTO_0051dba0	own ret [8] != ours 0
+AUTO_00524760	own ret [8] != ours 0
+AUTO_0052cd20	own ret [4] != ours 0
+AUTO_00549d10	own ret [8] != ours 4
+AUTO_0054e920	tail jmp 0054e940 pops [12] != ours 8
+AUTO_00555900	calls 006c1327 as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_00555ab0	calls 006c1327 as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_00555d00	calls 006c12ff as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_005bdff0	own ret [4] != ours 0
+AUTO_005c1ac0	own ret [4] != ours 0
+AUTO_005c5380	own ret [4] != ours 0
+AUTO_005e9530	own ret [8] != ours 0
+AUTO_00605ea0	tail jmp 005f11b0 pops [4] != ours 0
+AUTO_00606da0	own ret [44] != ours 0
+AUTO_0060c0e0	own ret [4] != ours 0
+AUTO_00632110	own ret [4] != ours 0
+AUTO_0063aaa0	tail jmp 00581f30 pops [4] != ours 0
+AUTO_0063b7d0	own ret [8] != ours 4
+AUTO_006405e0	own ret [8] != ours 0
+AUTO_00652870	own ret [4] != ours 0
+AUTO_006539f0	own ret [0] != ours 4
+AUTO_006583e0	tail jmp 0067be20 pops [0] != ours 12
+AUTO_00659c80	tail jmp 00678790 pops [8] != ours 4
+AUTO_0065d0f0	own ret [0] != ours 12
+AUTO_0066b4f0	tail jmp 0066d9a0 pops [0] != ours 8
+AUTO_00675160	tail jmp 006804a0 pops [4] != ours 0
+AUTO_00676bd0	own ret [12] != ours 0
+AUTO_00677270	own ret [8] != ours 0
+AUTO_0067d640	calls 0065c8d0 as thiscall (ECX unused) reading stack args to 20 > passed 0
+AUTO_00681285	own ret [4] != ours 0
+AUTO_00686f95	calls 006c12ff as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_0068725a	own ret [8] != ours 4
+AUTO_0068b5e2	calls 006907c3 as thiscall (ECX unused) reading stack args to 8 > passed 0
+AUTO_006c15ce	calls 006c15ef as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_006c24bb	calls 006c2430 as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_006c30f5	calls 006c2518 as thiscall (ECX unused) reading stack args to 8 > passed 0
+AUTO_006cb139	calls 006c2430 as thiscall (ECX unused) reading stack args to 4 > passed 0

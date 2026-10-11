@@ -16,7 +16,10 @@
 
 namespace hook {
 
-enum class Ret : uint8_t { Void, Int32, Int64, Float };
+// VoidPass: typed void, but the ORIGINAL changes EAX (calls something / writes EAX), so whatever it leaves there
+// may be used by the caller (00556740 passes operator_new's pointer through): the thunk keeps our EAX instead of
+// restoring the caller's. Plain Void keeps restoring EAX (original never touches it; callers may rely on it).
+enum class Ret : uint8_t { Void, Int32, Int64, Float, VoidPass };
 enum class Conv : uint8_t { Cdecl, Stdcall, Fastcall };
 
 struct Entry {

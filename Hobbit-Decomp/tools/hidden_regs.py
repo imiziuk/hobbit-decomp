@@ -89,6 +89,9 @@ def transform(c):
                 src = f"(__rx_eax >> {8 * (4 - size)})"
             elif reg == "var" and size == 4:
                 src = "__rx_edx"
+            elif reg == "ST0" and typ in ("float10", "float", "double", "longdouble"):
+                src = "__rx_st0"           # the float the last float-returning callee left in ST0
+                                           # (callers of functions re-typed float10 by tools/proto_fixes_ret.py)
             else:
                 return None, f"skip:hidden-register-input:{name}"
             defines.append(f"#define {name} (({typ}){src})")
@@ -103,7 +106,9 @@ def transform(c):
         out = "\n".join(defines) + "\n" + out
     return out, capture
 
-CAPTURE_DECL = "static unsigned int __rx_eax, __rx_ecx, __rx_edx;   /* registers right after the last call */"
+CAPTURE_DECL = ("static unsigned int __rx_eax, __rx_ecx, __rx_edx;   /* registers right after the last call */\n"
+                "static double __rx_st0;   /* ST0 returned by the last float-returning call */")
+FLOATS = ("float10", "float", "double", "longdouble")
 
 def capturing_wrapper(w):
     """`static __inline T F(params) { return (cast)(args); }` -> a wrapper that also saves EAX/ECX/EDX"""
@@ -113,5 +118,6 @@ def capturing_wrapper(w):
     ret, name, params, has_ret, call = m.groups()
     save = "__asm { mov __rx_eax, eax } __asm { mov __rx_ecx, ecx } __asm { mov __rx_edx, edx }"
     if has_ret and ret != "void":
-        return f"static {ret} {name}({params}) {{ {ret} __r = {call}; {save} return __r; }}"
+        st0 = " __rx_st0 = (double)__r;" if ret.strip() in FLOATS else ""
+        return f"static {ret} {name}({params}) {{ {ret} __r = {call}; {save}{st0} return __r; }}"
     return f"static {ret} {name}({params}) {{ {call}; {save} }}"

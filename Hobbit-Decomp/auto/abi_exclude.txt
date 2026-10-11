@@ -1,0 +1,9 @@
+AUTO_004f9830	own ret [4] != ours 0
+AUTO_0050b210	own ret [8] != ours 0
+AUTO_0051c160	own ret [8] != ours 0
+AUTO_0051dba0	own ret [8] != ours 0
+AUTO_00555ab0	calls 006c1327 as thiscall (ECX unused) reading stack args to 4 > passed 0
+AUTO_005c1ac0	own ret [4] != ours 0
+AUTO_005e9530	own ret [8] != ours 0
+AUTO_00605ea0	tail jmp 005f11b0 pops [4] != ours 0
+AUTO_00606da0	own ret [44] != ours 0

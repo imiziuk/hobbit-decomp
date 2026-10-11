@@ -25,6 +25,7 @@
 #include <cstdio>
 #include <cstring>
 #include <string>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
@@ -73,9 +74,17 @@ struct Probe {
     int samples, pass, near_, fail, inc;
     std::string detail;     // first failure
     std::string incWhy;     // last incomplete reason
+    // record mode (capsule recorder, see Record())
+    uint32_t end = 0;                       // next probed function = end of this one's code (edge coverage)
+    int hits = 0, caps = 0, lastNovel = 0;
+    bool recDone = false;                   // nothing new for a long time / capsule cap reached: unprobed
+    std::unordered_set<uint64_t> keys;      // cheap pre-filter keys seen (caller + input classes)
+    std::unordered_set<uint64_t> edges;     // (block -> block, hit-count bucket) seen
 };
 std::vector<Probe> g_probes;          // sorted by addr
 int g_maxSamples = 6;
+bool g_record = false;                // shadow.txt `record`: capsule recorder instead of live A/B compare
+int g_capCap = 40;                    // shadow.txt `capsules N`: max capsules per function
 CRITICAL_SECTION g_lock;
 uint32_t g_exeLo, g_exeHi, g_dllLo, g_dllHi;
 thread_local Probe* t_rearm = nullptr;
@@ -103,10 +112,17 @@ struct Run {
     std::string why;                                      // non-empty = did not complete
     uint32_t stackLo = 0, stackHi = 0;                    // excluded from the write compare
     uint32_t teb = 0;
+    std::vector<uint32_t>* blocks = nullptr;              // record mode: blocks executed inside [fnLo, fnHi)
+    uint32_t fnLo = 0, fnHi = 0;
 };
 
 // live pages copied for the current sample (both runs see the same): saved in a failure capsule
 std::vector<std::pair<uint32_t, std::vector<uint8_t>>> g_snap;
+
+bool SafeRead(void* dst, uint32_t src, size_t n) {   // no C++ objects here (__try)
+    __try { memcpy(dst, reinterpret_cast<void*>(src), n); } __except (EXCEPTION_EXECUTE_HANDLER) { return false; }
+    return true;
+}
 
 bool SafeCopy(void* dst, uint32_t src) {
     __try { memcpy(dst, reinterpret_cast<void*>(src), 4096); } __except (EXCEPTION_EXECUTE_HANDLER) { return false; }
@@ -178,6 +194,8 @@ std::string Describe(uint32_t a) {
 // only game code, our DLL and our thunks may run; anything else (Windows, D3D, sound) = not comparable
 void OnBlock(uc_engine* uc, uint64_t addr, uint32_t, void* user) {
     uint32_t a = static_cast<uint32_t>(addr);
+    auto* run = static_cast<Run*>(user);
+    if (run->blocks && a >= run->fnLo && a < run->fnHi && run->blocks->size() < 200000) run->blocks->push_back(a);
     if ((a >= g_exeLo && a < g_exeHi) || (a >= g_dllLo && a < g_dllHi) || a == kSentinel) return;
     MEMORY_BASIC_INFORMATION mi{};
     if (VirtualQuery(reinterpret_cast<void*>(a), &mi, sizeof mi) && mi.Type == MEM_PRIVATE) return;   // thunk pool
@@ -431,6 +449,169 @@ void Sample(Probe& p, const CONTEXT& c) {
     if (b.uc) U.close(b.uc);
 }
 
+// ---- capsule recorder (shadow.txt `record`) ----
+// A capsule = one real call of an ORIGINAL function: entry registers + x87 save area + every memory page the
+// original call tree touched (content as it was BEFORE the call: the emulator never writes the live game) +
+// the original's outputs (registers at return, final value of every byte it wrote outside its frame).
+// tools/replay.py runs OUR current build on it offline. Only novel calls are kept: new caller / input classes
+// (cheap pre-filter, before emulating) or new control-flow edges with AFL-style hit-count buckets (after).
+// Files (game folder): capsules/caps.bin (records), capsules/pages.bin ([u64 hash][4096 bytes], deduplicated).
+CRITICAL_SECTION g_qlock;
+std::vector<std::vector<uint8_t>> g_capQ;                        // finished capsule records
+std::vector<std::pair<uint64_t, std::vector<uint8_t>>> g_pageQ;  // new unique pages
+std::unordered_set<uint64_t> g_pageSeen;
+long g_capsTotal = 0;
+
+uint64_t Fnv(const void* p, size_t n, uint64_t h = 1469598103934665603ull) {
+    auto* b = static_cast<const uint8_t*>(p);
+    for (size_t i = 0; i < n; ++i) { h ^= b[i]; h *= 1099511628211ull; }
+    return h;
+}
+template <class T> void Put(std::vector<uint8_t>& v, const T& x) {
+    auto* b = reinterpret_cast<const uint8_t*>(&x);
+    v.insert(v.end(), b, b + sizeof x);
+}
+int Cls(uint32_t v, uint32_t stackLo, uint32_t stackHi) {      // coarse input class for the pre-filter
+    if (v == 0) return 0;
+    if (v < 0x1000) return 1;
+    if (v > 0xFFFFF000u) return 2;
+    if (v >= g_exeLo && v < g_exeHi) return 3;
+    if (v >= stackLo && v < stackHi) return 4;
+    if ((v & 0x7F800000u) == 0x7F800000u) return 5;              // float inf/NaN pattern
+    return 6;
+}
+
+void BuildCapsule(Probe& p, const CONTEXT& c, Run& a, uint32_t teb, uint32_t caller, uint32_t frameLo, uint32_t frameHi) {
+    std::vector<uint8_t> v;
+    Put(v, 0x53504143u); Put(v, 1u);                               // "CAPS", version
+    size_t lenAt = v.size(); Put(v, 0u);
+    uint32_t hdr[] = {p.addr, caller, static_cast<uint32_t>(p.e->ret), p.e->stackArgBytes, teb, frameLo, frameHi};
+    for (uint32_t x : hdr) Put(v, x);
+    uint32_t in[] = {c.Eax, c.Ebx, c.Ecx, c.Edx, c.Esi, c.Edi, c.Ebp, c.Esp, c.Eip, c.EFlags & ~0x100u};
+    for (uint32_t x : in) Put(v, x);
+    Put(v, c.FloatSave);                                            // 112 bytes: control/status/tag + ST0..7
+    int out[] = {UC_X86_REG_EAX, UC_X86_REG_EBX, UC_X86_REG_ECX, UC_X86_REG_EDX, UC_X86_REG_ESI, UC_X86_REG_EDI,
+                 UC_X86_REG_EBP, UC_X86_REG_ESP, UC_X86_REG_EFLAGS};
+    for (int id : out) Put(v, Reg(a, id));
+    uint16_t sw = 0, cw = 0;
+    U.reg_read(a.uc, UC_X86_REG_FPSW, &sw);
+    U.reg_read(a.uc, UC_X86_REG_FPCW, &cw);
+    Put(v, sw); Put(v, cw);
+    uint8_t st0[10] = {};
+    U.reg_read(a.uc, UC_X86_REG_FP0 + ((sw >> 11) & 7), st0);
+    v.insert(v.end(), st0, st0 + 10);
+    // input pages (deduplicated by content into pages.bin)
+    Put(v, static_cast<uint32_t>(g_snap.size()));
+    for (auto& pg : g_snap) {
+        uint64_t h = Fnv(pg.second.data(), 4096);
+        Put(v, pg.first); Put(v, h);
+        if (g_pageSeen.insert(h).second) g_pageQ.push_back({h, pg.second});
+    }
+    // final value of every byte the original wrote outside its frame / TEB / our DLL / emulator pages
+    std::vector<uint32_t> bytes;
+    for (auto& w : a.writes)
+        for (uint32_t i = 0; i < w.size; ++i) {
+            uint32_t x = w.addr + i;
+            if ((x >= frameLo && x < frameHi) || (x >= teb && x < teb + 0x1000) || (x >= g_dllLo && x < g_dllHi) ||
+                x >= 0xBAD00000u)
+                continue;
+            bytes.push_back(x);
+        }
+    std::sort(bytes.begin(), bytes.end());
+    bytes.erase(std::unique(bytes.begin(), bytes.end()), bytes.end());
+    Put(v, static_cast<uint32_t>(bytes.size()));
+    for (uint32_t x : bytes) {
+        uint8_t b = 0;
+        U.mem_read(a.uc, x, &b, 1);
+        Put(v, x); Put(v, b);
+    }
+    uint32_t len = static_cast<uint32_t>(v.size() - lenAt - 4);
+    memcpy(v.data() + lenAt, &len, 4);
+    g_capQ.push_back(std::move(v));
+    ++g_capsTotal;
+}
+
+void Record(Probe& p, const CONTEXT& c) {
+    NT_TIB* tib = reinterpret_cast<NT_TIB*>(NtCurrentTeb());
+    uint32_t teb = reinterpret_cast<uint32_t>(tib);
+    uint32_t sLo = reinterpret_cast<uint32_t>(tib->StackLimit), sHi = reinterpret_cast<uint32_t>(tib->StackBase);
+    ++p.hits;
+    uint32_t st[5] = {};
+    if (!SafeRead(st, c.Esp, sizeof st)) return;
+    uint64_t key = Fnv(&st[0], 4);                                  // caller (return address)
+    int cl[5] = {Cls(c.Ecx, sLo, sHi), Cls(st[1], sLo, sHi), Cls(st[2], sLo, sHi), Cls(st[3], sLo, sHi), Cls(st[4], sLo, sHi)};
+    key = Fnv(cl, sizeof cl, key);
+    bool newKey = p.keys.insert(key).second;
+    // emulate the original only for a new pre-filter key, the first calls, or a 1-in-32 sample of hot functions
+    if (!newKey && p.hits > 64 && p.hits % 32) {
+        if (p.hits - p.lastNovel > 3000) p.recDone = true;
+        return;
+    }
+    Run a;
+    std::vector<uint32_t> blocks;
+    a.blocks = &blocks;
+    a.fnLo = p.addr;
+    a.fnHi = p.end;
+    g_snap.clear();
+    if (Setup(a, c, p.addr, teb)) Execute(a, p.addr);
+    ++p.samples;
+    if (!a.why.empty()) {
+        ++p.inc;
+        p.incWhy = a.why;
+    } else {
+        // edge coverage with hit-count buckets: a loop running a different number of times is a new path
+        std::unordered_map<uint64_t, int> ec;
+        uint32_t prev = 0;
+        for (uint32_t b : blocks) { ++ec[(static_cast<uint64_t>(prev) << 32) | b]; prev = b; }
+        bool newEdge = false;
+        for (auto& [e, n] : ec) {
+            int bucket = n <= 3 ? n : n < 8 ? 4 : n < 16 ? 5 : n < 32 ? 6 : n < 128 ? 7 : 8;
+            uint64_t id = e * 0x9E3779B97F4A7C15ull ^ static_cast<uint64_t>(bucket);
+            if (p.edges.insert(id).second) newEdge = true;
+        }
+        if (newKey || newEdge) {
+            p.lastNovel = p.hits;
+            if (p.caps < g_capCap) {
+                EnterCriticalSection(&g_qlock);
+                BuildCapsule(p, c, a, teb, st[0], sLo, c.Esp + 4 + p.e->stackArgBytes);
+                LeaveCriticalSection(&g_qlock);
+                ++p.caps;
+                ++p.pass;
+            }
+        }
+    }
+    if (a.uc) U.close(a.uc);
+    if (p.caps >= g_capCap || p.hits - p.lastNovel > 3000) p.recDone = true;
+}
+
+void FlushCapsules() {
+    {
+        std::vector<std::vector<uint8_t>> caps;
+        std::vector<std::pair<uint64_t, std::vector<uint8_t>>> pages;
+        EnterCriticalSection(&g_qlock);
+        caps.swap(g_capQ);
+        pages.swap(g_pageQ);
+        LeaveCriticalSection(&g_qlock);
+        if (!pages.empty())
+            if (FILE* f = nullptr; !fopen_s(&f, "capsules/pages.bin", "ab") && f) {
+                for (auto& pg : pages) { fwrite(&pg.first, 8, 1, f); fwrite(pg.second.data(), 1, 4096, f); }
+                fclose(f);
+            }
+        if (!caps.empty())
+            if (FILE* f = nullptr; !fopen_s(&f, "capsules/caps.bin", "ab") && f) {
+                for (auto& c : caps) fwrite(c.data(), 1, c.size(), f);
+                fclose(f);
+            }
+    }
+}
+
+DWORD WINAPI CapsuleWriter(void*) {             // file I/O off the game thread
+    CreateDirectoryA("capsules", nullptr);
+    for (;;) { Sleep(500); FlushCapsules(); }
+}
+
+bool WantSample(const Probe& p) { return g_record ? !p.recDone : p.samples < g_maxSamples; }
+
 // ---- exception handler: INT3 at a probed entry / single step after it ----
 LONG CALLBACK Handler(EXCEPTION_POINTERS* x) {
     DWORD code = x->ExceptionRecord->ExceptionCode;
@@ -439,14 +620,14 @@ LONG CALLBACK Handler(EXCEPTION_POINTERS* x) {
         Probe* p = FindProbe(reinterpret_cast<uint32_t>(x->ExceptionRecord->ExceptionAddress));
         if (!p) return EXCEPTION_CONTINUE_SEARCH;
         c->Eip = p->addr;
-        if (p->samples < g_maxSamples && TryEnterCriticalSection(&g_lock)) {
+        if (WantSample(*p) && TryEnterCriticalSection(&g_lock)) {
             DWORD le = GetLastError();
-            Sample(*p, *c);
+            if (g_record) Record(*p, *c); else Sample(*p, *c);
             SetLastError(le);
             LeaveCriticalSection(&g_lock);
         }
         PokeByte(p->addr, p->orig);
-        if (p->samples < g_maxSamples) {
+        if (WantSample(*p)) {
             t_rearm = p;
             c->EFlags |= 0x100;          // trap after the first real instruction, then re-arm
         } else {
@@ -457,7 +638,7 @@ LONG CALLBACK Handler(EXCEPTION_POINTERS* x) {
     if (code == EXCEPTION_SINGLE_STEP && t_rearm) {
         Probe* p = t_rearm;
         t_rearm = nullptr;
-        if (p->samples < g_maxSamples) PokeByte(p->addr, 0xCC);
+        if (WantSample(*p)) PokeByte(p->addr, 0xCC);
         else p->armed = 0;
         return EXCEPTION_CONTINUE_EXECUTION;
     }
@@ -467,7 +648,8 @@ LONG CALLBACK Handler(EXCEPTION_POINTERS* x) {
 void WriteReport() {
     EnterCriticalSection(&g_lock);
     FILE* f = nullptr;
-    if (!fopen_s(&f, "shadow_results.tsv", "w") && f) {
+    // record mode: statistics only (capsules are verdict-free), never mistaken for shadow evidence
+    if (!fopen_s(&f, g_record ? "capsules/record_stats.tsv" : "shadow_results.tsv", "w") && f) {
         fprintf(f, "addr\tname\tsamples\tpass\tnear\tfail\tincomplete\tverdict\tdetail\n");
         int nPass = 0, nFail = 0, nInc = 0, nNever = 0;
         for (auto& p : g_probes) {
@@ -510,6 +692,8 @@ void Start() {
         unsigned v;
         while (fscanf_s(f, "%31s", w, (unsigned)sizeof w) == 1) {
             if (!_stricmp(w, "samples") && fscanf_s(f, "%u", &v) == 1) g_maxSamples = static_cast<int>(v);
+            else if (!_stricmp(w, "record")) g_record = true;
+            else if (!_stricmp(w, "capsules") && fscanf_s(f, "%u", &v) == 1) g_capCap = static_cast<int>(v);
             else if (!_stricmp(w, "only") && fscanf_s(f, "%x", &v) == 1) only.insert(v);
         }
         fclose(f);
@@ -526,6 +710,14 @@ void Start() {
     std::sort(g_probes.begin(), g_probes.end(), [](const Probe& x, const Probe& y) { return x.addr < y.addr; });
     g_probes.erase(std::unique(g_probes.begin(), g_probes.end(), [](const Probe& x, const Probe& y) { return x.addr == y.addr; }),
                    g_probes.end());
+    for (size_t i = 0; i < g_probes.size(); ++i)     // code of a function ends where the next probed one starts
+        g_probes[i].end = i + 1 < g_probes.size() ? std::min(g_probes[i + 1].addr, g_probes[i].addr + 0x10000)
+                                                  : g_probes[i].addr + 0x1000;
+    if (g_record) {
+        InitializeCriticalSection(&g_qlock);
+        CreateThread(nullptr, 0, CapsuleWriter, nullptr, 0, nullptr);
+        Log("shadow: RECORD mode, up to %d capsules per function -> capsules/", g_capCap);
+    }
     AddVectoredExceptionHandler(1, Handler);
     for (auto& p : g_probes) {
         DWORD prot;
@@ -538,6 +730,7 @@ void Start() {
 
 void Stop() {
     if (!g_probes.empty()) WriteReport();
+    if (g_record) FlushCapsules();
 }
 
 }  // namespace shadow

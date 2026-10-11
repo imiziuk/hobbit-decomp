@@ -82,7 +82,7 @@ static void* MakeThunk(Entry& e) {
     b({0x8B, 0x4D, 0xF8, 0x8B, 0x55, 0xF4});  // mov ecx,[ebp-8] / mov edx,[ebp-12]
     *p++ = 0xE8;                              // call rel32
     d(reinterpret_cast<uint32_t>(e.replacement) - (reinterpret_cast<uint32_t>(p) + 4));
-    const bool keepEax = e.ret == Ret::Void || e.ret == Ret::Float;
+    const bool keepEax = e.ret == Ret::Void || e.ret == Ret::Float;   // VoidPass: our EAX goes back
     const bool keepEdx = e.ret != Ret::Int64;
     if (keepEax) b({0x8B, 0x45, 0xFC});  // mov eax,[ebp-4]
     b({0x8B, 0x4D, 0xF8});               // mov ecx,[ebp-8]  (never a return register)

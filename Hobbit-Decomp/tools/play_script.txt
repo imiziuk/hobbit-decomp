@@ -1,0 +1,53 @@
+# automated play check (tools/load_check.py check(play=True)): New Game, then walk / jump / attack / fly.
+# A freeze shows up as no "quit" mark (TIMEOUT/CRASH). Keys: arrows + WASD (either may be bound), mouse/Ctrl attack.
+sleep 14000
+cursor 310 320
+sleep 1500
+mark click New Game
+mclick 0
+sleep 5000
+key RETURN 150
+mark intro skipped
+wait_bilbo 200000
+sleep 8000
+key RETURN 150
+sleep 3000
+mark play start
+hold W
+hold UP
+sleep 3000
+release W
+release UP
+key SPACE 150
+sleep 1200
+key SPACE 150
+sleep 250
+key SPACE 150
+sleep 1500
+mclick 0
+sleep 600
+mclick 0
+sleep 600
+key LCONTROL 150
+sleep 600
+key LCONTROL 150
+sleep 1500
+hold LEFT
+sleep 1500
+release LEFT
+mark fly on
+devkey FLYON
+sleep 1000
+hold W
+hold UP
+sleep 5000
+release W
+release UP
+hold SPACE
+sleep 1500
+release SPACE
+devkey FLYOFF
+mark fly off
+sleep 5000
+mark 20s in level
+quit

@@ -15,10 +15,20 @@ def kill():
     subprocess.run(["taskkill", "/F", "/IM", "Meridian.exe"], capture_output=True)
 def set_disabled(text):
     open(os.path.join(G, "hooks_disabled.txt"), "w").write(text)
+EXTRA = []          # other mode files (e.g. "shadow.txt") switched on with autotest and off by restore_folder
 def autotest(on):
-    src, dst = (AT_OFF, AT) if on else (AT, AT_OFF)
-    if os.path.exists(src):
-        os.replace(src, dst)
+    if not on and os.path.exists(AT + ".load"):   # a play check swapped the script in: restore the load script
+        os.replace(AT + ".load", AT)
+    for name in ["autotest.txt"] + EXTRA:
+        a, b = os.path.join(G, name), os.path.join(G, name + ".off")
+        src, dst = (b, a) if on else (a, b)
+        if os.path.exists(src):
+            os.replace(src, dst)
+    if not on:                                   # restore_folder: every known mode file off
+        for name in ("shadow.txt", "devmode.txt"):
+            a = os.path.join(G, name)
+            if os.path.exists(a) and name in EXTRA:
+                os.replace(a, a + ".off")
 def restore_folder():
     """the game folder as the maintainer expects it: pure original, no autotest"""
     autotest(False); set_disabled("auto\n")
@@ -47,15 +57,21 @@ def wait_unpaused():
         time.sleep(1)
     print(f"  resumed {time.strftime('%H:%M')}", flush=True)
 
-def check(disabled=()):
+PLAY_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "play_script.txt")
+
+def check(disabled=(), raw=None, max_wait=300, play=False):
+    """raw: exact hooks_disabled.txt text (e.g. '00000000-ffffffff' = every replacement off)"""
     while True:
         wait_unpaused()
         kill(); time.sleep(2)
-        set_disabled("".join(f"AUTO_{a}\n" for a in sorted(disabled))); autotest(True)
+        set_disabled(raw if raw is not None else "".join(f"AUTO_{a}\n" for a in sorted(disabled))); autotest(True)
+        if play:                                  # play script instead of the plain load script (put back on disable)
+            import shutil
+            shutil.copy(AT, AT + ".load"); shutil.copy(PLAY_SCRIPT, AT)
         start = os.path.getsize(LOG)
         subprocess.Popen(["cmd", "/c", os.path.join(G, "Play Hobbit.bat")], cwd=G)
         paused = False
-        for i in range(103):                          # up to ~5 min
+        for i in range(3 + max_wait // 3):            # up to max_wait seconds
             time.sleep(3 if i >= 3 else 8 / 3)
             if os.path.exists(PAUSE):
                 paused = True; break

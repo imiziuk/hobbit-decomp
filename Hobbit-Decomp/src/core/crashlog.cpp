@@ -8,7 +8,24 @@
 static LONG CALLBACK FirstChance(EXCEPTION_POINTERS* ep) {
     static volatile long logged = 0;
     const EXCEPTION_RECORD* er = ep->ExceptionRecord;
-    if (er->ExceptionCode != EXCEPTION_ACCESS_VIOLATION) return EXCEPTION_CONTINUE_SEARCH;
+    if (er->ExceptionCode != EXCEPTION_ACCESS_VIOLATION) {
+        // other exception types (x87/integer faults, stack overflow, stray INT3...) can make the game's own
+        // handler call ExitProcess without any trace: log each unusual code once
+        DWORD k = er->ExceptionCode;
+        bool routine = k == EXCEPTION_BREAKPOINT || k == EXCEPTION_SINGLE_STEP || k == 0xE06D7363 /* C++ throw */ ||
+                       k == 0x406D1388 /* thread name */ || k == 0x40010006 /* OutputDebugString */ || k == 0x4001000A;
+        static volatile long seen[16];
+        static volatile long nseen = 0;
+        if (!routine && nseen < 16) {
+            bool dup = false;
+            for (long i = 0; i < nseen; ++i) dup |= static_cast<DWORD>(seen[i]) == k;
+            if (!dup) {
+                seen[_InterlockedIncrement(&nseen) - 1] = static_cast<long>(k);
+                Log("!!! EXCEPTION %08lX at %08lX (thread %lu)", k, ep->ContextRecord->Eip, GetCurrentThreadId());
+            }
+        }
+        return EXCEPTION_CONTINUE_SEARCH;
+    }
     // the shadow tester's emulator takes (and handles) access violations of its own: not the game's crash
     static HMODULE uc = GetModuleHandleA("unicorn.dll");
     if (!uc) uc = GetModuleHandleA("unicorn.dll");

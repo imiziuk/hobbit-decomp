@@ -15,6 +15,9 @@
 
 #include <windows.h>
 
+// key presses injected by core/autotest.cpp (`devkey F5`): the test script cannot reach GetAsyncKeyState
+volatile LONG g_devInject[256];
+
 namespace {
 
 template <class T> T& At(DWORD a) { return *reinterpret_cast<T*>(a); }
@@ -26,6 +29,7 @@ bool Readable(DWORD a) {
 }
 
 bool Pressed(int vk) {                          // edge-triggered: true once per key press
+    if (InterlockedExchange(&g_devInject[vk & 0xFF], 0)) return true;
     static SHORT prev[256];
     SHORT now = GetAsyncKeyState(vk);
     bool down = (now & 0x8000) && !(prev[vk] & 0x8000);
@@ -75,10 +79,14 @@ DWORD WINAPI Hotkeys(void*) {
         // read every key each tick so edges are not stored up while the game is in the background
         bool f5 = Pressed(VK_F5), f6 = Pressed(VK_F6), f7 = Pressed(VK_F7), pgup = Pressed(VK_PRIOR),
              pgdn = Pressed(VK_NEXT), home = Pressed(VK_HOME);
-        if (!front) { SafeToSwitch(); ApplyPending(); continue; }
+        LONG force = InterlockedExchange(&g_devInject[0], 0);   // autotest `devkey FLYON` = 1 / `FLYOFF` = 2
+        bool injected = force || f5 || f6 || f7 || pgup || pgdn || home;   // script presses count in the background
+        if (!front && !(injected && GetFileAttributesA("autotest.txt") != INVALID_FILE_ATTRIBUTES)) {
+            SafeToSwitch(); ApplyPending(); continue;
+        }
         DWORD bilbo = At<DWORD>(0x0075BA3C);
-        if (f5) {
-            int fly = At<int>(0x00720F84) ? 0 : 1;
+        if (f5 || force) {
+            int fly = force ? (force == 1) : (At<int>(0x00720F84) ? 0 : 1);
             At<int>(0x00720F84) = fly;
             if (bilbo && Readable(bilbo + 0x364)) At<int>(bilbo + 0x364) = fly;
             Log("devmode: fly %s", fly ? "ON" : "OFF");

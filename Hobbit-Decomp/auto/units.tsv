@@ -6,9 +6,9 @@
 004016e0	FUN_004016e0	ok	__fastcall	8	void	16
 00401b40	FUN_00401b40	ok	__fastcall	4	void	12
 00401ee0	FUN_00401ee0	ok	__stdcall	4	void	4
-00401f00	FUN_00401f00	ok	__fastcall	12	void	20
+00401f00	FUN_00401f00	ok	__fastcall	12	int32	20
 00401f20	FUN_00401f20	ok	__fastcall	4	void	12
-00402000	FUN_00402000	ok	__stdcall	0	void	0
+00402000	FUN_00402000	ok	__fastcall	0	float	8
 00402020	FUN_00402020	ok	__fastcall	4	float	12
 00402040	FUN_00402040	ok	__fastcall	12	void	20
 00402130	FUN_00402130	ok	__cdecl	12	void	12
@@ -52,15 +52,15 @@
 00406430	FUN_00406430	ok	__fastcall	4	void	12
 004064d0	FUN_004064d0	ok	__fastcall	0	void	4
 00406510	FUN_00406510	ok	__fastcall	8	void	16
-00406570	FUN_00406570	ok	__fastcall	4	void	12
+00406570	FUN_00406570	ok	__fastcall	4	int32	12
 004065c0	FUN_004065c0	ok	__fastcall	4	void	12
 004068c0	FUN_004068c0	ok	__fastcall	4	void	12
 00406940	FUN_00406940	ok	__fastcall	4	void	12
 004069b0	FUN_004069b0	ok	__fastcall	4	void	12
-00406a80	FUN_00406a80	ok	__fastcall	0	void	4
+00406a80	FUN_00406a80	ok	__fastcall	0	int32	4
 00406aa0	FUN_00406aa0	ok	__fastcall	0	void	4
 00406af0	FUN_00406af0	ok	__fastcall	4	int32	12
-00406b70	FUN_00406b70	ok	__fastcall	4	void	12
+00406b70	FUN_00406b70	ok	__fastcall	4	int32	12
 00406ba0	FUN_00406ba0	ok	__fastcall	0	void	4
 00406bd0	FUN_00406bd0	ok	__fastcall	4	void	12
 00406bf0	FUN_00406bf0	ok	__fastcall	8	int32	16
@@ -139,7 +139,7 @@
 0040d560	FUN_0040d560	ok	__fastcall	0	void	4
 0040dff0	FUN_0040dff0	ok	__fastcall	0	int32	4
 0040e010	FUN_0040e010	ok	__stdcall	0	int32	0
-0040e060	FUN_0040e060	ok	__fastcall	0	void	4
+0040e060	FUN_0040e060	ok	__fastcall	0	int32	4
 0040e080	FUN_0040e080	ok	__fastcall	0	void	4
 0040e130	FUN_0040e130	ok	__fastcall	0	void	4
 0040e1f0	FUN_0040e1f0	ok	__fastcall	4	void	12
@@ -147,7 +147,7 @@
 0040e420	FUN_0040e420	ok	__fastcall	0	void	4
 0040e4e0	FUN_0040e4e0	ok	__fastcall	4	void	12
 0040e590	FUN_0040e590	ok	__fastcall	0	void	4
-0040e650	FUN_0040e650	ok	__fastcall	0	void	4
+0040e650	FUN_0040e650	ok	__fastcall	0	int32	4
 0040e6a0	FUN_0040e6a0	ok	__fastcall	0	void	4
 0040e700	FUN_0040e700	ok	__fastcall	4	void	12
 0040e830	FUN_0040e830	ok	__fastcall	0	int32	4
@@ -204,7 +204,7 @@
 00411c90	FUN_00411c90	ok	__stdcall	4	int32	4
 00411d10	FUN_00411d10	ok	__fastcall	4	void	12
 00411d60	FUN_00411d60	ok	__fastcall	4	void	12
-00411df0	FUN_00411df0	ok	__fastcall	0	void	4
+00411df0	FUN_00411df0	ok	__fastcall	0	int32	4
 00411e50	FUN_00411e50	ok	__fastcall	0	void	4
 00411ee0	FUN_00411ee0	ok	__fastcall	48	void	56
 00411f90	FUN_00411f90	ok	__fastcall	0	void	4
@@ -240,7 +240,7 @@
 00413280	FUN_00413280	ok	__fastcall	0	void	4
 004132a0	FUN_004132a0	ok	__fastcall	0	void	4
 004132d0	FUN_004132d0	ok	__fastcall	4	void	12
-00413480	FUN_00413480	ok	__fastcall	16	void	24
+00413480	FUN_00413480	ok	__fastcall	16	int32	24
 004134a0	FUN_004134a0	ok	__fastcall	0	int32	4
 004134e0	FUN_004134e0	ok	__fastcall	0	void	4
 00413c50	FUN_00413c50	ok	__fastcall	0	void	4
@@ -324,7 +324,7 @@
 00419ef0	FUN_00419ef0	ok	__fastcall	0	void	4
 00419f60	FUN_00419f60	ok	__fastcall	0	void	4
 00419ff0	FUN_00419ff0	ok	__cdecl	4	void	4
-0041a000	FUN_0041a000	ok	__fastcall	0	void	4
+0041a000	FUN_0041a000	ok	__fastcall	0	int32	4
 0041a010	FUN_0041a010	ok	__fastcall	4	int32	12
 0041a030	FUN_0041a030	ok	__fastcall	0	void	4
 0041a040	FUN_0041a040	ok	__fastcall	4	int32	12
@@ -338,8 +338,8 @@
 0041ae20	FUN_0041ae20	ok	__fastcall	0	void	4
 0041afb0	FUN_0041afb0	ok	__fastcall	0	int32	4
 0041b160	FUN_0041b160	ok	__fastcall	8	void	16
-0041b580	FUN_0041b580	skip:hidden-register-input:extraout_ST0				
-0041b9c0	FUN_0041b9c0	ok	__fastcall	8	void	16
+0041b580	FUN_0041b580	skip:hidden-register-input:extraout_ST1				
+0041b9c0	FUN_0041b9c0	ok	__fastcall	8	int32	16
 0041b9e0	FUN_0041b9e0	ok	__fastcall	0	int32	4
 0041b9f0	FUN_0041b9f0	ok	__fastcall	8	void	16
 0041ba80	FUN_0041ba80	ok	__fastcall	0	int32	4
@@ -384,11 +384,11 @@
 00421f80	FUN_00421f80	skip:compile:C2065 'uint5': undeclared identifier	__fastcall	0	void	4
 00422190	FUN_00422190	ok	__fastcall	0	void	4
 00422360	FUN_00422360	ok	__fastcall	0	void	4
-00422420	FUN_00422420	ok	__stdcall	0	void	0
+00422420	FUN_00422420	ok	__stdcall	0	float	0
 00422430	FUN_00422430	ok	__fastcall	0	float	4
 00422440	FUN_00422440	ok	__fastcall	0	float	4
 00422450	FUN_00422450	ok	__fastcall	0	int32	4
-00422460	FUN_00422460	ok	__stdcall	0	void	0
+00422460	FUN_00422460	ok	__stdcall	0	float	0
 00422470	FUN_00422470	ok	__fastcall	0	int32	4
 004224a0	FUN_004224a0	ok	__fastcall	16	int32	24
 00422510	FUN_00422510	ok	__fastcall	0	int32	4
@@ -415,13 +415,13 @@
 00423ec0	FUN_00423ec0	ok	__stdcall	4	void	4
 00424080	FUN_00424080	ok	__fastcall	8	int32	16
 004243b0	FUN_004243b0	ok	__fastcall	8	int32	16
-00424770	FUN_00424770	ok	__fastcall	4	void	12
-00424890	FUN_00424890	ok	__fastcall	4	void	12
+00424770	FUN_00424770	ok	__fastcall	4	int32	12
+00424890	FUN_00424890	ok	__fastcall	4	int32	12
 004249c0	FUN_004249c0	ok	__fastcall	4	void	12
-00424a30	FUN_00424a30	ok	__fastcall	4	void	12
-00424aa0	FUN_00424aa0	ok	__fastcall	0	void	4
+00424a30	FUN_00424a30	ok	__fastcall	4	int32	12
+00424aa0	FUN_00424aa0	ok	__fastcall	0	int32	4
 00424ba0	FUN_00424ba0	ok	__fastcall	0	int32	4
-00424bc0	FUN_00424bc0	ok	__fastcall	0	void	4
+00424bc0	FUN_00424bc0	ok	__fastcall	0	int32	4
 00424bd0	FUN_00424bd0	ok	__fastcall	0	int32	4
 00424bf0	FUN_00424bf0	ok	__fastcall	0	void	4
 00424c30	FUN_00424c30	skip:hidden-register-input:in_stack_ffffffe0				
@@ -430,10 +430,10 @@
 00424da0	FUN_00424da0	ok	__fastcall	4	void	12
 00424f20	FUN_00424f20	ok	__fastcall	0	void	4
 00425010	FUN_00425010	ok	__fastcall	0	int32	4
-00425250	FUN_00425250	ok	__fastcall	4	void	12
+00425250	FUN_00425250	ok	__fastcall	4	int32	12
 00425270	FUN_00425270	ok	__fastcall	4	void	12
 004253b0	FUN_004253b0	ok	__fastcall	4	int32	12
-00425440	FUN_00425440	ok	__fastcall	0	void	4
+00425440	FUN_00425440	ok	__fastcall	0	int32	4
 00425480	FUN_00425480	ok	__stdcall	0	int32	0
 00425490	FUN_00425490	ok	__stdcall	4	int32	4
 004254a0	FUN_004254a0	ok	__fastcall	0	void	4
@@ -475,7 +475,7 @@
 00425dd0	FUN_00425dd0	ok	__fastcall	4	void	12
 00425e90	FUN_00425e90	skip:hidden-register-input:in_stack_ffffff8c				
 00425fb0	FUN_00425fb0	skip:proto-mismatch:ret4-vs-0				
-00426760	FUN_00426760	ok	__fastcall	0	void	4
+00426760	FUN_00426760	ok	__fastcall	0	float	4
 004267a0	FUN_004267a0	ok	__fastcall	0	void	4
 00426a90	FUN_00426a90	ok	__fastcall	4	int32	12
 00426b90	FUN_00426b90	ok	__cdecl	8	int32	8
@@ -541,7 +541,7 @@
 0042e260	FUN_0042e260	skip:callee-proto-mismatch:0042c8b0				
 0042eb90	FUN_0042eb90	ok	__cdecl	12	void	12
 0042ebd0	FUN_0042ebd0	ok	__fastcall	4	void	12
-0042ebf0	FUN_0042ebf0	ok	__fastcall	4	void	12
+0042ebf0	FUN_0042ebf0	ok	__fastcall	4	int32	12
 0042ec20	FUN_0042ec20	ok	__fastcall	0	void	4
 0042ec70	FUN_0042ec70	ok	__fastcall	0	void	4
 0042ed30	FUN_0042ed30	ok	__fastcall	0	void	4
@@ -550,9 +550,9 @@
 0042ef70	FUN_0042ef70	ok	__fastcall	0	void	4
 0042efc0	FUN_0042efc0	ok	__fastcall	0	void	4
 0042f170	FUN_0042f170	ok	__fastcall	24	void	32
-0042faf0	FUN_0042faf0	ok	__fastcall	4	void	12
+0042faf0	FUN_0042faf0	ok	__fastcall	4	int32	12
 0042fb20	FUN_0042fb20	skip:callee-proto-mismatch:0042c8b0				
-0042fda0	FUN_0042fda0	ok	__fastcall	4	void	12
+0042fda0	FUN_0042fda0	ok	__fastcall	4	int32	12
 0042fdf0	FUN_0042fdf0	ok	__fastcall	0	void	4
 0042fe80	FUN_0042fe80	skip:hidden-register-input:in_stack_ffffffd0				
 004300c0	FUN_004300c0	ok	__fastcall	0	void	4
@@ -580,7 +580,7 @@
 00433b00	FUN_00433b00	ok	__stdcall	0	int32	0
 00433b10	FUN_00433b10	ok	__stdcall	0	void	0
 00433b30	FUN_00433b30	ok	__stdcall	4	int32	4
-00433b60	FUN_00433b60	ok	__fastcall	0	void	4
+00433b60	FUN_00433b60	ok	__fastcall	0	int32	4
 00433bc0	FUN_00433bc0	ok	__fastcall	0	void	4
 00433c80	FUN_00433c80	ok	__fastcall	0	void	4
 004343c0	FUN_004343c0	ok	__fastcall	0	void	4
@@ -590,7 +590,7 @@
 00434c20	FUN_00434c20	ok	__fastcall	4	void	12
 00434c40	FUN_00434c40	ok	__fastcall	8	void	16
 00434ca0	FUN_00434ca0	ok	__fastcall	4	float	12
-00434cd0	FUN_00434cd0	ok	__fastcall	4	void	12
+00434cd0	FUN_00434cd0	ok	__fastcall	4	float	12
 00434cf0	FUN_00434cf0	ok	__fastcall	4	void	12
 00434d10	FUN_00434d10	ok	__fastcall	8	void	16
 00434d70	FUN_00434d70	ok	__fastcall	4	void	12
@@ -609,7 +609,7 @@
 00434fc0	FUN_00434fc0	ok	__fastcall	4	void	12
 00435330	FUN_00435330	ok	__fastcall	8	int32	16
 004354a0	FUN_004354a0	ok	__fastcall	8	int32	16
-004357e0	FUN_004357e0	ok	__fastcall	4	void	12
+004357e0	FUN_004357e0	ok	__fastcall	4	int32	12
 00435800	FUN_00435800	ok	__fastcall	4	int32	12
 00435820	FUN_00435820	ok	__fastcall	12	void	20
 00435870	FUN_00435870	ok	__fastcall	0	int32	4
@@ -645,7 +645,7 @@
 00437830	FUN_00437830	ok	__fastcall	0	int32	4
 00437880	FUN_00437880	ok	__fastcall	4	void	12
 00437b60	FUN_00437b60	ok	__fastcall	0	void	4
-00438360	FUN_00438360	ok	__fastcall	4	void	12
+00438360	FUN_00438360	ok	__fastcall	4	int32	12
 004383b0	FUN_004383b0	ok	__fastcall	0	int32	4
 004385d0	FUN_004385d0	ok	__fastcall	0	void	4
 00438990	FUN_00438990	ok	__fastcall	0	void	4
@@ -719,7 +719,7 @@
 004422b0	FUN_004422b0	ok	__fastcall	0	int32	4
 00442320	FUN_00442320	ok	__fastcall	0	void	4
 00442400	FUN_00442400	ok	__stdcall	8	void	8
-00442420	FUN_00442420	ok	__fastcall	0	void	4
+00442420	FUN_00442420	ok	__fastcall	12	void	20
 00442480	FUN_00442480	ok	__fastcall	4	int32	12
 004424d0	FUN_004424d0	ok	__fastcall	8	void	16
 00442550	FUN_00442550	ok	__fastcall	4	void	12
@@ -738,8 +738,8 @@
 00444730	FUN_00444730	ok	__fastcall	0	void	4
 004449c0	FUN_004449c0	ok	__fastcall	0	void	4
 00444c70	FUN_00444c70	ok	__fastcall	0	void	4
-00445150	FUN_00445150	ok	__cdecl	4	void	4
-004451d0	FUN_004451d0	ok	__cdecl	12	void	12
+00445150	FUN_00445150	ok	__cdecl	4	float	4
+004451d0	FUN_004451d0	ok	__cdecl	12	int32	12
 00445200	FUN_00445200	ok	__fastcall	0	void	4
 00445320	FUN_00445320	ok	__fastcall	0	void	4
 00445430	FUN_00445430	ok	__fastcall	0	void	4
@@ -843,7 +843,7 @@
 0044f680	FUN_0044f680	ok	__fastcall	8	void	16
 0044f780	FUN_0044f780	ok	__fastcall	0	void	4
 0044f7e0	FUN_0044f7e0	ok	__fastcall	4	void	12
-0044fba0	FUN_0044fba0	ok	__fastcall	8	void	16
+0044fba0	FUN_0044fba0	ok	__fastcall	24	void	32
 0044fc60	FUN_0044fc60	ok	__stdcall	0	void	0
 0044fc80	FUN_0044fc80	skip:bad-decompile				
 0044fc90	FUN_0044fc90	ok	__fastcall	4	void	12
@@ -905,7 +905,7 @@
 00453690	FUN_00453690	ok	__stdcall	8	int32	8
 00453740	FUN_00453740	ok	__fastcall	20	int32	28
 004538a0	FUN_004538a0	ok	__fastcall	4	void	12
-004538d0	FUN_004538d0	ok	__stdcall	0	void	0
+004538d0	FUN_004538d0	ok	__fastcall	0	void	8
 00453920	FUN_00453920	ok	__fastcall	4	void	12
 00453b40	FUN_00453b40	ok	__stdcall	4	int32	4
 00453bf0	FUN_00453bf0	ok	__stdcall	4	int32	4
@@ -931,7 +931,7 @@
 004551c0	FUN_004551c0	skip:proto-mismatch:ret24-vs-0				
 004554a0	FUN_004554a0	ok	__fastcall	0	void	4
 00455570	FUN_00455570	ok	__fastcall	0	void	4
-00455640	FUN_00455640	ok	__fastcall	4	void	12
+00455640	FUN_00455640	skip:callee-proto-mismatch:004e30f0				
 00455a20	FUN_00455a20	ok	__fastcall	8	int32	16
 00456360	FUN_00456360	ok	__fastcall	8	int32	16
 00456bb0	FUN_00456bb0	ok	__fastcall	4	void	12
@@ -1002,7 +1002,7 @@
 0045b960	FUN_0045b960	ok	__fastcall	4	void	12
 0045b9c0	FUN_0045b9c0	ok	__fastcall	8	int32	16
 0045ba20	FUN_0045ba20	ok	__fastcall	8	int32	16
-0045bb90	FUN_0045bb90	ok	__fastcall	0	void	4
+0045bb90	FUN_0045bb90	ok	__fastcall	0	int32	4
 0045bbd0	FUN_0045bbd0	ok	__fastcall	4	void	12
 0045bc60	FUN_0045bc60	ok	__stdcall	0	int32	0
 0045bcc0	FUN_0045bcc0	ok	__fastcall	0	int32	4
@@ -1019,7 +1019,7 @@
 0045c600	FUN_0045c600	ok	__fastcall	4	void	12
 0045ca20	FUN_0045ca20	ok	__fastcall	8	void	16
 0045cae0	FUN_0045cae0	ok	__fastcall	4	void	12
-0045cbe0	FUN_0045cbe0	ok	__fastcall	0	void	4
+0045cbe0	FUN_0045cbe0	skip:compile:C2296 '&': not valid as left operand has type 'float'	__fastcall	4	void	12
 0045d020	FUN_0045d020	ok	__stdcall	0	int32	0
 0045d080	FUN_0045d080	ok	__fastcall	0	int32	4
 0045d1a0	FUN_0045d1a0	ok	__fastcall	4	int32	12
@@ -1062,7 +1062,7 @@
 004606e0	FUN_004606e0	ok	__fastcall	4	void	12
 004607c0	FUN_004607c0	ok	__fastcall	12	void	20
 004608e0	FUN_004608e0	skip:callee-proto-mismatch:004f90f0				
-00460c20	FUN_00460c20	skip:hidden-register-input:extraout_ST0				
+00460c20	FUN_00460c20	ok	__fastcall	8	void	16
 00460e50	FUN_00460e50	ok	__fastcall	8	void	16
 00460e80	FUN_00460e80	ok	__fastcall	0	void	4
 00460ea0	FUN_00460ea0	ok	__fastcall	0	int32	4
@@ -1148,7 +1148,7 @@
 0046a520	FUN_0046a520	ok	__fastcall	4	int32	12
 0046a550	FUN_0046a550	ok	__fastcall	0	void	4
 0046aa20	FUN_0046aa20	ok	__fastcall	0	int32	4
-0046aaf0	FUN_0046aaf0	ok	__fastcall	0	int32	4
+0046aaf0	FUN_0046aaf0	ok	__fastcall	4	int32	12
 0046ab10	FUN_0046ab10	ok	__fastcall	4	void	12
 0046adc0	FUN_0046adc0	ok	__fastcall	0	int32	4
 0046add0	FUN_0046add0	skip:bad-decompile				
@@ -1204,7 +1204,7 @@
 00474190	FUN_00474190	ok	__fastcall	4	int32	12
 00474220	FUN_00474220	ok	__cdecl	16	void	16
 00474270	FUN_00474270	ok	__fastcall	0	int32	4
-004742d0	FUN_004742d0	ok	__fastcall	0	void	4
+004742d0	FUN_004742d0	ok	__fastcall	0	int32	4
 00474300	FUN_00474300	ok	__fastcall	4	int32	12
 00474320	FUN_00474320	ok	__fastcall	4	int32	12
 00474340	FUN_00474340	ok	__fastcall	0	void	4
@@ -1252,7 +1252,7 @@
 00477250	FUN_00477250	ok	__fastcall	0	int32	4
 00477320	FUN_00477320	ok	__fastcall	8	void	16
 00477460	FUN_00477460	ok	__fastcall	8	void	16
-004775c0	FUN_004775c0	ok	__fastcall	0	void	4
+004775c0	FUN_004775c0	ok	__fastcall	0	int32	4
 00477660	FUN_00477660	ok	__fastcall	4	int32	12
 00477680	FUN_00477680	ok	__fastcall	0	void	4
 00477760	FUN_00477760	ok	__fastcall	0	void	4
@@ -1264,7 +1264,7 @@
 00479fe0	FUN_00479fe0	ok	__fastcall	8	void	16
 0047a340	FUN_0047a340	ok	__stdcall	0	void	0
 0047a370	FUN_0047a370	ok	__stdcall	0	void	0
-0047a3c0	FUN_0047a3c0	ok	__fastcall	0	void	4
+0047a3c0	FUN_0047a3c0	ok	__fastcall	0	int32	4
 0047a420	FUN_0047a420	ok	__fastcall	4	int32	12
 0047a440	FUN_0047a440	ok	__fastcall	0	void	4
 0047a4d0	FUN_0047a4d0	ok	__fastcall	0	void	4
@@ -1275,7 +1275,7 @@
 0047aec0	FUN_0047aec0	ok	__stdcall	0	int32	0
 0047b1e0	FUN_0047b1e0	ok	__fastcall	12	int32	20
 0047b5f0	FUN_0047b5f0	ok	__fastcall	12	int32	20
-0047bb60	FUN_0047bb60	ok	__fastcall	0	void	4
+0047bb60	FUN_0047bb60	ok	__fastcall	0	int32	4
 0047bb90	FUN_0047bb90	ok	__fastcall	4	int32	12
 0047bbb0	FUN_0047bbb0	ok	__fastcall	0	void	4
 0047bbc0	FUN_0047bbc0	ok	__fastcall	0	void	4
@@ -1349,8 +1349,8 @@
 00480d70	FUN_00480d70	ok	__fastcall	0	int32	4
 00480df0	FUN_00480df0	ok	__fastcall	4	int32	12
 00480ed0	FUN_00480ed0	ok	__fastcall	4	void	12
-00480f20	FUN_00480f20	ok	__fastcall	4	void	12
-00480f60	FUN_00480f60	ok	__fastcall	4	void	12
+00480f20	FUN_00480f20	ok	__fastcall	4	int32	12
+00480f60	FUN_00480f60	ok	__fastcall	4	int32	12
 00480fc0	FUN_00480fc0	ok	__fastcall	0	void	4
 00480ff0	FUN_00480ff0	ok	__cdecl	36	void	36
 00481150	FUN_00481150	ok	__cdecl	20	void	20
@@ -1386,8 +1386,8 @@
 00484550	FUN_00484550	ok	__fastcall	8	void	16
 00484610	FUN_00484610	ok	__fastcall	0	void	4
 00484690	FUN_00484690	ok	__fastcall	0	int32	4
-004846e0	FUN_004846e0	skip:hidden-register-input:extraout_ST0				
-004851f0	FUN_004851f0	skip:hidden-register-input:extraout_ST0				
+004846e0	FUN_004846e0	ok	__fastcall	4	void	12
+004851f0	FUN_004851f0	ok	__fastcall	8	void	16
 00485670	FUN_00485670	ok	__fastcall	0	void	4
 00485690	FUN_00485690	ok	__fastcall	0	int32	4
 00485780	FUN_00485780	ok	__fastcall	0	void	4
@@ -1520,7 +1520,7 @@
 004935d0	FUN_004935d0	ok	__fastcall	4	void	12
 004936f0	FUN_004936f0	ok	__fastcall	4	void	12
 004937a0	FUN_004937a0	ok	__fastcall	4	void	12
-004937e0	FUN_004937e0	ok	__stdcall	4	void	4
+004937e0	FUN_004937e0	ok	__fastcall	4	float	12
 00493840	FUN_00493840	ok	__stdcall	36	int32	36
 00493850	FUN_00493850	ok	__cdecl	4	int32	4
 00493920	FUN_00493920	ok	__stdcall	0	int32	0
@@ -1530,7 +1530,7 @@
 00493b70	FUN_00493b70	ok	__fastcall	0	void	4
 00493b80	FUN_00493b80	ok	__fastcall	0	void	4
 00493c70	FUN_00493c70	skip:proto-mismatch:ret40-vs-36				
-00493e40	FUN_00493e40	ok	__fastcall	8	void	16
+00493e40	FUN_00493e40	ok	__fastcall	8	float	16
 00493f70	FUN_00493f70	ok	__fastcall	0	void	4
 00493ff0	FUN_00493ff0	ok	__fastcall	4	void	12
 00494130	FUN_00494130	skip:callee-proto-mismatch:00493c70				
@@ -1628,7 +1628,7 @@
 0049b600	FUN_0049b600	ok	__cdecl	4	void	4
 0049bbd0	FUN_0049bbd0	ok	__cdecl	4	void	4
 0049bdb0	FUN_0049bdb0	ok	__cdecl	4	void	4
-0049be20	FUN_0049be20	ok	__fastcall	0	void	4
+0049be20	FUN_0049be20	ok	__fastcall	0	int32	4
 0049be50	FUN_0049be50	ok	__fastcall	4	int32	12
 0049be70	FUN_0049be70	skip:compile:C2065 's_': undeclared identifier	__fastcall	8	void	16
 0049bef0	FUN_0049bef0	ok	__fastcall	8	void	16
@@ -1636,7 +1636,7 @@
 0049cc10	FUN_0049cc10	ok	__fastcall	8	float	16
 0049cd40	FUN_0049cd40	ok	__fastcall	16	void	24
 0049d000	FUN_0049d000	ok	__fastcall	4	int32	12
-0049d020	FUN_0049d020	ok	__fastcall	0	void	4
+0049d020	FUN_0049d020	ok	__fastcall	0	int32	4
 0049d030	FUN_0049d030	ok	__fastcall	0	void	4
 0049d040	FUN_0049d040	ok	__fastcall	8	void	16
 0049d3f0	FUN_0049d3f0	ok	__fastcall	28	void	36
@@ -1717,7 +1717,7 @@
 004a2370	FUN_004a2370	ok	__fastcall	16	int32	24
 004a2410	FUN_004a2410	ok	__fastcall	16	int32	24
 004a27c0	FUN_004a27c0	ok	__fastcall	44	void	52
-004a28a0	FUN_004a28a0	ok	__fastcall	4	void	12
+004a28a0	FUN_004a28a0	ok	__fastcall	4	int32	12
 004a28c0	FUN_004a28c0	ok	__fastcall	4	void	12
 004a2970	FUN_004a2970	ok	__fastcall	0	int32	4
 004a2990	FUN_004a2990	ok	__fastcall	0	int64	4
@@ -1759,7 +1759,7 @@
 004a58a0	FUN_004a58a0	ok	__fastcall	0	void	4
 004a5920	FUN_004a5920	ok	__fastcall	4	int32	12
 004a5960	FUN_004a5960	ok	__fastcall	0	float	4
-004a5990	FUN_004a5990	ok	__fastcall	12	void	20
+004a5990	FUN_004a5990	ok	__fastcall	12	float	20
 004a5a70	FUN_004a5a70	skip:callee-proto-mismatch:0049fee0				
 004a6090	FUN_004a6090	ok	__fastcall	4	int32	12
 004a60a0	FUN_004a60a0	ok	__fastcall	0	int32	4
@@ -1793,7 +1793,7 @@
 004a9960	FUN_004a9960	ok	__fastcall	4	void	12
 004a99a0	FUN_004a99a0	ok	__fastcall	4	int32	12
 004a99c0	FUN_004a99c0	ok	__fastcall	4	void	12
-004a9ad0	FUN_004a9ad0	skip:hidden-register-input:extraout_ST0				
+004a9ad0	FUN_004a9ad0	ok	__fastcall	8	void	16
 004a9f20	FUN_004a9f20	ok	__fastcall	0	int32	4
 004aa000	FUN_004aa000	ok	__fastcall	0	int32	4
 004aa010	FUN_004aa010	ok	__fastcall	0	int32	4
@@ -1840,7 +1840,7 @@
 004ab4e0	FUN_004ab4e0	ok	__stdcall	4	void	4
 004ab750	FUN_004ab750	ok	__fastcall	8	int32	16
 004abdf0	FUN_004abdf0	ok	__fastcall	8	int32	16
-004ac490	FUN_004ac490	ok	__fastcall	4	void	12
+004ac490	FUN_004ac490	ok	__fastcall	4	int32	12
 004ac4c0	FUN_004ac4c0	ok	__stdcall	4	int32	4
 004ac4d0	FUN_004ac4d0	ok	__fastcall	0	int32	4
 004ac4e0	FUN_004ac4e0	ok	__fastcall	4	void	12
@@ -1876,7 +1876,7 @@
 004adb70	FUN_004adb70	ok	__stdcall	4	void	4
 004adb90	FUN_004adb90	ok	__stdcall	8	void	8
 004adbd0	FUN_004adbd0	skip:compile:C2065 '_PTR_DAT_006ecc78': undeclared identifier	__stdcall	8	void	8
-004adc40	FUN_004adc40	skip:hidden-register-input:extraout_ST0				
+004adc40	FUN_004adc40	ok	__fastcall	8	void	16
 004ade90	FUN_004ade90	ok	__fastcall	0	void	4
 004adeb0	FUN_004adeb0	ok	__fastcall	0	int32	4
 004adfa0	FUN_004adfa0	ok	__fastcall	16	void	24
@@ -1885,9 +1885,9 @@
 004ae3c0	FUN_004ae3c0	ok	__fastcall	4	void	12
 004ae510	FUN_004ae510	ok	__fastcall	4	void	12
 004ae880	FUN_004ae880	ok	__fastcall	0	int32	4
-004ae8c0	FUN_004ae8c0	ok	__stdcall	4	int64	4
+004ae8c0	FUN_004ae8c0	ok	__fastcall	4	int64	12
 004ae8e0	FUN_004ae8e0	ok	__stdcall	4	void	4
-004aea80	FUN_004aea80	skip:hidden-register-input:extraout_ST0				
+004aea80	FUN_004aea80	ok	__fastcall	8	int32	16
 004af1a0	FUN_004af1a0	ok	__fastcall	8	int32	16
 004af4a0	FUN_004af4a0	ok	__cdecl	16	int32	16
 004af520	FUN_004af520	ok	__stdcall	0	void	0
@@ -1925,7 +1925,7 @@
 004b2600	FUN_004b2600	ok	__cdecl	12	void	12
 004b2740	FUN_004b2740	ok	__cdecl	28	void	28
 004b2a60	FUN_004b2a60	ok	__cdecl	20	void	20
-004b3180	FUN_004b3180	ok	__stdcall	0	void	0
+004b3180	FUN_004b3180	ok	__cdecl	8	void	8
 004b31f0	FUN_004b31f0	ok	__fastcall	4	void	12
 004b3400	FUN_004b3400	ok	__fastcall	0	void	4
 004b36e0	FUN_004b36e0	ok	__fastcall	0	void	4
@@ -1965,7 +1965,7 @@
 004b49b0	FUN_004b49b0	ok	__fastcall	0	void	4
 004b4af0	FUN_004b4af0	ok	__fastcall	8	void	16
 004b4c80	FUN_004b4c80	ok	__stdcall	0	int32	0
-004b4ce0	FUN_004b4ce0	ok	__fastcall	36	void	44
+004b4ce0	FUN_004b4ce0	ok	__fastcall	36	int32	44
 004b51b0	FUN_004b51b0	ok	__fastcall	0	int32	4
 004b5230	FUN_004b5230	ok	__fastcall	0	void	4
 004b52b0	FUN_004b52b0	skip:hidden-register-input:in_stack_ffffffc0				
@@ -2240,7 +2240,7 @@
 004d0bc0	FUN_004d0bc0	ok	__fastcall	8	void	16
 004d0be0	FUN_004d0be0	ok	__fastcall	0	int32	4
 004d0c10	FUN_004d0c10	ok	__fastcall	4	int32	12
-004d0c50	FUN_004d0c50	ok	__fastcall	4	void	12
+004d0c50	FUN_004d0c50	skip:callee-proto-mismatch:00640450				
 004d0d20	FUN_004d0d20	ok	__stdcall	0	void	0
 004d0d70	FUN_004d0d70	ok	__fastcall	4	void	12
 004d0e10	FUN_004d0e10	ok	__fastcall	4	void	12
@@ -2318,7 +2318,7 @@
 004d57a0	FUN_004d57a0	ok	__fastcall	0	int32	4
 004d57b0	FUN_004d57b0	ok	__fastcall	0	int32	4
 004d5ac0	FUN_004d5ac0	ok	__cdecl	12	void	12
-004d5bd0	FUN_004d5bd0	skip:hidden-register-input:in_stack_fffffeb0				
+004d5bd0	FUN_004d5bd0	skip:hidden-register-input:in_stack_fffffea4				
 004d6080	FUN_004d6080	ok	__fastcall	4	void	12
 004d6280	FUN_004d6280	ok	__fastcall	48	int32	56
 004d6440	FUN_004d6440	ok	__fastcall	44	void	52
@@ -2496,18 +2496,18 @@
 004e7ba0	FUN_004e7ba0	ok	__fastcall	4	float	12
 004e7c80	FUN_004e7c80	ok	__fastcall	0	float	4
 004e7c90	FUN_004e7c90	ok	__fastcall	4	int32	12
-004e7e70	FUN_004e7e70	skip:hidden-register-input:extraout_ST0				
+004e7e70	FUN_004e7e70	ok	__fastcall	24	void	32
 004e8150	FUN_004e8150	ok	__fastcall	0	void	4
 004e8170	FUN_004e8170	ok	__fastcall	0	int32	4
 004e8260	FUN_004e8260	ok	__fastcall	0	void	4
 004e8330	FUN_004e8330	ok	__fastcall	0	void	4
 004e8890	FUN_004e8890	ok	__fastcall	0	void	4
 004e8a30	FUN_004e8a30	ok	__fastcall	0	void	4
-004e8ac0	FUN_004e8ac0	skip:hidden-register-input:extraout_ST0				
+004e8ac0	FUN_004e8ac0	skip:hidden-register-input:extraout_ST1				
 004e8d10	FUN_004e8d10	ok	__fastcall	4	void	12
 004e8e30	FUN_004e8e30	ok	__fastcall	4	void	12
 004e8f80	FUN_004e8f80	ok	__fastcall	4	void	12
-004e93f0	FUN_004e93f0	skip:hidden-register-input:extraout_ST0				
+004e93f0	FUN_004e93f0	skip:hidden-register-input:extraout_ST1				
 004e98c0	FUN_004e98c0	ok	__fastcall	4	void	12
 004e9d90	FUN_004e9d90	ok	__fastcall	0	int32	4
 004e9da0	FUN_004e9da0	ok	__fastcall	0	void	4
@@ -2569,19 +2569,19 @@
 004f28e0	FUN_004f28e0	ok	__fastcall	0	void	4
 004f29f0	FUN_004f29f0	ok	__fastcall	4	void	12
 004f2b00	FUN_004f2b00	ok	__fastcall	0	void	4
-004f2e00	FUN_004f2e00	skip:hidden-register-input:extraout_ST0				
+004f2e00	FUN_004f2e00	ok	__fastcall	0	int32	4
 004f3140	FUN_004f3140	ok	__fastcall	4	void	12
 004f32f0	FUN_004f32f0	ok	__fastcall	0	int32	4
 004f34c0	FUN_004f34c0	ok	__fastcall	0	int32	4
 004f34e0	FUN_004f34e0	ok	__fastcall	0	void	4
 004f3ac0	FUN_004f3ac0	ok	__fastcall	0	void	4
 004f3ca0	FUN_004f3ca0	ok	__fastcall	0	int32	4
-004f3f90	FUN_004f3f90	ok	__fastcall	0	void	4
+004f3f90	FUN_004f3f90	skip:callee-proto-mismatch:0066b4f0				
 004f42b0	FUN_004f42b0	ok	__fastcall	4	void	12
-004f42c0	FUN_004f42c0	ok	__fastcall	0	void	4
+004f42c0	FUN_004f42c0	skip:callee-proto-mismatch:0066b4f0				
 004f48d0	FUN_004f48d0	ok	__stdcall	20	void	20
 004f4940	FUN_004f4940	ok	__fastcall	8	void	16
-004f4990	FUN_004f4990	ok	__fastcall	0	void	4
+004f4990	FUN_004f4990	skip:callee-proto-mismatch:0066b4f0				
 004f4e70	FUN_004f4e70	ok	__fastcall	8	void	16
 004f4e90	FUN_004f4e90	ok	__fastcall	0	int32	4
 004f5080	FUN_004f5080	ok	__fastcall	0	void	4
@@ -2589,11 +2589,11 @@
 004f50c0	FUN_004f50c0	ok	__fastcall	0	void	4
 004f50e0	FUN_004f50e0	ok	__fastcall	0	void	4
 004f5340	FUN_004f5340	ok	__fastcall	0	void	4
-004f58f0	FUN_004f58f0	skip:hidden-register-input:extraout_ST0				
-004f6010	FUN_004f6010	ok	__fastcall	4	void	12
+004f58f0	FUN_004f58f0	skip:hidden-register-input:in_stack_fffffea8				
+004f6010	FUN_004f6010	ok	__fastcall	4	int32	12
 004f60b0	FUN_004f60b0	ok	__fastcall	16	void	24
-004f6510	FUN_004f6510	skip:hidden-register-input:extraout_ST0				
-004f6b80	FUN_004f6b80	ok	__stdcall	0	void	0
+004f6510	FUN_004f6510	ok	__fastcall	32	void	40
+004f6b80	FUN_004f6b80	ok	__stdcall	20	void	20
 004f6c60	FUN_004f6c60	ok	__fastcall	0	void	4
 004f6d00	FUN_004f6d00	ok	__fastcall	8	void	16
 004f6ea0	FUN_004f6ea0	ok	__fastcall	4	void	12
@@ -2610,7 +2610,7 @@
 004f85c0	FUN_004f85c0	ok	__fastcall	0	void	4
 004f8640	FUN_004f8640	ok	__fastcall	12	void	20
 004f86e0	FUN_004f86e0	ok	__fastcall	0	int32	4
-004f88c0	FUN_004f88c0	ok	__stdcall	0	void	0
+004f88c0	FUN_004f88c0	ok	__fastcall	0	void	8
 004f8970	FUN_004f8970	ok	__fastcall	4	void	12
 004f8a30	FUN_004f8a30	ok	__fastcall	4	void	12
 004f8a40	FUN_004f8a40	ok	__fastcall	0	int32	4
@@ -2625,7 +2625,7 @@
 004f8dc0	FUN_004f8dc0	ok	__fastcall	0	void	4
 004f8ec0	FUN_004f8ec0	ok	__fastcall	4	void	12
 004f8fb0	FUN_004f8fb0	ok	__fastcall	0	void	4
-004f9070	FUN_004f9070	ok	__stdcall	0	void	0
+004f9070	FUN_004f9070	ok	__fastcall	0	void	8
 004f90f0	CRect	skip:compile:C2143 syntax error: missing '{' before '::'	__fastcall	16	int32	24
 004f9110	FUN_004f9110	ok	__fastcall	0	float	4
 004f9150	FUN_004f9150	ok	__fastcall	0	float	4
@@ -2642,7 +2642,7 @@
 004f9920	FUN_004f9920	ok	__stdcall	0	void	0
 004f9d20	FUN_004f9d20	ok	__stdcall	0	void	0
 004fa290	FUN_004fa290	ok	__stdcall	0	void	0
-004fa340	FUN_004fa340	ok	__fastcall	0	void	4
+004fa340	FUN_004fa340	ok	__fastcall	0	int32	4
 004fa3c0	FUN_004fa3c0	ok	__fastcall	0	void	4
 004fa3d0	FUN_004fa3d0	ok	__fastcall	4	void	12
 004fa430	FUN_004fa430	ok	__fastcall	4	void	12
@@ -2677,7 +2677,7 @@
 004fc020	FUN_004fc020	ok	__fastcall	0	void	4
 004fc090	FUN_004fc090	ok	__stdcall	0	int32	0
 004fc380	FUN_004fc380	ok	__cdecl	8	int32	8
-004fc830	FUN_004fc830	ok	__stdcall	0	void	0
+004fc830	FUN_004fc830	ok	__cdecl	4	void	4
 004fc850	FUN_004fc850	ok	__stdcall	0	int32	0
 004fca30	FUN_004fca30	ok	__fastcall	0	int32	4
 004fca90	FUN_004fca90	ok	__stdcall	0	int32	0
@@ -2694,7 +2694,7 @@
 004fd2b0	FUN_004fd2b0	ok	__stdcall	0	void	0
 004fd630	FUN_004fd630	ok	__stdcall	16	void	16
 004fd670	FUN_004fd670	ok	__cdecl	4	void	4
-004fd690	FUN_004fd690	ok	__cdecl	4	void	4
+004fd690	FUN_004fd690	ok	__cdecl	4	int32	4
 004fd7c0	FUN_004fd7c0	ok	__stdcall	0	void	0
 004fdb90	FUN_004fdb90	skip:special-instruction				
 004fe030	FUN_004fe030	ok	__stdcall	0	int32	0
@@ -2741,7 +2741,7 @@
 00502cf0	FUN_00502cf0	ok	__stdcall	0	void	0
 00502d60	FUN_00502d60	ok	__stdcall	0	int32	0
 00502dc0	FUN_00502dc0	ok	__stdcall	0	int32	0
-00502e60	FUN_00502e60	ok	__stdcall	0	int32	0
+00502e60	FUN_00502e60	skip:callee-proto-mismatch:0066b4f0				
 005031e0	FUN_005031e0	ok	__stdcall	0	void	0
 00503200	FUN_00503200	ok	__stdcall	0	void	0
 005033a0	FUN_005033a0	ok	__stdcall	8	int32	8
@@ -2766,7 +2766,7 @@
 005081b0	FUN_005081b0	ok	__fastcall	4	int32	12
 005081d0	FUN_005081d0	ok	__fastcall	0	void	4
 00508220	FUN_00508220	ok	__fastcall	28	int32	36
-005082c0	FUN_005082c0	ok	__fastcall	0	void	4
+005082c0	FUN_005082c0	ok	__fastcall	8	void	16
 00508390	FUN_00508390	ok	__stdcall	0	void	0
 00508d80	FUN_00508d80	ok	__stdcall	0	void	0
 00508eb0	FUN_00508eb0	ok	__fastcall	0	int32	4
@@ -2776,7 +2776,7 @@
 00509160	FUN_00509160	ok	__fastcall	0	int32	4
 005091c0	FUN_005091c0	ok	__fastcall	8	void	16
 005092b0	FUN_005092b0	ok	__fastcall	4	void	12
-00509400	FUN_00509400	ok	__fastcall	8	int32	16
+00509400	FUN_00509400	ok	__fastcall	16	int32	24
 00509410	FUN_00509410	ok	__fastcall	4	void	12
 005097b0	FUN_005097b0	skip:proto-mismatch:ret92-vs-12				
 005099b0	FUN_005099b0	ok	__fastcall	0	int32	4
@@ -2887,7 +2887,7 @@
 00511550	FUN_00511550	skip:hidden-register-input:in_stack_ffffffdc				
 00511680	FUN_00511680	skip:hidden-register-input:in_stack_ffffffdc				
 00511770	FUN_00511770	ok	__stdcall	8	int32	8
-005117d0	FUN_005117d0	skip:hidden-register-input:extraout_ST0				
+005117d0	FUN_005117d0	skip:proto-mismatch:ret8-vs-0				
 00511cf0	FUN_00511cf0	ok	__stdcall	0	void	0
 005120b0	FUN_005120b0	skip:callee-proto-mismatch:004f90f0				
 00512250	FUN_00512250	ok	__stdcall	0	void	0
@@ -2901,7 +2901,7 @@
 00512400	FUN_00512400	ok	__fastcall	0	int32	4
 00512410	FUN_00512410	ok	__fastcall	28	int32	36
 00512770	FUN_00512770	ok	__fastcall	4	void	12
-00512850	FUN_00512850	ok	__fastcall	8	void	16
+00512850	FUN_00512850	ok	__fastcall	8	int32	16
 00512ce0	FUN_00512ce0	ok	__fastcall	0	void	4
 00513300	FUN_00513300	ok	__fastcall	0	int32	4
 005135c0	FUN_005135c0	skip:callee-proto-mismatch:005097b0				
@@ -2919,7 +2919,7 @@
 00514590	FUN_00514590	ok	__fastcall	0	int32	4
 005145b0	FUN_005145b0	ok	__fastcall	4	int32	12
 005145d0	FUN_005145d0	ok	__fastcall	0	void	4
-00514620	FUN_00514620	ok	__fastcall	24	int32	32
+00514620	FUN_00514620	ok	__fastcall	28	int32	36
 00514880	FUN_00514880	ok	__fastcall	8	void	16
 00514920	FUN_00514920	ok	__fastcall	4	int32	12
 00514aa0	FUN_00514aa0	ok	__fastcall	8	void	16
@@ -2935,7 +2935,7 @@
 00515350	FUN_00515350	ok	__fastcall	28	int32	36
 005155a0	FUN_005155a0	ok	__fastcall	8	void	16
 00515900	FUN_00515900	ok	__fastcall	8	void	16
-00515a40	FUN_00515a40	ok	__fastcall	4	void	12
+00515a40	FUN_00515a40	ok	__fastcall	4	int32	12
 00515b40	FUN_00515b40	ok	__fastcall	4	void	12
 00515ba0	FUN_00515ba0	ok	__stdcall	16	void	16
 00515bb0	FUN_00515bb0	skip:bad-decompile				
@@ -2951,7 +2951,7 @@
 00515ff0	FUN_00515ff0	ok	__fastcall	28	int32	36
 005161a0	FUN_005161a0	skip:proto-mismatch:ret8-vs-4				
 005163b0	FUN_005163b0	skip:proto-mismatch:ret8-vs-0				
-00516500	FUN_00516500	ok	__fastcall	4	void	12
+00516500	FUN_00516500	ok	__fastcall	4	int32	12
 00516580	FUN_00516580	ok	__fastcall	4	void	12
 005165e0	FUN_005165e0	ok	__stdcall	0	void	0
 005169e0	FUN_005169e0	ok	__cdecl	4	void	4
@@ -2964,7 +2964,7 @@
 00516e90	FUN_00516e90	ok	__fastcall	8	void	16
 00517120	FUN_00517120	skip:hidden-register-input:in_stack_ffffffd8				
 00517280	FUN_00517280	skip:hidden-register-input:in_stack_ffffffd8				
-00517330	FUN_00517330	ok	__fastcall	0	void	4
+00517330	FUN_00517330	ok	__fastcall	8	void	16
 005175c0	FUN_005175c0	ok	__stdcall	0	void	0
 00517800	FUN_00517800	ok	__cdecl	4	void	4
 00517820	FUN_00517820	ok	__cdecl	24	int32	24
@@ -2975,7 +2975,7 @@
 00517b10	FUN_00517b10	ok	__fastcall	8	void	16
 00517d90	FUN_00517d90	skip:hidden-register-input:in_stack_ffffffd8				
 00517ea0	FUN_00517ea0	skip:hidden-register-input:in_stack_ffffffe0				
-00517f30	FUN_00517f30	ok	__fastcall	0	void	4
+00517f30	FUN_00517f30	ok	__fastcall	8	void	16
 00517ff0	FUN_00517ff0	ok	__cdecl	4	void	4
 00518010	FUN_00518010	ok	__cdecl	24	int32	24
 00518090	FUN_00518090	ok	__fastcall	0	int32	4
@@ -3123,8 +3123,8 @@
 00524360	FUN_00524360	ok	__fastcall	8	void	16
 00524390	FUN_00524390	ok	__fastcall	8	void	16
 00524680	FUN_00524680	ok	__fastcall	4	void	12
-00524720	FUN_00524720	ok	__fastcall	4	void	12
-00524760	FUN_00524760	ok	__fastcall	0	void	4
+00524720	FUN_00524720	ok	__fastcall	4	int32	12
+00524760	FUN_00524760	ok	__fastcall	8	void	16
 00524870	FUN_00524870	ok	__stdcall	0	void	0
 00524bf0	FUN_00524bf0	ok	__fastcall	0	int32	4
 00524c70	FUN_00524c70	ok	__fastcall	4	int32	12
@@ -3160,7 +3160,7 @@
 00526890	FUN_00526890	ok	__fastcall	4	int32	12
 005268b0	FUN_005268b0	ok	__fastcall	4	int32	12
 005268d0	FUN_005268d0	ok	__fastcall	0	int32	4
-00526a90	FUN_00526a90	ok	__fastcall	0	void	4
+00526a90	FUN_00526a90	ok	__fastcall	0	int32	4
 00526aa0	FUN_00526aa0	ok	__fastcall	4	int32	12
 00526ac0	FUN_00526ac0	ok	__fastcall	0	void	4
 00526ad0	FUN_00526ad0	ok	__fastcall	0	int32	4
@@ -3202,7 +3202,7 @@
 00529130	FUN_00529130	ok	__fastcall	4	void	12
 005291d0	FUN_005291d0	ok	__fastcall	0	int32	4
 00529270	FUN_00529270	ok	__fastcall	0	void	4
-00529400	FUN_00529400	ok	__fastcall	0	void	4
+00529400	FUN_00529400	ok	__fastcall	0	int32	4
 00529520	FUN_00529520	ok	__fastcall	0	void	4
 005299e0	FUN_005299e0	ok	__fastcall	0	int32	4
 00529b10	FUN_00529b10	ok	__fastcall	12	void	20
@@ -3241,7 +3241,7 @@
 0052ade0	FUN_0052ade0	ok	__fastcall	4	int32	12
 0052ae30	FUN_0052ae30	skip:callee-proto-mismatch:006ab250				
 0052b0f0	FUN_0052b0f0	ok	__stdcall	8	void	8
-0052b120	FUN_0052b120	ok	__stdcall	12	void	12
+0052b120	FUN_0052b120	ok	__fastcall	12	void	20
 0052b310	FUN_0052b310	ok	__fastcall	0	void	4
 0052b560	FUN_0052b560	skip:callee-proto-mismatch:004f90f0				
 0052c080	FUN_0052c080	ok	__stdcall	0	void	0
@@ -3253,7 +3253,7 @@
 0052c8c0	FUN_0052c8c0	ok	__fastcall	0	int32	4
 0052cb70	FUN_0052cb70	ok	__fastcall	0	void	4
 0052ccc0	FUN_0052ccc0	ok	__fastcall	0	int32	4
-0052cd20	FUN_0052cd20	ok	__fastcall	0	void	4
+0052cd20	FUN_0052cd20	ok	__fastcall	4	void	12
 0052ce80	FUN_0052ce80	ok	__stdcall	4	void	4
 0052cee0	FUN_0052cee0	ok	__stdcall	4	void	4
 0052cf40	FUN_0052cf40	ok	__fastcall	0	void	4
@@ -3316,7 +3316,7 @@
 00530570	FUN_00530570	ok	__cdecl	8	void	8
 005307b0	FUN_005307b0	ok	__cdecl	4	int32	4
 00530990	FUN_00530990	ok	__cdecl	8	void	8
-00530aa0	FUN_00530aa0	ok	__fastcall	0	void	4
+00530aa0	FUN_00530aa0	ok	__fastcall	0	int32	4
 00530ad0	FUN_00530ad0	ok	__fastcall	4	int32	12
 00530b20	FUN_00530b20	ok	__fastcall	4	int32	12
 00530b80	FUN_00530b80	ok	__fastcall	4	int32	12
@@ -3368,7 +3368,7 @@
 005327d0	FUN_005327d0	ok	__fastcall	8	int32	16
 00532830	FUN_00532830	ok	__fastcall	0	void	4
 00532b40	FUN_00532b40	ok	__fastcall	4	void	12
-00532c20	FUN_00532c20	ok	__fastcall	12	void	20
+00532c20	FUN_00532c20	ok	__fastcall	12	float	20
 00532c70	FUN_00532c70	ok	__fastcall	4	void	12
 00532c80	FUN_00532c80	ok	__fastcall	4	float	12
 00532cf0	FUN_00532cf0	ok	__fastcall	0	int32	4
@@ -3430,7 +3430,7 @@
 00535130	FUN_00535130	ok	__fastcall	0	void	4
 00535200	FUN_00535200	ok	__fastcall	4	void	12
 00535310	FUN_00535310	ok	__fastcall	4	void	12
-005355c0	FUN_005355c0	ok	__fastcall	12	void	20
+005355c0	FUN_005355c0	ok	__fastcall	12	float	20
 005355f0	FUN_005355f0	ok	__fastcall	4	int32	12
 00535610	FUN_00535610	ok	__fastcall	12	int32	20
 005356a0	FUN_005356a0	ok	__fastcall	16	void	24
@@ -3523,21 +3523,21 @@
 0053e430	FUN_0053e430	ok	__fastcall	4	void	12
 0053e650	FUN_0053e650	ok	__fastcall	4	void	12
 0053e880	FUN_0053e880	ok	__fastcall	4	void	12
-0053eac0	FUN_0053eac0	ok	__fastcall	0	void	4
+0053eac0	FUN_0053eac0	ok	__fastcall	0	int32	4
 0053ead0	FUN_0053ead0	ok	__fastcall	8	int32	16
-0053eb00	FUN_0053eb00	ok	__fastcall	4	void	12
-0053eb20	FUN_0053eb20	ok	__fastcall	4	void	12
-0053eb40	FUN_0053eb40	ok	__fastcall	4	void	12
+0053eb00	FUN_0053eb00	ok	__fastcall	4	int32	12
+0053eb20	FUN_0053eb20	ok	__fastcall	4	int32	12
+0053eb40	FUN_0053eb40	ok	__fastcall	4	int32	12
 0053eb60	FUN_0053eb60	ok	__fastcall	4	void	12
-0053eb80	FUN_0053eb80	ok	__fastcall	4	void	12
+0053eb80	FUN_0053eb80	ok	__fastcall	4	int32	12
 0053eba0	FUN_0053eba0	skip:hidden-register-input:extraout_ECX				
 0053ebb0	FUN_0053ebb0	ok	__fastcall	4	void	12
 0053ebd0	FUN_0053ebd0	ok	__fastcall	4	void	12
-0053ebf0	FUN_0053ebf0	ok	__fastcall	8	void	16
-0053ec10	FUN_0053ec10	ok	__fastcall	8	void	16
-0053ec30	FUN_0053ec30	ok	__fastcall	8	void	16
+0053ebf0	FUN_0053ebf0	ok	__fastcall	8	int32	16
+0053ec10	FUN_0053ec10	ok	__fastcall	8	int32	16
+0053ec30	FUN_0053ec30	ok	__fastcall	8	int32	16
 0053ec60	FUN_0053ec60	ok	__fastcall	8	void	16
-0053ec80	FUN_0053ec80	ok	__fastcall	8	void	16
+0053ec80	FUN_0053ec80	ok	__fastcall	8	int32	16
 0053ecc0	FUN_0053ecc0	ok	__fastcall	0	void	4
 0053ed40	FUN_0053ed40	ok	__fastcall	0	int32	4
 0053edb0	FUN_0053edb0	ok	__fastcall	0	void	4
@@ -3591,7 +3591,7 @@
 005426a0	FUN_005426a0	ok	__fastcall	0	void	4
 00542720	FUN_00542720	ok	__stdcall	4	void	4
 00542730	FUN_00542730	ok	__stdcall	8	void	8
-00542740	FUN_00542740	skip:hidden-register-input:extraout_ST0				
+00542740	FUN_00542740	skip:hidden-register-input:extraout_ST1				
 00542d20	FUN_00542d20	ok	__stdcall	8	void	8
 00542d30	FUN_00542d30	ok	__stdcall	0	int32	0
 00542d70	FUN_00542d70	ok	__fastcall	4	void	12
@@ -3619,7 +3619,7 @@
 00544ae0	FUN_00544ae0	ok	__fastcall	0	float	4
 00544af0	FUN_00544af0	ok	__fastcall	4	int32	12
 00544b10	FUN_00544b10	ok	__fastcall	0	int32	4
-00544b20	FUN_00544b20	ok	__stdcall	0	void	0
+00544b20	FUN_00544b20	ok	__fastcall	0	void	8
 00544b30	FUN_00544b30	ok	__fastcall	4	int32	12
 00544bf0	FUN_00544bf0	ok	__fastcall	8	int32	16
 00544cd0	FUN_00544cd0	ok	__cdecl	20	void	20
@@ -3635,14 +3635,14 @@
 005452f0	FUN_005452f0	ok	__cdecl	12	void	12
 005453a0	FUN_005453a0	ok	__cdecl	16	void	16
 00545450	FUN_00545450	ok	__cdecl	12	void	12
-00545720	FUN_00545720	ok	__fastcall	0	void	4
+00545720	FUN_00545720	ok	__fastcall	0	int32	4
 00545730	FUN_00545730	ok	__fastcall	0	void	4
 00545770	FUN_00545770	ok	__fastcall	4	int32	12
 00545cb0	FUN_00545cb0	ok	__cdecl	4	void	4
 00547120	FUN_00547120	ok	__cdecl	4	void	4
 005481a0	FUN_005481a0	ok	__stdcall	0	int32	0
 005481b0	FUN_005481b0	ok	__stdcall	0	void	0
-005481d0	FUN_005481d0	ok	__fastcall	0	void	4
+005481d0	FUN_005481d0	ok	__fastcall	0	int32	4
 005481e0	FUN_005481e0	ok	__fastcall	8	void	16
 00548210	FUN_00548210	ok	__fastcall	0	int32	4
 00548300	FUN_00548300	skip:seh-in-expression				
@@ -3670,13 +3670,13 @@
 00549620	FUN_00549620	ok	__fastcall	4	int32	12
 00549670	FUN_00549670	ok	__fastcall	8	void	16
 005496c0	FUN_005496c0	ok	__fastcall	8	int32	16
-00549860	FUN_00549860	ok	__stdcall	0	void	0
+00549860	FUN_00549860	ok	__fastcall	0	void	8
 00549910	FUN_00549910	ok	__stdcall	4	void	4
 00549970	FUN_00549970	ok	__fastcall	4	void	12
 00549a40	FUN_00549a40	ok	__fastcall	8	void	16
 00549af0	FUN_00549af0	ok	__fastcall	0	void	4
 00549c40	FUN_00549c40	ok	__stdcall	8	int32	8
-00549d10	FUN_00549d10	ok	__stdcall	4	void	4
+00549d10	FUN_00549d10	ok	__stdcall	8	void	8
 00549d80	FUN_00549d80	ok	__stdcall	8	int32	8
 00549e80	FUN_00549e80	ok	__fastcall	4	int32	12
 00549fa0	FUN_00549fa0	ok	__fastcall	0	void	4
@@ -3690,9 +3690,9 @@
 0054a430	FUN_0054a430	ok	__fastcall	8	int32	16
 0054a6a0	FUN_0054a6a0	ok	__fastcall	8	void	16
 0054aae0	FUN_0054aae0	ok	__fastcall	8	void	16
-0054ab40	FUN_0054ab40	ok	__stdcall	4	void	4
+0054ab40	FUN_0054ab40	skip:compile:C2198 'void AUTO_0054ab40(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 0054ab90	FUN_0054ab90	ok	__fastcall	8	void	16
-0054abf0	FUN_0054abf0	ok	__fastcall	8	void	16
+0054abf0	FUN_0054abf0	ok	__fastcall	8	int32	16
 0054ac10	FUN_0054ac10	skip:callee-proto-mismatch:0054ac90				
 0054ac69	Catch@0054ac69	skip:no-signature				
 0054ac90	FUN_0054ac90	skip:proto-mismatch:ret4-vs-0				
@@ -3713,7 +3713,7 @@
 0054b510	FUN_0054b510	ok	__cdecl	12	void	12
 0054b5b0	FUN_0054b5b0	ok	__stdcall	0	int32	0
 0054b5c0	FUN_0054b5c0	ok	__stdcall	0	void	0
-0054b5e0	FUN_0054b5e0	ok	__fastcall	24	void	32
+0054b5e0	FUN_0054b5e0	ok	__fastcall	24	int32	32
 0054b620	FUN_0054b620	ok	__fastcall	0	int32	4
 0054b660	FUN_0054b660	ok	__fastcall	0	void	4
 0054b680	FUN_0054b680	ok	__fastcall	0	void	4
@@ -3723,7 +3723,7 @@
 0054b8a0	FUN_0054b8a0	ok	__fastcall	0	int32	4
 0054ba60	FUN_0054ba60	ok	__fastcall	4	void	12
 0054bad0	FUN_0054bad0	ok	__fastcall	12	int64	20
-0054baf0	FUN_0054baf0	ok	__fastcall	16	int64	24
+0054baf0	FUN_0054baf0	skip:compile:C2065 '_param_2': undeclared identifier	__fastcall	16	int64	24
 0054be30	FUN_0054be30	ok	__fastcall	8	void	16
 0054bfe0	FUN_0054bfe0	ok	__fastcall	4	void	12
 0054c080	FUN_0054c080	ok	__fastcall	4	void	12
@@ -3739,8 +3739,8 @@
 0054c7c0	FUN_0054c7c0	ok	__fastcall	0	int32	4
 0054c880	FUN_0054c880	ok	__fastcall	4	void	12
 0054c8e0	FUN_0054c8e0	ok	__fastcall	4	void	12
-0054c930	FUN_0054c930	ok	__stdcall	0	void	0
-0054ca40	FUN_0054ca40	ok	__stdcall	0	void	0
+0054c930	FUN_0054c930	ok	__fastcall	0	void	8
+0054ca40	FUN_0054ca40	ok	__fastcall	0	void	8
 0054cc00	FUN_0054cc00	ok	__stdcall	4	void	4
 0054cdd0	FUN_0054cdd0	ok	__cdecl	8	int32	8
 0054cf70	FUN_0054cf70	ok	__cdecl	8	int32	8
@@ -3752,7 +3752,7 @@
 0054d950	FUN_0054d950	ok	__stdcall	8	void	8
 0054dc60	FUN_0054dc60	ok	__stdcall	4	int32	4
 0054dca0	FUN_0054dca0	ok	__stdcall	4	int32	4
-0054dcf0	FUN_0054dcf0	ok	__stdcall	4	void	4
+0054dcf0	FUN_0054dcf0	ok	__fastcall	4	void	12
 0054e3f0	FUN_0054e3f0	skip:seh-in-expression				
 0054e4d0	FUN_0054e4d0	ok	__fastcall	12	int32	20
 0054e500	FUN_0054e500	ok	__fastcall	12	void	20
@@ -3760,12 +3760,12 @@
 0054e600	FUN_0054e600	ok	__fastcall	0	void	4
 0054e670	FUN_0054e670	ok	__stdcall	0	int32	0
 0054e680	FUN_0054e680	ok	__stdcall	0	void	0
-0054e6a0	FUN_0054e6a0	ok	__fastcall	0	void	4
+0054e6a0	FUN_0054e6a0	ok	__fastcall	0	int32	4
 0054e6c0	FUN_0054e6c0	ok	__stdcall	0	void	0
 0054e6d0	FUN_0054e6d0	ok	__fastcall	4	int32	12
 0054e780	FUN_0054e780	skip:compile:C2065 's___________SubTitle___s___': undeclared identifier	__fastcall	12	void	20
 0054e910	FUN_0054e910	ok	__fastcall	12	int32	20
-0054e920	FUN_0054e920	ok	__fastcall	8	int32	16
+0054e920	FUN_0054e920	ok	__fastcall	12	int32	20
 0054e940	FUN_0054e940	skip:compile:C2065 's___________SubTitle___s__': undeclared identifier	__fastcall	12	void	20
 0054ec40	FUN_0054ec40	ok	__fastcall	0	void	4
 0054ec70	FUN_0054ec70	ok	__fastcall	0	void	4
@@ -3786,7 +3786,7 @@
 0054f7c0	FUN_0054f7c0	ok	__fastcall	4	void	12
 0054f9c0	FUN_0054f9c0	ok	__fastcall	4	void	12
 0054fa20	FUN_0054fa20	ok	__fastcall	4	void	12
-0054fc60	FUN_0054fc60	skip:hidden-register-input:extraout_ST0				
+0054fc60	FUN_0054fc60	ok	__fastcall	24	int32	32
 00550d20	FUN_00550d20	ok	__fastcall	4	int32	12
 00550d50	FUN_00550d50	ok	__fastcall	0	int32	4
 00550dd0	FUN_00550dd0	ok	__stdcall	4	void	4
@@ -3797,11 +3797,11 @@
 00550f70	FUN_00550f70	ok	__fastcall	12	void	20
 00551010	FUN_00551010	ok	__stdcall	0	int32	0
 00551020	FUN_00551020	ok	__stdcall	0	void	0
-00551040	FUN_00551040	ok	__fastcall	0	void	4
+00551040	FUN_00551040	ok	__fastcall	0	int32	4
 00551070	FUN_00551070	ok	__fastcall	0	void	4
 005510b0	FUN_005510b0	ok	__fastcall	0	int32	4
 00551110	FUN_00551110	ok	__fastcall	0	void	4
-00551130	FUN_00551130	ok	__fastcall	0	void	4
+00551130	FUN_00551130	ok	__fastcall	0	int32	4
 00551190	FUN_00551190	ok	__fastcall	0	int32	4
 00551280	FUN_00551280	ok	__fastcall	8	void	16
 00551310	FUN_00551310	ok	__fastcall	8	void	16
@@ -3816,8 +3816,8 @@
 00552060	FUN_00552060	ok	__fastcall	4	void	12
 005522c0	FUN_005522c0	ok	__fastcall	4	int32	12
 005523d0	FUN_005523d0	ok	__fastcall	4	int32	12
-005524d0	FUN_005524d0	ok	__stdcall	28	void	28
-00552890	FUN_00552890	ok	__stdcall	16	void	16
+005524d0	FUN_005524d0	ok	__fastcall	28	void	36
+00552890	FUN_00552890	skip:compile:C2198 'void AUTO_00552890(void *,int,float,float,int,float)': too few arguments for call	__fastcall	16	void	24
 00552af0	FUN_00552af0	ok	__fastcall	0	int32	4
 00552c60	FUN_00552c60	ok	__stdcall	8	void	8
 00552e30	FUN_00552e30	ok	__fastcall	4	void	12
@@ -3831,7 +3831,7 @@
 005533e0	FUN_005533e0	ok	__fastcall	0	void	4
 00553510	FUN_00553510	ok	__fastcall	0	void	4
 005535f0	FUN_005535f0	ok	__fastcall	0	void	4
-00553680	FUN_00553680	ok	__stdcall	0	void	0
+00553680	FUN_00553680	ok	__fastcall	0	void	8
 005536c0	FUN_005536c0	ok	__fastcall	0	int32	4
 00553740	FUN_00553740	ok	__fastcall	0	void	4
 00553760	FUN_00553760	ok	__fastcall	0	void	4
@@ -3851,10 +3851,10 @@
 00553f20	FUN_00553f20	ok	__fastcall	8	void	16
 00553fa0	FUN_00553fa0	skip:callee-proto-mismatch:00554fb0				
 00554210	FUN_00554210	ok	__fastcall	8	void	16
-005542f0	FUN_005542f0	ok	__fastcall	4	void	12
+005542f0	FUN_005542f0	ok	__fastcall	4	int32	12
 005543c0	FUN_005543c0	ok	__fastcall	4	void	12
 00554680	FUN_00554680	ok	__fastcall	0	void	4
-005546a0	FUN_005546a0	ok	__stdcall	0	void	0
+005546a0	FUN_005546a0	ok	__fastcall	0	void	8
 00554720	FUN_00554720	ok	__fastcall	4	void	12
 00554730	FUN_00554730	ok	__fastcall	4	void	12
 00554750	FUN_00554750	ok	__fastcall	0	int32	4
@@ -3869,14 +3869,14 @@
 00555730	FUN_00555730	ok	__stdcall	4	int32	4
 00555900	FUN_00555900	ok	__stdcall	4	int32	4
 00555ab0	FUN_00555ab0	ok	__stdcall	8	int32	8
-00555d00	FUN_00555d00	ok	__stdcall	4	int32	4
+00555d00	FUN_00555d00	ok	__fastcall	4	int32	12
 00555d70	FUN_00555d70	ok	__stdcall	0	int32	0
 00555d80	FUN_00555d80	ok	__stdcall	0	int32	0
 00555da0	FUN_00555da0	ok	__fastcall	0	void	4
 00555ea0	FUN_00555ea0	ok	__fastcall	0	int32	4
 00555ec0	FUN_00555ec0	ok	__fastcall	12	void	20
 00555fa0	FUN_00555fa0	ok	__fastcall	8	void	16
-00556510	FUN_00556510	ok	__stdcall	4	void	4
+00556510	FUN_00556510	skip:compile:C2198 'void AUTO_00556510(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00556560	FUN_00556560	ok	__cdecl	4	void	4
 00556580	FUN_00556580	ok	__fastcall	0	void	4
 005565d0	FUN_005565d0	ok	__fastcall	0	void	4
@@ -3890,7 +3890,7 @@
 005567b0	FUN_005567b0	ok	__fastcall	4	int32	12
 005567d0	FUN_005567d0	ok	__fastcall	0	void	4
 005568c0	FUN_005568c0	ok	__fastcall	8	void	16
-00556db0	FUN_00556db0	ok	__stdcall	4	void	4
+00556db0	FUN_00556db0	skip:compile:C2198 'void AUTO_00556db0(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00556e00	FUN_00556e00	ok	__fastcall	0	int32	4
 00556e10	FUN_00556e10	ok	__fastcall	4	void	12
 00556e20	FUN_00556e20	ok	__fastcall	8	void	16
@@ -3903,7 +3903,7 @@
 00556f60	FUN_00556f60	skip:seh-in-expression				
 005570a0	FUN_005570a0	ok	__fastcall	12	void	20
 00557170	FUN_00557170	ok	__fastcall	8	void	16
-00557580	FUN_00557580	ok	__stdcall	4	void	4
+00557580	FUN_00557580	skip:compile:C2198 'void AUTO_00557580(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 005575c0	FUN_005575c0	ok	__fastcall	8	void	16
 00557620	FUN_00557620	ok	__cdecl	4	void	4
 00557640	FUN_00557640	ok	__fastcall	0	void	4
@@ -3923,7 +3923,7 @@
 00557ba0	FUN_00557ba0	ok	__stdcall	0	int32	0
 00557bb0	FUN_00557bb0	ok	__fastcall	0	float	4
 00557bc0	FUN_00557bc0	ok	__fastcall	0	float	4
-00557c00	FUN_00557c00	ok	__fastcall	0	void	4
+00557c00	FUN_00557c00	ok	__fastcall	0	int32	4
 00557ca0	FUN_00557ca0	ok	__fastcall	4	int32	12
 00557d60	FUN_00557d60	ok	__fastcall	4	void	12
 00557e00	FUN_00557e00	ok	__fastcall	0	int32	4
@@ -3934,7 +3934,7 @@
 005585c0	FUN_005585c0	ok	__cdecl	8	int32	8
 00558610	FUN_00558610	ok	__cdecl	8	void	8
 00558820	FUN_00558820	ok	__cdecl	8	int32	8
-00558850	FUN_00558850	skip:hidden-register-input:extraout_ST0				
+00558850	FUN_00558850	skip:proto-mismatch:ret8-vs-4				
 00558980	FUN_00558980	skip:callee-proto-mismatch:00558850				
 00558a10	FUN_00558a10	skip:callee-proto-mismatch:00558850				
 00558b50	FUN_00558b50	ok	__fastcall	0	int32	4
@@ -3942,7 +3942,7 @@
 00558c20	FUN_00558c20	ok	__fastcall	0	int32	4
 00558c40	FUN_00558c40	ok	__fastcall	0	int32	4
 00558c80	FUN_00558c80	ok	__fastcall	0	int32	4
-00558ca0	FUN_00558ca0	ok	__stdcall	0	int32	0
+00558ca0	FUN_00558ca0	ok	__fastcall	0	int32	8
 00558d10	FUN_00558d10	ok	__cdecl	12	void	12
 00558e90	FUN_00558e90	ok	__cdecl	8	void	8
 00559080	FUN_00559080	ok	__stdcall	0	void	0
@@ -3966,7 +3966,7 @@
 00559e70	FUN_00559e70	ok	__stdcall	4	void	4
 00559f40	FUN_00559f40	ok	__stdcall	4	void	4
 0055a010	FUN_0055a010	ok	__stdcall	4	int32	4
-0055a060	FUN_0055a060	ok	__fastcall	0	void	4
+0055a060	FUN_0055a060	ok	__fastcall	0	int32	4
 0055a0c0	FUN_0055a0c0	ok	__fastcall	0	void	4
 0055a180	FUN_0055a180	ok	__stdcall	0	void	0
 0055a1d0	FUN_0055a1d0	ok	__stdcall	0	void	0
@@ -3976,7 +3976,7 @@
 0055a9c0	FUN_0055a9c0	ok	__stdcall	16	void	16
 0055ab00	FUN_0055ab00	ok	__cdecl	8	int32	8
 0055ab50	FUN_0055ab50	ok	__stdcall	0	void	0
-0055abc0	FUN_0055abc0	ok	__stdcall	0	int32	0
+0055abc0	FUN_0055abc0	ok	__fastcall	0	int32	8
 0055b420	FUN_0055b420	skip:special-instruction				
 0055bb80	FUN_0055bb80	ok	__stdcall	4	void	4
 0055bc20	FUN_0055bc20	ok	__stdcall	4	void	4
@@ -4075,7 +4075,7 @@
 00566cc0	FUN_00566cc0	ok	__stdcall	0	void	0
 00566d00	FUN_00566d00	ok	__stdcall	0	void	0
 00566d30	FUN_00566d30	ok	__stdcall	0	void	0
-00566d80	FUN_00566d80	ok	__fastcall	4	void	12
+00566d80	FUN_00566d80	ok	__fastcall	4	int32	12
 00566da0	FUN_00566da0	ok	__fastcall	4	int32	12
 00566dc0	FUN_00566dc0	ok	__fastcall	0	void	4
 00566dd0	FUN_00566dd0	ok	__fastcall	0	int32	4
@@ -4120,7 +4120,7 @@
 0056a0d0	FUN_0056a0d0	ok	__stdcall	0	void	0
 0056a120	FUN_0056a120	ok	__stdcall	0	void	0
 0056a400	FUN_0056a400	ok	__fastcall	4	int32	12
-0056a410	FUN_0056a410	ok	__fastcall	12	void	20
+0056a410	FUN_0056a410	skip:callee-proto-mismatch:00640450				
 0056a4a0	FUN_0056a4a0	ok	__stdcall	12	void	12
 0056a730	FUN_0056a730	ok	__fastcall	16	int32	24
 0056a7f0	FUN_0056a7f0	ok	__fastcall	16	int32	24
@@ -4228,7 +4228,7 @@
 00576c70	FUN_00576c70	ok	__fastcall	12	void	20
 00576d50	FUN_00576d50	ok	__fastcall	8	void	16
 00577160	FUN_00577160	ok	__fastcall	8	void	16
-005771b0	FUN_005771b0	ok	__stdcall	4	void	4
+005771b0	FUN_005771b0	skip:compile:C2198 'void AUTO_005771b0(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00577200	FUN_00577200	ok	__fastcall	0	void	4
 00577250	FUN_00577250	ok	__fastcall	16	void	24
 005774c0	FUN_005774c0	ok	__cdecl	4	void	4
@@ -4240,7 +4240,7 @@
 00577620	FUN_00577620	ok	__stdcall	0	void	0
 00577640	FUN_00577640	ok	__fastcall	0	int32	4
 005777f0	FUN_005777f0	ok	__fastcall	0	void	4
-00577830	FUN_00577830	ok	__fastcall	0	void	4
+00577830	FUN_00577830	ok	__fastcall	0	int32	4
 00577850	FUN_00577850	ok	__fastcall	0	void	4
 005778a0	FUN_005778a0	ok	__fastcall	0	void	4
 00577940	FUN_00577940	ok	__cdecl	8	int32	8
@@ -4256,7 +4256,7 @@
 005788e0	FUN_005788e0	ok	__fastcall	12	void	20
 00578950	FUN_00578950	ok	__fastcall	8	void	16
 00578d40	FUN_00578d40	ok	__fastcall	4	void	12
-00579030	FUN_00579030	ok	__fastcall	4	void	12
+00579030	FUN_00579030	ok	__fastcall	4	int32	12
 00579080	FUN_00579080	ok	__fastcall	28	void	36
 00579460	FUN_00579460	ok	__fastcall	24	void	32
 005795c0	FUN_005795c0	ok	__fastcall	24	void	32
@@ -4277,7 +4277,7 @@
 0057a350	FUN_0057a350	ok	__cdecl	28	int32	28
 0057add0	FUN_0057add0	ok	__cdecl	16	int32	16
 0057ae50	FUN_0057ae50	skip:hidden-register-input:in_stack_fffffe08				
-0057b680	FUN_0057b680	ok	__fastcall	4	void	12
+0057b680	FUN_0057b680	ok	__fastcall	4	int32	12
 0057b700	FUN_0057b700	skip:hidden-register-input:in_stack_fffffe0c				
 0057c060	FUN_0057c060	ok	__fastcall	16	void	24
 0057c770	FUN_0057c770	skip:hidden-register-input:in_stack_fffffec0				
@@ -4287,15 +4287,15 @@
 0057d3e0	FUN_0057d3e0	ok	__fastcall	16	void	24
 0057d590	FUN_0057d590	ok	__fastcall	16	void	24
 0057d740	FUN_0057d740	skip:callee-proto-mismatch:0057cdf0				
-0057d810	FUN_0057d810	skip:hidden-register-input:extraout_ST0				
+0057d810	FUN_0057d810	skip:hidden-register-input:extraout_ST1				
 0057da20	FUN_0057da20	ok	__fastcall	72	void	80
 0057dc80	FUN_0057dc80	ok	__fastcall	0	int32	4
 0057dca0	FUN_0057dca0	ok	__fastcall	0	int32	4
 0057dcb0	FUN_0057dcb0	ok	__fastcall	0	int32	4
 0057dcc0	FUN_0057dcc0	ok	__stdcall	8	int32	8
 0057dd10	FUN_0057dd10	ok	__stdcall	8	int32	8
-0057dd60	FUN_0057dd60	ok	__fastcall	0	void	4
-0057ddb0	FUN_0057ddb0	ok	__fastcall	44	void	52
+0057dd60	FUN_0057dd60	ok	__fastcall	0	int32	4
+0057ddb0	FUN_0057ddb0	ok	__fastcall	44	int32	52
 0057de30	FUN_0057de30	ok	__fastcall	4	void	12
 0057e300	FUN_0057e300	ok	__fastcall	0	void	4
 0057ebd0	FUN_0057ebd0	ok	__fastcall	0	void	4
@@ -4332,7 +4332,7 @@
 005816c0	FUN_005816c0	ok	__fastcall	0	void	4
 00581710	FUN_00581710	ok	__fastcall	12	void	20
 005817e0	FUN_005817e0	ok	__fastcall	8	void	16
-00581bf0	FUN_00581bf0	ok	__stdcall	4	void	4
+00581bf0	FUN_00581bf0	skip:compile:C2198 'void AUTO_00581bf0(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00581c30	FUN_00581c30	ok	__fastcall	0	void	4
 00581cc0	FUN_00581cc0	ok	__cdecl	4	void	4
 00581ce0	FUN_00581ce0	ok	__fastcall	0	void	4
@@ -4344,7 +4344,7 @@
 00581e90	FUN_00581e90	ok	__fastcall	0	int32	4
 00581ea0	FUN_00581ea0	ok	__fastcall	0	int32	4
 00581eb0	FUN_00581eb0	ok	__fastcall	0	void	4
-00581ee0	FUN_00581ee0	ok	__stdcall	0	void	0
+00581ee0	FUN_00581ee0	ok	__fastcall	0	void	8
 00581f30	FUN_00581f30	ok	__fastcall	4	void	12
 00582170	FUN_00582170	ok	__fastcall	4	int32	12
 005821f0	FUN_005821f0	ok	__fastcall	0	void	4
@@ -4380,7 +4380,7 @@
 00583d70	FUN_00583d70	ok	__cdecl	4	void	4
 00583de0	FUN_00583de0	ok	__fastcall	0	void	4
 00583ff0	FUN_00583ff0	ok	__fastcall	4	void	12
-00584060	FUN_00584060	ok	__stdcall	0	void	0
+00584060	FUN_00584060	ok	__fastcall	0	void	8
 00584190	FUN_00584190	ok	__fastcall	8	int32	16
 005842f0	FUN_005842f0	ok	__fastcall	0	void	4
 00584360	FUN_00584360	ok	__fastcall	0	void	4
@@ -4432,7 +4432,7 @@
 00587cf0	FUN_00587cf0	ok	__fastcall	4	void	12
 00587d00	FUN_00587d00	ok	__fastcall	4	void	12
 00587fc0	FUN_00587fc0	ok	__fastcall	0	void	4
-005887d0	FUN_005887d0	ok	__stdcall	0	void	0
+005887d0	FUN_005887d0	ok	__fastcall	0	void	8
 00588820	FUN_00588820	ok	__cdecl	4	void	4
 00588910	FUN_00588910	ok	__cdecl	4	void	4
 005889c0	FUN_005889c0	ok	__stdcall	0	void	0
@@ -4450,9 +4450,9 @@
 00589010	FUN_00589010	ok	__cdecl	8	int32	8
 005890a0	FUN_005890a0	ok	__stdcall	0	int32	0
 005890b0	FUN_005890b0	ok	__stdcall	0	void	0
-005890d0	FUN_005890d0	ok	__fastcall	8	void	16
+005890d0	FUN_005890d0	ok	__fastcall	8	int32	16
 005890f0	FUN_005890f0	ok	__fastcall	8	void	16
-00589110	FUN_00589110	ok	__fastcall	0	void	4
+00589110	FUN_00589110	ok	__fastcall	0	int32	4
 00589120	FUN_00589120	ok	__fastcall	4	void	12
 00589150	FUN_00589150	ok	__fastcall	0	void	4
 00589170	FUN_00589170	ok	__fastcall	0	int32	4
@@ -4632,11 +4632,11 @@
 0059ad20	FUN_0059ad20	ok	__fastcall	8	int32	16
 0059ae70	FUN_0059ae70	ok	__fastcall	8	int32	16
 0059b1d0	FUN_0059b1d0	ok	__fastcall	16	void	24
-0059b3e0	FUN_0059b3e0	ok	__fastcall	4	void	12
+0059b3e0	FUN_0059b3e0	ok	__fastcall	4	int32	12
 0059b420	FUN_0059b420	ok	__fastcall	4	int32	12
 0059b610	FUN_0059b610	ok	__fastcall	0	int32	4
 0059b640	FUN_0059b640	ok	__fastcall	0	int32	4
-0059b670	FUN_0059b670	ok	__fastcall	0	void	4
+0059b670	FUN_0059b670	ok	__fastcall	0	int32	4
 0059b690	FUN_0059b690	ok	__stdcall	0	int32	0
 0059b6a0	FUN_0059b6a0	ok	__stdcall	0	void	0
 0059b6d0	FUN_0059b6d0	ok	__stdcall	0	void	0
@@ -4650,7 +4650,7 @@
 0059b910	FUN_0059b910	ok	__stdcall	0	void	0
 0059b940	FUN_0059b940	ok	__stdcall	0	void	0
 0059b990	FUN_0059b990	skip:seh-in-expression				
-0059bb60	FUN_0059bb60	ok	__fastcall	0	void	4
+0059bb60	FUN_0059bb60	ok	__fastcall	0	int32	4
 0059bbf0	FUN_0059bbf0	skip:seh-in-expression				
 0059bdf0	FUN_0059bdf0	ok	__fastcall	0	void	4
 0059bf80	FUN_0059bf80	ok	__fastcall	0	void	4
@@ -4665,7 +4665,7 @@
 0059d010	FUN_0059d010	ok	__fastcall	8	int32	16
 0059d060	FUN_0059d060	ok	__fastcall	0	int32	4
 0059d070	FUN_0059d070	ok	__stdcall	4	int32	4
-0059d1f0	FUN_0059d1f0	ok	__stdcall	0	void	0
+0059d1f0	FUN_0059d1f0	ok	__fastcall	0	void	8
 0059d3f0	FUN_0059d3f0	ok	__fastcall	0	void	4
 0059d750	FUN_0059d750	ok	__fastcall	4	void	12
 0059ed70	FUN_0059ed70	ok	__stdcall	4	void	4
@@ -4673,7 +4673,7 @@
 005a0fa0	FUN_005a0fa0	ok	__fastcall	8	int32	16
 005a2a10	FUN_005a2a10	ok	__fastcall	4	int32	12
 005a2a20	FUN_005a2a20	ok	__fastcall	4	void	12
-005a2ab0	FUN_005a2ab0	ok	__fastcall	0	void	4
+005a2ab0	FUN_005a2ab0	ok	__fastcall	0	int32	4
 005a2ad0	FUN_005a2ad0	ok	__fastcall	0	void	4
 005a2b00	FUN_005a2b00	ok	__fastcall	8	void	16
 005a2b70	FUN_005a2b70	ok	__fastcall	0	void	4
@@ -4734,7 +4734,7 @@
 005a40b0	FUN_005a40b0	ok	__fastcall	8	int32	16
 005a4110	FUN_005a4110	ok	__fastcall	12	void	20
 005a4350	FUN_005a4350	ok	__fastcall	0	void	4
-005a4930	FUN_005a4930	skip:hidden-register-input:extraout_ST0				
+005a4930	FUN_005a4930	ok	__fastcall	12	void	20
 005a52d0	FUN_005a52d0	ok	__fastcall	20	void	28
 005a56c0	FUN_005a56c0	skip:callee-proto-mismatch:005a5d80				
 005a5d40	PAGE_INFO	skip:compile:C2143 syntax error: missing '{' before '::'	__fastcall	0	int32	8
@@ -4747,7 +4747,7 @@
 005a7820	FUN_005a7820	ok	__fastcall	12	void	20
 005a7870	FUN_005a7870	ok	__stdcall	0	int32	0
 005a7880	FUN_005a7880	ok	__stdcall	0	void	0
-005a78a0	FUN_005a78a0	ok	__fastcall	0	void	4
+005a78a0	FUN_005a78a0	ok	__fastcall	0	int32	4
 005a78b0	FUN_005a78b0	ok	__fastcall	0	void	4
 005a7900	FUN_005a7900	ok	__fastcall	0	void	4
 005a7910	FUN_005a7910	ok	__fastcall	0	int32	4
@@ -4759,7 +4759,7 @@
 005a7b70	FUN_005a7b70	ok	__fastcall	0	int32	4
 005a7c00	FUN_005a7c00	ok	__fastcall	0	void	4
 005a7cd0	FUN_005a7cd0	ok	__fastcall	0	void	4
-005a7e00	FUN_005a7e00	ok	__fastcall	0	void	4
+005a7e00	FUN_005a7e00	ok	__fastcall	0	int32	4
 005a7e40	FUN_005a7e40	ok	__fastcall	4	void	12
 005a7e50	FUN_005a7e50	ok	__fastcall	12	void	20
 005a8170	FUN_005a8170	ok	__fastcall	0	int32	4
@@ -4779,7 +4779,7 @@
 005aa0b0	FUN_005aa0b0	ok	__fastcall	0	int32	4
 005aa0f0	FUN_005aa0f0	ok	__fastcall	4	void	12
 005aa5a0	FUN_005aa5a0	ok	__fastcall	0	void	4
-005aa6b0	FUN_005aa6b0	ok	__fastcall	8	void	16
+005aa6b0	FUN_005aa6b0	ok	__fastcall	8	int32	16
 005aa720	FUN_005aa720	ok	__fastcall	4	int32	12
 005aa740	FUN_005aa740	ok	__fastcall	0	void	4
 005aa750	FUN_005aa750	ok	__fastcall	0	int32	4
@@ -4788,7 +4788,7 @@
 005aa7f0	FUN_005aa7f0	ok	__fastcall	16	void	24
 005aa850	FUN_005aa850	ok	__fastcall	0	int64	4
 005aa860	FUN_005aa860	ok	__fastcall	0	void	4
-005aa880	FUN_005aa880	ok	__stdcall	12	int32	12
+005aa880	FUN_005aa880	ok	__fastcall	12	int32	20
 005aa910	FUN_005aa910	ok	__fastcall	12	int32	20
 005aa9b0	FUN_005aa9b0	ok	__fastcall	0	void	4
 005aa9e0	FUN_005aa9e0	ok	__fastcall	24	void	32
@@ -4882,7 +4882,7 @@
 005b3030	FUN_005b3030	ok	__fastcall	0	int32	4
 005b3050	FUN_005b3050	ok	__stdcall	0	int32	0
 005b3060	FUN_005b3060	ok	__stdcall	0	void	0
-005b3080	FUN_005b3080	ok	__fastcall	0	void	4
+005b3080	FUN_005b3080	ok	__fastcall	0	int32	4
 005b30c0	FUN_005b30c0	ok	__fastcall	4	int32	12
 005b30e0	FUN_005b30e0	ok	__fastcall	0	void	4
 005b31f0	FUN_005b31f0	ok	__cdecl	8	int32	8
@@ -4902,7 +4902,7 @@
 005b6580	FUN_005b6580	ok	__fastcall	4	void	12
 005b6760	FUN_005b6760	ok	__fastcall	4	void	12
 005b68b0	FUN_005b68b0	ok	__fastcall	4	int32	12
-005b6940	FUN_005b6940	ok	__fastcall	0	void	4
+005b6940	FUN_005b6940	ok	__fastcall	0	int32	4
 005b6950	AFX_EVENT	skip:compile:C2143 syntax error: missing '{' before '::'	__fastcall	20	int32	28
 005b69c0	FUN_005b69c0	ok	__fastcall	0	void	4
 005b6a10	FUN_005b6a10	ok	__stdcall	0	int32	0
@@ -4923,7 +4923,7 @@
 005b6f50	FUN_005b6f50	ok	__fastcall	20	void	28
 005b7050	FUN_005b7050	ok	__fastcall	0	void	4
 005b70b0	FUN_005b70b0	ok	__fastcall	16	int32	24
-005b7160	FUN_005b7160	ok	__fastcall	0	void	4
+005b7160	FUN_005b7160	ok	__fastcall	0	int32	4
 005b7180	FUN_005b7180	ok	__fastcall	0	void	4
 005b71e0	FUN_005b71e0	ok	__fastcall	4	int64	12
 005b7220	FUN_005b7220	ok	__fastcall	4	void	12
@@ -4956,9 +4956,9 @@
 005b88b0	FUN_005b88b0	ok	__cdecl	8	void	8
 005b88e0	FUN_005b88e0	ok	__stdcall	0	void	0
 005b8910	FUN_005b8910	ok	__stdcall	0	void	0
-005b8970	FUN_005b8970	ok	__fastcall	36	void	44
+005b8970	FUN_005b8970	ok	__fastcall	36	int32	44
 005b89d0	FUN_005b89d0	ok	__fastcall	4	int32	12
-005b89f0	FUN_005b89f0	ok	__fastcall	0	void	4
+005b89f0	FUN_005b89f0	ok	__fastcall	0	int32	4
 005b8a20	FUN_005b8a20	ok	__fastcall	0	void	4
 005b8a30	FUN_005b8a30	ok	__cdecl	8	int32	8
 005b8a70	FUN_005b8a70	ok	__stdcall	0	int32	0
@@ -5001,13 +5001,13 @@
 005bb880	FUN_005bb880	ok	__fastcall	4	void	12
 005bc1d0	FUN_005bc1d0	ok	__fastcall	8	int32	16
 005bc950	FUN_005bc950	ok	__fastcall	8	int32	16
-005bd4f0	FUN_005bd4f0	ok	__fastcall	4	void	12
+005bd4f0	FUN_005bd4f0	skip:callee-proto-mismatch:006405b0				
 005bd7d0	FUN_005bd7d0	skip:proto-mismatch:ret4-vs-0				
 005bd970	FUN_005bd970	ok	__fastcall	4	int32	12
 005bdb70	FUN_005bdb70	ok	__fastcall	0	int32	4
 005bdba0	FUN_005bdba0	ok	__fastcall	0	void	4
 005bde70	FUN_005bde70	ok	__fastcall	4	void	12
-005bdff0	FUN_005bdff0	ok	__fastcall	0	void	4
+005bdff0	FUN_005bdff0	ok	__fastcall	4	void	12
 005be0b0	FUN_005be0b0	ok	__stdcall	0	void	0
 005be0c0	FUN_005be0c0	ok	__stdcall	0	void	0
 005be0e0	FUN_005be0e0	ok	__fastcall	12	int32	20
@@ -5081,7 +5081,7 @@
 005c1b10	FUN_005c1b10	ok	__fastcall	4	int32	12
 005c1b30	FUN_005c1b30	ok	__stdcall	0	int32	0
 005c1b40	FUN_005c1b40	ok	__stdcall	0	void	0
-005c1b60	FUN_005c1b60	ok	__fastcall	0	void	4
+005c1b60	FUN_005c1b60	ok	__fastcall	0	int32	4
 005c1ba0	FUN_005c1ba0	ok	__fastcall	0	void	4
 005c1c00	FUN_005c1c00	ok	__fastcall	0	void	4
 005c1c10	FUN_005c1c10	ok	__fastcall	0	void	4
@@ -5097,7 +5097,7 @@
 005c20c0	FUN_005c20c0	ok	__fastcall	0	void	4
 005c2140	FUN_005c2140	ok	__stdcall	0	int32	0
 005c2150	FUN_005c2150	ok	__stdcall	0	void	0
-005c2170	FUN_005c2170	ok	__fastcall	0	void	4
+005c2170	FUN_005c2170	ok	__fastcall	0	int32	4
 005c2190	FUN_005c2190	ok	__fastcall	0	void	4
 005c21c0	FUN_005c21c0	ok	__fastcall	4	void	12
 005c2280	FUN_005c2280	ok	__fastcall	0	void	4
@@ -5113,7 +5113,7 @@
 005c2910	FUN_005c2910	ok	__fastcall	0	void	4
 005c2a50	FUN_005c2a50	ok	__stdcall	0	void	0
 005c2a60	FUN_005c2a60	ok	__fastcall	0	void	4
-005c2ae0	FUN_005c2ae0	ok	__stdcall	0	void	0
+005c2ae0	FUN_005c2ae0	ok	__fastcall	0	void	8
 005c2b70	FUN_005c2b70	ok	__fastcall	0	void	4
 005c2da0	FUN_005c2da0	skip:compile:C2065 'stack0x00000000': undeclared identifier	__fastcall	12	void	20
 005c3030	FUN_005c3030	ok	__fastcall	0	void	4
@@ -5133,7 +5133,7 @@
 005c4510	FUN_005c4510	ok	__fastcall	8	void	16
 005c4930	FUN_005c4930	ok	__fastcall	8	void	16
 005c4b50	FUN_005c4b50	ok	__fastcall	8	void	16
-005c4b90	FUN_005c4b90	ok	__stdcall	4	void	4
+005c4b90	FUN_005c4b90	skip:compile:C2198 'void AUTO_005c4b90(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 005c4be0	FUN_005c4be0	ok	__fastcall	4	void	12
 005c4c40	FUN_005c4c40	ok	__fastcall	4	void	12
 005c4ca0	FUN_005c4ca0	ok	__fastcall	16	void	24
@@ -5151,7 +5151,7 @@
 005c5210	FUN_005c5210	ok	__fastcall	0	void	4
 005c5270	FUN_005c5270	ok	__fastcall	0	int32	4
 005c5280	FUN_005c5280	ok	__fastcall	8	int32	16
-005c5380	FUN_005c5380	ok	__fastcall	0	int32	4
+005c5380	FUN_005c5380	ok	__fastcall	4	int32	12
 005c5580	FUN_005c5580	ok	__stdcall	8	int32	8
 005c5650	FUN_005c5650	ok	__fastcall	0	int32	4
 005c5710	FUN_005c5710	ok	__fastcall	0	void	4
@@ -5160,7 +5160,7 @@
 005c5c40	FUN_005c5c40	ok	__stdcall	0	int32	0
 005c5c50	FUN_005c5c50	ok	__stdcall	0	void	0
 005c5c70	FUN_005c5c70	ok	__fastcall	0	int32	4
-005c5cf0	FUN_005c5cf0	ok	__fastcall	0	void	4
+005c5cf0	FUN_005c5cf0	ok	__fastcall	0	int32	4
 005c5d30	FUN_005c5d30	ok	__fastcall	0	int32	4
 005c5da0	FUN_005c5da0	ok	__fastcall	0	void	4
 005c5e50	FUN_005c5e50	ok	__fastcall	0	void	4
@@ -5216,7 +5216,7 @@
 005c8380	FUN_005c8380	ok	__fastcall	8	void	16
 005c8410	FUN_005c8410	ok	__fastcall	4	int32	12
 005c8440	FUN_005c8440	ok	__fastcall	0	void	4
-005c8490	FUN_005c8490	ok	__fastcall	0	void	4
+005c8490	FUN_005c8490	ok	__fastcall	0	int32	4
 005c84a0	FUN_005c84a0	ok	__fastcall	4	int32	12
 005c84c0	FUN_005c84c0	ok	__fastcall	0	void	4
 005c84e0	FUN_005c84e0	ok	__stdcall	0	int32	0
@@ -5232,7 +5232,7 @@
 005c8730	FUN_005c8730	ok	__fastcall	0	void	4
 005c8830	FUN_005c8830	ok	__fastcall	0	void	4
 005c8ce0	FUN_005c8ce0	ok	__fastcall	0	int32	4
-005c8f80	FUN_005c8f80	ok	__fastcall	0	void	4
+005c8f80	FUN_005c8f80	ok	__fastcall	0	int32	4
 005c8fc0	FUN_005c8fc0	ok	__fastcall	4	int32	12
 005c8fe0	FUN_005c8fe0	ok	__fastcall	0	int32	4
 005c8ff0	FUN_005c8ff0	ok	__fastcall	16	void	24
@@ -5243,7 +5243,7 @@
 005c9400	FUN_005c9400	ok	__fastcall	4	int32	12
 005c9490	FUN_005c9490	ok	__fastcall	0	void	4
 005c9580	FUN_005c9580	ok	__fastcall	0	void	4
-005c96b0	FUN_005c96b0	ok	__fastcall	0	void	4
+005c96b0	FUN_005c96b0	ok	__fastcall	0	int32	4
 005c96d0	FUN_005c96d0	ok	__fastcall	8	void	16
 005c9720	FUN_005c9720	ok	__fastcall	0	void	4
 005c9770	FUN_005c9770	ok	__fastcall	4	void	12
@@ -5251,7 +5251,7 @@
 005c9920	FUN_005c9920	ok	__fastcall	0	void	4
 005c9d30	FUN_005c9d30	ok	__fastcall	0	int32	4
 005c9fc0	FUN_005c9fc0	skip:callee-proto-mismatch:00559300				
-005cc290	FUN_005cc290	ok	__fastcall	4	void	12
+005cc290	FUN_005cc290	ok	__fastcall	4	int32	12
 005cc2c0	FUN_005cc2c0	ok	__fastcall	4	int32	12
 005cc2e0	FUN_005cc2e0	ok	__fastcall	0	void	4
 005cc2f0	FUN_005cc2f0	ok	__fastcall	0	void	4
@@ -5259,7 +5259,7 @@
 005cc330	FUN_005cc330	ok	__fastcall	4	void	12
 005cc3d0	FUN_005cc3d0	ok	__fastcall	4	void	12
 005cc4b0	FUN_005cc4b0	ok	__fastcall	4	void	12
-005cc820	FUN_005cc820	ok	__stdcall	4	void	4
+005cc820	FUN_005cc820	ok	__fastcall	4	void	12
 005ccb60	FUN_005ccb60	ok	__fastcall	8	int32	16
 005ccdb0	FUN_005ccdb0	ok	__fastcall	8	int32	16
 005cd220	FUN_005cd220	skip:hidden-register-input:extraout_EDX				
@@ -5275,7 +5275,7 @@
 005cde70	FUN_005cde70	ok	__fastcall	0	int32	4
 005cde80	FUN_005cde80	ok	__fastcall	0	void	4
 005cdfa0	FUN_005cdfa0	ok	__fastcall	4	void	12
-005ce020	FUN_005ce020	ok	__stdcall	4	void	4
+005ce020	FUN_005ce020	skip:callee-proto-mismatch:005cc820				
 005ce2b0	FUN_005ce2b0	ok	__fastcall	8	int32	16
 005ce390	FUN_005ce390	ok	__fastcall	8	int32	16
 005ce690	FUN_005ce690	skip:hidden-register-input:extraout_EDX				
@@ -5283,7 +5283,7 @@
 005ce6d0	FUN_005ce6d0	ok	__fastcall	0	int32	4
 005ce6e0	FUN_005ce6e0	ok	__fastcall	0	void	4
 005ce800	FUN_005ce800	ok	__fastcall	4	void	12
-005ce880	FUN_005ce880	ok	__stdcall	4	void	4
+005ce880	FUN_005ce880	skip:callee-proto-mismatch:005cc820				
 005ceb10	FUN_005ceb10	ok	__fastcall	8	int32	16
 005cebf0	FUN_005cebf0	ok	__fastcall	8	int32	16
 005ceef0	FUN_005ceef0	skip:hidden-register-input:extraout_EDX				
@@ -5308,7 +5308,7 @@
 005d06f0	FUN_005d06f0	skip:hidden-register-input:in_stack_ffffff74				
 005d0870	FUN_005d0870	ok	__fastcall	0	int32	4
 005d08a0	FUN_005d08a0	ok	__fastcall	4	void	12
-005d0a00	FUN_005d0a00	ok	__fastcall	4	void	12
+005d0a00	FUN_005d0a00	skip:callee-proto-mismatch:005cc820				
 005d0d20	FUN_005d0d20	ok	__fastcall	8	int32	16
 005d0fb0	FUN_005d0fb0	ok	__fastcall	8	int32	16
 005d1410	FUN_005d1410	ok	__fastcall	4	int32	12
@@ -5326,14 +5326,14 @@
 005d2370	FUN_005d2370	skip:hidden-register-input:in_stack_ffffffa4				
 005d2510	FUN_005d2510	ok	__fastcall	0	int32	4
 005d2520	FUN_005d2520	ok	__fastcall	8	int32	16
-005d2540	FUN_005d2540	ok	__fastcall	4	void	12
-005d2900	FUN_005d2900	ok	__fastcall	4	void	12
+005d2540	FUN_005d2540	skip:callee-proto-mismatch:00640450				
+005d2900	FUN_005d2900	skip:callee-proto-mismatch:005cc820				
 005d2d40	FUN_005d2d40	ok	__fastcall	8	int32	16
 005d3270	FUN_005d3270	ok	__fastcall	8	int32	16
 005d38e0	FUN_005d38e0	ok	__fastcall	4	int32	12
 005d3970	FUN_005d3970	ok	__fastcall	4	int32	12
 005d3990	FUN_005d3990	ok	__fastcall	0	void	4
-005d39e0	FUN_005d39e0	ok	__fastcall	0	void	4
+005d39e0	FUN_005d39e0	skip:hidden-register-input:in_stack_ffffff94				
 005d3c10	FUN_005d3c10	ok	__fastcall	4	void	12
 005d3d60	FUN_005d3d60	ok	__stdcall	4	void	4
 005d44c0	FUN_005d44c0	ok	__fastcall	8	int32	16
@@ -5343,7 +5343,7 @@
 005d4ca0	FUN_005d4ca0	ok	__fastcall	0	int32	4
 005d4cb0	FUN_005d4cb0	ok	__fastcall	0	void	4
 005d4dd0	FUN_005d4dd0	ok	__fastcall	4	void	12
-005d4e50	FUN_005d4e50	ok	__stdcall	4	void	4
+005d4e50	FUN_005d4e50	skip:callee-proto-mismatch:005cc820				
 005d50e0	FUN_005d50e0	ok	__fastcall	8	int32	16
 005d51c0	FUN_005d51c0	ok	__fastcall	8	int32	16
 005d54b0	FUN_005d54b0	skip:hidden-register-input:extraout_EDX				
@@ -5380,7 +5380,7 @@
 005d89b0	FUN_005d89b0	ok	__fastcall	0	int32	4
 005d89c0	FUN_005d89c0	ok	__fastcall	0	void	4
 005d8ae0	FUN_005d8ae0	ok	__fastcall	4	void	12
-005d8b60	FUN_005d8b60	ok	__stdcall	4	void	4
+005d8b60	FUN_005d8b60	skip:callee-proto-mismatch:005cc820				
 005d8df0	FUN_005d8df0	ok	__fastcall	8	int32	16
 005d8ed0	FUN_005d8ed0	ok	__fastcall	8	int32	16
 005d91c0	FUN_005d91c0	ok	__fastcall	4	int32	12
@@ -5399,7 +5399,7 @@
 005da180	FUN_005da180	ok	__fastcall	0	void	4
 005da1d0	FUN_005da1d0	ok	__fastcall	0	int32	4
 005da200	FUN_005da200	ok	__fastcall	8	int32	16
-005da240	FUN_005da240	ok	__fastcall	4	void	12
+005da240	FUN_005da240	skip:callee-proto-mismatch:00640450				
 005da470	FUN_005da470	ok	__fastcall	4	void	12
 005da840	FUN_005da840	ok	__fastcall	8	int32	16
 005dacc0	FUN_005dacc0	ok	__fastcall	8	int32	16
@@ -5431,7 +5431,7 @@
 005dcde0	FUN_005dcde0	ok	__fastcall	0	int32	4
 005dce60	FUN_005dce60	ok	__fastcall	0	int32	4
 005dce90	FUN_005dce90	ok	__fastcall	8	int32	16
-005dced0	FUN_005dced0	ok	__fastcall	4	void	12
+005dced0	FUN_005dced0	skip:callee-proto-mismatch:00640450				
 005dd0e0	FUN_005dd0e0	ok	__fastcall	4	void	12
 005dd460	FUN_005dd460	ok	__fastcall	8	int32	16
 005dd8d0	FUN_005dd8d0	ok	__fastcall	8	int32	16
@@ -5505,7 +5505,7 @@
 005e2ba0	FUN_005e2ba0	ok	__fastcall	0	void	4
 005e2be0	FUN_005e2be0	ok	__fastcall	0	int32	4
 005e2c10	FUN_005e2c10	ok	__fastcall	8	int32	16
-005e2c50	FUN_005e2c50	ok	__fastcall	4	void	12
+005e2c50	FUN_005e2c50	skip:callee-proto-mismatch:006405b0				
 005e2e70	FUN_005e2e70	ok	__fastcall	4	void	12
 005e3240	FUN_005e3240	ok	__fastcall	8	int32	16
 005e36c0	FUN_005e36c0	ok	__fastcall	8	int32	16
@@ -5523,7 +5523,7 @@
 005e44d0	FUN_005e44d0	ok	__fastcall	0	void	4
 005e4520	FUN_005e4520	ok	__fastcall	44	int32	52
 005e4580	FUN_005e4580	ok	__fastcall	4	void	12
-005e4610	FUN_005e4610	ok	__stdcall	4	void	4
+005e4610	FUN_005e4610	skip:callee-proto-mismatch:005cc820				
 005e4880	FUN_005e4880	ok	__fastcall	8	int32	16
 005e4940	FUN_005e4940	ok	__fastcall	8	int32	16
 005e4c40	FUN_005e4c40	ok	__fastcall	4	int32	12
@@ -5533,7 +5533,7 @@
 005e4d80	FUN_005e4d80	ok	__fastcall	0	int32	4
 005e4dd0	FUN_005e4dd0	ok	__fastcall	44	int32	52
 005e4e30	FUN_005e4e30	ok	__fastcall	4	void	12
-005e4ec0	FUN_005e4ec0	ok	__stdcall	4	void	4
+005e4ec0	FUN_005e4ec0	skip:callee-proto-mismatch:005cc820				
 005e5130	FUN_005e5130	ok	__fastcall	8	int32	16
 005e51f0	FUN_005e51f0	ok	__fastcall	8	int32	16
 005e54f0	FUN_005e54f0	ok	__fastcall	4	int32	12
@@ -5549,7 +5549,7 @@
 005e6000	FUN_005e6000	ok	__fastcall	0	int32	4
 005e6010	FUN_005e6010	skip:bad-decompile				
 005e6040	FUN_005e6040	ok	__fastcall	4	void	12
-005e60c0	FUN_005e60c0	ok	__stdcall	4	void	4
+005e60c0	FUN_005e60c0	skip:callee-proto-mismatch:005cc820				
 005e6340	FUN_005e6340	ok	__fastcall	8	int32	16
 005e6420	FUN_005e6420	ok	__fastcall	8	int32	16
 005e6710	FUN_005e6710	skip:hidden-register-input:extraout_EDX				
@@ -5557,7 +5557,7 @@
 005e6750	FUN_005e6750	ok	__fastcall	0	int32	4
 005e6760	FUN_005e6760	ok	__fastcall	0	int32	4
 005e6780	FUN_005e6780	ok	__fastcall	4	void	12
-005e6800	FUN_005e6800	ok	__stdcall	4	void	4
+005e6800	FUN_005e6800	skip:callee-proto-mismatch:005cc820				
 005e6a80	FUN_005e6a80	ok	__fastcall	8	int32	16
 005e6b60	FUN_005e6b60	ok	__fastcall	8	int32	16
 005e6e50	FUN_005e6e50	ok	__fastcall	4	int32	12
@@ -5565,7 +5565,7 @@
 005e6fa0	FUN_005e6fa0	ok	__fastcall	0	int32	4
 005e6fd0	FUN_005e6fd0	ok	__fastcall	0	void	4
 005e7050	FUN_005e7050	ok	__fastcall	8	int32	16
-005e7090	FUN_005e7090	ok	__fastcall	4	void	12
+005e7090	FUN_005e7090	skip:callee-proto-mismatch:00640450				
 005e72e0	FUN_005e72e0	ok	__fastcall	4	void	12
 005e7620	FUN_005e7620	ok	__fastcall	8	int32	16
 005e7a50	FUN_005e7a50	ok	__fastcall	8	int32	16
@@ -5649,7 +5649,7 @@
 005edb60	FUN_005edb60	ok	__fastcall	0	int32	4
 005edb70	FUN_005edb70	ok	__fastcall	0	void	4
 005edb90	FUN_005edb90	ok	__fastcall	4	void	12
-005edc10	FUN_005edc10	ok	__stdcall	4	void	4
+005edc10	FUN_005edc10	skip:callee-proto-mismatch:005cc820				
 005ede90	FUN_005ede90	ok	__fastcall	8	int32	16
 005edf70	FUN_005edf70	ok	__fastcall	8	int32	16
 005ee260	FUN_005ee260	skip:hidden-register-input:extraout_EDX				
@@ -5657,7 +5657,7 @@
 005ee2a0	FUN_005ee2a0	ok	__fastcall	0	int32	4
 005ee2b0	FUN_005ee2b0	ok	__fastcall	0	void	4
 005ee2d0	FUN_005ee2d0	ok	__fastcall	4	void	12
-005ee350	FUN_005ee350	ok	__stdcall	4	void	4
+005ee350	FUN_005ee350	skip:callee-proto-mismatch:005cc820				
 005ee5d0	FUN_005ee5d0	ok	__fastcall	8	int32	16
 005ee6b0	FUN_005ee6b0	ok	__fastcall	8	int32	16
 005ee9a0	FUN_005ee9a0	skip:hidden-register-input:extraout_EDX				
@@ -5695,13 +5695,13 @@
 005f0be0	FUN_005f0be0	ok	__fastcall	8	int32	16
 005f0d50	FUN_005f0d50	ok	__fastcall	8	int32	16
 005f10c0	FUN_005f10c0	ok	__fastcall	4	void	12
-005f1160	FUN_005f1160	ok	__fastcall	4	void	12
+005f1160	FUN_005f1160	ok	__fastcall	4	int32	12
 005f1180	FUN_005f1180	ok	__fastcall	4	int32	12
 005f11a0	FUN_005f11a0	ok	__fastcall	0	void	4
 005f11b0	FUN_005f11b0	ok	__fastcall	4	int32	12
 005f11d0	FUN_005f11d0	ok	__fastcall	4	void	12
-005f1210	FUN_005f1210	ok	__stdcall	4	void	4
-005f1470	FUN_005f1470	ok	__stdcall	4	void	4
+005f1210	FUN_005f1210	ok	__fastcall	4	void	12
+005f1470	FUN_005f1470	ok	__fastcall	4	void	12
 005f17e0	FUN_005f17e0	ok	__fastcall	8	int32	16
 005f19b0	FUN_005f19b0	ok	__fastcall	8	int32	16
 005f1cf0	FUN_005f1cf0	ok	__fastcall	4	void	12
@@ -5844,7 +5844,7 @@
 005fc070	FUN_005fc070	ok	__fastcall	0	int32	4
 005fc0a0	FUN_005fc0a0	ok	__fastcall	8	int32	16
 005fc0f0	FUN_005fc0f0	ok	__fastcall	4	int32	12
-005fc200	FUN_005fc200	ok	__fastcall	4	void	12
+005fc200	FUN_005fc200	skip:callee-proto-mismatch:006405b0				
 005fc440	FUN_005fc440	ok	__fastcall	4	void	12
 005fc800	FUN_005fc800	ok	__fastcall	8	int32	16
 005fce20	FUN_005fce20	ok	__fastcall	8	int32	16
@@ -6054,7 +6054,7 @@
 0060bfa0	FUN_0060bfa0	ok	__fastcall	4	void	12
 0060c060	FUN_0060c060	ok	__stdcall	0	void	0
 0060c090	FUN_0060c090	ok	__stdcall	0	void	0
-0060c0e0	FUN_0060c0e0	ok	__fastcall	0	void	4
+0060c0e0	FUN_0060c0e0	ok	__fastcall	4	void	12
 0060c670	FUN_0060c670	ok	__fastcall	8	int32	16
 0060c6a0	FUN_0060c6a0	ok	__fastcall	4	int32	12
 0060c6c0	FUN_0060c6c0	ok	__fastcall	0	int32	4
@@ -6072,7 +6072,7 @@
 0060cf60	FUN_0060cf60	ok	__fastcall	4	void	12
 0060cfa0	FUN_0060cfa0	ok	__fastcall	0	int32	4
 0060cfc0	FUN_0060cfc0	ok	__fastcall	12	void	20
-0060d020	FUN_0060d020	ok	__fastcall	4	void	12
+0060d020	FUN_0060d020	skip:callee-proto-mismatch:00640480				
 0060d0c0	FUN_0060d0c0	ok	__fastcall	4	void	12
 0060d430	FUN_0060d430	ok	__fastcall	8	int32	16
 0060d650	FUN_0060d650	ok	__fastcall	8	int32	16
@@ -6152,7 +6152,7 @@
 00613960	FUN_00613960	ok	__fastcall	4	int32	12
 00613990	FUN_00613990	ok	__fastcall	0	void	4
 00613a30	FUN_00613a30	ok	__fastcall	0	int32	4
-00613a70	FUN_00613a70	ok	__fastcall	0	void	4
+00613a70	FUN_00613a70	ok	__fastcall	0	int32	4
 00613a90	FUN_00613a90	ok	__fastcall	4	void	12
 00613b50	FUN_00613b50	ok	__fastcall	0	void	4
 00613d20	FUN_00613d20	ok	__fastcall	8	void	16
@@ -6162,7 +6162,7 @@
 00614670	FUN_00614670	ok	__fastcall	4	void	12
 006153f0	FUN_006153f0	ok	__fastcall	8	int32	16
 00616020	FUN_00616020	ok	__fastcall	8	int32	16
-00617120	FUN_00617120	ok	__fastcall	4	void	12
+00617120	FUN_00617120	skip:callee-proto-mismatch:00640420				
 006175c0	FUN_006175c0	ok	__fastcall	4	void	12
 00617830	FUN_00617830	ok	__fastcall	4	void	12
 00617880	FUN_00617880	ok	__fastcall	0	void	4
@@ -6359,7 +6359,7 @@
 00627f00	FUN_00627f00	ok	__stdcall	0	void	0
 00627f30	FUN_00627f30	ok	__stdcall	0	void	0
 00627f80	FUN_00627f80	ok	__fastcall	0	void	4
-006282f0	FUN_006282f0	ok	__fastcall	4	void	12
+006282f0	FUN_006282f0	skip:callee-proto-mismatch:00640420				
 006284c0	FUN_006284c0	ok	__fastcall	4	void	12
 00628830	FUN_00628830	ok	__fastcall	8	int32	16
 00628c60	FUN_00628c60	ok	__fastcall	8	int32	16
@@ -6460,7 +6460,7 @@
 00632050	FUN_00632050	ok	__fastcall	0	int32	4
 00632090	FUN_00632090	ok	__stdcall	0	void	0
 006320c0	FUN_006320c0	ok	__stdcall	0	void	0
-00632110	FUN_00632110	ok	__fastcall	0	void	4
+00632110	FUN_00632110	ok	__fastcall	4	void	12
 00632680	FUN_00632680	ok	__fastcall	8	int32	16
 00632720	FUN_00632720	ok	__fastcall	4	int32	12
 00632740	FUN_00632740	ok	__fastcall	0	int32	4
@@ -6566,10 +6566,10 @@
 00639f50	FUN_00639f50	ok	__fastcall	8	int32	16
 0063a430	FUN_0063a430	ok	__fastcall	8	int32	16
 0063aa90	FUN_0063aa90	ok	__fastcall	4	int32	12
-0063aaa0	FUN_0063aaa0	ok	__fastcall	0	int32	4
+0063aaa0	FUN_0063aaa0	ok	__fastcall	4	int32	12
 0063aae0	FUN_0063aae0	ok	__fastcall	4	void	12
 0063adb0	FUN_0063adb0	ok	__cdecl	24	void	24
-0063aed0	FUN_0063aed0	ok	__fastcall	0	void	4
+0063aed0	FUN_0063aed0	ok	__fastcall	0	int32	4
 0063af20	FUN_0063af20	ok	__fastcall	0	void	4
 0063af70	FUN_0063af70	ok	__fastcall	4	void	12
 0063af90	FUN_0063af90	ok	__fastcall	24	void	32
@@ -6581,22 +6581,22 @@
 0063b140	FUN_0063b140	ok	__fastcall	4	void	12
 0063b1d0	FUN_0063b1d0	ok	__fastcall	0	void	4
 0063b1f0	FUN_0063b1f0	ok	__fastcall	0	void	4
-0063b200	FUN_0063b200	skip:hidden-register-input:extraout_ST0				
-0063b7d0	FUN_0063b7d0	ok	__fastcall	4	void	12
-0063ba50	FUN_0063ba50	ok	__fastcall	0	void	4
+0063b200	FUN_0063b200	ok	__fastcall	0	void	4
+0063b7d0	FUN_0063b7d0	ok	__fastcall	8	void	16
+0063ba50	FUN_0063ba50	ok	__fastcall	0	int32	4
 0063ba60	FUN_0063ba60	ok	__fastcall	0	void	4
 0063ba80	FUN_0063ba80	ok	__fastcall	0	int32	4
 0063bac0	FUN_0063bac0	ok	__fastcall	4	int32	12
 0063bae0	FUN_0063bae0	ok	__fastcall	0	int32	4
 0063bb40	FUN_0063bb40	ok	__fastcall	8	void	16
-0063bec0	FUN_0063bec0	ok	__fastcall	0	void	4
+0063bec0	FUN_0063bec0	ok	__fastcall	0	int32	4
 0063bee0	FUN_0063bee0	ok	__fastcall	4	int32	12
 0063bf50	FUN_0063bf50	ok	__fastcall	8	void	16
 0063c7e0	FUN_0063c7e0	ok	__fastcall	0	int32	4
 0063c800	FUN_0063c800	ok	__stdcall	8	void	8
 0063c830	FUN_0063c830	ok	__stdcall	12	void	12
 0063c880	FUN_0063c880	ok	__stdcall	12	void	12
-0063c8f0	FUN_0063c8f0	ok	__fastcall	0	void	4
+0063c8f0	FUN_0063c8f0	ok	__fastcall	0	int32	4
 0063c930	FUN_0063c930	ok	__fastcall	0	void	4
 0063c970	FUN_0063c970	ok	__fastcall	4	void	12
 0063c9d0	FUN_0063c9d0	ok	__fastcall	8	void	16
@@ -6631,13 +6631,13 @@
 0063d440	FUN_0063d440	ok	__fastcall	4	void	12
 0063d560	FUN_0063d560	ok	__fastcall	4	void	12
 0063d590	FUN_0063d590	ok	__fastcall	4	void	12
-0063d750	FUN_0063d750	ok	__fastcall	4	void	12
-0063d790	FUN_0063d790	ok	__fastcall	4	void	12
+0063d750	FUN_0063d750	ok	__fastcall	4	int32	12
+0063d790	FUN_0063d790	ok	__fastcall	4	int32	12
 0063d8d0	FUN_0063d8d0	ok	__fastcall	0	void	4
 0063d930	FUN_0063d930	ok	__fastcall	4	void	12
 0063d990	FUN_0063d990	ok	__fastcall	0	int32	4
-0063d9d0	FUN_0063d9d0	ok	__fastcall	8	void	16
-0063daf0	FUN_0063daf0	ok	__fastcall	8	void	16
+0063d9d0	FUN_0063d9d0	ok	__fastcall	8	int32	16
+0063daf0	FUN_0063daf0	ok	__fastcall	8	int32	16
 0063dbd0	FUN_0063dbd0	ok	__fastcall	8	void	16
 0063dcd0	FUN_0063dcd0	ok	__fastcall	4	int64	12
 0063ddb0	FUN_0063ddb0	ok	__fastcall	0	int32	4
@@ -6678,16 +6678,16 @@
 006400f0	FUN_006400f0	ok	__fastcall	4	int32	12
 006401e0	FUN_006401e0	ok	__cdecl	8	int32	8
 00640370	FUN_00640370	ok	__stdcall	0	int32	0
-006403a0	FUN_006403a0	ok	__stdcall	8	int32	8
-006403e0	FUN_006403e0	ok	__stdcall	8	int32	8
-00640420	FUN_00640420	ok	__stdcall	8	int32	8
-00640450	FUN_00640450	ok	__stdcall	8	int32	8
-00640480	FUN_00640480	ok	__stdcall	8	int32	8
-006404b0	FUN_006404b0	ok	__stdcall	8	int32	8
-00640500	FUN_00640500	ok	__stdcall	8	int32	8
-00640570	FUN_00640570	ok	__stdcall	8	int32	8
-006405b0	FUN_006405b0	ok	__stdcall	8	int32	8
-006405e0	FUN_006405e0	ok	__cdecl	12	int32	12
+006403a0	FUN_006403a0	ok	__fastcall	8	int32	16
+006403e0	FUN_006403e0	ok	__fastcall	8	int32	16
+00640420	FUN_00640420	ok	__fastcall	8	int32	16
+00640450	FUN_00640450	ok	__fastcall	8	int32	16
+00640480	FUN_00640480	ok	__fastcall	8	int32	16
+006404b0	FUN_006404b0	ok	__fastcall	8	int32	16
+00640500	FUN_00640500	ok	__fastcall	8	int32	16
+00640570	FUN_00640570	ok	__fastcall	8	int32	16
+006405b0	FUN_006405b0	ok	__fastcall	8	int32	16
+006405e0	FUN_006405e0	ok	__fastcall	8	int32	16
 00640670	FUN_00640670	ok	__fastcall	0	void	4
 00640710	FUN_00640710	ok	__fastcall	0	void	4
 00640850	FUN_00640850	ok	__fastcall	8	int32	16
@@ -6715,11 +6715,11 @@
 00642490	FUN_00642490	ok	__fastcall	4	int32	12
 006424d0	FUN_006424d0	ok	__fastcall	8	void	16
 00642590	FUN_00642590	ok	__cdecl	8	void	8
-00642c70	FUN_00642c70	ok	__stdcall	0	void	0
+00642c70	FUN_00642c70	ok	__cdecl	0	void	0
 006433b0	FUN_006433b0	ok	__fastcall	8	void	16
 00643450	FUN_00643450	ok	__fastcall	8	void	16
 006436b0	FUN_006436b0	ok	__fastcall	4	int32	12
-00643740	FUN_00643740	ok	__stdcall	4	int32	4
+00643740	FUN_00643740	ok	__fastcall	4	int32	12
 00643820	FUN_00643820	ok	__fastcall	8	int32	16
 00643920	FUN_00643920	skip:compile:C2065 's______': undeclared identifier	__fastcall	0	int32	4
 00643a00	FUN_00643a00	ok	__fastcall	0	void	4
@@ -6736,7 +6736,7 @@
 00644820	FUN_00644820	ok	__fastcall	0	int32	4
 00644910	FUN_00644910	ok	__fastcall	0	int32	4
 00644c10	FUN_00644c10	ok	__fastcall	4	int32	12
-00644c60	FUN_00644c60	ok	__fastcall	16	void	24
+00644c60	FUN_00644c60	ok	__fastcall	16	int32	24
 00644c90	FUN_00644c90	ok	__fastcall	0	void	4
 00644d50	FUN_00644d50	ok	__stdcall	0	void	0
 00644db0	FUN_00644db0	ok	__stdcall	0	void	0
@@ -6794,9 +6794,9 @@
 00647830	FUN_00647830	ok	__cdecl	24	void	24
 00647b00	FUN_00647b00	ok	__stdcall	0	int32	0
 00647b10	FUN_00647b10	ok	__cdecl	8	void	8
-00647b30	FUN_00647b30	ok	__cdecl	8	void	8
-00647b50	FUN_00647b50	ok	__fastcall	0	void	4
-00647b60	FUN_00647b60	ok	__fastcall	4	void	12
+00647b30	FUN_00647b30	ok	__cdecl	8	float	8
+00647b50	FUN_00647b50	ok	__fastcall	0	int32	4
+00647b60	FUN_00647b60	ok	__fastcall	4	int32	12
 00647b80	FUN_00647b80	ok	__fastcall	0	int32	4
 00647ba0	FUN_00647ba0	ok	__fastcall	8	int32	16
 00647bc0	FUN_00647bc0	ok	__fastcall	8	float	16
@@ -6859,7 +6859,7 @@
 00649940	FUN_00649940	ok	__fastcall	0	int32	4
 00649950	FUN_00649950	ok	__fastcall	0	void	4
 00649960	FUN_00649960	ok	__fastcall	4	void	12
-006499d0	FUN_006499d0	ok	__fastcall	0	void	4
+006499d0	FUN_006499d0	ok	__fastcall	0	int32	4
 006499f0	FUN_006499f0	ok	__fastcall	4	void	12
 00649a50	FUN_00649a50	ok	__fastcall	8	void	16
 00649a80	FUN_00649a80	ok	__fastcall	8	void	16
@@ -6903,7 +6903,7 @@
 0064ac80	FUN_0064ac80	ok	__fastcall	4	void	12
 0064ae30	FUN_0064ae30	ok	__fastcall	4	int32	12
 0064af30	FUN_0064af30	ok	__fastcall	4	void	12
-0064afa0	FUN_0064afa0	ok	__fastcall	0	void	4
+0064afa0	FUN_0064afa0	ok	__fastcall	0	int32	4
 0064afc0	FUN_0064afc0	skip:compile:C2100 you cannot dereference an operand of type 'undefined4'	__fastcall	4	void	12
 0064b010	FUN_0064b010	ok	__fastcall	8	void	16
 0064b060	FUN_0064b060	ok	__fastcall	8	void	16
@@ -6937,9 +6937,9 @@
 0064c5e0	FUN_0064c5e0	ok	__cdecl	8	float	8
 0064c600	FUN_0064c600	ok	__cdecl	8	void	8
 0064c6b0	FUN_0064c6b0	ok	__cdecl	8	float	8
-0064c800	FUN_0064c800	ok	__cdecl	4	void	4
+0064c800	FUN_0064c800	ok	__cdecl	4	float	4
 0064c810	FUN_0064c810	ok	__cdecl	8	float	8
-0064c8d0	FUN_0064c8d0	ok	__cdecl	4	void	4
+0064c8d0	FUN_0064c8d0	ok	__cdecl	4	float	4
 0064c8e0	FUN_0064c8e0	ok	__cdecl	12	void	12
 0064ca10	FUN_0064ca10	skip:special-instruction				
 0064cb30	FUN_0064cb30	ok	__stdcall	0	void	0
@@ -6948,7 +6948,7 @@
 0064cbb0	FUN_0064cbb0	ok	__cdecl	8	float	8
 0064cbc0	FUN_0064cbc0	ok	__cdecl	8	float	8
 0064cbd0	FUN_0064cbd0	ok	__stdcall	0	void	0
-0064cbe0	FUN_0064cbe0	ok	__fastcall	0	void	4
+0064cbe0	FUN_0064cbe0	ok	__fastcall	0	int32	4
 0064cc00	FUN_0064cc00	ok	__fastcall	0	void	4
 0064cc30	FUN_0064cc30	ok	__fastcall	0	void	4
 0064cc50	FUN_0064cc50	ok	__fastcall	0	int64	4
@@ -6965,9 +6965,9 @@
 0064d480	FUN_0064d480	ok	__fastcall	0	int32	4
 0064d6d0	FUN_0064d6d0	ok	__fastcall	0	int32	4
 0064d8e0	FUN_0064d8e0	skip:bad-decompile				
-0064dc00	FUN_0064dc00	ok	__cdecl	12	void	12
+0064dc00	FUN_0064dc00	ok	__cdecl	12	int32	12
 0064e040	FUN_0064e040	ok	__cdecl	12	void	12
-0064e180	FUN_0064e180	ok	__stdcall	8	int32	8
+0064e180	FUN_0064e180	ok	__fastcall	8	int32	16
 0064e5d0	FUN_0064e5d0	ok	__cdecl	4	void	4
 0064e5e0	FUN_0064e5e0	ok	__cdecl	16	void	16
 0064e610	FUN_0064e610	ok	__stdcall	0	void	0
@@ -7001,7 +7001,7 @@
 0064fef0	FUN_0064fef0	ok	__stdcall	0	void	0
 0064ff00	FUN_0064ff00	ok	__stdcall	0	void	0
 0064ff10	FUN_0064ff10	ok	__cdecl	4	int32	4
-0064ff40	FUN_0064ff40	ok	__cdecl	4	void	4
+0064ff40	FUN_0064ff40	ok	__cdecl	12	void	12
 0064ff70	FUN_0064ff70	ok	__cdecl	4	int32	4
 0064ffa0	FUN_0064ffa0	ok	__cdecl	8	int32	8
 00650010	FUN_00650010	ok	__stdcall	0	int32	0
@@ -7059,12 +7059,12 @@
 00652470	FUN_00652470	ok	__fastcall	4	int32	12
 006524b0	FUN_006524b0	ok	__fastcall	4	int32	12
 006524f0	FUN_006524f0	ok	__fastcall	4	int32	12
-00652580	FUN_00652580	ok	__stdcall	4	int32	4
+00652580	FUN_00652580	ok	__fastcall	4	int32	12
 00652630	FUN_00652630	ok	__fastcall	4	void	12
 00652650	FUN_00652650	ok	__cdecl	8	int32	8
 00652740	FUN_00652740	ok	__stdcall	4	int32	4
 00652780	FUN_00652780	ok	__fastcall	4	int32	12
-00652870	FUN_00652870	ok	__cdecl	8	int32	8
+00652870	FUN_00652870	ok	__fastcall	4	int32	12
 00652ed0	FUN_00652ed0	ok	__cdecl	16	void	16
 00652f40	FUN_00652f40	ok	__cdecl	16	void	16
 00652fc0	FUN_00652fc0	ok	__cdecl	16	void	16
@@ -7082,11 +7082,11 @@
 006538e0	FUN_006538e0	ok	__fastcall	0	void	4
 006539a0	FUN_006539a0	ok	__fastcall	8	void	16
 006539d0	FUN_006539d0	ok	__fastcall	4	void	12
-006539f0	FUN_006539f0	ok	__fastcall	4	void	12
+006539f0	FUN_006539f0	ok	__fastcall	0	void	8
 00653a20	FUN_00653a20	ok	__fastcall	0	void	4
-00653a30	FUN_00653a30	ok	__fastcall	0	void	4
-00653a50	FUN_00653a50	ok	__fastcall	0	void	4
-00653a70	FUN_00653a70	ok	__fastcall	4	void	12
+00653a30	FUN_00653a30	ok	__fastcall	0	int32	4
+00653a50	FUN_00653a50	ok	__fastcall	0	int32	4
+00653a70	FUN_00653a70	ok	__fastcall	4	int32	12
 00653a80	FUN_00653a80	ok	__fastcall	4	void	12
 00653a90	FUN_00653a90	ok	__fastcall	4	void	12
 00653ae0	FUN_00653ae0	ok	__fastcall	0	void	4
@@ -7125,11 +7125,11 @@
 00655810	FUN_00655810	ok	__fastcall	0	int32	4
 00655820	FUN_00655820	ok	__fastcall	0	int32	4
 00655850	FUN_00655850	ok	__fastcall	0	int32	4
-00655880	FUN_00655880	ok	__stdcall	0	int32	0
-00655890	FUN_00655890	ok	__stdcall	4	int32	4
+00655880	FUN_00655880	ok	__fastcall	0	int32	8
+00655890	FUN_00655890	ok	__fastcall	4	int32	12
 006558d0	FUN_006558d0	ok	__fastcall	4	int32	12
 006558f0	FUN_006558f0	ok	__fastcall	8	int32	16
-00655950	FUN_00655950	ok	__stdcall	0	void	0
+00655950	FUN_00655950	ok	__fastcall	0	void	8
 006559a0	FUN_006559a0	ok	__fastcall	4	int32	12
 00655a60	FUN_00655a60	ok	__fastcall	4	int32	12
 00655b20	FUN_00655b20	ok	__stdcall	0	void	0
@@ -7150,31 +7150,31 @@
 00657080	FUN_00657080	ok	__cdecl	44	void	44
 006571e0	FUN_006571e0	ok	__cdecl	48	void	48
 00657520	FUN_00657520	ok	__cdecl	4	void	4
-00657cf0	FUN_00657cf0	ok	__stdcall	0	int64	0
+00657cf0	FUN_00657cf0	ok	__cdecl	20	int64	20
 00657d60	FUN_00657d60	ok	__stdcall	0	int32	0
 00657d70	FUN_00657d70	ok	__stdcall	0	void	0
-00657d90	FUN_00657d90	ok	__fastcall	0	void	4
+00657d90	FUN_00657d90	ok	__fastcall	0	int32	4
 00657df0	FUN_00657df0	ok	__fastcall	0	void	4
 00657e10	FUN_00657e10	ok	__fastcall	4	void	12
 00657f10	FUN_00657f10	ok	__fastcall	0	void	4
-00657fa0	FUN_00657fa0	ok	__fastcall	4	float	12
-00658020	FUN_00658020	ok	__stdcall	4	void	4
+00657fa0	FUN_00657fa0	skip:callee-proto-mismatch:006784d0				
+00658020	FUN_00658020	skip:callee-proto-mismatch:006784d0				
 00658080	FUN_00658080	ok	__fastcall	4	int32	12
 006581c0	FUN_006581c0	ok	__fastcall	4	int32	12
 00658290	FUN_00658290	ok	__fastcall	8	int32	16
-00658330	FUN_00658330	skip:hidden-register-input:in_stack_ffffffec				
-006583e0	FUN_006583e0	ok	__stdcall	12	int32	12
+00658330	FUN_00658330	skip:callee-proto-mismatch:006583e0				
+006583e0	FUN_006583e0	skip:proto-mismatch:ret12-vs-0				
 00658470	FUN_00658470	ok	__fastcall	12	void	20
-006584d0	FUN_006584d0	ok	__stdcall	20	int32	20
+006584d0	FUN_006584d0	ok	__fastcall	20	int32	28
 00658660	FUN_00658660	ok	__stdcall	20	int32	20
-00658670	FUN_00658670	ok	__stdcall	20	int32	20
+00658670	FUN_00658670	ok	__fastcall	20	int32	28
 00658800	FUN_00658800	ok	__stdcall	16	int32	16
-006588b0	FUN_006588b0	ok	__stdcall	16	int32	16
-006589e0	FUN_006589e0	ok	__stdcall	16	int64	16
-00658bf0	FUN_00658bf0	ok	__stdcall	16	int32	16
+006588b0	FUN_006588b0	ok	__fastcall	16	int32	24
+006589e0	FUN_006589e0	ok	__fastcall	16	int64	24
+00658bf0	FUN_00658bf0	ok	__fastcall	16	int32	24
 00658d20	FUN_00658d20	ok	__stdcall	16	int32	16
 00658e30	FUN_00658e30	ok	__fastcall	0	void	4
-00658e60	FUN_00658e60	skip:hidden-register-input:extraout_ST0				
+00658e60	FUN_00658e60	ok	__stdcall	8	float	8
 00658ef0	FUN_00658ef0	ok	__stdcall	20	void	20
 006592a0	FUN_006592a0	ok	__fastcall	8	void	16
 00659300	FUN_00659300	ok	__fastcall	32	void	40
@@ -7186,7 +7186,7 @@
 00659ab0	FUN_00659ab0	ok	__stdcall	8	int32	8
 00659b70	FUN_00659b70	ok	__fastcall	0	void	4
 00659c10	FUN_00659c10	ok	__fastcall	0	void	4
-00659c80	FUN_00659c80	ok	__stdcall	4	int32	4
+00659c80	FUN_00659c80	ok	__stdcall	8	int32	8
 00659ce0	FUN_00659ce0	ok	__fastcall	0	void	4
 00659d20	FUN_00659d20	ok	__fastcall	0	void	4
 00659db0	FUN_00659db0	ok	__stdcall	4	int32	4
@@ -7198,8 +7198,8 @@
 0065a290	FUN_0065a290	ok	__stdcall	8	int32	8
 0065a2f0	FUN_0065a2f0	ok	__stdcall	12	int32	12
 0065a420	FUN_0065a420	ok	__stdcall	4	int32	4
-0065a480	FUN_0065a480	ok	__stdcall	4	float	4
-0065a5b0	FUN_0065a5b0	ok	__stdcall	4	int32	4
+0065a480	FUN_0065a480	skip:callee-proto-mismatch:00678540				
+0065a5b0	FUN_0065a5b0	skip:callee-proto-mismatch:006786a0				
 0065a610	FUN_0065a610	ok	__fastcall	4	int32	12
 0065a650	FUN_0065a650	ok	__fastcall	4	int32	12
 0065a670	FUN_0065a670	ok	__fastcall	8	int32	16
@@ -7234,7 +7234,7 @@
 0065bb60	FUN_0065bb60	ok	__cdecl	8	void	8
 0065bc20	FUN_0065bc20	ok	__stdcall	0	int32	0
 0065bcc0	FUN_0065bcc0	ok	__cdecl	8	void	8
-0065bcf0	FUN_0065bcf0	skip:hidden-register-input:extraout_ST0				
+0065bcf0	FUN_0065bcf0	skip:callee-proto-mismatch:006c23d9				
 0065c0d0	FUN_0065c0d0	ok	__stdcall	0	int32	0
 0065c170	FUN_0065c170	ok	__stdcall	0	int32	0
 0065c190	FUN_0065c190	ok	__stdcall	0	float	0
@@ -7249,11 +7249,11 @@
 0065c800	FUN_0065c800	ok	__cdecl	4	int32	4
 0065c840	FUN_0065c840	ok	__stdcall	0	void	0
 0065c8b0	FUN_0065c8b0	ok	__stdcall	0	int32	0
-0065c8d0	FUN_0065c8d0	ok	__fastcall	0	int64	8
+0065c8d0	FUN_0065c8d0	ok	__cdecl	20	int64	20
 0065c9a0	FUN_0065c9a0	ok	__cdecl	4	void	4
 0065caf0	FUN_0065caf0	ok	__stdcall	0	void	0
 0065cd80	FUN_0065cd80	ok	__stdcall	0	int32	0
-0065d0f0	FUN_0065d0f0	ok	__stdcall	12	int32	12
+0065d0f0	FUN_0065d0f0	ok	__cdecl	12	int32	12
 0065d360	FUN_0065d360	ok	__cdecl	4	int32	4
 0065d4e0	FUN_0065d4e0	ok	__cdecl	4	int32	4
 0065de70	FUN_0065de70	skip:compile:C2065 'stack0xffffff78': undeclared identifier	__cdecl	16	void	16
@@ -7285,7 +7285,7 @@
 00660510	FUN_00660510	ok	__stdcall	0	float	0
 00660530	FUN_00660530	ok	__stdcall	0	float	0
 006605b0	FUN_006605b0	ok	__stdcall	0	int32	0
-006605f0	FUN_006605f0	ok	__cdecl	28	void	28
+006605f0	FUN_006605f0	skip:hidden-register-input:extraout_ST1				
 006606a0	FUN_006606a0	skip:compile:C2065 'iRam00000000': undeclared identifier	__stdcall	0	void	0
 006608d0	FUN_006608d0	ok	__cdecl	4	void	4
 00660a00	FUN_00660a00	ok	__stdcall	0	float	0
@@ -7305,13 +7305,13 @@
 00661370	FUN_00661370	ok	__cdecl	4	void	4
 006613a0	FUN_006613a0	ok	__cdecl	4	int32	4
 00661450	FUN_00661450	ok	__cdecl	4	int32	4
-00661490	FUN_00661490	skip:hidden-register-input:extraout_ST0				
+00661490	FUN_00661490	skip:callee-proto-mismatch:006c23d9				
 00661c40	FUN_00661c40	ok	__stdcall	0	void	0
 00661e00	FUN_00661e00	ok	__stdcall	0	void	0
 00661e70	FUN_00661e70	ok	__stdcall	0	void	0
 00661ea0	FUN_00661ea0	ok	__cdecl	12	int32	12
 00661f20	FUN_00661f20	ok	__cdecl	12	float	12
-006620d0	FUN_006620d0	ok	__cdecl	8	void	8
+006620d0	FUN_006620d0	ok	__cdecl	8	int32	8
 00662160	FUN_00662160	ok	__cdecl	8	float	8
 00662230	FUN_00662230	ok	__cdecl	8	void	8
 006622f0	FUN_006622f0	ok	__cdecl	4	void	4
@@ -7391,7 +7391,7 @@
 006653e0	FUN_006653e0	ok	__fastcall	0	int32	4
 00665500	FUN_00665500	ok	__fastcall	0	void	4
 006655b0	FUN_006655b0	ok	__fastcall	0	void	4
-006656a0	FUN_006656a0	ok	__fastcall	4	void	12
+006656a0	FUN_006656a0	ok	__fastcall	4	int32	12
 006656d0	FUN_006656d0	ok	__fastcall	0	void	4
 006657c0	FUN_006657c0	ok	__fastcall	4	int32	12
 006657e0	FUN_006657e0	ok	__fastcall	0	void	4
@@ -7399,7 +7399,7 @@
 006658f0	FUN_006658f0	ok	__fastcall	4	int32	12
 00665910	FUN_00665910	ok	__fastcall	4	int32	12
 00665930	FUN_00665930	ok	__fastcall	4	int32	12
-00665950	FUN_00665950	ok	__cdecl	12	void	12
+00665950	FUN_00665950	ok	__cdecl	12	int32	12
 00665980	FUN_00665980	ok	__cdecl	12	int32	12
 006659c0	FUN_006659c0	ok	__fastcall	0	void	4
 00665a60	FUN_00665a60	ok	__fastcall	0	void	4
@@ -7425,21 +7425,21 @@
 00667fa0	FUN_00667fa0	ok	__fastcall	0	void	4
 00667ff0	FUN_00667ff0	ok	__fastcall	4	int32	12
 00668060	FUN_00668060	ok	__fastcall	8	void	16
-006680d0	FUN_006680d0	ok	__stdcall	4	void	4
+006680d0	FUN_006680d0	skip:compile:C2198 'void AUTO_006680d0(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00668110	FUN_00668110	ok	__fastcall	16	void	24
 00668380	FUN_00668380	ok	__fastcall	8	void	16
 006683e0	FUN_006683e0	ok	__fastcall	12	void	20
 00668600	FUN_00668600	ok	__fastcall	4	void	12
 00668620	FUN_00668620	ok	__fastcall	8	int32	16
 00668750	FUN_00668750	ok	__fastcall	8	void	16
-00668b60	FUN_00668b60	ok	__stdcall	4	void	4
+00668b60	FUN_00668b60	skip:compile:C2198 'void AUTO_00668b60(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00668bb0	FUN_00668bb0	ok	__fastcall	16	void	24
 00668e20	FUN_00668e20	ok	__fastcall	8	void	16
-00669040	FUN_00669040	ok	__stdcall	4	void	4
+00669040	FUN_00669040	skip:compile:C2198 'void AUTO_00669040(void *,int,int *)': too few arguments for call	__fastcall	4	void	12
 00669080	FUN_00669080	ok	__fastcall	4	void	12
 006690e0	FUN_006690e0	ok	__fastcall	4	void	12
 00669140	FUN_00669140	ok	__fastcall	0	void	4
-006691d0	FUN_006691d0	ok	__fastcall	8	void	16
+006691d0	FUN_006691d0	ok	__fastcall	8	int32	16
 00669200	FUN_00669200	ok	__fastcall	4	void	12
 00669270	FUN_00669270	ok	__fastcall	0	void	4
 006692d0	FUN_006692d0	ok	__stdcall	12	void	12
@@ -7481,7 +7481,7 @@
 0066ae20	FUN_0066ae20	ok	__cdecl	12	int32	12
 0066b080	FUN_0066b080	ok	__cdecl	12	int32	12
 0066b290	FUN_0066b290	ok	__cdecl	12	int32	12
-0066b4f0	FUN_0066b4f0	ok	__stdcall	8	int32	8
+0066b4f0	FUN_0066b4f0	skip:proto-mismatch:ret8-vs-0				
 0066bf90	FUN_0066bf90	ok	__fastcall	12	void	20
 0066c120	FUN_0066c120	ok	__cdecl	4	void	4
 0066c130	FUN_0066c130	ok	__stdcall	0	void	0
@@ -7496,7 +7496,7 @@
 0066db80	FUN_0066db80	skip:compile:C2064 term does not evaluate to a function taking 0 arguments	__cdecl	8	void	8
 0066dc10	FUN_0066dc10	skip:compile:C2064 term does not evaluate to a function taking 0 arguments	__cdecl	12	void	12
 0066dcb0	FUN_0066dcb0	ok	__stdcall	0	void	0
-0066dce0	FUN_0066dce0	ok	__cdecl	4	void	4
+0066dce0	FUN_0066dce0	ok	__cdecl	4	int32	4
 0066dd10	FUN_0066dd10	ok	__cdecl	8	void	8
 0066ddd0	FUN_0066ddd0	ok	__cdecl	4	void	4
 0066de80	FUN_0066de80	skip:bad-decompile				
@@ -7532,7 +7532,7 @@
 00670f20	FUN_00670f20	ok	__cdecl	16	float	16
 006710d0	FUN_006710d0	ok	__cdecl	8	int32	8
 00671100	FUN_00671100	ok	__cdecl	8	int32	8
-00671130	FUN_00671130	ok	__cdecl	8	void	8
+00671130	FUN_00671130	ok	__cdecl	8	float	8
 00671150	FUN_00671150	ok	__cdecl	12	void	12
 00671220	FUN_00671220	ok	__stdcall	0	void	0
 00671230	FUN_00671230	ok	__cdecl	4	void	4
@@ -7622,11 +7622,11 @@
 00675000	FUN_00675000	ok	__fastcall	0	void	4
 00675010	FUN_00675010	ok	__fastcall	0	void	4
 00675040	FUN_00675040	ok	__fastcall	0	void	4
-00675070	FUN_00675070	ok	__stdcall	0	int32	0
+00675070	FUN_00675070	ok	__fastcall	0	int32	8
 006750d0	FUN_006750d0	ok	__fastcall	0	void	4
 006750f0	FUN_006750f0	ok	__fastcall	4	void	12
 00675150	FUN_00675150	ok	__stdcall	0	int32	0
-00675160	FUN_00675160	ok	__stdcall	0	int32	0
+00675160	FUN_00675160	ok	__stdcall	4	int32	4
 00675410	FUN_00675410	ok	__stdcall	0	int32	0
 00675420	FUN_00675420	ok	__stdcall	0	void	0
 00675490	FUN_00675490	ok	__cdecl	4	void	4
@@ -7650,7 +7650,7 @@
 00676660	FUN_00676660	ok	__fastcall	8	int32	16
 00676860	FUN_00676860	ok	__fastcall	4	void	12
 006768b0	FUN_006768b0	ok	__fastcall	12	int32	20
-00676bd0	FUN_00676bd0	ok	__stdcall	0	int32	0
+00676bd0	FUN_00676bd0	ok	__stdcall	12	int32	12
 00676c00	FUN_00676c00	ok	__fastcall	0	void	4
 00676c30	FUN_00676c30	ok	__fastcall	4	void	12
 00676da0	FUN_00676da0	ok	__fastcall	4	int32	12
@@ -7669,8 +7669,8 @@
 006771e0	FUN_006771e0	ok	__stdcall	8	void	8
 00677210	FUN_00677210	ok	__stdcall	0	int32	0
 00677220	FUN_00677220	ok	__stdcall	0	void	0
-00677250	FUN_00677250	ok	__fastcall	0	void	4
-00677270	FUN_00677270	ok	__stdcall	0	void	0
+00677250	FUN_00677250	ok	__fastcall	0	int32	4
+00677270	FUN_00677270	ok	__stdcall	8	void	8
 006772d0	FUN_006772d0	ok	__cdecl	4	void	4
 006772e0	FUN_006772e0	ok	__stdcall	0	int32	0
 00677370	FUN_00677370	ok	__stdcall	0	int32	0
@@ -7678,56 +7678,56 @@
 00677720	FUN_00677720	ok	__cdecl	8	void	8
 00677750	FUN_00677750	ok	__fastcall	0	int32	4
 006777c0	FUN_006777c0	ok	__fastcall	16	int32	24
-00677970	FUN_00677970	ok	__stdcall	4	void	4
+00677970	FUN_00677970	ok	__stdcall	4	int32	4
 00677990	FUN_00677990	ok	__fastcall	8	int32	16
 00677a80	FUN_00677a80	ok	__fastcall	8	int32	16
 00677bb0	FUN_00677bb0	ok	__stdcall	0	void	0
 00677cf0	FUN_00677cf0	ok	__fastcall	0	void	4
 006781d0	FUN_006781d0	ok	__stdcall	0	int32	0
 006781e0	FUN_006781e0	ok	__stdcall	0	void	0
-00678200	FUN_00678200	ok	__fastcall	0	void	4
+00678200	FUN_00678200	ok	__fastcall	0	int32	4
 00678250	FUN_00678250	ok	__fastcall	0	int32	4
 00678340	FUN_00678340	ok	__stdcall	0	int32	0
 00678360	FUN_00678360	ok	__fastcall	0	int32	4
 00678390	FUN_00678390	ok	__fastcall	8	void	16
 00678450	FUN_00678450	ok	__fastcall	8	int32	16
-006784d0	FUN_006784d0	ok	__stdcall	4	float	4
-00678540	FUN_00678540	ok	__stdcall	4	float	4
-006785e0	FUN_006785e0	ok	__stdcall	4	int32	4
+006784d0	FUN_006784d0	skip:proto-mismatch:ret4-vs-12				
+00678540	FUN_00678540	skip:proto-mismatch:ret4-vs-12				
+006785e0	FUN_006785e0	ok	__fastcall	4	int32	12
 00678630	FUN_00678630	ok	__stdcall	8	int32	8
-006786a0	FUN_006786a0	ok	__stdcall	4	float	4
+006786a0	FUN_006786a0	skip:proto-mismatch:ret4-vs-12				
 00678790	FUN_00678790	ok	__fastcall	8	void	16
 006787e0	FUN_006787e0	ok	__fastcall	0	int32	4
 00678810	FUN_00678810	ok	__fastcall	4	void	12
-00678850	FUN_00678850	ok	__stdcall	4	void	4
-00678880	FUN_00678880	ok	__stdcall	8	int32	8
-006788c0	FUN_006788c0	ok	__stdcall	8	int32	8
+00678850	FUN_00678850	ok	__fastcall	4	void	12
+00678880	FUN_00678880	ok	__fastcall	8	int32	16
+006788c0	FUN_006788c0	ok	__fastcall	8	int32	16
 00678930	FUN_00678930	ok	__stdcall	4	void	4
 00678960	FUN_00678960	ok	__stdcall	4	void	4
 00678990	FUN_00678990	ok	__fastcall	0	int32	4
 006789d0	FUN_006789d0	ok	__fastcall	0	int32	4
-00678a10	FUN_00678a10	ok	__stdcall	4	int32	4
-00678a50	FUN_00678a50	ok	__stdcall	4	int32	4
-00678a90	FUN_00678a90	ok	__stdcall	4	int32	4
+00678a10	FUN_00678a10	ok	__fastcall	4	int32	12
+00678a50	FUN_00678a50	ok	__fastcall	4	int32	12
+00678a90	FUN_00678a90	ok	__fastcall	4	int32	12
 00678ad0	FUN_00678ad0	ok	__stdcall	4	int32	4
 00678b10	FUN_00678b10	ok	__stdcall	4	int32	4
 00678b50	FUN_00678b50	ok	__stdcall	4	float	4
-00678b90	FUN_00678b90	ok	__stdcall	8	int32	8
+00678b90	FUN_00678b90	ok	__fastcall	8	int32	16
 00678be0	FUN_00678be0	ok	__stdcall	4	float	4
 00678c20	FUN_00678c20	ok	__stdcall	8	int32	8
 00678c70	FUN_00678c70	ok	__stdcall	4	float	4
 00678cb0	FUN_00678cb0	ok	__stdcall	8	int32	8
 00678d10	FUN_00678d10	ok	__stdcall	4	float	4
-00678d50	FUN_00678d50	ok	__stdcall	8	int32	8
+00678d50	FUN_00678d50	ok	__fastcall	8	int32	16
 00678da0	FUN_00678da0	ok	__stdcall	4	float	4
 00678de0	FUN_00678de0	ok	__stdcall	8	int32	8
 00678e30	FUN_00678e30	ok	__stdcall	4	float	4
-00678e70	FUN_00678e70	ok	__stdcall	8	int32	8
+00678e70	FUN_00678e70	ok	__fastcall	8	int32	16
 00678ec0	FUN_00678ec0	ok	__stdcall	4	float	4
 00678f00	FUN_00678f00	ok	__stdcall	8	int32	8
 00678f50	FUN_00678f50	ok	__stdcall	8	int32	8
-00678fb0	FUN_00678fb0	ok	__stdcall	8	int32	8
-00679010	FUN_00679010	ok	__stdcall	12	int32	12
+00678fb0	FUN_00678fb0	ok	__fastcall	8	int32	16
+00679010	FUN_00679010	ok	__fastcall	12	int32	20
 00679070	FUN_00679070	ok	__stdcall	12	int32	12
 006790d0	FUN_006790d0	ok	__stdcall	12	int32	12
 006790e0	FUN_006790e0	ok	__stdcall	4	void	4
@@ -7735,13 +7735,13 @@
 00679510	FUN_00679510	ok	__fastcall	0	int32	4
 00679570	FUN_00679570	ok	__fastcall	8	void	16
 006795e0	FUN_006795e0	ok	__fastcall	8	void	16
-006796d0	FUN_006796d0	ok	__fastcall	8	void	16
-00679700	FUN_00679700	ok	__fastcall	4	void	12
-00679710	FUN_00679710	ok	__fastcall	4	void	12
-00679720	FUN_00679720	ok	__fastcall	4	void	12
+006796d0	FUN_006796d0	ok	__fastcall	8	int32	16
+00679700	FUN_00679700	ok	__fastcall	4	int32	12
+00679710	FUN_00679710	ok	__fastcall	4	int32	12
+00679720	FUN_00679720	ok	__fastcall	4	int32	12
 00679730	FUN_00679730	ok	__stdcall	8	void	8
-00679760	FUN_00679760	ok	__stdcall	8	void	8
-00679870	FUN_00679870	ok	__stdcall	4	void	4
+00679760	FUN_00679760	ok	__fastcall	8	void	16
+00679870	FUN_00679870	ok	__fastcall	4	void	12
 00679980	FUN_00679980	ok	__stdcall	8	void	8
 00679a80	FUN_00679a80	ok	__fastcall	0	int32	4
 00679ab0	FUN_00679ab0	ok	__stdcall	0	int32	0
@@ -7811,7 +7811,7 @@
 0067be00	FUN_0067be00	ok	__fastcall	0	void	4
 0067be20	FUN_0067be20	ok	__fastcall	0	void	4
 0067be30	FUN_0067be30	ok	__stdcall	4	void	4
-0067be50	FUN_0067be50	ok	__stdcall	0	void	0
+0067be50	FUN_0067be50	ok	__fastcall	0	void	8
 0067c050	FUN_0067c050	ok	__cdecl	4	int32	4
 0067c0c0	FUN_0067c0c0	ok	__stdcall	4	void	4
 0067c0e0	FUN_0067c0e0	ok	__stdcall	4	void	4
@@ -7882,7 +7882,7 @@
 006805f0	FUN_006805f0	ok	__fastcall	0	void	4
 00680640	FUN_00680640	ok	__fastcall	0	void	4
 00680660	FUN_00680660	ok	__fastcall	0	int32	4
-006806a0	FUN_006806a0	ok	__stdcall	0	int32	0
+006806a0	FUN_006806a0	ok	__fastcall	0	int32	8
 006806b0	FUN_006806b0	ok	__fastcall	36	void	44
 00680700	FUN_00680700	ok	__cdecl	8	void	8
 00680720	FUN_00680720	ok	__fastcall	0	void	4
@@ -7911,7 +7911,7 @@
 00680f70	FUN_00680f70	ok	__fastcall	0	void	4
 00681030	FUN_00681030	ok	__fastcall	0	void	4
 00681140	FUN_00681140	ok	__fastcall	4	int32	12
-00681285	FUN_00681285	ok	__fastcall	0	void	4
+00681285	FUN_00681285	ok	__fastcall	4	void	12
 00681410	FUN_00681410	ok	__fastcall	0	int32	4
 00681420	FUN_00681420	ok	__stdcall	0	void	0
 00681430	FUN_00681430	skip:proto-mismatch:ret8-vs-0				
@@ -7923,7 +7923,7 @@
 00681c80	FUN_00681c80	ok	__cdecl	12	void	12
 00681d00	FUN_00681d00	ok	__cdecl	12	int32	12
 00682060	FUN_00682060	ok	__cdecl	20	int32	20
-00682380	FUN_00682380	ok	__fastcall	0	void	4
+00682380	FUN_00682380	ok	__fastcall	0	int32	4
 006823f0	FUN_006823f0	ok	__fastcall	0	void	4
 00682422	FUN_00682422	ok	__stdcall	4	int32	4
 0068242f	FUN_0068242f	ok	__fastcall	8	int32	16
@@ -7935,7 +7935,7 @@
 0068250f	FUN_0068250f	ok	__stdcall	24	void	24
 00682535	FUN_00682535	ok	__stdcall	12	int32	12
 00682579	FUN_00682579	ok	__stdcall	4	int32	4
-0068259a	FUN_0068259a	ok	__fastcall	0	void	4
+0068259a	FUN_0068259a	ok	__fastcall	0	int32	4
 006825b5	FUN_006825b5	ok	__fastcall	0	void	4
 006825f5	FUN_006825f5	ok	__fastcall	4	int32	12
 0068287c	FUN_0068287c	ok	__stdcall	8	int32	8
@@ -7945,15 +7945,15 @@
 0068294e	FUN_0068294e	ok	__stdcall	4	int32	4
 0068296f	FUN_0068296f	ok	__stdcall	32	void	32
 00682a46	FUN_00682a46	ok	__stdcall	20	int32	20
-00682d05	FUN_00682d05	ok	__fastcall	0	void	4
+00682d05	FUN_00682d05	ok	__fastcall	0	int32	4
 00682d23	FUN_00682d23	ok	__fastcall	0	void	4
 00682d35	FUN_00682d35	ok	__fastcall	8	int32	16
 00682e4e	FUN_00682e4e	ok	__fastcall	0	int32	4
 00682e8f	FUN_00682e8f	ok	__fastcall	0	int32	4
-00682e9a	FUN_00682e9a	ok	__fastcall	0	void	4
+00682e9a	FUN_00682e9a	ok	__fastcall	0	int32	4
 00682ea4	FUN_00682ea4	ok	__fastcall	0	void	4
 00682ec2	FUN_00682ec2	ok	__fastcall	0	void	4
-00682ee4	FUN_00682ee4	ok	__cdecl	12	int32	12
+00682ee4	FUN_00682ee4	skip:hidden-register-input:extraout_ST1				
 00683185	FUN_00683185	ok	__fastcall	0	int32	4
 0068353b	FUN_0068353b	ok	__fastcall	0	int32	4
 00683a12	FUN_00683a12	ok	__fastcall	0	int32	4
@@ -7986,11 +7986,11 @@
 006861d5	FUN_006861d5	ok	__fastcall	0	void	4
 0068622e	FUN_0068622e	ok	__fastcall	8	int32	16
 00686869	FUN_00686869	ok	__cdecl	4	void	4
-006868c8	FUN_006868c8	ok	__stdcall	8	int32	8
+006868c8	FUN_006868c8	ok	__fastcall	8	int32	16
 00686b1d	FUN_00686b1d	ok	__fastcall	8	int32	16
 00686f95	FUN_00686f95	ok	__fastcall	8	int32	16
-0068725a	FUN_0068725a	ok	__stdcall	4	void	4
-00687265	FUN_00687265	skip:hidden-register-input:unaff_ESI				
+0068725a	FUN_0068725a	ok	__stdcall	8	void	8
+00687265	FUN_00687265	ok	__fastcall	8	int32	16
 0068777b	FUN_0068777b	ok	__fastcall	8	int32	16
 00687a8e	FUN_00687a8e	ok	__fastcall	8	int32	16
 00687abe	FUN_00687abe	ok	__fastcall	12	int32	20
@@ -8000,7 +8000,7 @@
 00687d40	FUN_00687d40	ok	__stdcall	20	int32	20
 00687da0	FUN_00687da0	ok	__cdecl	4	void	4
 00687de0	FUN_00687de0	ok	__stdcall	4	void	4
-00687e00	FUN_00687e00	ok	__fastcall	0	void	4
+00687e00	FUN_00687e00	ok	__fastcall	0	int32	4
 00687e3f	FUN_00687e3f	ok	__fastcall	0	void	4
 00687f0a	FUN_00687f0a	ok	__fastcall	0	void	4
 00687f0d	FUN_00687f0d	ok	__fastcall	4	int32	12
@@ -8017,7 +8017,7 @@
 00688a83	FUN_00688a83	ok	__stdcall	28	int32	28
 00688c82	FUN_00688c82	ok	__fastcall	0	void	4
 00688c89	FUN_00688c89	ok	__stdcall	12	void	12
-00688c8c	FUN_00688c8c	ok	__fastcall	4	void	12
+00688c8c	FUN_00688c8c	ok	__fastcall	4	int32	12
 00688ce2	FUN_00688ce2	ok	__fastcall	12	void	20
 00688d4b	FUN_00688d4b	ok	__fastcall	12	void	20
 00688de1	FUN_00688de1	ok	__fastcall	12	void	20
@@ -8167,7 +8167,7 @@
 00690788	FUN_00690788	ok	__cdecl	4	void	4
 00690796	FUN_00690796	ok	__cdecl	8	void	8
 006907a1	FUN_006907a1	ok	__cdecl	4	int32	4
-006907c3	FUN_006907c3	ok	__fastcall	0	void	8
+006907c3	FUN_006907c3	ok	__cdecl	8	void	8
 0069082c	FUN_0069082c	ok	__cdecl	8	void	8
 00690852	FUN_00690852	ok	__cdecl	4	void	4
 00690884	FUN_00690884	ok	__cdecl	4	void	4
@@ -8177,7 +8177,7 @@
 006909d5	FUN_006909d5	ok	__cdecl	12	void	12
 00690a60	FUN_00690a60	ok	__fastcall	0	void	8
 00690b92	FUN_00690b92	ok	__cdecl	4	void	4
-00690bf3	FUN_00690bf3	ok	__cdecl	16	void	16
+00690bf3	FUN_00690bf3	skip:hidden-register-input:extraout_ST1				
 0069108a	FUN_0069108a	ok	__cdecl	8	void	8
 00691173	FUN_00691173	ok	__cdecl	8	void	8
 006911c1	FUN_006911c1	ok	__cdecl	8	void	8
@@ -8350,7 +8350,7 @@
 0069adff	FUN_0069adff	ok	__cdecl	20	void	20
 0069ae3c	FUN_0069ae3c	ok	__cdecl	20	void	20
 0069ae88	FUN_0069ae88	ok	__cdecl	20	void	20
-0069aed4	FUN_0069aed4	skip:hidden-register-input:extraout_ST0				
+0069aed4	FUN_0069aed4	skip:hidden-register-input:extraout_ST1				
 0069b2b5	FUN_0069b2b5	ok	__cdecl	20	void	20
 0069b2e9	FUN_0069b2e9	ok	__cdecl	12	void	12
 0069b83f	FUN_0069b83f	ok	__cdecl	8	void	8
@@ -8386,7 +8386,7 @@
 0069fc80	FUN_0069fc80	ok	__fastcall	16	void	24
 0069fcb0	FUN_0069fcb0	ok	__fastcall	4	void	12
 0069fcd0	FUN_0069fcd0	ok	__stdcall	12	void	12
-0069fd50	FUN_0069fd50	ok	__stdcall	24	void	24
+0069fd50	FUN_0069fd50	skip:callee-proto-mismatch:0066b4f0				
 0069fdd0	FUN_0069fdd0	ok	__fastcall	8	int32	16
 0069fe40	FUN_0069fe40	ok	__fastcall	20	int32	28
 0069feb0	FUN_0069feb0	ok	__fastcall	12	int32	20
@@ -8408,7 +8408,7 @@
 006a13b0	FUN_006a13b0	ok	__fastcall	12	int32	20
 006a1430	FUN_006a1430	ok	__fastcall	36	int32	44
 006a16c0	FUN_006a16c0	ok	__stdcall	8	void	8
-006a1760	FUN_006a1760	ok	__stdcall	4	void	4
+006a1760	FUN_006a1760	ok	__fastcall	4	void	12
 006a1790	FUN_006a1790	ok	__stdcall	4	int32	4
 006a17a0	FUN_006a17a0	ok	__stdcall	4	int32	4
 006a17c0	FUN_006a17c0	ok	__fastcall	4	void	12
@@ -8538,7 +8538,7 @@
 006a5e20	FUN_006a5e20	ok	__fastcall	8	void	16
 006a5e90	FUN_006a5e90	ok	__fastcall	4	void	12
 006a5f10	FUN_006a5f10	ok	__fastcall	4	void	12
-006a5f60	FUN_006a5f60	skip:hidden-register-input:extraout_ST0				
+006a5f60	FUN_006a5f60	ok	__fastcall	12	void	20
 006a6090	FUN_006a6090	ok	__fastcall	0	int32	4
 006a60a0	FUN_006a60a0	skip:bad-decompile				
 006a60e0	FUN_006a60e0	ok	__fastcall	4	void	12
@@ -8727,7 +8727,7 @@
 006b78e0	FUN_006b78e0	ok	__fastcall	8	void	16
 006b79b0	FUN_006b79b0	ok	__fastcall	8	void	16
 006b7a00	FUN_006b7a00	ok	__fastcall	8	void	16
-006b7f40	FUN_006b7f40	ok	__fastcall	8	void	16
+006b7f40	FUN_006b7f40	skip:hidden-register-input:extraout_ST1				
 006b85d0	FUN_006b85d0	skip:compile:C2440 'type cast': cannot convert from 'undefined1 *' to 'float'	__fastcall	4	void	12
 006b9b70	FUN_006b9b70	ok	__fastcall	4	int32	12
 006b9ba0	FUN_006b9ba0	ok	__fastcall	0	void	4
@@ -8845,13 +8845,13 @@
 006c02ea	FUN_006c02ea	ok	__stdcall	16	void	16
 006c035e	operator_new	ok	__cdecl	4	int32	4
 006c0370	FUN_006c0370	skip:hidden-register-input:in_ST0				
-006c038d	FUN_006c038d	skip:hidden-register-input:extraout_ST0				
+006c038d	FUN_006c038d	skip:hidden-register-input:in_FPUControlWord				
 006c043b	FUN_006c043b	ok	__stdcall	20	void	20
 006c04a5	FUN_006c04a5	ok	__stdcall	0	void	0
-006c04c0	__ftol	skip:hidden-register-input:in_ST0				
+006c04c0	__ftol	ok	__cdecl	8	int64	8
 006c04f0	FUN_006c04f0	ok	__stdcall	0	void	0
 006c0520	FUN_006c0520	skip:hidden-register-input:in_ST0				
-006c053d	FUN_006c053d	skip:hidden-register-input:extraout_ST0				
+006c053d	FUN_006c053d	skip:hidden-register-input:in_FPUControlWord				
 006c05f0	FUN_006c05f0	skip:hidden-register-input:in_ST0				
 006c0612	FUN_006c0612	skip:decompile-error				
 006c07e5	FUN_006c07e5	skip:hidden-register-input:in_ST0				
@@ -8861,7 +8861,7 @@
 006c0893	FUN_006c0893	ok	__cdecl	8	int32	8
 006c08cf	FUN_006c08cf	ok	__cdecl	12	int32	12
 006c0900	FUN_006c0900	ok	__cdecl	8	void	8
-006c0920	__allshl	ok	__fastcall	0	int64	8
+006c0920	__allshl	ok	__cdecl	12	int64	12
 006c093f	FUN_006c093f	ok	__cdecl	4	int32	4
 006c09c5	FUN_006c09c5	ok	__stdcall	0	void	0
 006c09f2	FUN_006c09f2	ok	__cdecl	4	void	4
@@ -8881,9 +8881,9 @@
 006c0e60	FUN_006c0e60	ok	__cdecl	4	int32	4
 006c0ecf	FUN_006c0ecf	skip:compile:C2065 '_uStack00000004': undeclared identifier	__fastcall	0	int32	8
 006c0fa0	FUN_006c0fa0	ok	__cdecl	12	int32	12
-006c12e0	__aullshr	ok	__fastcall	0	int64	8
-006c12ff	FUN_006c12ff	ok	__fastcall	0	int32	8
-006c1327	FUN_006c1327	ok	__fastcall	0	int32	8
+006c12e0	__aullshr	ok	__cdecl	12	int64	12
+006c12ff	FUN_006c12ff	ok	__cdecl	4	int32	4
+006c1327	FUN_006c1327	ok	__cdecl	4	int32	4
 006c135a	FUN_006c135a	ok	__fastcall	0	void	4
 006c1382	FUN_006c1382	ok	__cdecl	16	void	16
 006c14d6	FUN_006c14d6	ok	__cdecl	16	void	16
@@ -8891,8 +8891,8 @@
 006c1556	FUN_006c1556	ok	__stdcall	0	int64	0
 006c1599	FUN_006c1599	ok	__stdcall	0	void	0
 006c15ce	FUN_006c15ce	ok	__cdecl	4	int32	4
-006c15ef	FUN_006c15ef	ok	__fastcall	0	int32	8
-006c1670	__allshr	ok	__fastcall	0	int64	8
+006c15ef	FUN_006c15ef	ok	__cdecl	4	int32	4
+006c1670	__allshr	ok	__cdecl	12	int64	12
 006c16a0	FUN_006c16a0	ok	__cdecl	8	int32	8
 006c1720	FUN_006c1720	ok	__cdecl	4	int32	4
 006c1761	FUN_006c1761	ok	__cdecl	16	int32	16
@@ -8921,7 +8921,7 @@
 006c236d	__seh_longjmp_unwind@4	skip:no-signature				
 006c2388	FUN_006c2388	ok	__cdecl	12	int32	12
 006c23d9	FUN_006c23d9	skip:proto-mismatch:ret0-vs-8				
-006c2430	FUN_006c2430	ok	__fastcall	0	int32	8
+006c2430	FUN_006c2430	ok	__cdecl	4	int32	4
 006c24bb	FUN_006c24bb	ok	__fastcall	0	void	8
 006c24c6	FUN_006c24c6	ok	__cdecl	4	int32	4
 006c24e3	FUN_006c24e3	skip:hidden-register-input:in_FPUControlWord				
@@ -9023,7 +9023,7 @@
 006c576f	FUN_006c576f	ok	__cdecl	12	float	12
 006c57c3	FUN_006c57c3	ok	__cdecl	28	float	28
 006c585b	FUN_006c585b	ok	__cdecl	32	void	32
-006c5b0e	FUN_006c5b0e	skip:link-error				
+006c5b0e	FUN_006c5b0e	skip:link-error	__cdecl	16	int32	16
 006c5d25	FUN_006c5d25	ok	__cdecl	8	float	8
 006c5dad	FUN_006c5dad	ok	__cdecl	4	void	4
 006c5dd5	FUN_006c5dd5	ok	__cdecl	4	int32	4
@@ -9158,7 +9158,7 @@
 006cbff2	FUN_006cbff2	ok	__cdecl	8	int32	8
 006cc04a	FUN_006cc04a	ok	__cdecl	4	int32	4
 006cc0b1	FUN_006cc0b1	ok	__cdecl	4	void	4
-006cc0f5	FUN_006cc0f5	ok	__fastcall	28	int32	36
+006cc0f5	FUN_006cc0f5	ok	__cdecl	0	int32	0
 006cc5c6	FUN_006cc5c6	ok	__cdecl	12	int32	12
 006cc5e7	___add_12	ok	__cdecl	8	void	8
 006cc645	FUN_006cc645	ok	__cdecl	4	void	4
@@ -9202,7 +9202,7 @@
 006cd6d5	_GetProcAddressInternal@8	skip:no-signature				
 006cd739	driveandpathC	ok	__stdcall	12	void	12
 006cd7d4	FUN_006cd7d4	skip:compile:C2065 'stack0x00000000': undeclared identifier	__stdcall	0	int32	0
-006cda7f	FUN_006cda7f	skip:link-error				
+006cda7f	FUN_006cda7f	skip:link-error	__stdcall	20	void	20
 006cdc09	FID_conflict:_GodotFailFindResourceW@12	skip:bad-decompile				
 006cdc37	FID_conflict:_GodotFaillstrcatW@8	skip:bad-decompile				
 006cdc7d	_GodotFailGetProcAddress@8	skip:bad-decompile				
@@ -9218,7 +9218,7 @@
 006ce040	FUN_006ce040	ok	__fastcall	4	void	12
 006ce190	FUN_006ce190	ok	__stdcall	4	void	4
 006ce1a0	FUN_006ce1a0	ok	__stdcall	8	void	8
-006ce1b0	FUN_006ce1b0	skip:hidden-register-input:extraout_ST0				
+006ce1b0	FUN_006ce1b0	skip:hidden-register-input:extraout_ST1				
 006ce890	FUN_006ce890	ok	__stdcall	0	void	0
 006ce8d0	FUN_006ce8d0	ok	__fastcall	4	void	12
 006ce990	FUN_006ce990	ok	__fastcall	0	int32	4

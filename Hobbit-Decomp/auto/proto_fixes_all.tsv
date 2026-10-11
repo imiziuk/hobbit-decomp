@@ -1,0 +1,563 @@
+00406430	__thiscall	1	ret 4 vs signature
+00408250	__thiscall	1	ret 4 vs signature
+0040aaa0	__thiscall	1	ret 4 vs signature
+0040e700	__thiscall	1	ret 4 vs signature
+0040eab0	__thiscall	1	ret 4 vs signature
+0040ed10	__stdcall	1	ret 4 vs signature
+0041e080	__stdcall	1	ret 4 vs signature
+00422980	__thiscall	2	ret 8 vs signature
+004229e0	__thiscall	1	ret 4 vs signature
+00425490	__stdcall	1	ret 4 vs signature
+00425940	__stdcall	1	ret 4 vs signature
+00425b10	__stdcall	1	ret 4 vs signature
+00452640	__thiscall	2	ret 8 vs signature
+00453360	__thiscall	4	ret 16 vs signature
+00453ce0	__stdcall	11	ret 44 vs signature
+00453f10	__stdcall	11	ret 44 vs signature
+0045ca20	__thiscall	2	ret 8 vs signature
+0045cae0	__thiscall	1	ret 4 vs signature
+00460660	__stdcall	1	ret 4 vs signature
+004678e0	__thiscall	11	ret 44 vs signature
+00467bf0	__thiscall	3	ret 12 vs signature
+00468250	__thiscall	1	ret 4 vs signature
+0046af70	__thiscall	2	ret 8 vs signature
+0046b050	__thiscall	2	ret 8 vs signature
+0046b180	__thiscall	2	ret 8 vs signature
+0046b3b0	__thiscall	2	ret 8 vs signature
+004752d0	__thiscall	2	ret 8 vs signature
+0047d290	__thiscall	2	ret 8 vs signature
+0047edb0	__thiscall	2	ret 8 vs signature
+00481990	__thiscall	1	ret 4 vs signature
+0048c060	__stdcall	1	ret 4 vs signature
+0048e930	__thiscall	12	ret 48 vs signature
+004937e0	__stdcall	1	ret 4 vs signature
+00493840	__stdcall	9	ret 36 vs signature
+00494130	__thiscall	1	ret 4 vs signature
+004961e0	__thiscall	1	ret 4 vs signature
+00496700	__thiscall	1	ret 4 vs signature
+004978c0	__stdcall	1	ret 4 vs signature
+004978e0	__thiscall	6	ret 24 vs signature
+0049a1e0	__stdcall	1	ret 4 vs signature
+0049a460	__thiscall	1	ret 4 vs signature
+0049be70	__thiscall	2	ret 8 vs signature
+004a0b90	__stdcall	19	ret 76 vs signature
+004a1130	__thiscall	12	ret 48 vs signature
+004a27c0	__thiscall	11	ret 44 vs signature
+004a6430	__thiscall	1	ret 4 vs signature
+004a6780	__thiscall	2	ret 8 vs signature
+004a68b0	__thiscall	1	ret 4 vs signature
+004aa420	__stdcall	1	ret 4 vs signature
+004ac4c0	__stdcall	1	ret 4 vs signature
+004adb70	__stdcall	1	ret 4 vs signature
+004ae8c0	__stdcall	1	ret 4 vs signature
+004b3fc0	__stdcall	1	ret 4 vs signature
+004b4670	__thiscall	1	ret 4 vs signature
+004b8e80	__stdcall	1	ret 4 vs signature
+004c14a0	__thiscall	1	ret 4 vs signature
+004c2e80	__thiscall	9	ret 36 vs signature
+004c3d10	__thiscall	1	ret 4 vs signature
+004c7580	__thiscall	1	ret 4 vs signature
+004cdaa0	__thiscall	1	ret 4 vs signature
+004cf490	__thiscall	2	ret 8 vs signature
+004d21b0	__thiscall	3	ret 12 vs signature
+004d3f30	__thiscall	5	ret 20 vs signature
+004d6280	__thiscall	12	ret 48 vs signature
+004d6440	__thiscall	11	ret 44 vs signature
+004de270	__thiscall	7	ret 28 vs signature
+004de730	__thiscall	9	ret 36 vs signature
+004e3f10	__stdcall	9	ret 36 vs signature
+004f0080	__thiscall	3	ret 12 vs signature
+004f48d0	__stdcall	5	ret 20 vs signature
+004f8ec0	__thiscall	1	ret 4 vs signature
+00506c40	__thiscall	1	ret 4 vs signature
+00506c90	__thiscall	4	ret 16 vs signature
+00506db0	__thiscall	2	ret 8 vs signature
+00508220	__thiscall	7	ret 28 vs signature
+00508ff0	__thiscall	7	ret 28 vs signature
+00509bf0	__thiscall	7	ret 28 vs signature
+0050a080	__thiscall	2	ret 8 vs signature
+0050a540	__thiscall	7	ret 28 vs signature
+0050b5c0	__thiscall	7	ret 28 vs signature
+0050bfc0	__thiscall	7	ret 28 vs signature
+0050c5f0	__thiscall	2	ret 8 vs signature
+0050cdc0	__thiscall	7	ret 28 vs signature
+0050d1e0	__thiscall	2	ret 8 vs signature
+0050d3b0	__thiscall	7	ret 28 vs signature
+0050d690	__thiscall	7	ret 28 vs signature
+0050de50	__thiscall	2	ret 8 vs signature
+00511770	__stdcall	2	ret 8 vs signature
+00512850	__thiscall	2	ret 8 vs signature
+005135c0	__thiscall	23	ret 92 vs signature
+00513770	__thiscall	7	ret 28 vs signature
+00514aa0	__thiscall	2	ret 8 vs signature
+00515350	__thiscall	7	ret 28 vs signature
+00515b40	__thiscall	1	ret 4 vs signature
+00515ba0	__stdcall	4	ret 16 vs signature
+00515ff0	__thiscall	7	ret 28 vs signature
+00516580	__thiscall	1	ret 4 vs signature
+00516b10	__thiscall	7	ret 28 vs signature
+00517930	__thiscall	7	ret 28 vs signature
+00518880	__thiscall	7	ret 28 vs signature
+00518d50	__thiscall	7	ret 28 vs signature
+00519c80	__thiscall	7	ret 28 vs signature
+0051a220	__stdcall	1	ret 4 vs signature
+0051aec0	__thiscall	7	ret 28 vs signature
+0051cd00	__thiscall	7	ret 28 vs signature
+0051da80	__thiscall	7	ret 28 vs signature
+0051eae0	__thiscall	7	ret 28 vs signature
+00520170	__thiscall	7	ret 28 vs signature
+00522900	__thiscall	2	ret 8 vs signature
+005238f0	__thiscall	7	ret 28 vs signature
+00523dc0	__stdcall	1	ret 4 vs signature
+00523e00	__thiscall	2	ret 8 vs signature
+005242d0	__thiscall	7	ret 28 vs signature
+00524d30	__thiscall	7	ret 28 vs signature
+005257a0	__thiscall	1	ret 4 vs signature
+005257c0	__thiscall	2	ret 8 vs signature
+0052b560	__thiscall	1	ret 4 vs signature
+0052ef80	__thiscall	11	ret 44 vs signature
+0052f5f0	__thiscall	1	ret 4 vs signature
+0052f8a0	__stdcall	1	ret 4 vs signature
+005314d0	__thiscall	11	ret 44 vs signature
+00531910	__stdcall	11	ret 44 vs signature
+00531e50	__thiscall	11	ret 44 vs signature
+00531f00	__thiscall	11	ret 44 vs signature
+00532020	__stdcall	3	ret 12 vs signature
+005322f0	__thiscall	2	ret 8 vs signature
+00532370	__thiscall	4	ret 16 vs signature
+005340d0	__thiscall	4	ret 16 vs signature
+005345e0	__thiscall	1	ret 4 vs signature
+005346e0	__thiscall	1	ret 4 vs signature
+005347e0	__thiscall	1	ret 4 vs signature
+00534a30	__thiscall	1	ret 4 vs signature
+00534b00	__thiscall	1	ret 4 vs signature
+00534cf0	__thiscall	1	ret 4 vs signature
+00534d60	__thiscall	1	ret 4 vs signature
+00534dd0	__thiscall	1	ret 4 vs signature
+00535610	__thiscall	3	ret 12 vs signature
+005356a0	__thiscall	4	ret 16 vs signature
+00535930	__thiscall	1	ret 4 vs signature
+00535990	__thiscall	1	ret 4 vs signature
+005360d0	__stdcall	1	ret 4 vs signature
+0053c860	__stdcall	2	ret 8 vs signature
+0053d6c0	__stdcall	1	ret 4 vs signature
+00542720	__stdcall	1	ret 4 vs signature
+00542730	__stdcall	2	ret 8 vs signature
+00542d20	__stdcall	2	ret 8 vs signature
+00542e40	__stdcall	1	ret 4 vs signature
+00549c40	__stdcall	2	ret 8 vs signature
+00549d80	__stdcall	2	ret 8 vs signature
+0054ab90	__thiscall	2	ret 8 vs signature
+0054c0f0	__thiscall	2	ret 8 vs signature
+0054c120	__thiscall	2	ret 8 vs signature
+0054c150	__thiscall	2	ret 8 vs signature
+0054c210	__thiscall	2	ret 8 vs signature
+0054c880	__thiscall	1	ret 4 vs signature
+0054f290	__stdcall	1	ret 4 vs signature
+00552c60	__stdcall	2	ret 8 vs signature
+00554210	__thiscall	2	ret 8 vs signature
+00556e20	__thiscall	2	ret 8 vs signature
+005575c0	__thiscall	2	ret 8 vs signature
+005582b0	__thiscall	2	ret 8 vs signature
+00558980	__thiscall	2	ret 8 vs signature
+0055d280	__thiscall	11	ret 44 vs signature
+005673d0	__thiscall	4	ret 16 vs signature
+00567c00	__thiscall	1	ret 4 vs signature
+00568110	__thiscall	4	ret 16 vs signature
+00568650	__thiscall	1	ret 4 vs signature
+00569020	__stdcall	4	ret 16 vs signature
+00569690	__stdcall	1	ret 4 vs signature
+00569c40	__thiscall	4	ret 16 vs signature
+0056a400	__thiscall	1	ret 4 vs signature
+0056a7f0	__thiscall	4	ret 16 vs signature
+0056d5e0	__thiscall	1	ret 4 vs signature
+0056e2b0	__thiscall	1	ret 4 vs signature
+005734c0	__stdcall	5	ret 20 vs signature
+00574980	__thiscall	5	ret 20 vs signature
+00579a60	__thiscall	3	ret 12 vs signature
+00579de0	__stdcall	5	ret 20 vs signature
+0057d740	__thiscall	4	ret 16 vs signature
+0057dcc0	__stdcall	2	ret 8 vs signature
+00580bb0	__stdcall	1	ret 4 vs signature
+00581420	__thiscall	3	ret 12 vs signature
+005814f0	__thiscall	1	ret 4 vs signature
+00581500	__stdcall	1	ret 4 vs signature
+005815a0	__thiscall	1	ret 4 vs signature
+00581d70	__thiscall	1	ret 4 vs signature
+00584190	__thiscall	2	ret 8 vs signature
+00584750	__thiscall	1	ret 4 vs signature
+005847c0	__thiscall	1	ret 4 vs signature
+00591540	__thiscall	11	ret 44 vs signature
+00592ae0	__thiscall	4	ret 16 vs signature
+00594390	__thiscall	1	reads ECX
+00595170	__thiscall	1	ret 4 vs signature
+0059c060	__thiscall	11	ret 44 vs signature
+0059ed70	__stdcall	1	ret 4 vs signature
+005a32d0	__thiscall	3	ret 12 vs signature
+005a3fc0	__thiscall	1	ret 4 vs signature
+005a4040	__stdcall	1	ret 4 vs signature
+005a9c10	__thiscall	2	ret 8 vs signature
+005aa7f0	__thiscall	4	ret 16 vs signature
+005aa880	__stdcall	3	ret 12 vs signature
+005aa9e0	__thiscall	6	ret 24 vs signature
+005abcd0	__thiscall	1	ret 4 vs signature
+005aea00	__thiscall	11	ret 44 vs signature
+005aec10	__thiscall	22	ret 88 vs signature
+005aecb0	__thiscall	11	ret 44 vs signature
+005af6d0	__thiscall	3	ret 12 vs signature
+005b5e70	__thiscall	2	ret 8 vs signature
+005b6b80	__thiscall	11	ret 44 vs signature
+005b7790	__stdcall	2	ret 8 vs signature
+005b7f00	__thiscall	2	ret 8 vs signature
+005b8840	__stdcall	2	ret 8 vs signature
+005ba850	__stdcall	1	ret 4 vs signature
+005ba860	__thiscall	1	ret 4 vs signature
+005ba900	__stdcall	6	ret 24 vs signature
+005bacd0	__thiscall	2	ret 8 vs signature
+005bb170	__stdcall	3	ret 12 vs signature
+005bb180	__stdcall	4	ret 16 vs signature
+005bd4f0	__thiscall	1	ret 4 vs signature
+005bf550	__thiscall	1	ret 4 vs signature
+005c1ab0	__thiscall	1	ret 4 vs signature
+005c1b10	__thiscall	1	ret 4 vs signature
+005c1cb0	__thiscall	1	ret 4 vs signature
+005c41e0	__thiscall	2	ret 8 vs signature
+005cc3d0	__thiscall	1	ret 4 vs signature
+005d2540	__thiscall	1	ret 4 vs signature
+005d7330	__thiscall	1	ret 4 vs signature
+005dbf40	__thiscall	11	ret 44 vs signature
+005dced0	__thiscall	1	ret 4 vs signature
+005df010	__thiscall	11	ret 44 vs signature
+005e4520	__thiscall	11	ret 44 vs signature
+005e4dd0	__thiscall	11	ret 44 vs signature
+005e8170	__thiscall	1	ret 4 vs signature
+005f11b0	__thiscall	1	ret 4 vs signature
+005f11d0	__thiscall	1	ret 4 vs signature
+005f1cf0	__thiscall	1	ret 4 vs signature
+005f1e30	__thiscall	1	ret 4 vs signature
+005f1e70	__thiscall	1	ret 4 vs signature
+005f2660	__thiscall	1	ret 4 vs signature
+005f2df0	__thiscall	1	ret 4 vs signature
+005f3b50	__thiscall	1	ret 4 vs signature
+005f3b90	__thiscall	1	ret 4 vs signature
+005f7930	__thiscall	1	ret 4 vs signature
+005f8450	__thiscall	1	ret 4 vs signature
+005f8bc0	__thiscall	1	ret 4 vs signature
+005f8c60	__thiscall	1	ret 4 vs signature
+005f9910	__thiscall	1	ret 4 vs signature
+005f9950	__thiscall	1	ret 4 vs signature
+005fa870	__thiscall	1	ret 4 vs signature
+005fb360	__thiscall	1	ret 4 vs signature
+005fc0f0	__thiscall	1	ret 4 vs signature
+005fc200	__thiscall	1	ret 4 vs signature
+005fde50	__thiscall	1	ret 4 vs signature
+005fe820	__thiscall	1	ret 4 vs signature
+005ffee0	__thiscall	1	ret 4 vs signature
+00600840	__thiscall	1	ret 4 vs signature
+00601050	__thiscall	11	ret 44 vs signature
+006010b0	__thiscall	1	ret 4 vs signature
+00601830	__thiscall	1	ret 4 vs signature
+006024b0	__thiscall	1	ret 4 vs signature
+00603340	__thiscall	1	ret 4 vs signature
+00603a70	__thiscall	1	ret 4 vs signature
+00603ad0	__thiscall	1	ret 4 vs signature
+00604b70	__thiscall	1	ret 4 vs signature
+00605eb0	__thiscall	1	ret 4 vs signature
+00606610	__thiscall	1	ret 4 vs signature
+00606d30	__thiscall	1	ret 4 vs signature
+0060a100	__thiscall	1	ret 4 vs signature
+0060c870	__thiscall	1	ret 4 vs signature
+0060d020	__thiscall	1	ret 4 vs signature
+0060dce0	__thiscall	1	ret 4 vs signature
+0060e820	__thiscall	1	ret 4 vs signature
+0060f680	__thiscall	1	ret 4 vs signature
+0060f8c0	__thiscall	1	ret 4 vs signature
+00612210	__thiscall	1	ret 4 vs signature
+006122f0	__thiscall	1	ret 4 vs signature
+00618cd0	__thiscall	1	ret 4 vs signature
+0061c6f0	__thiscall	1	ret 4 vs signature
+0061d6c0	__thiscall	1	ret 4 vs signature
+0061e330	__thiscall	1	ret 4 vs signature
+0061f640	__thiscall	1	ret 4 vs signature
+00620150	__thiscall	1	ret 4 vs signature
+00620be0	__thiscall	1	ret 4 vs signature
+006224b0	__thiscall	1	ret 4 vs signature
+00624420	__thiscall	1	ret 4 vs signature
+00625c60	__thiscall	1	ret 4 vs signature
+00627150	__thiscall	1	ret 4 vs signature
+006282f0	__thiscall	1	ret 4 vs signature
+0062e090	__thiscall	1	ret 4 vs signature
+0062ff30	__thiscall	1	ret 4 vs signature
+00631190	__thiscall	1	ret 4 vs signature
+00632f20	__thiscall	1	ret 4 vs signature
+00634100	__thiscall	1	ret 4 vs signature
+00634e50	__thiscall	1	ret 4 vs signature
+00635940	__thiscall	1	ret 4 vs signature
+00637b80	__thiscall	1	ret 4 vs signature
+00638d40	__thiscall	1	ret 4 vs signature
+00639d50	__thiscall	1	ret 4 vs signature
+0063aa90	__thiscall	1	ret 4 vs signature
+0063af70	__thiscall	1	ret 4 vs signature
+0063cef0	__thiscall	4	ret 16 vs signature
+006403a0	__stdcall	2	ret 8 vs signature
+006403e0	__stdcall	2	ret 8 vs signature
+00640420	__stdcall	2	ret 8 vs signature
+00640450	__stdcall	2	ret 8 vs signature
+00640480	__stdcall	2	ret 8 vs signature
+006404b0	__stdcall	2	ret 8 vs signature
+00640500	__stdcall	2	ret 8 vs signature
+00640570	__stdcall	2	ret 8 vs signature
+006405b0	__stdcall	2	ret 8 vs signature
+00641560	__thiscall	2	ret 8 vs signature
+006433b0	__thiscall	2	ret 8 vs signature
+00643740	__stdcall	1	ret 4 vs signature
+0064d8e0	__thiscall	1	ret 4 vs signature
+0064e180	__stdcall	2	ret 8 vs signature
+006501d0	__thiscall	1	ret 4 vs signature
+00652370	__thiscall	1	ret 4 vs signature
+006523b0	__thiscall	1	ret 4 vs signature
+006523f0	__thiscall	1	ret 4 vs signature
+00652430	__thiscall	1	ret 4 vs signature
+00652470	__thiscall	1	ret 4 vs signature
+006524b0	__thiscall	1	ret 4 vs signature
+006524f0	__thiscall	1	ret 4 vs signature
+00652580	__stdcall	1	ret 4 vs signature
+00652740	__stdcall	1	ret 4 vs signature
+006539d0	__thiscall	1	ret 4 vs signature
+00655890	__stdcall	1	ret 4 vs signature
+00657e10	__thiscall	1	ret 4 vs signature
+006583e0	__stdcall	3	ret 12 vs signature
+00658660	__stdcall	5	ret 20 vs signature
+0065c8d0	__fastcall	0	ret 0 vs signature
+006650d0	__thiscall	2	ret 8 vs signature
+00668380	__thiscall	2	ret 8 vs signature
+0066b4f0	__stdcall	2	ret 8 vs signature
+006750f0	__thiscall	1	ret 4 vs signature
+00678790	__thiscall	2	ret 8 vs signature
+006790d0	__stdcall	3	ret 12 vs signature
+0067b470	__thiscall	1	ret 4 vs signature
+0067b860	__stdcall	5	ret 20 vs signature
+006804a0	__stdcall	1	ret 4 vs signature
+00680dd0	__stdcall	2	ret 8 vs signature
+00680df0	__stdcall	2	ret 8 vs signature
+00680e00	__stdcall	5	ret 20 vs signature
+00680e10	__stdcall	1	ret 4 vs signature
+00680ec0	__stdcall	3	ret 12 vs signature
+00686869	__cdecl	1	ret 0 vs signature
+00687d40	__stdcall	5	ret 20 vs signature
+00688c89	__stdcall	3	ret 12 vs signature
+0068e24e	__thiscall	0	ret 0 vs signature
+006907c3	__thiscall	0	ret 0 vs signature
+006912c1	__thiscall	0	ret 0 vs signature
+0069134c	__thiscall	0	ret 0 vs signature
+00691aad	__thiscall	0	ret 0 vs signature
+00691ba9	__thiscall	0	ret 0 vs signature
+00691d67	__thiscall	0	ret 0 vs signature
+00691dc8	__thiscall	0	ret 0 vs signature
+006941d2	__thiscall	0	ret 0 vs signature
+0069947d	__thiscall	0	ret 0 vs signature
+006a2960	__thiscall	4	ret 16 vs signature
+006a34d0	__thiscall	4	ret 16 vs signature
+006a34e0	__thiscall	1	ret 4 vs signature
+006a34f0	__thiscall	1	ret 4 vs signature
+006a3500	__thiscall	1	ret 4 vs signature
+006a3510	__thiscall	1	ret 4 vs signature
+006a3520	__thiscall	1	ret 4 vs signature
+006a3530	__thiscall	1	ret 4 vs signature
+006a3540	__thiscall	1	ret 4 vs signature
+006a3550	__thiscall	1	ret 4 vs signature
+006a3560	__thiscall	2	ret 8 vs signature
+006a3570	__thiscall	2	ret 8 vs signature
+006a3580	__thiscall	4	ret 16 vs signature
+006a3590	__thiscall	1	ret 4 vs signature
+006a35a0	__thiscall	1	ret 4 vs signature
+006a35b0	__thiscall	1	ret 4 vs signature
+006a35c0	__thiscall	2	ret 8 vs signature
+006a35e0	__thiscall	2	ret 8 vs signature
+006a49c0	__thiscall	1	ret 4 vs signature
+006a4a80	__thiscall	1	ret 4 vs signature
+006a5020	__thiscall	1	ret 4 vs signature
+006a5230	__thiscall	1	ret 4 vs signature
+006a5e10	__thiscall	1	ret 4 vs signature
+006a5f10	__thiscall	1	ret 4 vs signature
+006a60a0	__thiscall	1	ret 4 vs signature
+006a6480	__thiscall	4	ret 16 vs signature
+006a64f0	__thiscall	1	ret 4 vs signature
+006a6df0	__thiscall	1	ret 4 vs signature
+006a6e20	__thiscall	1	ret 4 vs signature
+006a6fa0	__thiscall	1	ret 4 vs signature
+006a7070	__thiscall	1	ret 4 vs signature
+006ab920	__thiscall	2	ret 8 vs signature
+006b9d00	__thiscall	2	ret 8 vs signature
+006befd0	__thiscall	2	ret 8 vs signature
+006bfb10	__thiscall	1	ret 4 vs signature
+006bfbf8	__thiscall	1	ret 4 vs signature
+006bfe96	__stdcall	2	ret 8 vs signature
+006c043b	__stdcall	5	ret 20 vs signature
+006c0ecf	__thiscall	0	ret 0 vs signature
+006c12ff	__thiscall	0	ret 0 vs signature
+006c1327	__thiscall	0	ret 0 vs signature
+006c15ef	__thiscall	0	ret 0 vs signature
+006c23d9	__thiscall	0	ret 0 vs signature
+006c2430	__thiscall	0	ret 0 vs signature
+006c24bb	__thiscall	0	ret 0 vs signature
+006c2518	__thiscall	0	ret 0 vs signature
+006c322e	__thiscall	0	reads ECX
+006c6f0c	__thiscall	0	ret 0 vs signature
+006c9ac8	__thiscall	0	ret 0 vs signature
+006ca252	__thiscall	0	ret 0 vs signature
+006ca27f	__thiscall	0	ret 0 vs signature
+006cb70f	__thiscall	0	ret 0 vs signature
+006cb726	__thiscall	0	ret 0 vs signature
+006ccb8e	__thiscall	0	ret 0 vs signature
+006ce190	__stdcall	1	ret 4 vs signature
+006ce1a0	__stdcall	2	ret 8 vs signature
+00402000	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00442420	__thiscall	3	abi_exclude: own ret [12] != ours 0
+0044fba0	__thiscall	6	abi_exclude: own ret [24] != ours 8
+004538d0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0045cbe0	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+0046aaf0	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+004937e0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+004ae8c0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+004b3180	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 0
+004e30f0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+004f6510	__thiscall	8	callee_audit: pops: callee ret [32], ours passes 8
+004f6b80	__stdcall	5	callee_audit: pops: callee ret [20], ours passes 0
+004f88c0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+004f9070	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+004f9830	__stdcall	1	abi_exclude: own ret [4] != ours 0
+004fc830	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+005082c0	__thiscall	2	abi_exclude: own ret [8] != ours 0
+00509400	__thiscall	4	abi_exclude: tail jmp 006a2960 pops [16] != ours 8
+0050b210	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0050e930	__thiscall	7	callee_audit: pops: callee ret [28], ours passes 24
+00514620	__thiscall	7	callee_audit: pops: callee ret [28], ours passes 24
+00517330	__thiscall	2	abi_exclude: own ret [8] != ours 0
+00517f30	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0051c160	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0051dba0	__thiscall	2	abi_exclude: own ret [8] != ours 0
+00524760	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0052b120	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+0052cd20	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+00544b20	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00549860	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00549d10	__stdcall	2	abi_exclude: own ret [8] != ours 4
+0054ab40	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0054ac10	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0054baf0	__thiscall	4	callee_audit: pops: callee ret [16], ours passes 12
+0054c930	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0054ca40	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0054dcf0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0054e920	__thiscall	3	callee_audit: pops: callee ret [12], ours passes 8
+005524d0	__thiscall	7	callee_audit: this: callee reads ECX, ours stdcall
+00552890	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+00553680	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005546a0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00554860	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+00555d00	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00556510	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00556db0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00557580	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00558ca0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0055abc0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0055b420	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005750e0	__thiscall	7	callee_audit: this: callee reads ECX, ours stdcall
+00576050	__thiscall	5	callee_audit: this: callee reads ECX, ours stdcall
+005771b0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00581bf0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00581ee0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00584060	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005887d0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0059d1f0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005aa880	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+005bdff0	__thiscall	1	abi_exclude: own ret [4] != ours 0
+005c1ac0	__thiscall	1	abi_exclude: own ret [4] != ours 0
+005c2ae0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005c4b90	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+005c5380	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+005cc820	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+005e9530	__stdcall	2	abi_exclude: own ret [8] != ours 0
+005f1210	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+005f1470	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00605ea0	__thiscall	1	abi_exclude: tail jmp 005f11b0 pops [4] != ours 0
+00606da0	__stdcall	11	abi_exclude: own ret [44] != ours 0
+00607df0	__cdecl	7	callee_audit: stack: callee reads args to 28, ours passes 0
+0060c0e0	__thiscall	1	abi_exclude: own ret [4] != ours 0
+00632110	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+0063aaa0	__thiscall	1	abi_exclude: tail jmp 00581f30 pops [4] != ours 0
+0063b7d0	__thiscall	2	abi_exclude: own ret [8] != ours 4
+006403a0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006403e0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640420	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640450	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640480	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006404b0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640500	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640570	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006405b0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006405e0	__thiscall	2	callee_audit: pops: callee ret [8], ours passes 4
+00642c70	__cdecl	1508	callee_audit: stack: callee reads args to 6032, ours passes 0
+00643740	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0064a890	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 4
+0064e180	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+0064ff40	__cdecl	3	callee_audit: stack: callee reads args to 12, ours passes 4
+00652580	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00652870	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+006539f0	__thiscall	0	callee_audit: pops: callee ret [0], ours passes 4
+00655880	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00655890	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00655950	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00657cf0	__cdecl	5	callee_audit: stack: callee reads args to 20, ours passes 0
+006583e0	__cdecl	0	abi_exclude: tail jmp 0067be20 pops [0] != ours 12
+006584d0	__thiscall	5	callee_audit: this: callee reads ECX, ours stdcall
+00658670	__thiscall	5	callee_audit: this: callee reads ECX, ours stdcall
+006588b0	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+006589e0	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+00658bf0	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+00659c80	__stdcall	2	callee_audit: stack: callee reads args to 8, ours passes 4
+0065c8d0	__cdecl	5	callee_audit: stack: callee reads args to 20, ours passes 0
+0065d0f0	__cdecl	3	abi_exclude: own ret [0] != ours 12
+006680d0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00668b60	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00669040	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00669340	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0066b4f0	__cdecl	6	callee_audit: stack: callee reads args to 24, ours passes 8
+00675070	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00675160	__stdcall	1	callee_audit: pops: callee ret [4], ours passes 0
+00676bd0	__stdcall	3	abi_exclude: own ret [12] != ours 0
+00677270	__stdcall	2	abi_exclude: own ret [8] != ours 0
+006784d0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678540	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+006785e0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+006786a0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678850	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678880	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006788c0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678a10	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678a50	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678a90	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678b90	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678d50	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678e70	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678fb0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00679010	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+00679760	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00679870	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0067bad0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0067be50	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+006806a0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00681285	__thiscall	1	abi_exclude: own ret [4] != ours 0
+006868c8	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+0068725a	__stdcall	2	callee_audit: pops: callee ret [8], ours passes 4
+00687265	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006907c3	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 0
+0069154e	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+006a1760	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+006bf8fc	__stdcall	1	callee_audit: pops: callee ret [4], ours passes 0
+006c12ff	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c1327	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c15ef	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c2430	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c2518	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 0
+006cc0f5	__cdecl	0	callee_audit: pops: callee ret [0], ours passes 28

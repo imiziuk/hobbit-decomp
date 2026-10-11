@@ -1,0 +1,8 @@
+FAIL  0046AAF0 AUTO_0046aaf0                      0/30 ok
+FAIL  004B83E0 AUTO_004b83e0                      0/30 ok
+PASS  0054C5C0 AUTO_0054c5c0                      30/30 ok
+FAIL  00555D00 AUTO_00555d00                      0/30 ok
+FAIL  004016E0 AUTO_004016e0                      3/30 ok
+PASS  00402130 AUTO_00402130                      30/30 ok
+PASS  00402160 AUTO_00402160                      30/30 ok
+FAIL  00416630 AUTO_00416630                      7/30 ok

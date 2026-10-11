@@ -1,0 +1,149 @@
+00402000	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00442420	__thiscall	3	abi_exclude: own ret [12] != ours 0
+0044fba0	__thiscall	6	abi_exclude: own ret [24] != ours 8
+004538d0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0045cbe0	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+0046aaf0	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+004937e0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+004ae8c0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+004b3180	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 0
+004e30f0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+004f6510	__thiscall	8	callee_audit: pops: callee ret [32], ours passes 8
+004f6b80	__stdcall	5	callee_audit: pops: callee ret [20], ours passes 0
+004f88c0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+004f9070	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+004f9830	__stdcall	1	abi_exclude: own ret [4] != ours 0
+004fc830	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+005082c0	__thiscall	2	abi_exclude: own ret [8] != ours 0
+00509400	__thiscall	4	abi_exclude: tail jmp 006a2960 pops [16] != ours 8
+0050b210	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0050e930	__thiscall	7	callee_audit: pops: callee ret [28], ours passes 24
+00514620	__thiscall	7	callee_audit: pops: callee ret [28], ours passes 24
+00517330	__thiscall	2	abi_exclude: own ret [8] != ours 0
+00517f30	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0051c160	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0051dba0	__thiscall	2	abi_exclude: own ret [8] != ours 0
+00524760	__thiscall	2	abi_exclude: own ret [8] != ours 0
+0052b120	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+0052cd20	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+00544b20	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00549860	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00549d10	__stdcall	2	abi_exclude: own ret [8] != ours 4
+0054ab40	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0054ac10	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0054baf0	__thiscall	4	callee_audit: pops: callee ret [16], ours passes 12
+0054c930	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0054ca40	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0054dcf0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0054e920	__thiscall	3	callee_audit: pops: callee ret [12], ours passes 8
+005524d0	__thiscall	7	callee_audit: this: callee reads ECX, ours stdcall
+00552890	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+00553680	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005546a0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00554860	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+00555d00	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00556510	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00556db0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00557580	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00558ca0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0055abc0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0055b420	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005750e0	__thiscall	7	callee_audit: this: callee reads ECX, ours stdcall
+00576050	__thiscall	5	callee_audit: this: callee reads ECX, ours stdcall
+005771b0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00581bf0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00581ee0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00584060	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005887d0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+0059d1f0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005aa880	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+005bdff0	__thiscall	1	abi_exclude: own ret [4] != ours 0
+005c1ac0	__thiscall	1	abi_exclude: own ret [4] != ours 0
+005c2ae0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+005c4b90	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+005c5380	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+005cc820	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+005e9530	__stdcall	2	abi_exclude: own ret [8] != ours 0
+005f1210	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+005f1470	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00605ea0	__thiscall	1	abi_exclude: tail jmp 005f11b0 pops [4] != ours 0
+00606da0	__stdcall	11	abi_exclude: own ret [44] != ours 0
+00607df0	__cdecl	7	callee_audit: stack: callee reads args to 28, ours passes 0
+0060c0e0	__thiscall	1	abi_exclude: own ret [4] != ours 0
+00632110	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+0063aaa0	__thiscall	1	abi_exclude: tail jmp 00581f30 pops [4] != ours 0
+0063b7d0	__thiscall	2	abi_exclude: own ret [8] != ours 4
+006403a0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006403e0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640420	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640450	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640480	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006404b0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640500	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00640570	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006405b0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006405e0	__thiscall	2	callee_audit: pops: callee ret [8], ours passes 4
+00642c70	__cdecl	1508	callee_audit: stack: callee reads args to 6032, ours passes 0
+00643740	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0064a890	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 4
+0064e180	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+0064ff40	__cdecl	3	callee_audit: stack: callee reads args to 12, ours passes 4
+00652580	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00652870	__thiscall	1	callee_audit: pops: callee ret [4], ours passes 0
+006539f0	__thiscall	0	callee_audit: pops: callee ret [0], ours passes 4
+00655880	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00655890	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00655950	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00657cf0	__cdecl	5	callee_audit: stack: callee reads args to 20, ours passes 0
+006583e0	__cdecl	0	abi_exclude: tail jmp 0067be20 pops [0] != ours 12
+006584d0	__thiscall	5	callee_audit: this: callee reads ECX, ours stdcall
+00658670	__thiscall	5	callee_audit: this: callee reads ECX, ours stdcall
+006588b0	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+006589e0	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+00658bf0	__thiscall	4	callee_audit: this: callee reads ECX, ours stdcall
+00659c80	__stdcall	2	callee_audit: stack: callee reads args to 8, ours passes 4
+0065c8d0	__cdecl	5	callee_audit: stack: callee reads args to 20, ours passes 0
+0065d0f0	__cdecl	3	abi_exclude: own ret [0] != ours 12
+006680d0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00668b60	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00669040	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00669340	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0066b4f0	__cdecl	6	callee_audit: stack: callee reads args to 24, ours passes 8
+00675070	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00675160	__stdcall	1	callee_audit: pops: callee ret [4], ours passes 0
+00676bd0	__stdcall	3	abi_exclude: own ret [12] != ours 0
+00677270	__stdcall	2	abi_exclude: own ret [8] != ours 0
+006784d0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678540	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+006785e0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+006786a0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678850	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678880	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006788c0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678a10	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678a50	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678a90	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+00678b90	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678d50	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678e70	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00678fb0	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00679010	__thiscall	3	callee_audit: this: callee reads ECX, ours stdcall
+00679760	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+00679870	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0067bad0	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+0067be50	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+006806a0	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+00681285	__thiscall	1	abi_exclude: own ret [4] != ours 0
+006868c8	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+0068725a	__stdcall	2	callee_audit: pops: callee ret [8], ours passes 4
+00687265	__thiscall	2	callee_audit: this: callee reads ECX, ours stdcall
+006907c3	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 0
+0069154e	__thiscall	0	callee_audit: this: callee reads ECX, ours stdcall
+006a1760	__thiscall	1	callee_audit: this: callee reads ECX, ours stdcall
+006bf8fc	__stdcall	1	callee_audit: pops: callee ret [4], ours passes 0
+006c12ff	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c1327	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c15ef	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c2430	__cdecl	1	callee_audit: stack: callee reads args to 4, ours passes 0
+006c2518	__cdecl	2	callee_audit: stack: callee reads args to 8, ours passes 0
+006cc0f5	__cdecl	0	callee_audit: pops: callee ret [0], ours passes 28

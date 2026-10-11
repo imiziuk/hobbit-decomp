@@ -74,6 +74,17 @@ def wrapper(cal, used_names):
     name, addr = cal.get("name"), cal["addr"]
     if not name or name in used_names:
         return None
+    # MSVC runtime helpers with REGISTER inputs (Hobbit-RE/scripts/ApplyHelperStorage.java gives Ghidra their real
+    # storage, so call sites show the value): implemented in plain C with identical semantics, never called
+    # through the stack (the originals read ST0 / EDX:EAX / CL)
+    HELPERS = {
+        "006c04c0": "static __inline long long {n}(float10 p0) {{ return (long long)p0; }}",   # truncates like __ftol
+        "006c0920": "static __inline long long {n}(long long p0, unsigned char p1) {{ return p0 << (p1 & 63); }}",
+        "006c12e0": "static __inline unsigned long long {n}(unsigned long long p0, unsigned char p1) {{ return p0 >> (p1 & 63); }}",
+        "006c1670": "static __inline long long {n}(long long p0, unsigned char p1) {{ return p0 >> (p1 & 63); }}",
+    }
+    if addr in HELPERS and cal.get("params"):
+        return HELPERS[addr].format(n=name)
     if cal.get("external"):
         iat = IAT.get(name)
         if not iat:
@@ -199,6 +210,12 @@ def sig_from_c(c, name):
     return {"ret": ret, "cc": cc, "params": types}
 
 TAIL = {}      # function addr -> addresses it tail-jumps to (its result is theirs)
+# void-typed functions that return `this` on every recorded real call (capsules; HANDOFF 2026-10-11)
+_rt = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "auto", "returns_this.txt")
+RETURNS_THIS = set(open(_rt).read().split()) if os.path.exists(_rt) else set()
+# void-typed functions that return their k-th stack argument on every recorded real call
+_ra = os.path.join(os.path.dirname(_rt), "returns_arg.tsv")
+RETURNS_ARG = {a: int(k) for a, k in (l.split() for l in open(_ra) if l.strip())} if os.path.exists(_ra) else {}
 RET_POP = {}   # function addr -> bytes its `ret N` pops (ground truth from the binary), None if unknown
 
 def load_ret_pops():
@@ -318,6 +335,29 @@ def convert(u):
             if not re.search(r"return [^;]*;\s*$", body[:end].rstrip() + "\n"):
                 body = body[:end] + "  return __tail;\n" + body[end:]
             body = re.sub(r"(\b" + re.escape(u["name"]) + r"\s*\([^)]*\)\s*\n?\{\n)", r"\1  int __tail;\n", body, count=1)
+    # Ghidra says void, but recorded real calls prove the original returns its `this` (MSVC constructors and
+    # chainable setters: `mov eax, ecx` kept to the end, e.g. vector3::Set 00401f00); callers use EAX
+    # (auto/returns_this.txt from capsules, see HANDOFF). Return the first parameter.
+    # (`this` = ECX = the first parameter only for thiscall/fastcall; in cdecl functions ECX merely matched)
+    if ret == "void" and addr in RETURNS_THIS and params.strip() not in ("", "void") and \
+            cc in ("__thiscall", "__fastcall"):
+        first = params.split(",")[0].strip().replace("*", " ").split()[-1]
+        ret = "int"
+        body = re.sub(r"\breturn;", f"return (int){first};", body)
+        end = body.rstrip().rfind("}")
+        if not re.search(r"return [^;]*;\s*$", body[:end].rstrip() + "\n"):
+            body = body[:end] + f"  return (int){first};\n" + body[end:]
+    # Ghidra says void, but recorded real calls prove the original returns its k-th STACK argument (output
+    # buffers: `Vec *f(this, Vec *out)` returns out). Read it from our thunk's copy of the arguments: our return
+    # address is followed by exactly the original stack arguments (core/hook.cpp MakeThunk).
+    if ret == "void" and addr in RETURNS_ARG:
+        k = RETURNS_ARG[addr]
+        ret = "int"
+        expr = f"(*(int *)((unsigned char *)_AddressOfReturnAddress() + {4 * k}))"
+        body = re.sub(r"\breturn;", f"return {expr};", body)
+        end = body.rstrip().rfind("}")
+        if not re.search(r"return [^;]*;\s*$", body[:end].rstrip() + "\n"):
+            body = body[:end] + f"  return {expr};\n" + body[end:]
     plist = [] if params in ("", "void") else [p.strip() for p in params.split(",")]
     if any(p == "..." for p in plist):
         return None, "skip:variadic"

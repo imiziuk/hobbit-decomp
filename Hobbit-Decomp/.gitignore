@@ -25,3 +25,5 @@ auto/stabilize.log
 auto/bisect*.log
 auto/pipeline.log
 auto/equiv_run.log
+capsules_store/
+auto/ok_before_*/

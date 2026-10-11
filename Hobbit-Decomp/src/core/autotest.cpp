@@ -29,6 +29,8 @@
 #include <cstring>
 #include <string>
 
+extern volatile LONG g_devInject[256];   // core/devmode.cpp: dev hotkeys pressed by the script (`devkey F5`)
+
 namespace {
 
 std::atomic<unsigned char> g_keys[256];      // scripted keys currently held
@@ -268,6 +270,16 @@ DWORD WINAPI Runner(void* p) {
                 g_keys[k] = 1;
                 if (!_stricmp(cmd, "key")) { Sleep(b2[0] ? atoi(b2) : 120); g_keys[k] = 0; Sleep(60); }
             }
+        } else if (!_stricmp(cmd, "devkey")) {         // dev-mode hotkey (core/devmode.cpp): F5 fly, F7 health, ...
+            static const struct { const char* n; int vk; } V[] = {{"F5", VK_F5}, {"F6", VK_F6}, {"F7", VK_F7},
+                {"PGUP", VK_PRIOR}, {"PGDN", VK_NEXT}, {"HOME", VK_HOME}};
+            int vk = 0;
+            for (const auto& v : V) if (!_stricmp(a, v.n)) vk = v.vk;
+            if (!_stricmp(a, "FLYON") || !_stricmp(a, "FLYOFF")) {   // explicit state (F5 only toggles)
+                InterlockedExchange(&g_devInject[0], !_stricmp(a, "FLYON") ? 1 : 2);
+                Log("autotest: devkey %s", a);
+            } else if (vk) { InterlockedExchange(&g_devInject[vk], 1); Log("autotest: devkey %s", a); }
+            else Log("autotest: unknown devkey %s", a);
         } else if (!_stricmp(cmd, "wait_bilbo") || !_stricmp(cmd, "wait_nobilbo")) {
             bool ok = WaitBilbo(!_stricmp(cmd, "wait_bilbo"), a[0] ? atoi(a) : 120000);
             Log("autotest: %s %s", cmd, ok ? "ok" : "TIMEOUT");

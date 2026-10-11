@@ -27,12 +27,24 @@ def main():
     os.makedirs(okdir)
     rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(AUTO, "units.tsv"), encoding="utf-8")]
 
+    def sig(path):
+        m = re.search(r"^[^\n]*\bAUTO_[0-9a-f]{8}\([^)]*\)", open(path, encoding="utf-8", errors="replace").read(), re.M)
+        return m.group(0) if m else None
+
+    def repaired(addr):
+        """tools/repair.py variant, only while it still matches the freshly generated signature (a newer
+        Ghidra export can change the prototype; a stale variant then breaks linking / the registry)"""
+        fixed = os.path.join(AUTO, "repaired_src", f"{addr}.c")
+        if os.path.exists(fixed) and sig(fixed) == sig(os.path.join(AUTO, "units", f"{addr}.c")):
+            return fixed
+        return None
+
     def build(row):
         addr = row[0]
         src = os.path.join(AUTO, "units", f"{addr}.c")
         # tools/repair.py variants confirmed by equiv.py replace the plain generated unit
-        fixed = os.path.join(AUTO, "repaired_src", f"{addr}.c")
-        if os.path.exists(fixed):
+        fixed = repaired(addr)
+        if fixed:
             src = fixed
         for attempt in range(8):
             r = subprocess.run([CL, *FLAGS, "/diagnostics:column", f"/Fo{os.path.join(objdir, addr + '.obj')}", src],
@@ -48,6 +60,11 @@ def main():
             open(src, "w", encoding="utf-8", errors="surrogateescape").write(new)
         return addr, errs
 
+    # C runtime units that compile but reference symbols nothing defines (_SUB87, __GetProcAddressInternal)
+    LINK_BROKEN = {"006c5b0e", "006cda7f"}
+    for r in rows:
+        if len(r) > 2 and r[0] in LINK_BROKEN and r[2] == "ok":
+            r[2] = "skip:link-error"
     todo = [r for r in rows if len(r) > 2 and r[2] == "ok"]
     results = {}
     with concurrent.futures.ThreadPoolExecutor(jobs) as ex:
@@ -60,8 +77,8 @@ def main():
                 msg = re.sub(r"^.*?error (C\d+): ", r"\1 ", results[r[0]][0])[:90]
                 r[2] = f"skip:compile:{msg}"
             else:
-                fixed = os.path.join(AUTO, "repaired_src", f"{r[0]}.c")
-                shutil.copy(fixed if os.path.exists(fixed) else os.path.join(AUTO, "units", f"{r[0]}.c"), okdir)
+                fixed = repaired(r[0])
+                shutil.copy(fixed or os.path.join(AUTO, "units", f"{r[0]}.c"), okdir)
                 ok += 1
     open(os.path.join(AUTO, "units.tsv"), "w", encoding="utf-8").write("\n".join("\t".join(r) for r in rows) + "\n")
     codes = {}

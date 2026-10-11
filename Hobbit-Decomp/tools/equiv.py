@@ -14,6 +14,7 @@ Two versions are equivalent on a trial when return registers, memory writes outs
 the recorded call sequence all match. Usage:
     tools/.venv/Scripts/python tools/equiv.py [--trials N] [name_or_address ...]
 """
+import x86scan
 import argparse, bisect, gc, glob, hashlib, json, os, re, struct, sys
 
 import pefile
@@ -65,13 +66,17 @@ from capstone.x86_const import X86_OP_MEM, X86_REG_INVALID
 _insn_cache = {}
 REGMAP = {}  # capstone reg id -> unicorn reg id (filled lazily by name)
 
+UNITS_DIR = os.environ.get("HOBBIT_UNITS", os.path.join(ROOT, "..", "Hobbit-RE", "db", "units"))
+
 def load_callee_sigs():
     """addr -> (stack arg words, 'none'|'ecx'|'ecx+edx'), collected from every callee signature Ghidra
     reported in the unit export (cached in auto/callee_sigs.json)."""
     cache = os.path.join(ROOT, "auto", "callee_sigs.json")
-    if os.path.exists(cache):
+    # keyed to the export it was built from: a new Ghidra export changes callee prototypes
+    stamp = os.path.join(ROOT, "auto", "callee_sigs.src")
+    if os.path.exists(cache) and os.path.exists(stamp) and open(stamp).read() == UNITS_DIR:
         return {int(k, 16): tuple(v) for k, v in json.load(open(cache)).items()}
-    units = os.environ.get("HOBBIT_UNITS", os.path.join(ROOT, "..", "Hobbit-RE", "db", "units"))
+    units = UNITS_DIR
     sigs = {}
     big = ("undefined8", "longlong", "ulonglong", "double", "GUID", "float10")
     for fn in os.listdir(units) if os.path.isdir(units) else []:
@@ -88,9 +93,18 @@ def load_callee_sigs():
                 regs, stack = "none", ps
             sigs[c["addr"]] = (sum(2 if p.strip() in big else 1 for p in stack), regs)
     json.dump(sigs, open(cache, "w"))
+    open(stamp, "w").write(UNITS_DIR)
     return {int(k, 16): v for k, v in sigs.items()}
 
 CALLEE_SIGS = load_callee_sigs()
+
+_real_cache = {}
+def callee_real_inputs(a):
+    """(stack arg words the original reads, reads ECX?) from the binary itself (tools/x86scan.py)"""
+    if a not in _real_cache:
+        lo, _ = orig_range(a)
+        _real_cache[a] = (x86scan.max_arg(lo) // 4, x86scan.reads_ecx(lo)) if EXE_BASE <= lo < EXE_BASE + EXE_SIZE else (0, False)
+    return _real_cache[a]
 
 _callee_cache = {}
 def callee_info(a):
@@ -100,11 +114,10 @@ def callee_info(a):
     lo, hi = orig_range(a)
     pop, isfloat = 0, False
     if EXE_BASE <= lo < EXE_BASE + EXE_SIZE:
-        code = exe_img[lo - EXE_BASE: hi - EXE_BASE]
-        for ins in cs.disasm(code, lo):
-            if ins.mnemonic == "ret":
-                pop = int(ins.op_str, 16) if ins.op_str else 0
-                break
+        # real cleanup incl. tail-jump targets (a linear "first ret" missed e.g. 00659c80: plain ret on a
+        # side path, ret 8 through its tail jump) - a wrong pop here hid callers passing too few args
+        ps = x86scan.pops(lo)
+        pop = max(ps) if ps else 0
         for d in DECOMP:
             p = os.path.join(d, f"{lo:08x}.c")
             if os.path.exists(p):
@@ -238,6 +251,13 @@ class Run:
             nwords, regs = sig
         else:     # unknown callee: what its ret pops (callee-cleaned) or a guess of 4 words
             nwords, regs = (pop // 4 if pop else 4), "ecx"
+        # ... but never fewer than the ORIGINAL callee really uses: stack args it reads / pops, and ECX if
+        # it reads ECX. Ghidra's prototype can be short (ours then passes too few args or loses `this`
+        # and both sides looked equal).
+        real_words, real_ecx = callee_real_inputs(target)
+        nwords = max(nwords, real_words, pop // 4)
+        if real_ecx and regs not in ("ecx", "ecx+edx"):
+            regs = "ecx"
         args = struct.unpack(f"<{nwords}I", bytes(uc.mem_read(esp + 4, 4 * nwords))) if nwords else ()
         ecx = uc.reg_read(UC_X86_REG_ECX) if regs in ("ecx", "ecx+edx") else None
         edx = uc.reg_read(UC_X86_REG_EDX) if regs == "ecx+edx" else None
@@ -301,7 +321,14 @@ class Run:
         st0 = uc.reg_read(UC_X86_REG_FP0)
         changed = {a: v for a, v in self.writes.items() if self.before.get(a) != v}  # same-value writes are no-ops
         return dict(status=self.status if not self.garbage else "garbage", eax=uc.reg_read(UC_X86_REG_EAX),
-                    edx=uc.reg_read(UC_X86_REG_EDX), st0=st0, writes=changed, calls=self.calls)
+                    edx=uc.reg_read(UC_X86_REG_EDX), st0=st0, writes=changed, calls=self.calls,
+                    esp=uc.reg_read(UC_X86_REG_ESP),
+                    # callee-saved registers, x87 stack depth (TOP) and the direction flag at return:
+                    # the original MSVC6 code relies on all of them across calls
+                    saved=tuple(uc.reg_read(r) for r in (UC_X86_REG_EBX, UC_X86_REG_ESI, UC_X86_REG_EDI,
+                                                         UC_X86_REG_EBP)),
+                    fptop=(uc.reg_read(UC_X86_REG_FPSW) >> 11) & 7,
+                    df=(uc.reg_read(UC_X86_REG_EFLAGS) >> 10) & 1)
 
 # ------------------------------------------------------------------ comparison
 def make_args(seed, trial, n):
@@ -344,6 +371,16 @@ def compare(a, b, rk):
         return f"status {a['status']} vs {b['status']}"
     if a["status"] != "ok":
         return None
+    # ESP after return = how many argument bytes the function popped (ret N): a mismatch unbalances
+    # every caller's stack (0046aaf0: original pops 4 via its tail target, ours popped 0)
+    if a.get("esp") != b.get("esp"):
+        return f"stack cleanup: esp after return {a.get('esp', 0):08x} vs {b.get('esp', 0):08x}"
+    if a.get("saved") != b.get("saved"):
+        return f"callee-saved regs (ebx,esi,edi,ebp) {[hex(x) for x in a['saved']]} vs {[hex(x) for x in b['saved']]}"
+    if a.get("fptop") != b.get("fptop"):
+        return f"x87 stack depth (TOP) {a['fptop']} vs {b['fptop']}"
+    if a.get("df") != b.get("df"):
+        return f"direction flag {a['df']} vs {b['df']}"
     if rk in ("int32", "int64") and a["eax"] != b["eax"]:
         return f"eax {a['eax']:08x} vs {b['eax']:08x}"
     if rk == "int64" and a["edx"] != b["edx"]:

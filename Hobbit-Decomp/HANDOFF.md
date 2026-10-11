@@ -201,3 +201,79 @@ Generator rounds (units2 export, `ghidra2c.py` + `build_units.py`): compiled 6,9
   sanity check failed at the end. Real crash = INTERACTION across both halves. New tool: tools/load_ddmin.py (delta
   debugging: minimal crashing set, crash = 2 in a row, resumable via auto/ddmin_state.txt, Ctrl+Alt+P pause).
   Also open: why the near-original config crashes ~5% (infra? Enter-skip timing?).
+- 2026-10-10: private GitHub backup https://github.com/imiziuk/hobbit-decomp (mirror in ../hobbit-decomp-backup, cleaned docs, no game files/personal data). Update: python Hobbit-Decomp/tools/backup_repo.py --push
+- 2026-10-10: ChatGPT review of the ddmin plan ( first compare crash signatures of the all-enabled crashes (EIP/stack), then static ABI audit of replaced->replaced call edges (ret N vs generated conv/args/return), then ddmin with signature matching + adaptive repeats (2-in-a-row rejects 30% reproducers). Suggests a call-history ring buffer in the crash report.
+- 2026-10-10 PM: crash signatures (tools/crash_signatures.py over hobbit_decomp.log, 560 sessions):
+  A) all-enabled: 21/22 = EIP 0 (ret to 0, stack imbalance) under logic_mgr__SingleStep -> obj_mgr__AdvanceAll.
+     tools/abi_audit.py (ret N vs our pops, incl. tail-jump targets): only live hit = 0046aaf0 (writes [esp+4]=1,
+     jmp 0046ab10 which does ret 4; Ghidra saw no param -> ours pops 0; caller 0046a1f0 pushes 1 arg).
+  B) half-enabled: 10/15 = AV at 006C1348 (CRT isspace-like 006c1327 reads [esp+4]); live 00555d00 calls it
+     typed __fastcall (arg in ECX). tools/ecx_audit.py: 84 callees typed thiscall never read ECX; with stack-arg
+     tracking (tools/ecx_args_check.py) only 006c1327/006c12ff are harmful for live units.
+  C) baseline (few enabled, ~5%): EIP 0/1 under Projectile__OnAdvanceLogic -> fx_object__OnAdvanceLogic, and an ntdll
+     heap AV after operator_delete. Not caused by generated code? (check pure original).
+  Both A+B culprits blacklisted; DLL rebuilt (2,061 live, auto/live_fix2.txt), NOT yet installed/tested.
+  Generator class fixes TODO: (1) functions that write their stack args then tail-jmp: nb = target's ret N;
+  (2) callees that never read ECX -> type cdecl/stdcall with the real stack args.
+- 2026-10-10 evening: MILESTONE: New Game load 10/10 with 2,034 live generated functions (auto/live_fix3.txt).
+  All-off baseline 10/10 too (so the old "5% baseline" was our code). Third culprit 004b83e0: calls 00659c80 typed
+  __stdcall(1 arg) but original sets ECX=0x7eb850, pushes 2, callee pops 8 via tail jmp. New tools:
+  tools/x86scan.py (pops incl. tail targets, reads_ecx, max_arg), tools/callee_audit.py (all call wrappers vs
+  binary -> auto/abi_exclude2.txt, 668 units), tools/abi_exclude.py (own ret/tail pops -> auto/abi_exclude.txt).
+  equiv.py hardened: stubs compare max(Ghidra, real) arg words + ECX and pop the real amount; ESP after return,
+  EBX/ESI/EDI/EBP, x87 TOP and DF compared. tools/equiv_regress.sh = 5 culprits must FAIL, 3 good PASS (OK).
+  ChatGPT review #2 (same chat): treat binary facts as constraints (ABIDescriptor), recover the 668 in batches.
+  RUNNING: full strict equiv (auto/equiv_strict.log); old results in auto/verified_before_strict.tsv.
+- 2026-10-10 night: strict equiv done: PASS 6,005 / FAIL 1,741 / INC 842 (auto/verified_strict_20261010.tsv;
+  old = verified_before_strict.tsv). 325 PASS->FAIL, sampled ones are real ABI bugs (e.g. callee 006405e0 pops 8
+  but reads 1 arg: Ghidra dropped the unused 2nd; float pass-through typed void 00422460). Live set 2,022.
+  Recovery of the ABI-excluded units: tools/proto_fixes2.py (binary facts -> auto/proto_fixes2.tsv, 149) appended
+  to old proto_fixes.tsv = auto/proto_fixes_all.tsv; headless Ghidra on a COPY (scratchpad/units3.bat):
+  -preScript EnableParamID.java (FULL re-analysis; -noanalysis gave cc "unknown" for 7,773 funcs = useless)
+  -postScript ApplyProtoFixes.java proto_fixes_all.tsv -postScript ExportDecompUnits.java -> Hobbit-RE/db/units3.
+  NOTE: callee signatures in ghidra2c come from each callee's own unit (INDEX) -> never mix exports per unit.
+  !! auto/units + auto/ok are currently generated from a MIXED units4 (do not trust; regenerate from units3
+  when the export finishes, then audits -> gen_registry -> DLL -> equiv on changed units -> load_check).
+  The game folder still has the tested 2,034-live DLL (10/10 loads); hooks_disabled=auto.
+- 2026-10-11 ~01:00: units3 re-exported WITH -preScript EnableParamID (full analysis 134 s ParamID) + proto_fixes_all
+  -> 8,252 units, cc proper. units5 = units3 + 974 units2-only (vtable funcs not in the GUI project copy).
+  Regenerated from units5: 8,538 compiled; callee_audit 26 bad pairs / 203 units (was 137 / 668); abi_exclude 9.
+  build_units.py: repaired_src variant only used if its AUTO_ signature equals the fresh one (stale ones broke
+  linking). equiv.py: callee_sigs.json cache now keyed to HOBBIT_UNITS (auto/callee_sigs.src).
+  006c5b0e/006cda7f = skip:link-error (CRT). RUNNING: full strict equiv on units5 code (auto/equiv_units5.log).
+  Then: gen_registry -> DLL -> load_check x10.
+- 2026-10-11: units5 strict equiv PASS 6,229 / FAIL 1,519 / INC 788 (auto/verified_units5_strict.tsv). Live 1,970 (gated by allow.txt + unchanged shadow passes). New Game 10/10 LOADED. Game folder: units5 DLL (prev = dinput8.dll.fix3).
+- 2026-10-11: STOPPED by the maintainer during bisect of newly-live (auto/suspects_new.txt, ~240) after shadow evidence promoted 1,970 -> 2,222. Excluded so far: 004c71a0, 00401080, 00469060 (blacklist) + all &stack0x units (gen_registry rule). Remaining crash: AV 005A4BAB, only baseline frames on stack (delayed corruption). tools/auto_culprit.py = automated deterministic-crash loop. Game folder: dinput8.dll.fix3 restored (known 10/10), hooks_disabled=auto, all mode files off.
+- 2026-10-11: NEW STRATEGY (the maintainer): enable functionality by functionality, top-down. tools/group_map.py -> auto/groups.tsv
+  (every function: subsystem / source file / class / call depth; anchors = leaked .cpp names, class names, factories,
+  vtable "home" (most basic vtable), between-same-file, call-graph vote, nearest). gen_registry writes auto/eligible.txt
+  (all checks passed, before allow gate) and supports HOBBIT_STAGE=<file>. tools/group_stage.py (try/accept/status),
+  tools/stage_all.py (unattended: subsystem -> files -> bisect; auto/stage_accepted.txt grows, auto/stage_rejected.tsv).
+  1. Game loop accepted (105, 3/3 loads). Play-test of the old 1,970 set froze: sdbase__TraverseCells endless loop via
+  camera__MoveTowardsDesired -> AUTO_00577e70 (with devmode on; autotest without devmode was fine).
+- 2026-10-11 LESSONS -> class fixes: (1) safety lists were stale after regeneration -> tools/refresh_lists.sh +
+  gen_registry refuses stale lists. (2) globals__OnImport dropped "Ambient_%d" vararg (lighting glitch).
+  (3) 00556740 (level-create crash): typed void but passes operator_new's EAX through; the thunk RESTORED the caller's
+  EAX for every Ret::Void. New Ret::VoidPass (hook.h/hook.cpp): thunk keeps our EAX unless the original never touches
+  EAX (tools/eax_untouched.py, 182 units). 00556740 re-enabled: 3/3 loads. eax_users: pass-through/virtual rules kept
+  opt-in (EAX_RULES) - too broad (would flag 43-67 play-tested functions).
+  Stage 3 Bilbo: all 299 OK automated. Accepted (stage_accepted.txt) is always intersected with eligible.
+- 2026-10-11 CAPSULE RECORDER + REPLAY (the maintainer's idea, ChatGPT-reviewed): shadow.txt `record` + `capsules N` ->
+  game folder capsules/ (caps.bin + deduplicated pages.bin). Novelty: caller + input classes (pre-filter), then
+  AFL edge buckets of the ORIGINAL's run. tools/replay.py: A determinism gate, B = current build through the same
+  thunk; PASS/FAIL/INCONCLUSIVE -> auto/replay_results.tsv (gen_registry excludes FAIL if newer than units.tsv;
+  group_stage counts replay PASS as real-data evidence). First recording: capsules_store/rec_20261011_stage3
+  (1 h of the maintainer's play, 22,227 capsules / 3,731 functions; 1,889 ran but dropped = external code in call tree;
+  2,228 never ran). Full replay = 2 min 12 s. Recording template: game folder shadow_record.txt.off.
+- ChatGPT plan (the maintainer asked it to decide): 1 x87 generator fix, 2 cluster EAX/memory mismatches, 3 strict replay
+  gate, 4 investigate the 6 gameplay bugs with capsules, 5 Bilbo play-test, 6 selective API virtualization,
+  7 next stages. IN PROGRESS: step 1. tools/x87_audit.py (x87 depth path analysis -> x87_net.tsv,
+  returns_st0_path.txt, x87_mismatch.txt); tools/proto_fixes_ret.py -> auto/proto_fixes_ret.tsv (97 return types);
+  Hobbit-RE/scripts/ApplyRetFixes.java. LESSON: float10 return on thiscall/fastcall = hidden
+  __return_storage_ptr__ in Ghidra -> use 4-byte "float". hidden_regs.py: extraout_ST0 via __rx_st0.
+  tools/equiv_subset.py: re-test only changed units and merge into verified.tsv.
+- 2026-10-11 GOAL (the maintainer, option b): a modern READABLE codebase behaving exactly like the original. Decomp = reference;
+  subsystems get clean rewrites (real names/structs/comments) verified by capsule replay. Current ChatGPT plan steps 1-7 continue first.
+- 2026-10-11 morning: STOP POINT. Read docs/NEXT_SESSION.md FIRST (direction: hybrid reimplementation track,
+  next experiment = asset audit; exact decomp state; pending generator fixes RETURNS_ARG + RETURNS_THIS cc fix).
+  Night results: replay 3,095 -> 3,209 PASS, x87 failures 127 -> 4 (recorded-truth return types, __ftol storage).
